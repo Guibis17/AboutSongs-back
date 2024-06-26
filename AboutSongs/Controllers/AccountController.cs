@@ -1,9 +1,12 @@
-
+using System.Net.Mail;
+using System.Security.Claims;
 using System.Security.Policy;
+using AboutSongs.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AboutSongs.Controller;
+
+namespace AboutSongs.Controllers;
 public class AccountController : Controller
 {
     private readonly ILogger<AccountController> _logger;
@@ -28,8 +31,29 @@ public class AccountController : Controller
         {
             UrlRetorno = returnUrl ?? Url.Content("~/")
         };
+        return View(login);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Login(LoginVM login)
+    {
+        if (ModelState.IsValid)
+        {
+            string userName = login.Email;
+            if (IsValidEmail(userName))
+            {
+                var user = await _userInManager.FindByEmailAsync(userName);
+                if (user != null)
+                    userName = user.UserName;
+            }
+
+            var result = await _signInManager.PasswordSignInAsync(
+                userName, login.Senha, login.Lembrar, lockoutOnFailure:true
+            );
+        }
     }
 
 
-        
+
 }
