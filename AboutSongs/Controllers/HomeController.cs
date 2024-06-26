@@ -13,11 +13,28 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    
+    public IActionResult Login()
+    {
+        return View();
+    }
+    public IActionResult Inscrever()
+    {
+        return View();
+    }
+    public IActionResult Música()
     {
         return View();
     }
 
+    public IActionResult Album()
+    {
+        return View();
+    }
+    public IActionResult Favoritos()
+    {
+        return View();
+    }
     public IActionResult Privacy()
     {
         return View();
