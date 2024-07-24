@@ -49,9 +49,24 @@ public class AccountController : Controller
             }
 
             var result = await _signInManager.PasswordSignInAsync(
-                userName, login.Senha, login.Lembrar, lockoutOnFailure:true
+                userName, login.Senha, login.Lembrar, lockoutOnFailure: true
             );
+
+            if (result.Succeeded)
+            {
+                _logger.LogInformation($"Usuário {userName} acessou o sistema!");
+                return LocalRedirect(login.UrlRetorno);
+            }
+
+            if (result.IsLockedOut)
+            {
+                _logger.LogWarning($"Usuário {userName} está bloqueado");
+                ModelState.AddModelError(string.Empty, "Conta Bloqueado! Aguarde alguns minutos para continuar!");
+            }
+
+            ModelState.AddModelError(string.Empty, "Usuário e/ou Senha Inválidos!!!");
         }
+        return View(login);
     }
 
 
