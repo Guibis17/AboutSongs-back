@@ -21,5 +21,20 @@ protected override void OnModelCreating(ModelBuilder builder)
     base.OnModelCreating(builder);
     AppDbSeed seed = new(builder);
 
-    #region Relacionamento de Muitos para Muitos -
+    #region Relacionamento de Muitos para Muitos - Artista
+
+    builder.Entity<Artista>()
+        .HasOne(a => a.Musica)
+        .WithMany(m => m.Artista)
+        .HasForeignKey(a => a.MusicaId);
+
+    builder.Entity<Artista>()
+        .HasOne(a => a.Album)
+        .WithMany(a => a.Artista)
+        .HasForeignKey(a => a.AlbumId);
+        
+    builder.Entity<Artista>()
+        .HasOne(a => a.Album)
+        .WithMany(a => a.Artista)
+        .HasForeignKey(a => a.AlbumId);
 }
