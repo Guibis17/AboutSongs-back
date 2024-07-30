@@ -2,15 +2,21 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity;
 
-namespace AboutSongs.Models
+namespace AboutSongs.Models;
 [Table("Album")]
 public class Album
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public string AlbumId { get; set; }
-    [ForeignKey("ArtistaId")]
-    public Artista Artista { get; set; }
+    public int Id { get; set; }
 
-    public string Título 
+    [Required(ErrorMessage = "Por favor, informe o Título")]
+    [StringLength(100)]
+    public string Título { get; set; }
+
+    [StringLength(100)]
+    public string Capa { get; set; }
+
+    [DataType(DataType.Date)]
+    public DateTime DataDeLancamento { get; set; }
 }
