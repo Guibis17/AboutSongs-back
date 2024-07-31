@@ -8,33 +8,35 @@ public class AppDbContext : IdentityDbContext
 {
 
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-    {      
+    {
     }
-    public DbSet<Album> Albuns { get; set;}
+    public DbSet<Album> Albuns { get; set; }
     public DbSet<Artista> Artistas { get; set; }
-    public DbSet<Critica> Criticas { get; set; } 
+    public DbSet<Critica> Criticas { get; set; }
+    public DbSet<Genero> Generos { get; set; }
     public DbSet<Musica> Musicas { get; set; }
     public DbSet<Usuario> Usuarios { get; set; }
-}
-protected override void OnModelCreating(ModelBuilder builder)
-{
-    base.OnModelCreating(builder);
-    AppDbSeed seed = new(builder);
 
-    #region Relacionamento de Muitos para Muitos - Artista
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
+        //AppDbSeed seed = new(builder);
 
-    builder.Entity<Artista>()
-        .HasOne(a => a.Musica)
-        .WithMany(m => m.Artista)
-        .HasForeignKey(a => a.MusicaId);
+        #region Relacionamento de Muitos para Muitos - Artista
 
-    builder.Entity<Artista>()
-        .HasOne(a => a.Album)
-        .WithMany(a => a.Artista)
-        .HasForeignKey(a => a.AlbumId);
-        
-    builder.Entity<Artista>()
-        .HasOne(a => a.Album)
-        .WithMany(a => a.Artista)
-        .HasForeignKey(a => a.AlbumId);
+        builder.Entity<Artista>()
+            .HasOne(a => a.Musica)
+            .WithMany(m => m.Artista)
+            .HasForeignKey(a => a.MusicaId);
+
+        builder.Entity<Artista>()
+            .HasOne(a => a.Album)
+            .WithMany(a => a.Artista)
+            .HasForeignKey(a => a.AlbumId);
+
+        builder.Entity<Artista>()
+            .HasOne(a => a.Album)
+            .WithMany(a => a.Artista)
+            .HasForeignKey(a => a.AlbumId);
+    }
 }
