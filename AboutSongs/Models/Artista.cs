@@ -22,4 +22,6 @@ public class Artista
 
     [DataType(DataType.Date)]
     public DateTime DataDeNascimento { get; set; }
+
+    public ICollection<AlbumArtista> Albuns { get; set; }
 }
