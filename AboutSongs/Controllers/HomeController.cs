@@ -18,7 +18,7 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult Inscrever()
+    public IActionResult Entrar()
     {
         return View();
     }
