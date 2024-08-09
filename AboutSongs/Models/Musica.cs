@@ -25,5 +25,6 @@ public class Musica
     [StringLength(100)]
     public string Compositores { get; set; }
 
+    public ICollection<MusicaGenero> Generos { get; set; }
 
 }

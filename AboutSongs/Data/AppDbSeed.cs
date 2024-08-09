@@ -7,6 +7,12 @@ public class AppDbSeed
 {
     public class AppDbSeed(ModelBuilder builder)
     {
-        
+        #region Populate Album 
+        List<Album> albums = new() {
+            new Album(){
+                Id = 1,
+                
+            }
+        }
     }
 }

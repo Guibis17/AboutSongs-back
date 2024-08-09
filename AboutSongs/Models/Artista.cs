@@ -24,4 +24,6 @@ public class Artista
     public DateTime DataDeNascimento { get; set; }
 
     public ICollection<AlbumArtista> Albuns { get; set; }
+
+    public ICollection<GeneroArtista> Generos { get; set; }
 }
