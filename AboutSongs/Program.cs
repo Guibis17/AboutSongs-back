@@ -6,13 +6,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 string conn = builder.Configuration.GetConnectionString("AboutSongsConn");
+var versao = ServerVersion.AutoDetect(conn);
 builder.Services.AddDbContext<AppDbContext>(
-    options => options.UseInMemoryDatabase(conn)
+    options => options.UseMySql(conn, versao)
 );
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>(
-    Opt => Opt.SignIn.RequireConfirmedAccount = false
-)
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
 .AddEntityFrameworkStores<AppDbContext>()
 .AddDefaultTokenProviders();
 
@@ -20,13 +19,6 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-using (var scope = app.Services.CreateScope())
-{
-    var context = scope.ServiceProvider
-        .GetRequiredService<AppDbContext>();
-    context.Database.EnsureCreated();
-
-}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

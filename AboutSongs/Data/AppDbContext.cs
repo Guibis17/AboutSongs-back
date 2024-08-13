@@ -2,6 +2,7 @@ using AboutSongs.Models;
 using AboutSongs.Data;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace AboutSongs.Data;
 
@@ -65,15 +66,78 @@ public class AppDbContext : IdentityDbContext
             .HasKey(mg => new { mg.MusicaId, mg.GeneroId });
 
         builder.Entity<MusicaGenero>()
-            .HasOne(mg=> mg.Musica)
+            .HasOne(mg => mg.Musica)
             .WithMany(m => m.Generos)
-            .HasForeignKey(m=> m.MusicaId);
+            .HasForeignKey(m => m.MusicaId);
 
         builder.Entity<MusicaGenero>()
             .HasOne(mg => mg.Genero)
-            .WithMany(g=> g.Musicas)
+            .WithMany(g => g.Musicas)
             .HasForeignKey(g => g.GeneroId);
         #endregion
 
+        #region Populate Roles - Perfis de Usuário
+        List<IdentityRole> roles = new()
+        {
+            new IdentityRole()
+            {
+               Id = Guid.NewGuid().ToString(),
+               Name = "Administrador",
+               NormalizedName = "ADMINISTRADOR"
+            },
+            new IdentityRole()
+            {
+               Id = Guid.NewGuid().ToString(),
+               Name = "Usuário",
+               NormalizedName = "USUÁRIO"
+            }
+        };
+        builder.Entity<IdentityRole>().HasData(roles);
+        #endregion
+
+        #region Populate IdentityUser
+        List<IdentityUser> users = new(){
+            new IdentityUser(){
+                Id = Guid.NewGuid().ToString(),
+                Email = "admin@aboutsongs.com",
+                NormalizedEmail = "ADMIN@ABOUTSONGS.COM",
+                UserName = "Admin",
+                NormalizedUserName = "ADMIN",
+                LockoutEnabled = false,
+                EmailConfirmed = true,
+            }
+        };
+        foreach (var user in users)
+        {
+            PasswordHasher<IdentityUser> pass = new();
+            user.PasswordHash = pass.HashPassword(user, "zecapagodinho3");
+        }
+        builder.Entity<IdentityUser>().HasData(users);
+
+        List<Usuario> usuarios = new(){
+            new Usuario(){
+                UsuarioId = users[0].Id,
+                Nome = "Guilherme Bispo da Silva",
+                DataDeNascimento = DateTime.Parse("19/07/2006"),
+                Foto = "/img/usuarios/avatar.png"
+            }
+        };
+        builder.Entity<Usuario>().HasData(usuarios);
+        #endregion
+
+        #region Populate UserRole - Usuário com Perfil
+        List<IdentityUserRole<string>> userRoles = new()
+        {
+            new IdentityUserRole<string>() {
+                UserId = users[0].Id,
+                RoleId = roles[0].Id
+            },
+            new IdentityUserRole<string>() {
+                UserId = users[0].Id,
+                RoleId = roles[1].Id
+            }
+        };
+        builder.Entity<IdentityUserRole<string>>().HasData(userRoles);
+        #endregion
     }
 }
