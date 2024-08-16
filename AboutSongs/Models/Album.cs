@@ -10,6 +10,8 @@ public class Album
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
 
+    public string Nome { get; set; }
+
     [Required(ErrorMessage = "Por favor, informe o Título")]
     [StringLength(100)]
     public string Título { get; set; }

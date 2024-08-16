@@ -11,8 +11,13 @@ public class AppDbSeed
         List<Album> albums = new() {
             new Album(){
                 Id = 1,
+                Nome = "",
+                CodigoHexa ""
+
                 
-            }
-        }
+            },
+        };
+
+        
     }
 }
