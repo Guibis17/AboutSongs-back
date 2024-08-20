@@ -22,4 +22,6 @@ public class Album
     [DataType(DataType.Date)]
     public DateTime DataDeLancamento { get; set; }
     public ICollection<AlbumArtista> Artistas { get; set; }
+
+    public bool ExibirHome { get; set; } = false;
 }

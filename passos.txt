@@ -42,7 +42,7 @@ Nuget Gallery
         Microsoft.EntityFrameworkCore.SqlServer
 
 
-dotnet ef migrations add InitialCreate
+dotnet ef migrations add criar-banco
 
 dotnet ef database update
 

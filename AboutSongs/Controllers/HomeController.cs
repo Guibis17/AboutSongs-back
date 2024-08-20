@@ -1,19 +1,43 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using AboutSongs.Models;
+using AboutSongs.Data;
+using AboutSongs.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace AboutSongs.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly AppDbContext _context;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, AppDbContext context)
     {
         _logger = logger;
+        _context = context;
     }
 
-    
+    public IActionResult Index()
+    {
+        HomeVM home = new()
+        {
+        Albuns = _context.Albuns
+            .Where(a => a.ExibirHome)
+
+            .AsNoTracking()
+            .ToList(),
+        Musicas = _context.Musicas
+            .Include(m => m.)
+            .Include(m => m.Artistas)
+            .AsNoTracking()
+            .ToList()
+
+
+        };
+        return View(home);
+    }
+
     public IActionResult Login()
     {
         return View();
