@@ -17,7 +17,7 @@ public class Album
     public string Título { get; set; }
 
     [StringLength(100)]
-    public string Capa { get; set; }
+    public string Foto { get; set; }
 
     [DataType(DataType.Date)]
     public DateTime DataDeLancamento { get; set; }

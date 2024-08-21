@@ -5,18 +5,16 @@ using Microsoft.EntityFrameworkCore;
 namespace AboutSongs.Data;
 public class AppDbSeed
 {
-    public class AppDbSeed(ModelBuilder builder)
+    public AppDbSeed(ModelBuilder builder)
     {
-        #region Populate Albuns 
-        List<Album> albuns = new() 
+        #region Populate Albuns
+        List<Album> albuns = new()
         {
             new Album() {
                 Id = 1,
                 Nome = "My Beautiful Dark Twisted Fantasy",
-                Capa = "",
+                Foto = "/img/Albuns/1.jpg",
                 ExibirHome = true
-
-
             },
         };
         builder.Entity<Album>().HasData(albuns);
