@@ -1,6 +1,5 @@
 using AboutSongs.Models;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Build.Framework;
 using Microsoft.EntityFrameworkCore;
 
 namespace AboutSongs.Data;
@@ -24,9 +23,9 @@ public class AppDbSeed
                 ExibirHome = true
             },
             new Album() {
-                Id = 1,
-                Nome = "My Beautiful Dark Twisted Fantasy",
-                Foto = "/img/Albuns/1.jpg",
+                Id = 3,
+                Nome = "ye",
+                Foto = "/img/Albuns/3.jpg",
                 ExibirHome = true
             },
         };
