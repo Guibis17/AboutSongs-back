@@ -69,7 +69,7 @@ public class AppDbSeed
         foreach (var user in users)
         {
             PasswordHasher<IdentityUser> pass = new();
-            user.PasswordHash = pass.HashPassword(user, "@zecapagodinho3");
+            user.PasswordHash = pass.HashPassword(user, "zecapagodinho3");
         }
         builder.Entity<IdentityUser>().HasData(users);
 
