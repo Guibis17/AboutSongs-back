@@ -15,8 +15,7 @@ public class Genero
 
     [Required(ErrorMessage = "Por favor, Informe o Nome")]
     public string Nome { get; set; }
-
     public ICollection<GeneroArtista> Artistas { get; set; }
     public ICollection<MusicaGenero> Musicas { get; set; }
-
+    public ICollection<AlbumGenero> Albuns { get; set; }
 }

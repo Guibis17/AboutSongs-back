@@ -19,4 +19,6 @@ public class AlbumArtista
     [ForeignKey("ArtistaId")]
     public Artista Artista { get; set; }
 
+    public ICollection<AlbumArtista> Musica { get; set; }
+
 }

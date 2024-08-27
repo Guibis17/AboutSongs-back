@@ -7,24 +7,30 @@ public class AppDbSeed
 {
     public AppDbSeed(ModelBuilder builder)
     {
-        #region Populate Albuns
+       #region Populate Albuns
         List<Album> albuns = new()
         {
             new Album() {
                 Id = 1,
                 Nome = "My Beautiful Dark Twisted Fantasy",
+                ArtistaId = 1,
+                Genero = "Rap/Hip-Hop",
                 Foto = "/img/Albuns/1.jpg",
                 ExibirHome = true
             },
             new Album() {
                 Id = 2,
                 Nome = "HIT ME HARD AND SOFT",
+                ArtistaId = 2,
+                Genero = "Rap/Hip-Hop",
                 Foto = "/img/Albuns/2.jpg",
                 ExibirHome = true
             },
             new Album() {
                 Id = 3,
                 Nome = "ye",
+                Genero = "Rap/Hip-Hop",
+                ArtistaId = 1,
                 Foto = "/img/Albuns/3.jpg",
                 ExibirHome = true
             },
@@ -32,6 +38,46 @@ public class AppDbSeed
         builder.Entity<Album>().HasData(albuns);
         #endregion
 
+        #region Populate Musica 
+        List<Musica> musicas = new(){
+            new Musica() {
+                Id = 1,
+                Título = "Runaway",
+                Compositores = "JEFF BHASKER, MALIK YUSEF JONES, EMILE HAYNIE, JOHN ROGER BRANCH, MIKE DEAN, TERRENCE THORNTON, KANYE WEST, PHILLIPS PETER",
+                AlbumId = 
+            }
+        };
+        builder.Entity<Musica>().HasData(musicas);
+        #endregion
+
+        #region Populate Generos
+        List<Genero> generos = new() {
+            new Genero() {
+                Id = 1,
+                Nome = "Pop"
+            },
+            new Genero() {
+                Id = 2,
+                Nome = "Rap/Hip-Hop"
+            },
+            new Genero() {
+                Id = 3,
+                Nome = "Rock"
+            },
+            new Genero() {
+                Id = 4,
+                Nome = "Funk"
+            },
+            new Genero() {
+                Id = 5,
+                Nome = "Eletrônica"
+            },
+            
+        };
+        builder.Entity<Genero>().HasData(generos);
+        #endregion 
+
+        
         #region Populate Roles - Perfis de Usuário
         List<IdentityRole> roles = new()
         {

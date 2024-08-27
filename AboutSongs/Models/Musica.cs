@@ -25,8 +25,12 @@ public class Musica
     [StringLength(100)]
     public string Compositores { get; set; }
 
+    public int AlbumId { get; set; }
+    [ForeignKey("AlbumId")]
+    public Album Album { get; set; }
+
     public ICollection<MusicaGenero> Generos { get; set; }
-    public ICollection<AlbumArtista> Artistas { get; set; }
-    public ICollection<AlbumArtista> Albuns { get; set; }
+    
+    
 
 }
