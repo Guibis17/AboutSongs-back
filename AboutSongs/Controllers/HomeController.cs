@@ -28,7 +28,7 @@ public class HomeController : Controller
             .AsNoTracking()
             .ToList(),
         Musicas = _context.Musicas
-            .Include(m => m.Album)
+            .Include(m => m.)
             .Include(m => m.Generos)
             .AsNoTracking()
             .ToList()

@@ -13,25 +13,22 @@ public class AppDbSeed
             new Album() {
                 Id = 1,
                 Nome = "My Beautiful Dark Twisted Fantasy",
-                ArtistaId = 1,
-                Genero = "Rap/Hip-Hop",
                 Foto = "/img/Albuns/1.jpg",
+                DataDeLancamento = DateTime.Parse ("22/11/2010"),
                 ExibirHome = true
             },
             new Album() {
                 Id = 2,
                 Nome = "HIT ME HARD AND SOFT",
-                ArtistaId = 2,
-                Genero = "Rap/Hip-Hop",
                 Foto = "/img/Albuns/2.jpg",
+                DataDeLancamento = DateTime.Parse ("17/05/2024"),
                 ExibirHome = true
             },
             new Album() {
                 Id = 3,
                 Nome = "ye",
-                Genero = "Rap/Hip-Hop",
-                ArtistaId = 1,
                 Foto = "/img/Albuns/3.jpg",
+                DataDeLancamento = DateTime.Parse ("1/06/2018"),
                 ExibirHome = true
             },
         };
@@ -44,7 +41,7 @@ public class AppDbSeed
                 Id = 1,
                 Título = "Runaway",
                 Compositores = "JEFF BHASKER, MALIK YUSEF JONES, EMILE HAYNIE, JOHN ROGER BRANCH, MIKE DEAN, TERRENCE THORNTON, KANYE WEST, PHILLIPS PETER",
-                AlbumId = 
+                Duracao = TimeSpan.Parse ("9:07")
             }
         };
         builder.Entity<Musica>().HasData(musicas);
@@ -77,6 +74,15 @@ public class AppDbSeed
         builder.Entity<Genero>().HasData(generos);
         #endregion 
 
+        #region Populate AlbumArtista
+        List<AlbumArtista> albumArtistas = new() {
+            new AlbumArtista() {
+                AlbumId = 1,
+                ArtistaId = 1,
+            },
+        };
+        builder.Entity<AlbumArtista>().HasData(albumArtistas);
+        #endregion
         
         #region Populate Roles - Perfis de Usuário
         List<IdentityRole> roles = new()

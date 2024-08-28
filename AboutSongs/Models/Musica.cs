@@ -18,16 +18,11 @@ public class Musica
     [StringLength(100)]
     public string Título { get; set; }
 
-    public int Faixa { get; set; }
-    public TimeSpan Duracao { get; set; }
-
     [Required(ErrorMessage = "Por favor, informe os Compositores")]
     [StringLength(100)]
     public string Compositores { get; set; }
-
-    public int AlbumId { get; set; }
-    [ForeignKey("AlbumId")]
-    public Album Album { get; set; }
+    
+    public TimeSpan Duracao { get; set; }
 
     public ICollection<MusicaGenero> Generos { get; set; }
     

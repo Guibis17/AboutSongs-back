@@ -18,6 +18,6 @@ public class Critica
     public string Comentario { get; set; }
 
     [DataType(DataType.Date)]
-    public DateTime DataDePublicação { get; set; }
+    public DateTime DataDePublicacao { get; set; }
 
 }

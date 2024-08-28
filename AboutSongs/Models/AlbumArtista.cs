@@ -19,6 +19,14 @@ public class AlbumArtista
     [ForeignKey("ArtistaId")]
     public Artista Artista { get; set; }
 
-    public ICollection<AlbumArtista> Musica { get; set; }
+    [Key, Column(Order = 3)]
+    public int MusicaId { get; set; }
+    [ForeignKey("MusicaId")]
+    public Musica Musica { get; set; }
+
+    public int Faixa { get; set; }
+
+    public TimeSpan? Duracao { get; set; }
+
 
 }
