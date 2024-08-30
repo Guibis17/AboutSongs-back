@@ -5,6 +5,7 @@ using AboutSongs.Data;
 using AboutSongs.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace AboutSongs.Controllers;
 
 public class HomeController : Controller
@@ -23,17 +24,14 @@ public class HomeController : Controller
         HomeVM home = new()
         {
         Albuns = _context.Albuns
-            .Where(a => a.ExibirHome)
-
             .AsNoTracking()
+            .Where(a => a.ExibirHome)
             .ToList(),
         Musicas = _context.Musicas
-            .Include(m => m.)
+            .Include(m => m.AlbunsArtistas)
             .Include(m => m.Generos)
             .AsNoTracking()
             .ToList()
-
-
         };
         return View(home);
     }

@@ -26,6 +26,6 @@ public class Musica
 
     public ICollection<MusicaGenero> Generos { get; set; }
     
-    
+    public ICollection<AlbumArtista> AlbunsArtistas { get; set; }
 
 }
