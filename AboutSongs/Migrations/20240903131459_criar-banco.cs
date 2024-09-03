@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace AboutSongs.Migrations
 {
     /// <inheritdoc />
@@ -430,6 +432,73 @@ namespace AboutSongs.Migrations
                         onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.InsertData(
+                table: "Album",
+                columns: new[] { "Id", "DataDeLancamento", "ExibirHome", "Foto", "Nome", "Título" },
+                values: new object[,]
+                {
+                    { 1, new DateTime(2010, 11, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "/img/Albuns/1.jpg", null, "My Beautiful Dark Twisted Fantasy" },
+                    { 2, new DateTime(2024, 5, 17, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "/img/Albuns/2.jpg", null, "HIT ME HARD AND SOFT" },
+                    { 3, new DateTime(2018, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "/img/Albuns/3.jpg", null, "ye" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Artista",
+                columns: new[] { "Id", "Biografia", "DataDeNascimento", "Nome" },
+                values: new object[] { 1, null, new DateTime(1977, 6, 8, 0, 0, 0, 0, DateTimeKind.Unspecified), "Kanye West" });
+
+            migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[,]
+                {
+                    { "0b44ca04-f6b0-4a8f-a953-1f2330d30894", null, "Administrador", "ADMINISTRADOR" },
+                    { "bec71b05-8f3d-4849-88bb-0e8d518d2de8", null, "Usuário", "USUÁRIO" },
+                    { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", null, "Moderador", "MODERADOR" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUsers",
+                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", 0, "143d000a-210b-464c-9859-42d78b1cd33c", "admin@aboutsongs.com", true, false, null, "ADMIN@ABOUTSONGS.COM", "ADMIN", "AQAAAAIAAYagAAAAEESkexct3GFFNB/w0BYBQ0hiWs2PQbT/MoiYR/8gizhpqjYJjYDnE2GoyvCpNEbxAQ==", null, false, "b44d9f56-145e-48da-9461-769073801483", false, "Admin" });
+
+            migrationBuilder.InsertData(
+                table: "Genero",
+                columns: new[] { "Id", "Nome" },
+                values: new object[,]
+                {
+                    { 1, "Pop" },
+                    { 2, "Rap/Hip-Hop" },
+                    { 3, "Rock" },
+                    { 4, "Funk" },
+                    { 5, "Eletrônica" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Musica",
+                columns: new[] { "Id", "Compositores", "Duracao", "Título" },
+                values: new object[] { 1, "JEFF BHASKER, MALIK YUSEF JONES, EMILE HAYNIE, JOHN ROGER BRANCH, MIKE DEAN, TERRENCE THORNTON, KANYE WEST, PHILLIPS PETER", new TimeSpan(0, 9, 7, 0, 0), "Runaway" });
+
+            migrationBuilder.InsertData(
+                table: "AlbumArtista",
+                columns: new[] { "AlbumId", "ArtistaId", "Duracao", "Faixa", "MusicaId" },
+                values: new object[] { 1, 1, null, 0, 1 });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUserRoles",
+                columns: new[] { "RoleId", "UserId" },
+                values: new object[,]
+                {
+                    { "0b44ca04-f6b0-4a8f-a953-1f2330d30894", "ddf093a6-6cb5-4ff7-9a64-83da34aee005" },
+                    { "bec71b05-8f3d-4849-88bb-0e8d518d2de8", "ddf093a6-6cb5-4ff7-9a64-83da34aee005" },
+                    { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", "ddf093a6-6cb5-4ff7-9a64-83da34aee005" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Usuario",
+                columns: new[] { "UsuarioId", "DataDeNascimento", "Foto", "Nome" },
+                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "", "Guilherme Bispo da Silva" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AlbumArtista_ArtistaId",

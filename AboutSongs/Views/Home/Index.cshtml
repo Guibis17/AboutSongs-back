@@ -14,8 +14,8 @@
                 {
                     <div class="col">
                         <div class="bg-light rounded-2">
-                            <img src="@album.Foto" class="w-100 rounded-top-2" alt="@album.Nome">
-                            <h3 class="display-4 fs-6 text-dark py-2">@album.Nome</h3>
+                            <img src="@album.Foto" class="w-100 rounded-top-2" alt="@album.Título">
+                            <h3 class="display-4 fs-6 text-dark py-2">@album.Título</h3>
                         </div>
                     </div>
                 }
@@ -31,12 +31,11 @@
             <div class="col">
                 <a asp-action="musica" asp-route-id="@musica.Id" class="text-decoration-none">
                     <div class="card bg-dark border-white">
-                        <img src="@musica." class="card-img-top object-fit-cover" alt="@musica.Título" height="260" />
                         <div class="card-body">
                             <h5 class="card-title text-white mb-3">@musica.Título</h5>
                             <div class="d-flex justify-content-between">
-                                @* <span class="text-white">@musica.Album.Título</span>
-                                <span class="text-white">@musica.Generos.Count() Generos</span> *@
+                                 <span class="text-white">@musica.AlbunsArtistas</span>
+                                <span class="text-white">@musica.Generos.Count() Generos</span> 
                             </div>
                         </div>
                     </div>

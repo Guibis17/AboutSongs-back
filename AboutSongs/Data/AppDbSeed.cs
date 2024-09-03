@@ -12,21 +12,21 @@ public class AppDbSeed
         {
             new Album() {
                 Id = 1,
-                Nome = "My Beautiful Dark Twisted Fantasy",
+                Título = "My Beautiful Dark Twisted Fantasy",
                 Foto = "/img/Albuns/1.jpg",
                 DataDeLancamento = DateTime.Parse ("22/11/2010"),
                 ExibirHome = true
             },
             new Album() {
                 Id = 2,
-                Nome = "HIT ME HARD AND SOFT",
+                Título = "HIT ME HARD AND SOFT",
                 Foto = "/img/Albuns/2.jpg",
                 DataDeLancamento = DateTime.Parse ("17/05/2024"),
                 ExibirHome = true
             },
             new Album() {
                 Id = 3,
-                Nome = "ye",
+                Título = "ye",
                 Foto = "/img/Albuns/3.jpg",
                 DataDeLancamento = DateTime.Parse ("1/06/2018"),
                 ExibirHome = true
@@ -46,6 +46,19 @@ public class AppDbSeed
         };
         builder.Entity<Musica>().HasData(musicas);
         #endregion
+
+        #region Populate Artista
+        List<Artista> artistas = new(){
+            new Artista() {
+                Id = 1,
+                Nome = "Kanye West",
+                DataDeNascimento = DateTime.Parse ("8/06/1977"),
+            }
+        };
+        builder.Entity<Artista>().HasData(artistas);
+        #endregion
+
+
 
         #region Populate Generos
         List<Genero> generos = new() {
@@ -79,6 +92,7 @@ public class AppDbSeed
             new AlbumArtista() {
                 AlbumId = 1,
                 ArtistaId = 1,
+                MusicaId = 1,
             },
         };
         builder.Entity<AlbumArtista>().HasData(albumArtistas);

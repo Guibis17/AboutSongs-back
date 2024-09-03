@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AboutSongs.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240830133843_criar-banco")]
+    [Migration("20240903131459_criar-banco")]
     partial class criarbanco
     {
         /// <inheritdoc />
@@ -54,6 +54,32 @@ namespace AboutSongs.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Album");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DataDeLancamento = new DateTime(2010, 11, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExibirHome = true,
+                            Foto = "/img/Albuns/1.jpg",
+                            Título = "My Beautiful Dark Twisted Fantasy"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DataDeLancamento = new DateTime(2024, 5, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExibirHome = true,
+                            Foto = "/img/Albuns/2.jpg",
+                            Título = "HIT ME HARD AND SOFT"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DataDeLancamento = new DateTime(2018, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExibirHome = true,
+                            Foto = "/img/Albuns/3.jpg",
+                            Título = "ye"
+                        });
                 });
 
             modelBuilder.Entity("AboutSongs.Models.AlbumArtista", b =>
@@ -83,6 +109,15 @@ namespace AboutSongs.Migrations
                     b.HasIndex("MusicaId");
 
                     b.ToTable("AlbumArtista");
+
+                    b.HasData(
+                        new
+                        {
+                            AlbumId = 1,
+                            ArtistaId = 1,
+                            Faixa = 0,
+                            MusicaId = 1
+                        });
                 });
 
             modelBuilder.Entity("AboutSongs.Models.AlbumGenero", b =>
@@ -125,6 +160,14 @@ namespace AboutSongs.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Artista");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DataDeNascimento = new DateTime(1977, 6, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Nome = "Kanye West"
+                        });
                 });
 
             modelBuilder.Entity("AboutSongs.Models.Comentario", b =>
@@ -178,6 +221,33 @@ namespace AboutSongs.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Genero");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Nome = "Pop"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Nome = "Rap/Hip-Hop"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Nome = "Rock"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Nome = "Funk"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Nome = "Eletrônica"
+                        });
                 });
 
             modelBuilder.Entity("AboutSongs.Models.GeneroArtista", b =>
@@ -221,6 +291,15 @@ namespace AboutSongs.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Musica");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Compositores = "JEFF BHASKER, MALIK YUSEF JONES, EMILE HAYNIE, JOHN ROGER BRANCH, MIKE DEAN, TERRENCE THORNTON, KANYE WEST, PHILLIPS PETER",
+                            Duracao = new TimeSpan(0, 9, 7, 0, 0),
+                            Título = "Runaway"
+                        });
                 });
 
             modelBuilder.Entity("AboutSongs.Models.MusicaGenero", b =>
@@ -260,6 +339,15 @@ namespace AboutSongs.Migrations
                     b.HasKey("UsuarioId");
 
                     b.ToTable("Usuario");
+
+                    b.HasData(
+                        new
+                        {
+                            UsuarioId = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
+                            DataDeNascimento = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Foto = "",
+                            Nome = "Guilherme Bispo da Silva"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -286,6 +374,26 @@ namespace AboutSongs.Migrations
                         .HasDatabaseName("RoleNameIndex");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "0b44ca04-f6b0-4a8f-a953-1f2330d30894",
+                            Name = "Administrador",
+                            NormalizedName = "ADMINISTRADOR"
+                        },
+                        new
+                        {
+                            Id = "bec71b05-8f3d-4849-88bb-0e8d518d2de8",
+                            Name = "Usuário",
+                            NormalizedName = "USUÁRIO"
+                        },
+                        new
+                        {
+                            Id = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
+                            Name = "Moderador",
+                            NormalizedName = "MODERADOR"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -375,6 +483,24 @@ namespace AboutSongs.Migrations
                         .HasDatabaseName("UserNameIndex");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "143d000a-210b-464c-9859-42d78b1cd33c",
+                            Email = "admin@aboutsongs.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "ADMIN@ABOUTSONGS.COM",
+                            NormalizedUserName = "ADMIN",
+                            PasswordHash = "AQAAAAIAAYagAAAAEESkexct3GFFNB/w0BYBQ0hiWs2PQbT/MoiYR/8gizhpqjYJjYDnE2GoyvCpNEbxAQ==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "b44d9f56-145e-48da-9461-769073801483",
+                            TwoFactorEnabled = false,
+                            UserName = "Admin"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -437,6 +563,23 @@ namespace AboutSongs.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
+                            RoleId = "0b44ca04-f6b0-4a8f-a953-1f2330d30894"
+                        },
+                        new
+                        {
+                            UserId = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
+                            RoleId = "bec71b05-8f3d-4849-88bb-0e8d518d2de8"
+                        },
+                        new
+                        {
+                            UserId = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
+                            RoleId = "ddf093a6-6cb5-4ff7-9a64-83da34aee005"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
