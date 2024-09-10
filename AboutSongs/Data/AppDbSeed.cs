@@ -177,136 +177,208 @@ public class AppDbSeed
                 Duracao = TimeSpan.Parse ("4:21")
             },
             new Musica() {
-                Id = 22,
+                Id = 23,
                 Título = "THE GREATEST ",
                 Compositores = "Billie Eilish e Finneas O'Connell",
                 Duracao = TimeSpan.Parse ("4:53")
             },
             new Musica() {
-                Id = 22,
+                Id = 24,
                 Título = "L’AMOUR DE MA VIE ",
                 Compositores = "Billie Eilish e Finneas O'Connell",
                 Duracao = TimeSpan.Parse ("5:33")
             },
             new Musica() {
-                Id = 22,
+                Id = 25,
                 Título = "THE DINER",
                 Compositores = "Billie Eilish e Finneas O'Connell",
                 Duracao = TimeSpan.Parse ("3:06")
             },
             new Musica() {
-                Id = 22,
+                Id = 26,
                 Título = "BITTERSUITE",
                 Compositores = "Billie Eilish e Finneas O'Connell",
                 Duracao = TimeSpan.Parse ("4:58")
             },
             new Musica() {
-                Id = 22,
+                Id = 27,
                 Título = "BLUE",
                 Compositores = "Billie Eilish e Finneas O'Connell",
                 Duracao = TimeSpan.Parse ("5:43")
             },
             new Musica() {
-                Id = 23,
+                Id = 28,
                 Título = "Die With A Smile",
                 Compositores = "Andrew Watt,Bruno Mars, Dernst Emile IIJames Faunt, leroy e Lady Gaga",
                 Duracao = TimeSpan.Parse ("4:11")
             },
             new Musica() {
-                Id = 24,
+                Id = 29,
                 Título = "Taste",
                 Compositores = "Amy Allen, Ian Kirkpatrick, John Ryan, Julia Michaels e Sabrina Carpenter",
                 Duracao = TimeSpan.Parse ("2:37")
             },
             new Musica() {
-                Id = 25,
+                Id = 30,
                 Título = "Please Please Please",
                 Compositores = "Amy Allen, Jack Antonoff e Sabrina Carpenter",
                 Duracao = TimeSpan.Parse ("3:06")
             },
             new Musica() {
-                Id = 26,
+                Id = 31,
                 Título = "Good Graces",
                 Compositores = "Amy Allen, Julia Michaels, John Ryan, Julian Bunetta e Sabrina Carpenter",
                 Duracao = TimeSpan.Parse ("3:05")
             },
             new Musica() {
-                Id = 27,
+                Id = 32,
                 Título = "Sharpest Tool",
                 Compositores = "Amy Allen, Jack Antonoff e Sabrina Carpenter",
                 Duracao = TimeSpan.Parse ("3:38")
             },
             new Musica() {
-                Id = 28,
+                Id = 33,
                 Título = "Coincidence",
                 Compositores = "Amy Allen, Ian Kirkpatrick, Julia Michaels, John Ryan e Sabrina Carpenter",
                 Duracao = TimeSpan.Parse ("2:44")
             },
             new Musica() {
-                Id = 29,
+                Id = 34,
                 Título = "Bed Chem",
                 Compositores = "Amy Allen, Ian Kirkpatrick, Julia Michaels, John Ryan e Sabrina Carpenter",
                 Duracao = TimeSpan.Parse ("2:51")
             },
             new Musica() {
-                Id = 30,
+                Id = 35,
                 Título = "Espresso",
                 Compositores = "Amy Allen, Julian Bunetta, Steph Jones e Sabrina Carpenter",
                 Duracao = TimeSpan.Parse ("2:55")
             },
             new Musica() {
-                Id = 31,
+                Id = 36,
                 Título = "Dumb & Poetic",
                 Compositores = "Amy Allen, John Ryan, Julia Michaels e Sabrina Carpenter",
                 Duracao = TimeSpan.Parse ("2:13")
             },
             new Musica() {
-                Id = 32,
+                Id = 37,
                 Título = "Slim Pickins",
                 Compositores = "Amy Allen, Jack Antonoff e Sabrina Carpenter",
                 Duracao = TimeSpan.Parse ("2:32")
             },
             new Musica() {
-                Id = 33,
+                Id = 38,
                 Título = "Juno",
                 Compositores = "Amy Allen, John Ryan e Sabrina Carpenter",
                 Duracao = TimeSpan.Parse ("4:11")
             },
             new Musica() {
-                Id = 34,
+                Id = 39,
                 Título = "Lie To Girls",
                 Compositores = "Amy Allen, Jack Antonoff e Sabrina Carpenter",
                 Duracao = TimeSpan.Parse ("3:22")
             },
             new Musica() {
-                Id = 35,
+                Id = 40,
                 Título = "Don't Smile",
                 Compositores = "Amy Allen, John Ryan, Julian Bunetta e Sabrina Carpenter",
                 Duracao = TimeSpan.Parse ("3:26")
             },
             new Musica() {
-                Id = 36,
+                Id = 41,
                 Título = "american dream",
                 Compositores = "BK Rube, Isaiah Brown, James Owens, Sterling White",
                 Duracao = TimeSpan.Parse ("1:03")
             },
             new Musica() {
-                Id = 37,
+                Id = 42,
                 Título = "all of me",
                 Compositores = "Billie Rae Calvin, Isaiah Brown, Jalen Jackson, Jared Brown, Khaya Gilika, Raphael Oliveira, Shéyaa Bin Abraham-Joseph, Sterling White Jr. e Yakki Davis",
                 Duracao = TimeSpan.Parse ("3:18")
             },
             new Musica() {
-                Id = 38,
+                Id = 43,
                 Título = "redrum",
                 Compositores = "London Tyler Holmes, Mateen Kyle Niknam, Shéyaa Bin Abraham-Joseph e Vinícius de Moraes",
                 Duracao = TimeSpan.Parse ("4:30")
             },
             new Musica() {
-                Id = 36,
+                Id = 44,
                 Título = "n.h.i.e",
                 Compositores = "Anthony Paul Jefferies, Amala Dlamini, Douglas Ford, Jonah Stevens, Kurtis McKenzie, Michael Orabiyi e Shéyaa Bin Abraham-Joseph",
                 Duracao = TimeSpan.Parse ("2:23")
+            },
+            new Musica() {
+                Id = 45,
+                Título = "sneakey",
+                Compositores = "Edward Maclin Cooper III e Shéyaa Bin Abraham-Joseph",
+                Duracao = TimeSpan.Parse ("3:21")
+            },
+            new Musica() {
+                Id = 46,
+                Título = "pop ur shit",
+                Compositores = "Allen Ritter, Jeffery Lamar Williams, Leland Tyler Wayne e Shéyaa Bin Abraham-Joseph",
+                Duracao = TimeSpan.Parse ("3:13")
+            },
+            new Musica() {
+                Id = 47,
+                Título = "pop ur shit",
+                Compositores = "Allen Ritter, Jeffery Lamar Williams, Leland Tyler Wayne e Shéyaa Bin Abraham-Joseph",
+                Duracao = TimeSpan.Parse ("3:13")
+            },
+            new Musica() {
+                Id = 48,
+                Título = "letter to my brudda",
+                Compositores = "Kavi Lybarger, Paola Barba, Park Min Geon, Shéyaa Bin Abraham-Joseph, Tchakalla Anthony Romeo, Tyrese McGriff e William Boyette",
+                Duracao = TimeSpan.Parse ("2:39")
+            },
+            new Musica() {
+                Id = 49,
+                Título = "dangerous",
+                Compositores = "Durk Banks, Jahmal Gwin, Jahshua Brown, Leland Tyler Wayne e Shéyaa Bin Abraham-Joseph",
+                Duracao = TimeSpan.Parse ("4:25")
+            },
+            new Musica() {
+                Id = 50,
+                Título = "née-nah",
+                Compositores = "Douglas Ford, Jacques Webster, Leland Tyler Wayne, Malcolm McLaren, Rodney Argent, Shéyaa Bin Abraham-Joseph e William Handy",
+                Duracao = TimeSpan.Parse ("3:40")
+            },
+            new Musica() {
+                Id = 51,
+                Título = "see the real",
+                Compositores = "Dylan Cleary-Krell, Joshua Parker, Jason Cornet, Jocelyn Donald, Jordan Holt-May, Samuel David Jimenez e Shéyaa Bin Abraham-Joseph",
+                Duracao = TimeSpan.Parse ("3:02")
+            },
+            new Musica() {
+                Id = 52,
+                Título = "prove it",
+                Compositores = "Carl Thompson, Edward Maclin Cooper III, Faith Evans, Isaiah Brown, James Owens,Keith Thomas, Shéyaa Bin Abraham-Joseph, Summer Walker, Tauren kngs Stovall e Tye Beats",
+                Duracao = TimeSpan.Parse ("3:27")
+            },
+            new Musica() {
+                Id = 53,
+                Título = "should've wore a bonnet",
+                Compositores = "Ronald LaTour, Christopher Wood, Darryl Pearson, Daveon Jackson, David Patino, Donald Earle De Grate Jr Francis Esteban, Joel Hailey, John Julian e Shéyaa Bin Abraham-Joseph",
+                Duracao = TimeSpan.Parse ("3:06")
+            },
+            new Musica() {
+                Id = 54,
+                Título = "just like me",
+                Compositores = "Isaac De Boni, Michael Mule, Akeel Henry, Damini Ebunoluwa Ogulu, Jahmal Gwin, Jordon Manswell, Kevin Ekofo, Khadijah Lopez, Kira Huszar, Leland Tyler Wayne, Nevon Sinclair e Shéyaa Bin Abraham-Joseph",
+                Duracao = TimeSpan.Parse ("3:51")
+            },
+            new Musica() {
+                Id = 55,
+                Título = "red sky",
+                Compositores = "4th Pyramid, Carlton Davis Mays, Jr.,Courtney Dwight, John Stephen Sudduth, Shaan Ramaprasad, Shéyaa Bin Abraham-Joseph e Tommy Newport",
+                Duracao = TimeSpan.Parse ("2:56")
+            },
+            new Musica() {
+                Id = 56,
+                Título = "dark days",
+                Compositores = "Ahmar Bailey, Atia Boggs, JONAS LEE, Kavi Lybarger,Mariah Buckles, Paola Madelaine Barba Amado, Shéyaa Bin Abraham-Joseph, Yakki Davis e Yousef Sameh",
+                Duracao = TimeSpan.Parse ("4:55")
             },
         };
         builder.Entity<Musica>().HasData(musicas);
@@ -329,6 +401,10 @@ public class AppDbSeed
             new Artista() {
                 Id = 4,
                 Nome = "Sabrina Carpenter"
+            },
+            new Artista() {
+                Id = 5,
+                Nome = "21 Savage"
             },
         };
         builder.Entity<Artista>().HasData(artistas);
@@ -502,6 +578,90 @@ public class AppDbSeed
             new MusicaGenero() {
                 MusicaId = 35,
                 GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 36,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 37,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 38,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 39,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 40,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 41,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 42,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 43,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 44,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 45,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 46,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 47,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 48,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 49,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 50,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 51,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 52,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 53,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 54,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 55,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 56,
+                GeneroId = 2,
             },
         };
         builder.Entity<MusicaGenero>().HasData(musicaGeneros);
@@ -684,6 +844,126 @@ public class AppDbSeed
                 AlbumId = 3,
                 ArtistaId = 4,
                 MusicaId = 35,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 36,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 36,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 37,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 38,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 39,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 4,
+                MusicaId = 40,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 41,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 42,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 43,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 44,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 45,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 46,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 47,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 48,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 49,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 50,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 51,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 52,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 53,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 54,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 55,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 56,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 57,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 58,
             },
         };
         builder.Entity<AlbumArtista>().HasData(albumArtistas);
