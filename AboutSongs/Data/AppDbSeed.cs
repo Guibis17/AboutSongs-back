@@ -38,6 +38,13 @@ public class AppDbSeed
                 DataDeLancamento = DateTime.Parse ("12/01/2024"),
                 ExibirHome = true
             },
+            new Album() {
+                Id = 5,
+                Título = "Utopia",
+                Foto = "",
+                DataDeLancamento = DateTime.Parse ("28/07/2023"),
+                ExibirHome = true
+            },
         };
         builder.Entity<Album>().HasData(albuns);
         #endregion
@@ -380,6 +387,84 @@ public class AppDbSeed
                 Compositores = "Ahmar Bailey, Atia Boggs, JONAS LEE, Kavi Lybarger,Mariah Buckles, Paola Madelaine Barba Amado, Shéyaa Bin Abraham-Joseph, Yakki Davis e Yousef Sameh",
                 Duracao = TimeSpan.Parse ("4:55")
             },
+            new Musica() {
+                Id = 57,
+                Título = "Not Like Us",
+                Compositores = "Kendrick LamarRay Charles e Sean Momberger",
+                Duracao = TimeSpan.Parse ("4:34")
+            },
+            new Musica() {
+                Id = 58,
+                Título = "HYAENA",
+                Compositores = "Mike Dean, Noah Goldstein, Andy Votel, Derek Shulman, Ebony Oshunrinde, Edward Hazel, George Clinton, Jacques Webster, Jahaan Sweet, Kerry Minnear e Ray Shulman",
+                Duracao = TimeSpan.Parse ("3:42")
+            },
+            new Musica() {
+                Id = 59,
+                Título = "THANK GOD",
+                Compositores = "Allen Ritter, Ebony Oshunrinde, Finatik(of FNZ), Zac(of FNZ), Isaac Boni, Jacques Webster, Jahmal Gwin, Mark Mbogo, Micheal Mule, Stormi Webster e Ye",
+                Duracao = TimeSpan.Parse ("3:04")
+            },
+            new Musica() {
+                Id = 60,
+                Título = "MODERN JAM (feat. Teezo Touchdown)",
+                Compositores = "Mike Dean, Aaron Thomas, Guy-Manuel de Homem, Jacques Webster e Jahaan Sweet",
+                Duracao = TimeSpan.Parse ("4:15")
+            },
+            new Musica() {
+                Id = 61,
+                Título = "MY EYES",
+                Compositores = "Josiah Sherman, Wesley Glass,Dua Saleh, Ebony Oshunrinde, Jacques Webster, Joseph Thornalley, Justin Vernon, Phil Cook e Sampha Sisay ",
+                Duracao = TimeSpan.Parse ("4:11")
+            },
+            new Musica() {
+                Id = 62,
+                Título = "GOD'S COUNTRY",
+                Compositores = "Dez Wright, Samuel Gloade, Jacques Webster e Ye ",
+                Duracao = TimeSpan.Parse ("2:07")
+            },
+            new Musica() {
+                Id = 63,
+                Título = "SIRENS",
+                Compositores = "Josiah Sherman, Noah Goldstein, Psymun, Ebony Oshunrinde, Isaac Mpofu, Jacques Webster, Jahaan Sweet, John Fannon, Keith Kawbe e Evan mast",
+                Duracao = TimeSpan.Parse ("3:24")
+            },
+            new Musica() {
+                Id = 64,
+                Título = "MELTDOWN (feat. Drake)",
+                Compositores = "ANDERSON HERNANDEZ, Brytavious Chambers, Coleman, Matthew Samuels, A. Graham, Benjamin Saint Fort e Jacques Webster",
+                Duracao = TimeSpan.Parse ("4:06")
+            },
+            new Musica() {
+                Id = 65,
+                Título = "FE!N (feat. Playboi Carti)",
+                Compositores = "Jahaan Sweet, Jacques Webster, Jordan Carter e Khadimou Fall",
+                Duracao = TimeSpan.Parse ("3:11")
+            },
+            new Musica() {
+                Id = 66,
+                Título = "DELRESTO (ECHOES) (feat. Beyoncé)",
+                Compositores = "Allen Ritter, Chauncey Hollis, MIke Dean, Beyoncé, Jacques Webster, James Blake e Terius Gesteelde-Diamant",
+                Duracao = TimeSpan.Parse ("4:34")
+            },
+            new Musica() {
+                Id = 67,
+                Título = "I KNOW ?",
+                Compositores = "Josiah Sherman, Ozan Yildrim, Scotty Coleman, Jacques Webster, Kobe Hood e Terrance George",
+                Duracao = TimeSpan.Parse ("3:31")
+            },
+            new Musica() {
+                Id = 68,
+                Título = "TOPIA TWINS (feat. Rob49 & 21 Savage)",
+                Compositores = "Dez Wright, Wesley Glass, Cash Esmailian,Douglas Ford, Harry Edwards, Henri Velasco, Jacques Webster, Oliver Rodigan, Robert Thomas e Shéyaa Bin Abraham-Joseph",
+                Duracao = TimeSpan.Parse ("3:43")
+            },
+            new Musica() {
+                Id = 69,
+                Título = "CIRCUS MAXIMUS (feat. The Weeknd & Swae Lee)",
+                Compositores = "Noah Goldstein, Abel Tesfaye, Ebony Oshunrinde, Gary Klebe, Jacques Webster, Jahaan Sweet, Khalif Brown e Mike Dean",
+                Duracao = TimeSpan.Parse ("4:18")
+            },
         };
         builder.Entity<Musica>().HasData(musicas);
         #endregion
@@ -405,6 +490,14 @@ public class AppDbSeed
             new Artista() {
                 Id = 5,
                 Nome = "21 Savage"
+            },
+            new Artista() {
+                Id = 6,
+                Nome = "Travis Scott"
+            },
+            new Artista() {
+                Id = 7,
+                Nome = "Kendrick Lamar"
             },
         };
         builder.Entity<Artista>().HasData(artistas);
