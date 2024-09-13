@@ -45,6 +45,13 @@ public class AppDbSeed
                 DataDeLancamento = DateTime.Parse ("28/07/2023"),
                 ExibirHome = true
             },
+            new Album() {
+                Id = 6,
+                Título = "333",
+                Foto = "",
+                DataDeLancamento = DateTime.Parse ("09/09/2024"),
+                ExibirHome = true
+            },
         };
         builder.Entity<Album>().HasData(albuns);
         #endregion
@@ -465,6 +472,122 @@ public class AppDbSeed
                 Compositores = "Noah Goldstein, Abel Tesfaye, Ebony Oshunrinde, Gary Klebe, Jacques Webster, Jahaan Sweet, Khalif Brown e Mike Dean",
                 Duracao = TimeSpan.Parse ("4:18")
             },
+            new Musica() {
+                Id = 70,
+                Título = "PARASAIL (feat. Yung Lean & Dave Chappelle)",
+                Compositores = "Buddy Ross, Jahaan Sweet, Noah Goldstein, Anthony Ruiz, Dave Bixby, David Chappelle, Jacques Webster, Jonatan Håsted e Joseph Thornalley",
+                Duracao = TimeSpan.Parse ("2:34")
+            },
+            new Musica() {
+                Id = 71,
+                Título = "SKITZO (feat. Young Thug)",
+                Compositores = "Dylan Teixeira, Matthew Samuels, Scotty Coleman, Sevn Thomas, Blue Miller, Douglas Ford, Ebony Oshunrinde, India Simpson, Jacques Webster, Jahaan Sweet, Jeffrey Williams, Nami Ondas, Nik Dean, Slim Pharoah e Travis Sayles",
+                Duracao = TimeSpan.Parse ("6:06")
+            },
+            new Musica() {
+                Id = 72,
+                Título = "LOST FOREVER (feat. Westside Gunn)",
+                Compositores = "Alan Maman, Alvin Worthy, Dominic Maker, Douglas Ford, Elliott Baker, Jacques Webster e James Litherland",
+                Duracao = TimeSpan.Parse ("2:43")
+            },
+            new Musica() {
+                Id = 73,
+                Título = "LOOOVE (feat. Kid Cudi)",
+                Compositores = "Buddy Ross, Jacques Webster, Pharrell Williams e Scott Mescudi",
+                Duracao = TimeSpan.Parse ("3:46")
+            },
+            new Musica() {
+                Id = 74,
+                Título = "K-POP (feat. Bad Bunny & The Weeknd)",
+                Compositores = "Bigram John Zayas, Carlo Montagnese, Jahaan Sweet, Matthew Samuels, Abel Tesfaye, Benito Antonio Martínez Ocasio, Benjamin Saint Fort e Jacques Webster",
+                Duracao = TimeSpan.Parse ("3:05")
+            },
+            new Musica() {
+                Id = 75,
+                Título = "TELEKINESIS (feat. SZA & Future)",
+                Compositores = "Edgar Nabeyin Pandord, Jacques Webster, Jahaan Sweet, Jahmal Gwin, Nayvadius Wilburn, Nima Jahanbin, Paimon Jahanbin, Solana Rowe, Victory Boyd e Ye",
+                Duracao = TimeSpan.Parse ("5:53")
+            },
+            new Musica() {
+                Id = 76,
+                Título = "TIL FURTHER NOTICE (feat. James Blake & 21 Savage)",
+                Compositores = "Jacques Webster, James Litherland, Leland Wayne e Shéyaa Bin Abraham-Joseph",
+                Duracao = TimeSpan.Parse ("5:14")
+            },
+            new Musica() {
+                Id = 77,
+                Título = "Crack com Mussilon",
+                Compositores = "Citação: Oceano - Djavan, Djavan e Matuê",
+                Duracao = TimeSpan.Parse ("2:34")
+            },
+            new Musica() {
+                Id = 78,
+                Título = "Imagina esse Cenário",
+                Compositores = "Matuê e Veigh",
+                Duracao = TimeSpan.Parse ("2:35")
+            },
+
+            new Musica() {
+                Id = 79,
+                Título = "Isso é Sério",
+                Compositores = "Brandão85 e Matuê",
+                Duracao = TimeSpan.Parse ("4:45")
+            },
+            new Musica() {
+                Id = 80,
+                Título = "1993",
+                Compositores = "Matuê",
+                Duracao = TimeSpan.Parse ("2:07")
+            },
+            new Musica() {
+                Id = 81,
+                Título = "4Tal",
+                Compositores = "Matuê e Teto",
+                Duracao = TimeSpan.Parse ("3:24")
+            },
+            new Musica() {
+                Id = 82,
+                Título = "O Som",
+                Compositores = "Matuê",
+                Duracao = TimeSpan.Parse ("5:12")
+            },
+            new Musica() {
+                Id = 83,
+                Título = "04AM",
+                Compositores = "Matuê",
+                Duracao = TimeSpan.Parse ("3:19")
+            },
+            new Musica() {
+                Id = 84,
+                Título = "Castlevania",
+                Compositores = "Matuê",
+                Duracao = TimeSpan.Parse ("3:50")
+            },
+            new Musica() {
+                Id =  85,
+                Título = "V de Vilão",
+                Compositores = "Matuê",
+                Duracao = TimeSpan.Parse ("2:26")
+            },
+            new Musica() {
+                Id = 86,
+                Título = "V de Vilão",
+                Compositores = "Matuê",
+                Duracao = TimeSpan.Parse ("3:24")
+            },
+            new Musica() {
+                Id = 87,
+                Título = "333",
+                Compositores = "Matuê",
+                Duracao = TimeSpan.Parse ("5:24")
+            },
+            new Musica() {
+                Id = 88,
+                Título = "Like This!",
+                Compositores = "Matuê",
+                Duracao = TimeSpan.Parse ("3:28")
+            },
+
         };
         builder.Entity<Musica>().HasData(musicas);
         #endregion
@@ -498,6 +621,10 @@ public class AppDbSeed
             new Artista() {
                 Id = 7,
                 Nome = "Kendrick Lamar"
+            },
+            new Artista() {
+                Id = 8,
+                Nome = "Matuê"
             },
         };
         builder.Entity<Artista>().HasData(artistas);
@@ -754,6 +881,142 @@ public class AppDbSeed
             },
             new MusicaGenero() {
                 MusicaId = 56,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 57,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 58,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 59,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 60,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 61,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 62,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 63,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 64,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 56,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 65,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 66,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 67,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 68,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 69,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 70,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 71,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 72,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 73,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 74,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 75,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 76,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 77,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 78,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 79,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 80,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 81,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 82,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 83,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 84,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 85,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 86,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 87,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 88,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 89,
                 GeneroId = 2,
             },
         };
@@ -1057,6 +1320,156 @@ public class AppDbSeed
                 AlbumId = 4,
                 ArtistaId = 5,
                 MusicaId = 58,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 59,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 60,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 61,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 62,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 63,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 64,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 65,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 66,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 67,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 68,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 69,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 70,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 71,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 72,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 73,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 74,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 75,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 76,
+            },
+            new AlbumArtista() {
+                AlbumId = 4,
+                ArtistaId = 5,
+                MusicaId = 77,
+            },
+            new AlbumArtista() {
+                AlbumId = 5,
+                ArtistaId = 5,
+                MusicaId = 78,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 79,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 80,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 81,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 82,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 83,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 84,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 85,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 86,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 87,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 88,
             },
         };
         builder.Entity<AlbumArtista>().HasData(albumArtistas);
