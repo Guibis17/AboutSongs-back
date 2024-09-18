@@ -52,6 +52,13 @@ public class AppDbSeed
                 DataDeLancamento = DateTime.Parse ("09/09/2024"),
                 ExibirHome = true
             },
+            new Album() {
+                Id = 7,
+                Título = "Bad Boys",
+                Foto = "",
+                DataDeLancamento = DateTime.Parse ("21/08/2024"),
+                ExibirHome = true
+            },
         };
         builder.Entity<Album>().HasData(albuns);
         #endregion
@@ -571,7 +578,7 @@ public class AppDbSeed
             },
             new Musica() {
                 Id = 86,
-                Título = "V de Vilão",
+                Título = "Maria",
                 Compositores = "Matuê",
                 Duracao = TimeSpan.Parse ("3:24")
             },
@@ -586,6 +593,90 @@ public class AppDbSeed
                 Título = "Like This!",
                 Compositores = "Matuê",
                 Duracao = TimeSpan.Parse ("3:28")
+            },
+            new Musica() {
+                Id = 89,
+                Título = "Bad Boys",
+                Compositores = "DJ Glenner, Elizie Morais dos Santos Leite, Mc IG, MC PH, MC Ryan SP, Renan Dalmas e Yuri Dinalli ",
+                Duracao = TimeSpan.Parse ("5:51")
+            },
+            new Musica() {
+                Id = 90,
+                Título = "Nois Já Tá Rico",
+                Compositores = "DJ Glenner, DJ Negret, Elizie Morais dos Santos Leite, Mc IG, MC Ryan SP e Orochi",
+                Duracao = TimeSpan.Parse ("4:48")
+            },
+            new Musica() {
+                Id = 91,
+                Título = "Noite Carioca",
+                Compositores = "Bielzinho, Borges, L7NNON, Mc Cidinho General, MC GP, Mc IG, MC Maneirinho, MC Nego Micha, MC PH, MC Ryan SP, Murillo e LT no Beat, Orochi e TrapLaudo",
+                Duracao = TimeSpan.Parse ("13:30")
+            },
+            new Musica() {
+                Id = 92,
+                Título = "Fernando de Noronha 2",
+                Compositores = "Mc IG, MC Ryan SP, Murillo e LT no Beat",
+                Duracao = TimeSpan.Parse ("3:50")
+            },
+            new Musica() {
+                Id = 93,
+                Título = "Filha do Deputado",
+                Compositores = "Mc IG, Mc Poze do Rodo, MC Ryan SP e Oruam",
+                Duracao = TimeSpan.Parse ("6:11")
+            },
+            new Musica() {
+                Id = 94,
+                Título = "Casal Celebridade",
+                Compositores = "DJ Glenner, Fepache, Mc IG e MC Ryan SP",
+                Duracao = TimeSpan.Parse ("3:28")
+            },
+            new Musica() {
+                Id = 95,
+                Título = "Quer falar o quê?",
+                Compositores = "Elizie Morais dos Santos Leite, Fepache, MC Hariel, Mc IG, Murillo e LT no Beat e Renan Dalmas",
+                Duracao = TimeSpan.Parse ("5:30")
+            },
+            new Musica() {
+                Id = 96,
+                Título = "Saudade",
+                Compositores = "Charles SantosElizie Morais dos Santos Leite, Galdino, Gale, Guiggow, Gustah, Leto, LUDMILLA, Mc IG e Pedro Lotto",
+                Duracao = TimeSpan.Parse ("2:36")
+            },
+            new Musica() {
+                Id = 97,
+                Título = "Afrodite",
+                Compositores = "DJ WN, Mc IG, MC PH, MC Ryan SP, Murillo e LT no Beat e WIU",
+                Duracao = TimeSpan.Parse ("3:44")
+            },
+            new Musica() {
+                Id = 98,
+                Título = "Imagina Eu",
+                Compositores = "Mc IG, Mc Jacaré e MC Ryan SP",
+                Duracao = TimeSpan.Parse ("2:50")
+            },
+            new Musica() {
+                Id = 99,
+                Título = "Hoje Não Vou Dormir na Mansão",
+                Compositores = "Boladin 211, DJ Glenner, Elizie Morais dos Santos Leite, Julee Beats, Mc IG, MC Nego Micha e Renan Dalmas",
+                Duracao = TimeSpan.Parse ("5:32")
+            },
+            new Musica() {
+                Id = 100,
+                Título = "Falsidade",
+                Compositores = "DJ Glenner, Mc IG, Mc Kadu, MC Marks e MC Ryan SP",
+                Duracao = TimeSpan.Parse ("6:39")
+            },
+            new Musica() {
+                Id = 101,
+                Título = "Não é Ego Não",
+                Compositores = "DJ Glenner,Dj TC, Elizie Morais dos Santos Leite, Mc Capelinha, Mc IG, Mc Kadu, MC LUUKY, MC Nego Micha, MC Tuto, Menor Will, Renan Dalmas e TrapLaudo",
+                Duracao = TimeSpan.Parse ("5:32")
+            },
+            new Musica() {
+                Id = 102,
+                Título = "Pra Roncar Tem que Desbicar",
+                Compositores = "Lil Kid, Mc Don Juan, MC GH do 7, MC Hariel, Mc IG, MC LUUKY, MC Marcos IP, Mc Menor Kau, MC Nego Micha, Mc Paiva ZS, MC Ryan SP, TrapLaudo e Ttheuz1n",
+                Duracao = TimeSpan.Parse ("11:05")
             },
 
         };
@@ -1013,11 +1104,11 @@ public class AppDbSeed
             },
             new MusicaGenero() {
                 MusicaId = 88,
-                GeneroId = 2,
+                GeneroId = 1,
             },
             new MusicaGenero() {
                 MusicaId = 89,
-                GeneroId = 2,
+                GeneroId = 1,
             },
         };
         builder.Entity<MusicaGenero>().HasData(musicaGeneros);
