@@ -53,9 +53,9 @@ public class AppDbSeed
             },
             new Album() {
                 Id = 7,
-                Título = "Bad Boys",
+                Título = "",
                 Foto = "",
-                DataDeLancamento = DateTime.Parse ("21/08/2024"),
+                DataDeLancamento = DateTime.Parse (""),
                 ExibirHome = true
             },
             new Album() {
@@ -602,86 +602,86 @@ public class AppDbSeed
             },
             new Musica() {
                 Id = 89,
-                Título = "Bad Boys",
-                Compositores = "DJ Glenner, Elizie Morais dos Santos Leite, Mc IG, MC PH, MC Ryan SP, Renan Dalmas e Yuri Dinalli ",
+                Título = "",
+                Compositores = "",
                 Duracao = TimeSpan.Parse ("5:51")
             },
             new Musica() {
                 Id = 90,
-                Título = "Nois Já Tá Rico",
-                Compositores = "DJ Glenner, DJ Negret, Elizie Morais dos Santos Leite, Mc IG, MC Ryan SP e Orochi",
+                Título = "",
+                Compositores = "",
                 Duracao = TimeSpan.Parse ("4:48")
             },
             new Musica() {
                 Id = 91,
-                Título = "Noite Carioca",
-                Compositores = "Bielzinho, Borges, L7NNON, Mc Cidinho General, MC GP, Mc IG, MC Maneirinho, MC Nego Micha, MC PH, MC Ryan SP, Murillo e LT no Beat, Orochi e TrapLaudo",
+                Título = "",
+                Compositores = "",
                 Duracao = TimeSpan.Parse ("13:30")
             },
             new Musica() {
                 Id = 92,
-                Título = "Fernando de Noronha 2",
-                Compositores = "Mc IG, MC Ryan SP, Murillo e LT no Beat",
+                Título = "",
+                Compositores = "",
                 Duracao = TimeSpan.Parse ("3:50")
             },
             new Musica() {
                 Id = 93,
-                Título = "Filha do Deputado",
-                Compositores = "Mc IG, Mc Poze do Rodo, MC Ryan SP e Oruam",
+                Título = "",
+                Compositores = "",
                 Duracao = TimeSpan.Parse ("6:11")
             },
             new Musica() {
                 Id = 94,
-                Título = "Casal Celebridade",
-                Compositores = "DJ Glenner, Fepache, Mc IG e MC Ryan SP",
+                Título = "",
+                Compositores = "",
                 Duracao = TimeSpan.Parse ("3:28")
             },
             new Musica() {
                 Id = 95,
-                Título = "Quer falar o quê?",
-                Compositores = "Elizie Morais dos Santos Leite, Fepache, MC Hariel, Mc IG, Murillo e LT no Beat e Renan Dalmas",
+                Título = "",
+                Compositores = "",
                 Duracao = TimeSpan.Parse ("5:30")
             },
             new Musica() {
                 Id = 96,
-                Título = "Saudade",
-                Compositores = "Charles SantosElizie Morais dos Santos Leite, Galdino, Gale, Guiggow, Gustah, Leto, LUDMILLA, Mc IG e Pedro Lotto",
+                Título = "",
+                Compositores = "",
                 Duracao = TimeSpan.Parse ("2:36")
             },
             new Musica() {
                 Id = 97,
-                Título = "Afrodite",
-                Compositores = "DJ WN, Mc IG, MC PH, MC Ryan SP, Murillo e LT no Beat e WIU",
+                Título = "",
+                Compositores = "",
                 Duracao = TimeSpan.Parse ("3:44")
             },
             new Musica() {
                 Id = 98,
-                Título = "Imagina Eu",
-                Compositores = "Mc IG, Mc Jacaré e MC Ryan SP",
+                Título = "",
+                Compositores = "",
                 Duracao = TimeSpan.Parse ("2:50")
             },
             new Musica() {
                 Id = 99,
-                Título = "Hoje Não Vou Dormir na Mansão",
-                Compositores = "Boladin 211, DJ Glenner, Elizie Morais dos Santos Leite, Julee Beats, Mc IG, MC Nego Micha e Renan Dalmas",
+                Título = "",
+                Compositores = "",
                 Duracao = TimeSpan.Parse ("5:32")
             },
             new Musica() {
                 Id = 100,
-                Título = "Falsidade",
-                Compositores = "DJ Glenner, Mc IG, Mc Kadu, MC Marks e MC Ryan SP",
+                Título = "",
+                Compositores = "",
                 Duracao = TimeSpan.Parse ("6:39")
             },
             new Musica() {
                 Id = 101,
-                Título = "Não é Ego Não",
-                Compositores = "DJ Glenner,Dj TC, Elizie Morais dos Santos Leite, Mc Capelinha, Mc IG, Mc Kadu, MC LUUKY, MC Nego Micha, MC Tuto, Menor Will, Renan Dalmas e TrapLaudo",
+                Título = "",
+                Compositores = "",
                 Duracao = TimeSpan.Parse ("5:32")
             },
             new Musica() {
                 Id = 102,
-                Título = "Pra Roncar Tem que Desbicar",
-                Compositores = "Lil Kid, Mc Don Juan, MC GH do 7, MC Hariel, Mc IG, MC LUUKY, MC Marcos IP, Mc Menor Kau, MC Nego Micha, Mc Paiva ZS, MC Ryan SP, TrapLaudo e Ttheuz1n",
+                Título = "",
+                Compositores = "",
                 Duracao = TimeSpan.Parse ("11:05")
             },
             new Musica() {
@@ -757,28 +757,46 @@ public class AppDbSeed
                 Duracao = TimeSpan.Parse ("3:31")
             },
             new Musica() {
-                Id = 104,
-                Título = "PSYCHO",
-                Compositores = "Michael Hardy, Tyler Hubbard, Jax e Zach Abend",
-                Duracao = TimeSpan.Parse ("3:18")
+                Id = 113,
+                Título = "Girl, so confusing",
+                Compositores = "Alexander Guy Cook e Charlotte Aitchison",
+                Duracao = TimeSpan.Parse ("2:54")
             },
             new Musica() {
-                Id = 104,
-                Título = "PSYCHO",
-                Compositores = "Michael Hardy, Tyler Hubbard, Jax e Zach Abend",
-                Duracao = TimeSpan.Parse ("3:18")
+                Id = 114,
+                Título = "Apple",
+                Compositores = "Charlotte Aitchison, Linus Wiklund, Noonie Bao e George",
+                Duracao = TimeSpan.Parse ("2:31")
             },
             new Musica() {
-                Id = 104,
-                Título = "PSYCHO",
-                Compositores = "Michael Hardy, Tyler Hubbard, Jax e Zach Abend",
-                Duracao = TimeSpan.Parse ("3:18")
+                Id = 115,
+                Título = "B2b",
+                Compositores = "Alexander Guy Cook, Charlotte Aitchison, Omer Fedi e Mike Levy",
+                Duracao = TimeSpan.Parse ("2:58")
             },
             new Musica() {
-                Id = 104,
-                Título = "PSYCHO",
-                Compositores = "Michael Hardy, Tyler Hubbard, Jax e Zach Abend",
-                Duracao = TimeSpan.Parse ("3:18")
+                Id = 116,
+                Título = "Mean girls",
+                Compositores = "Alexander Guy Cook, Charlotte Aitchison e Ross Matthew Birchard",
+                Duracao = TimeSpan.Parse ("3:09")
+            },
+            new Musica() {
+                Id = 117,
+                Título = "I think about it all the time",
+                Compositores = "Alexander Guy Cook, Charlotte Aitchison, Finn Keane e Jonathan Christopher Shave",
+                Duracao = TimeSpan.Parse ("2:15")
+            },
+            new Musica() {
+                Id = 116,
+                Título = "365",
+                Compositores = "Alexander Guy Cook, Blake Slatkin, Charlotte Aitchison, Cirkut, Finn Keane (EasyFun) e Omer Fedi",
+                Duracao = TimeSpan.Parse ("3:23")
+            },
+            new Musica() {
+                Id = 117,
+                Título = "The Emptiness Machine",
+                Compositores = "Linkin Park",
+                Duracao = TimeSpan.Parse ("3:10")
             },
 
         };
@@ -821,7 +839,7 @@ public class AppDbSeed
             },
             new Artista() {
                 Id = 9,
-                Nome = "Mc IG, MC Ryan SP"
+                Nome = ""
             },
             new Artista() {
                 Id = 10,
@@ -830,6 +848,10 @@ public class AppDbSeed
             new Artista() {
                 Id = 11,
                 Nome = "HARDY"
+            },
+            new Artista() {
+                Id = 12,
+                Nome = "Linkin Park"
             },
         };
         builder.Entity<Artista>().HasData(artistas);
@@ -1285,7 +1307,75 @@ public class AppDbSeed
                 GeneroId = 3,
             },
             new MusicaGenero() {
-                MusicaId = 89,
+                MusicaId = 105,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 106,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 107,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 108,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 109,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 110,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 111,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 112,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 113,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 114,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 115,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 116,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 116,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 117,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 118,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 119,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 120,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 121,
                 GeneroId = 1,
             },
         };
@@ -1824,6 +1914,101 @@ public class AppDbSeed
                 AlbumId = 6,
                 ArtistaId = 8,
                 MusicaId = 104,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 105,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 106,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 107,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 108,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 109,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 110,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 111,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 112,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 113,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 114,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 115,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 116,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 117,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 118,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 119,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 120,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 121,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 122,
+            },
+            new AlbumArtista() {
+                AlbumId = 6,
+                ArtistaId = 8,
+                MusicaId = 123,
             },
         };
         builder.Entity<AlbumArtista>().HasData(albumArtistas);
