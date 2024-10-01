@@ -34,7 +34,7 @@ public class AppDbSeed
             new Album() {
                 Id = 4,
                 Título = "American Dream",
-                Foto = "",
+                Foto = "/img/Albuns/4.jpg",
                 DataDeLancamento = DateTime.Parse ("12/01/2024"),
                 ExibirHome = true
             },
@@ -47,7 +47,7 @@ public class AppDbSeed
             new Album() {
                 Id = 6,
                 Título = "333",
-                Foto = "",
+                Foto = "/img/Albuns/6.jpg",
                 DataDeLancamento = DateTime.Parse ("09/09/2024"),
                 ExibirHome = true
             },
@@ -61,7 +61,7 @@ public class AppDbSeed
             new Album() {
                 Id = 8,
                 Título = "Brat",
-                Foto = "",
+                Foto = "/img/Albuns/8.jpg",
                 DataDeLancamento = DateTime.Parse ("07/06/2024"),
                 ExibirHome = true
             },
@@ -236,6 +236,7 @@ public class AppDbSeed
             new Musica() {
                 Id = 28,
                 Título = "Die With A Smile",
+                Foto = "",
                 Compositores = "Andrew Watt,Bruno Mars, Dernst Emile IIJames Faunt, leroy e Lady Gaga",
                 Duracao = TimeSpan.Parse ("4:11")
             },
@@ -410,6 +411,7 @@ public class AppDbSeed
             new Musica() {
                 Id = 57,
                 Título = "Not Like Us",
+                Foto = "/img/Albuns/57.jpg",
                 Compositores = "Kendrick LamarRay Charles e Sean Momberger",
                 Duracao = TimeSpan.Parse ("4:34")
             },
@@ -602,80 +604,80 @@ public class AppDbSeed
             },
             new Musica() {
                 Id = 89,
-                Título = "",
-                Compositores = "",
-                Duracao = TimeSpan.Parse ("5:51")
+                Título = "Medo de Quem?",
+                Compositores = "msahlholdt, RUXN e WIU",
+                Duracao = TimeSpan.Parse ("2:54")
             },
             new Musica() {
                 Id = 90,
-                Título = "",
-                Compositores = "",
-                Duracao = TimeSpan.Parse ("4:48")
+                Título = "Casa do Tio Wiu",
+                Compositores = "WIU",
+                Duracao = TimeSpan.Parse ("3:02")
             },
             new Musica() {
                 Id = 91,
-                Título = "",
+                Título = "Rainha da Finesse",
                 Compositores = "",
-                Duracao = TimeSpan.Parse ("13:30")
+                Duracao = TimeSpan.Parse ("2:46")
             },
             new Musica() {
                 Id = 92,
-                Título = "",
-                Compositores = "",
-                Duracao = TimeSpan.Parse ("3:50")
+                Título = "Vidigal",
+                Compositores = "BlueFire, WIU e Yako",
+                Duracao = TimeSpan.Parse ("3:17")
             },
             new Musica() {
                 Id = 93,
-                Título = "",
-                Compositores = "",
-                Duracao = TimeSpan.Parse ("6:11")
-            },
-            new Musica() {
-                Id = 94,
-                Título = "",
-                Compositores = "",
+                Título = "Amor de 1h",
+                Compositores = "WIU",
                 Duracao = TimeSpan.Parse ("3:28")
             },
             new Musica() {
+                Id = 94,
+                Título = "Se eu ver sua mãe na rua",
+                Compositores = "Saint Blunts e WIU",
+                Duracao = TimeSpan.Parse ("3:02")
+            },
+            new Musica() {
                 Id = 95,
-                Título = "",
-                Compositores = "",
-                Duracao = TimeSpan.Parse ("5:30")
+                Título = "desgraçadagostosamaldita",
+                Compositores = "Desro, Dragzi, Moras e WIU",
+                Duracao = TimeSpan.Parse ("3:00")
             },
             new Musica() {
                 Id = 96,
-                Título = "",
-                Compositores = "",
-                Duracao = TimeSpan.Parse ("2:36")
+                Título = "Teimosa",
+                Compositores = "AK On De Beat, Stoneraider e WIU",
+                Duracao = TimeSpan.Parse ("3:03")
             },
             new Musica() {
                 Id = 97,
-                Título = "",
-                Compositores = "",
-                Duracao = TimeSpan.Parse ("3:44")
+                Título = "Olha oq ce fez comigo",
+                Compositores = "WIU",
+                Duracao = TimeSpan.Parse ("3:28")
             },
             new Musica() {
                 Id = 98,
-                Título = "",
-                Compositores = "",
-                Duracao = TimeSpan.Parse ("2:50")
+                Título = "Guala",
+                Compositores = "INQBOI BEATZ e WIU",
+                Duracao = TimeSpan.Parse ("3:02")
             },
             new Musica() {
                 Id = 99,
-                Título = "",
-                Compositores = "",
-                Duracao = TimeSpan.Parse ("5:32")
+                Título = "Maria do Olho Verde",
+                Compositores = "RRareBear e WIU",
+                Duracao = TimeSpan.Parse ("3:24")
             },
             new Musica() {
                 Id = 100,
-                Título = "",
-                Compositores = "",
-                Duracao = TimeSpan.Parse ("6:39")
+                Título = "Eu Não Ouço Mais Trap",
+                Compositores = "Cheek, Hulls e WIU",
+                Duracao = TimeSpan.Parse ("3:16")
             },
             new Musica() {
                 Id = 101,
-                Título = "",
-                Compositores = "",
+                Título = "Rolê de Sempre",
+                Compositores = "WIU",
                 Duracao = TimeSpan.Parse ("5:32")
             },
             new Musica() {
@@ -1143,15 +1145,7 @@ public class AppDbSeed
                 GeneroId = 2,
             },
             new MusicaGenero() {
-                MusicaId = 56,
-                GeneroId = 2,
-            },
-            new MusicaGenero() {
                 MusicaId = 65,
-                GeneroId = 2,
-            },
-            new MusicaGenero() {
-                MusicaId = 66,
                 GeneroId = 2,
             },
             new MusicaGenero() {
@@ -1164,6 +1158,10 @@ public class AppDbSeed
             },
             new MusicaGenero() {
                 MusicaId = 69,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 68,
                 GeneroId = 2,
             },
             new MusicaGenero() {
@@ -1240,11 +1238,11 @@ public class AppDbSeed
             },
             new MusicaGenero() {
                 MusicaId = 88,
-                GeneroId = 1,
+                GeneroId = 2,
             },
             new MusicaGenero() {
                 MusicaId = 89,
-                GeneroId = 4,
+                GeneroId = 1,
             },
             new MusicaGenero() {
                 MusicaId = 90,
@@ -1300,15 +1298,15 @@ public class AppDbSeed
             },
             new MusicaGenero() {
                 MusicaId = 103,
-                GeneroId = 2,
+                GeneroId = 4,
             },
             new MusicaGenero() {
                 MusicaId = 104,
-                GeneroId = 3,
+                GeneroId = 2,
             },
             new MusicaGenero() {
                 MusicaId = 105,
-                GeneroId = 1,
+                GeneroId = 3,
             },
             new MusicaGenero() {
                 MusicaId = 106,
@@ -1355,10 +1353,6 @@ public class AppDbSeed
                 GeneroId = 1,
             },
             new MusicaGenero() {
-                MusicaId = 116,
-                GeneroId = 1,
-            },
-            new MusicaGenero() {
                 MusicaId = 117,
                 GeneroId = 1,
             },
@@ -1376,6 +1370,14 @@ public class AppDbSeed
             },
             new MusicaGenero() {
                 MusicaId = 121,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 122,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 123,
                 GeneroId = 1,
             },
         };

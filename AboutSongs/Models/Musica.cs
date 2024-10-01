@@ -21,6 +21,9 @@ public class Musica
     [Required(ErrorMessage = "Por favor, informe os Compositores")]
     [StringLength(100)]
     public string Compositores { get; set; }
+
+    public string Foto { get; set; }
+
     
     public TimeSpan Duracao { get; set; }
 
