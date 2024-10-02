@@ -53,9 +53,9 @@ public class AppDbSeed
             },
             new Album() {
                 Id = 7,
-                Título = "",
+                Título = "Vagabundo de Luxo",
                 Foto = "",
-                DataDeLancamento = DateTime.Parse (""),
+                DataDeLancamento = DateTime.Parse ("10/07/2024"),
                 ExibirHome = true
             },
             new Album() {
@@ -617,7 +617,7 @@ public class AppDbSeed
             new Musica() {
                 Id = 91,
                 Título = "Rainha da Finesse",
-                Compositores = "",
+                Compositores = "WIU",
                 Duracao = TimeSpan.Parse ("2:46")
             },
             new Musica() {
@@ -682,9 +682,9 @@ public class AppDbSeed
             },
             new Musica() {
                 Id = 102,
-                Título = "",
-                Compositores = "",
-                Duracao = TimeSpan.Parse ("11:05")
+                Título = "Euphoria",
+                Compositores = "Cardo, Kenneth Gamble, Jordan Houston, Kendrick Lamar, Leon Huff e Paul Beauregard",
+                Duracao = TimeSpan.Parse("6:23")
             },
             new Musica() {
                 Id = 103,
@@ -694,108 +694,108 @@ public class AppDbSeed
             },
             new Musica() {
                 Id = 104,
-                Título = "PSYCHO",
-                Compositores = "Michael Hardy, Tyler Hubbard, Jax e Zach Abend",
-                Duracao = TimeSpan.Parse ("3:18")
-            },
-            new Musica() {
-                Id = 104,
-                Título = "PSYCHO",
-                Compositores = "Michael Hardy, Tyler Hubbard, Jax e Zach Abend",
-                Duracao = TimeSpan.Parse ("3:18")
+                Título = "MTG QUERO VER SE VOCÊ TEM ATITUDE",
+                Compositores = "Luan Gabriel",
+                Duracao = TimeSpan.Parse ("1:")
             },
             new Musica() {
                 Id = 105,
+                Título = "PSYCHO",
+                Compositores = "Michael Hardy, Tyler Hubbard, Jax e Zach Abend",
+                Duracao = TimeSpan.Parse ("3:18")
+            },
+            new Musica() {
+                Id = 106,
                 Título = "360",
                 Compositores = "Alexander Guy Cook, Blake Slatkin, Charlotte Aitchison, Finn Keane, Henry Walter e Omer Fedi",
                 Duracao = TimeSpan.Parse ("2:13")
             },
             new Musica() {
-                Id = 106,
+                Id = 107,
                 Título = "Club classics",
                 Compositores = "A.G.Cook, Charlotte Aitchison e George Daniel",
                 Duracao = TimeSpan.Parse ("2:33")
             },
             new Musica() {
-                Id = 106,
+                Id = 108,
                 Título = "Sympathy is a knife",
                 Compositores = "Charlotte Aitchison, Finn Keane e Jonathan Christopher Shave",
                 Duracao = TimeSpan.Parse ("2:31")
             },
             new Musica() {
-                Id = 107,
+                Id = 109,
                 Título = "I might isay something stupid",
                 Compositores = "Charlotte Aitchison e Mike Levy",
                 Duracao = TimeSpan.Parse ("1:49")
             },
             new Musica() {
-                Id = 108,
+                Id = 110,
                 Título = "Talk talk",
                 Compositores = "Alexander Guy Cook, Charlotte Aitchison e Ross Matthew Birchard",
                 Duracao = TimeSpan.Parse ("2:41")
             },
             new Musica() {
-                Id = 109,
+                Id = 111,
                 Título = "Von dutch",
                 Compositores = "Charlotte Aitchison e Finn Keane",
                 Duracao = TimeSpan.Parse ("2:44")
             },
             new Musica() {
-                Id = 110,
+                Id = 112,
                 Título = "Everything is romantic",
                 Compositores = "A.G.Cook, Charlotte Aitchison, Jasper Harris, Jae Deal, Marlon Travis Barrow e Pablo Diaz-Reixa",
                 Duracao = TimeSpan.Parse ("3:23")
             },
             new Musica() {
-                Id = 111,
+                Id = 113,
                 Título = "Rewind",
                 Compositores = "Alexander Guy Cook, Charlotte Aitchison, e Henry Walter",
                 Duracao = TimeSpan.Parse ("2:48")
             },
             new Musica() {
-                Id = 112,
+                Id = 114,
                 Título = "So I",
                 Compositores = "Charlotte Aitchison, Finn Keane e Jonathan Christopher Shave",
                 Duracao = TimeSpan.Parse ("3:31")
             },
             new Musica() {
-                Id = 113,
+                Id = 115,
                 Título = "Girl, so confusing",
                 Compositores = "Alexander Guy Cook e Charlotte Aitchison",
                 Duracao = TimeSpan.Parse ("2:54")
             },
             new Musica() {
-                Id = 114,
+                Id = 116,
                 Título = "Apple",
                 Compositores = "Charlotte Aitchison, Linus Wiklund, Noonie Bao e George",
                 Duracao = TimeSpan.Parse ("2:31")
             },
             new Musica() {
-                Id = 115,
+                Id = 117,
                 Título = "B2b",
                 Compositores = "Alexander Guy Cook, Charlotte Aitchison, Omer Fedi e Mike Levy",
                 Duracao = TimeSpan.Parse ("2:58")
             },
             new Musica() {
-                Id = 116,
+                Id = 118,
                 Título = "Mean girls",
                 Compositores = "Alexander Guy Cook, Charlotte Aitchison e Ross Matthew Birchard",
                 Duracao = TimeSpan.Parse ("3:09")
             },
             new Musica() {
-                Id = 117,
+                Id = 119,
                 Título = "I think about it all the time",
                 Compositores = "Alexander Guy Cook, Charlotte Aitchison, Finn Keane e Jonathan Christopher Shave",
                 Duracao = TimeSpan.Parse ("2:15")
             },
             new Musica() {
-                Id = 116,
+                Id = 120,
                 Título = "365",
                 Compositores = "Alexander Guy Cook, Blake Slatkin, Charlotte Aitchison, Cirkut, Finn Keane (EasyFun) e Omer Fedi",
                 Duracao = TimeSpan.Parse ("3:23")
             },
             new Musica() {
-                Id = 117,
+                Id = 121,
                 Título = "The Emptiness Machine",
                 Compositores = "Linkin Park",
                 Duracao = TimeSpan.Parse ("3:10")
@@ -841,7 +841,7 @@ public class AppDbSeed
             },
             new Artista() {
                 Id = 9,
-                Nome = ""
+                Nome = "Wiu"
             },
             new Artista() {
                 Id = 10,
@@ -854,6 +854,10 @@ public class AppDbSeed
             new Artista() {
                 Id = 12,
                 Nome = "Linkin Park"
+            },
+            new Artista() {
+                Id = 13,
+                Nome = "Charli XCX "
             },
         };
         builder.Entity<Artista>().HasData(artistas);
@@ -1242,55 +1246,55 @@ public class AppDbSeed
             },
             new MusicaGenero() {
                 MusicaId = 89,
-                GeneroId = 1,
+                GeneroId = 2,
             },
             new MusicaGenero() {
                 MusicaId = 90,
-                GeneroId = 4,
+                GeneroId = 2,
             },
             new MusicaGenero() {
                 MusicaId = 91,
-                GeneroId = 4,
+                GeneroId = 2,
             },
             new MusicaGenero() {
                 MusicaId = 92,
-                GeneroId = 4,
+                GeneroId = 2,
             },
             new MusicaGenero() {
                 MusicaId = 93,
-                GeneroId = 4,
+                GeneroId = 2,
             },
             new MusicaGenero() {
                 MusicaId = 94,
-                GeneroId = 4,
+                GeneroId = 2,
             },
             new MusicaGenero() {
                 MusicaId = 95,
-                GeneroId = 4,
+                GeneroId = 2,
             },
             new MusicaGenero() {
                 MusicaId = 96,
-                GeneroId = 4,
+                GeneroId = 2,
             },
             new MusicaGenero() {
                 MusicaId = 97,
-                GeneroId = 4,
+                GeneroId = 2,
             },
             new MusicaGenero() {
                 MusicaId = 98,
-                GeneroId = 4,
+                GeneroId = 2,
             },
             new MusicaGenero() {
                 MusicaId = 99,
-                GeneroId = 4,
+                GeneroId = 2,
             },
             new MusicaGenero() {
                 MusicaId = 100,
-                GeneroId = 4,
+                GeneroId = 2,
             },
             new MusicaGenero() {
                 MusicaId = 101,
-                GeneroId = 4,
+                GeneroId = 2,
             },
             new MusicaGenero() {
                 MusicaId = 102,
@@ -1358,7 +1362,7 @@ public class AppDbSeed
             },
             new MusicaGenero() {
                 MusicaId = 118,
-                GeneroId = 1,
+                GeneroId = 3,
             },
             new MusicaGenero() {
                 MusicaId = 119,
@@ -1370,7 +1374,7 @@ public class AppDbSeed
             },
             new MusicaGenero() {
                 MusicaId = 121,
-                GeneroId = 1,
+                GeneroId = 3,
             },
             new MusicaGenero() {
                 MusicaId = 122,
@@ -1833,77 +1837,77 @@ public class AppDbSeed
                 MusicaId = 88,
             },
             new AlbumArtista() {
-                AlbumId = 7,
+                AlbumId = 8,
                 ArtistaId = 9,
                 MusicaId = 89,
             },
             new AlbumArtista() {
-                AlbumId = 7,
+                AlbumId = 8,
                 ArtistaId = 9,
                 MusicaId = 90,
             },
             new AlbumArtista() {
-                AlbumId = 7,
+                AlbumId = 8,
                 ArtistaId = 9,
                 MusicaId = 91,
             },
             new AlbumArtista() {
-                AlbumId = 7,
+                AlbumId = 8,
                 ArtistaId = 9,
                 MusicaId = 92,
             },
             new AlbumArtista() {
-                AlbumId = 7,
+                AlbumId = 8,
                 ArtistaId = 9,
                 MusicaId = 93,
             },
             new AlbumArtista() {
-                AlbumId = 7,
+                AlbumId = 8,
                 ArtistaId = 9,
                 MusicaId = 93,
             },
             new AlbumArtista() {
-                AlbumId = 7,
+                AlbumId = 8,
                 ArtistaId = 9,
                 MusicaId = 94,
             },
             new AlbumArtista() {
-                AlbumId = 7,
+                AlbumId = 8,
                 ArtistaId = 9,
                 MusicaId = 95,
             },
             new AlbumArtista() {
-                AlbumId = 7,
+                AlbumId = 8,
                 ArtistaId = 9,
                 MusicaId = 96,
             },
             new AlbumArtista() {
-                AlbumId = 7,
+                AlbumId = 8,
                 ArtistaId = 9,
                 MusicaId = 97,
             },
             new AlbumArtista() {
-                AlbumId = 7,
+                AlbumId = 8,
                 ArtistaId = 9,
                 MusicaId = 98,
             },
             new AlbumArtista() {
-                AlbumId = 7,
+                AlbumId = 8,
                 ArtistaId = 9,
                 MusicaId = 99,
             },
             new AlbumArtista() {
-                AlbumId = 7,
+                AlbumId = 8,
                 ArtistaId = 9,
                 MusicaId = 100,
             },
             new AlbumArtista() {
-                AlbumId = 7,
+                AlbumId = 8,
                 ArtistaId = 9,
                 MusicaId = 101,
             },
             new AlbumArtista() {
-                AlbumId = 7,
+                AlbumId = 8,
                 ArtistaId = 9,
                 MusicaId = 102,
             },
@@ -1978,7 +1982,6 @@ public class AppDbSeed
                 MusicaId = 116,
             },
             new AlbumArtista() {
-                AlbumId = 6,
                 ArtistaId = 8,
                 MusicaId = 117,
             },
@@ -1998,8 +2001,7 @@ public class AppDbSeed
                 MusicaId = 120,
             },
             new AlbumArtista() {
-                AlbumId = 6,
-                ArtistaId = 8,
+                ArtistaId = 12,
                 MusicaId = 121,
             },
             new AlbumArtista() {
