@@ -46,4 +46,4 @@ dotnet ef migrations add criar-banco
 
 dotnet ef database update
 
-
+dotnet watch run

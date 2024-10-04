@@ -695,6 +695,7 @@ public class AppDbSeed
             new Musica() {
                 Id = 104,
                 Título = "MTG QUERO VER SE VOCÊ TEM ATITUDE",
+                Foto = "/img/Albuns/104.png",
                 Compositores = "Luan Gabriel",
                 Duracao = TimeSpan.Parse ("1:")
             },
