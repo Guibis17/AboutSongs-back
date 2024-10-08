@@ -32,7 +32,7 @@ public class AppDbContext : IdentityDbContext
 
         #region Relacionamento de Muitos para Muitos - Album Artista
         builder.Entity<AlbumArtista>()
-            .HasKey(aa => new { aa.AlbumId, aa.ArtistaId });
+            .HasKey(aa => new { aa.AlbumId, aa.ArtistaId, aa.MusicaId });
         #endregion
 
         #region Relacionamento de Muitos para Muitos - Album Genero
