@@ -91,6 +91,24 @@ public class AppDbSeed
                 Foto = "/img/Albuns/12.png",
                 DataDeLancamento = DateTime.Parse ("03/05/2024"),
             },
+            new Album() {
+                Id = 13,
+                Título = "MTG QUERO VER SE VOCÊ TEM ATITUDE",
+                Foto = "/img/Albuns/13.png",
+                DataDeLancamento = DateTime.Parse ("02/07/2024"),
+            },
+            new Album() {
+                Id = 14,
+                Título = "Euphoria",
+                Foto = "/img/Albuns/14.png",
+                DataDeLancamento = DateTime.Parse ("30/04/2024"),
+            },
+            new Album() {
+                Id = 15,
+                Título = "Timeless (with Playboi Carti)",
+                Foto = "/img/Albuns/15.png",
+                DataDeLancamento = DateTime.Parse ("27/09/2024"),
+            },
             
         };
         builder.Entity<Album>().HasData(albuns);
@@ -263,7 +281,6 @@ public class AppDbSeed
             new Musica() {
                 Id = 28,
                 Título = "Die With A Smile",
-                Foto = "",
                 Compositores = "Andrew Watt,Bruno Mars, Dernst Emile IIJames Faunt, leroy e Lady Gaga",
                 Duracao = TimeSpan.Parse ("4:11")
             },
@@ -721,15 +738,14 @@ public class AppDbSeed
             new Musica() {
                 Id = 104,
                 Título = "MTG QUERO VER SE VOCÊ TEM ATITUDE",
-                Foto = "/img/Albuns/104.png",
                 Compositores = "Luan Gabriel",
                 Duracao = TimeSpan.Parse ("1:57")
             },
             new Musica() {
                 Id = 105,
-                Título = "PSYCHO",
-                Compositores = "Michael Hardy, Tyler Hubbard, Jax e Zach Abend",
-                Duracao = TimeSpan.Parse ("3:18")
+                Título = "Timeless (with Playboi Carti)",
+                Compositores = "Abel Tesfaye, Blessed, Devon Chisolm (Lawson), Jarrod Morgan, Jordan Terrell Carter, Kobe Hood, Mark Williams (Oji), MIKE DEAN, Pharrell Williams, Raul Cubina (Volta) e Tariq Sharrieff",
+                Duracao = TimeSpan.Parse ("4:16")
             },
             new Musica() {
                 Id = 106,
@@ -889,6 +905,14 @@ public class AppDbSeed
             new Artista() {
                 Id = 14,
                 Nome = "Dj Luan Gomes"
+            },
+            new Artista() {
+                Id = 15,
+                Nome = "Drake"
+            },
+            new Artista() {
+                Id = 16,
+                Nome = "Playboi Carti e The Weeknd"
             },
         };
         builder.Entity<Artista>().HasData(artistas);
@@ -1341,7 +1365,7 @@ public class AppDbSeed
             },
             new MusicaGenero() {
                 MusicaId = 105,
-                GeneroId = 1,
+                GeneroId = 2,
             },
             new MusicaGenero() {
                 MusicaId = 106,
@@ -1550,7 +1574,7 @@ public class AppDbSeed
                 MusicaId = 27,
             },
             new AlbumArtista() {
-                AlbumId = 3,
+                AlbumId = 10,
                 ArtistaId = 4,
                 MusicaId = 28,
             },
@@ -1650,8 +1674,8 @@ public class AppDbSeed
                 MusicaId = 46,
             },
             new AlbumArtista() {
-                AlbumId = 4,
-                ArtistaId = 5,
+                AlbumId = 12,
+                ArtistaId = 15,
                 MusicaId = 47,
             },
             new AlbumArtista() {
@@ -1930,19 +1954,23 @@ public class AppDbSeed
                 MusicaId = 101,
             },
             new AlbumArtista() {
+                AlbumId = 14,
                 ArtistaId = 7,
                 MusicaId = 102,
             },
             new AlbumArtista() {
+                AlbumId = 11,
                 ArtistaId = 10,
                 MusicaId = 103,
             },
             new AlbumArtista() {
+                AlbumId = 13,
                 ArtistaId = 14,
                 MusicaId = 104,
             },
             new AlbumArtista() {
-                ArtistaId = 11,
+                AlbumId = 15,
+                ArtistaId = 16,
                 MusicaId = 105,
             },
             new AlbumArtista() {
