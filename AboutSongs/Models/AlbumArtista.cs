@@ -23,10 +23,4 @@ public class AlbumArtista
     public int MusicaId { get; set; }
     [ForeignKey("MusicaId")]
     public Musica Musica { get; set; }
-
-    public int Faixa { get; set; }
-
-    public TimeSpan? Duracao { get; set; }
-
-
 }

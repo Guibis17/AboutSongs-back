@@ -1208,6 +1208,10 @@ public class AppDbSeed
                 GeneroId = 2,
             },
             new MusicaGenero() {
+                MusicaId = 66,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
                 MusicaId = 67,
                 GeneroId = 2,
             },
@@ -1217,10 +1221,6 @@ public class AppDbSeed
             },
             new MusicaGenero() {
                 MusicaId = 69,
-                GeneroId = 2,
-            },
-            new MusicaGenero() {
-                MusicaId = 68,
                 GeneroId = 2,
             },
             new MusicaGenero() {
@@ -1621,11 +1621,6 @@ public class AppDbSeed
             new AlbumArtista() {
                 AlbumId = 4,
                 ArtistaId = 5,
-                MusicaId = 36,
-            },
-            new AlbumArtista() {
-                AlbumId = 4,
-                ArtistaId = 5,
                 MusicaId = 37,
             },
             new AlbumArtista() {
@@ -1911,11 +1906,6 @@ public class AppDbSeed
             new AlbumArtista() {
                 AlbumId = 7,
                 ArtistaId = 9,
-                MusicaId = 93,
-            },
-            new AlbumArtista() {
-                AlbumId = 7,
-                ArtistaId = 9,
                 MusicaId = 94,
             },
             new AlbumArtista() {
@@ -2049,6 +2039,7 @@ public class AppDbSeed
                 MusicaId = 120,
             },
             new AlbumArtista() {
+                 AlbumId = 8,
                 ArtistaId = 12,
                 MusicaId = 121,
             },
