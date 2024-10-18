@@ -109,6 +109,24 @@ public class AppDbSeed
                 Foto = "/img/Albuns/15.png",
                 DataDeLancamento = DateTime.Parse ("27/09/2024"),
             },
+            new Album() {
+                Id = 16,
+                Título = "MILLION DOLLAR BABY",
+                Foto = "/img/Albuns/16.",
+                DataDeLancamento = DateTime.Parse ("26/04/2024"),
+            },
+            new Album() {
+                Id = 17,
+                Título = "Feelslikeimfallinginlove",
+                Foto = "/img/Albuns/17.",
+                DataDeLancamento = DateTime.Parse ("21/06/2024"),
+            },
+            new Album() {
+                Id = 18,
+                Título = "Eternal Sunshine",
+                Foto = "/img/Albuns/18.",
+                DataDeLancamento = DateTime.Parse ("08/03/2024"),
+            },
             
         };
         builder.Entity<Album>().HasData(albuns);
@@ -843,6 +861,96 @@ public class AppDbSeed
                 Compositores = "Linkin Park",
                 Duracao = TimeSpan.Parse ("3:10")
             },
+            new Musica() {
+                Id = 122,
+                Título = "MILLION DOLLAR BABY",
+                Compositores = "Ava La'RaeTommy Richman",
+                Duracao = TimeSpan.Parse ("2:35")
+            },
+            new Musica() {
+                Id = 123,
+                Título = "Feelslikeimfallinginlove",
+                Compositores = "Max Martin, Apple Martin, Chris Martin, Guy Berryman, Jon Hopkins, Jonny Buckland, Oscar Holter, Tim Rutili e Will Champion",
+                Duracao = TimeSpan.Parse ("3:57")
+            },
+            new Musica() {
+                Id = 124,
+                Título = "Intro (end of the world)",
+                Compositores = "Ariana Grande, Nick Lee, Shintaro Yasuda e Aaron Cheung",
+                Duracao = TimeSpan.Parse ("1:32")
+            },
+            new Musica() {
+                Id = 125,
+                Título = "bye",
+                Compositores = "Ariana Grande, LLya Salamanzadeh e Max Martin",
+                Duracao = TimeSpan.Parse ("2:44")
+            },
+            new Musica() {
+                Id = 126,
+                Título = "don't wanna break up again",
+                Compositores = "Ariana Grande, LLya Salamanzadeh e Max Martin",
+                Duracao = TimeSpan.Parse ("2:54")
+            },
+            new Musica() {
+                Id = 127,
+                Título = "Saturn Returns Interlude",
+                Compositores = "Ariana Grande, LLya Salamanzadeh e Max Martin",
+                Duracao = TimeSpan.Parse ("0:42")
+            },
+            new Musica() {
+                Id = 128,
+                Título = "eternal sunshine",
+                Compositores = "Ariana Grande, Max Martin, Shintaro Yasuda e DaviDior",
+                Duracao = TimeSpan.Parse ("3:30")
+            },
+            new Musica() {
+                Id = 129,
+                Título = "supernatural",
+                Compositores = "Ariana Grande, Max Martin e Oscar Görres",
+                Duracao = TimeSpan.Parse ("2:43")
+            },
+            new Musica() {
+                Id = 130,
+                Título = "true story",
+                Compositores = "Ariana Grande e Max Martin",
+                Duracao = TimeSpan.Parse ("2:43")
+            },
+            new Musica() {
+                Id = 131,
+                Título = "the boy is mine",
+                Compositores = "Ariana Grande, Max Martin, Shintaro Yasuda e DaviDior",
+                Duracao = TimeSpan.Parse ("2:53")
+            },
+            new Musica() {
+                Id = 132,
+                Título = "yes, and?",
+                Compositores = "Ariana Grande, LLya Salamanzadeh e Max Martin",
+                Duracao = TimeSpan.Parse ("3:34")
+            },
+            new Musica() {
+                Id = 133,
+                Título = "we can't be friends (wait for your love)",
+                Compositores = "Ariana Grande, LLya Salamanzadeh e Max Martin",
+                Duracao = TimeSpan.Parse ("3:48")
+            },
+            new Musica() {
+                Id = 134,
+                Título = "i wish i hated you",
+                Compositores = "Ariana Grande e LLya Salamanzadeh",
+                Duracao = TimeSpan.Parse ("2:33")
+            },
+            new Musica() {
+                Id = 135,
+                Título = "imperfect for you",
+                Compositores = "Ariana Grande, LLya Salamanzadeh, Max Martin e Peter Kahm",
+                Duracao = TimeSpan.Parse ("3:02")
+            },
+            new Musica() {
+                Id = 136,
+                Título = "ordinary things (feat. Nonna)",
+                Compositores = "Ariana Grande, Nick Lee, Luka Kloser e Nonna",
+                Duracao = TimeSpan.Parse ("2:48")
+            },
 
         };
         builder.Entity<Musica>().HasData(musicas);
@@ -913,6 +1021,18 @@ public class AppDbSeed
             new Artista() {
                 Id = 16,
                 Nome = "Playboi Carti e The Weeknd"
+            },
+            new Artista() {
+                Id = 17,
+                Nome = "Tommy Richman"
+            },
+            new Artista() {
+                Id = 18,
+                Nome = "Coldplay"
+            },
+            new Artista() {
+                Id = 19,
+                Nome = "Ariana Grande"
             },
         };
         builder.Entity<Artista>().HasData(artistas);
@@ -1430,6 +1550,66 @@ public class AppDbSeed
             new MusicaGenero() {
                 MusicaId = 121,
                 GeneroId = 3,
+            },
+            new MusicaGenero() {
+                MusicaId = 122,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 123,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 124,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 125,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 126,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 127,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 128,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 129,
+                GeneroId = 5,
+            },
+            new MusicaGenero() {
+                MusicaId = 130,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 131,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 132,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 133,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 134,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 135,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 136,
+                GeneroId = 1,
             },
         };
         builder.Entity<MusicaGenero>().HasData(musicaGeneros);
@@ -2039,9 +2219,84 @@ public class AppDbSeed
                 MusicaId = 120,
             },
             new AlbumArtista() {
-                 AlbumId = 8,
+                AlbumId = 8,
                 ArtistaId = 12,
                 MusicaId = 121,
+            },
+            new AlbumArtista() {
+                AlbumId = 16,
+                ArtistaId = 17,
+                MusicaId = 122,
+            },
+            new AlbumArtista() {
+                AlbumId = 17,
+                ArtistaId = 18,
+                MusicaId = 123,
+            },
+            new AlbumArtista() {
+                AlbumId = 18,
+                ArtistaId = 19,
+                MusicaId = 124,
+            },
+            new AlbumArtista() {
+                AlbumId = 18,
+                ArtistaId = 19,
+                MusicaId = 125,
+            },
+            new AlbumArtista() {
+                AlbumId = 18,
+                ArtistaId = 19,
+                MusicaId = 126,
+            },
+            new AlbumArtista() {
+                AlbumId = 18,
+                ArtistaId = 19,
+                MusicaId = 127,
+            },
+            new AlbumArtista() {
+                AlbumId = 18,
+                ArtistaId = 19,
+                MusicaId = 128,
+            },
+            new AlbumArtista() {
+                AlbumId = 18,
+                ArtistaId = 19,
+                MusicaId = 129,
+            },
+            new AlbumArtista() {
+                AlbumId = 18,
+                ArtistaId = 19,
+                MusicaId = 130,
+            },
+            new AlbumArtista() {
+                AlbumId = 18,
+                ArtistaId = 19,
+                MusicaId = 131,
+            },
+            new AlbumArtista() {
+                AlbumId = 18,
+                ArtistaId = 19,
+                MusicaId = 132,
+            },
+            new AlbumArtista() {
+                AlbumId = 18,
+                ArtistaId = 19,
+                MusicaId = 133,
+            },
+            new AlbumArtista() {
+                AlbumId = 18,
+                ArtistaId = 19,
+                MusicaId = 134,
+            },
+            new AlbumArtista() {
+                AlbumId = 18,
+                ArtistaId = 19,
+                MusicaId = 135,
+            },
+            new AlbumArtista() {
+                AlbumId = 18,
+                ArtistaId = 19,
+                MusicaId = 136,
             },
         };
         builder.Entity<AlbumArtista>().HasData(albumArtistas);
