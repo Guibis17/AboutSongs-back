@@ -973,9 +973,80 @@ public class AppDbSeed
                 Id = 139,
                 Título = "PAID",
                 Compositores = "Chrishan, Anthony Kilhoffer, Cedric R Hailey, Christopher C. Dotson, Hamid Bashir, Louis K. Celestin, Samuel C. LindleyTyrone Griffin, Jr. e Ye",
-                Duracao = TimeSpan.Parse ("1:55")
+                Duracao = TimeSpan.Parse ("3:15")
             },
-
+            new Musica() {
+                Id = 140,
+                Título = "TALKING",
+                Compositores = "Anthony Clemons Jr, Darhyl Camper Jr., Dominic Maker, Edward Davadi, James B. Litherland, Kasseem D. Dean, North West, Quentin Miller, Shawntoni A. Nichols, Tyrone Griffin, Jr. e Ye",
+                Duracao = TimeSpan.Parse ("3:05")
+            },
+            new Musica() {
+                Id = 141,
+                Título = "BACK TO ME",
+                Compositores = "Aswad Asif, Charles M. Njapa, Daniel Kin J. Chien, Frederick Tipton, James A. Hau, Nicholas M. Balding, Sasha Hashemi, Tyrone Griffin, Jr., Ye e Zachary R. Frenes",
+                Duracao = TimeSpan.Parse ("4:55")
+            },
+            new Musica() {
+                Id = 142,
+                Título = "HOODRAT",
+                Compositores = "Charles M. Njapa, Darhyl Camper Jr., Malik Y. Jones, Robert G. Booker, Tyrone Griffin, Jr. e Ye",
+                Duracao = TimeSpan.Parse ("3:42")
+            },
+            new Musica() {
+                Id = 143,
+                Título = "DO IT",
+                Compositores = "Chrishan, Alexander West, Billy Ray Schlag, Darhyl Camper Jr., Denis Raab, Dijon I. McFarlane, Ermias J. Asghedom, Keenon Dequan R. Jackson, Kevin Gomringer, Lukas Benjamin Leth Kroll, Samuel C. Lindley, Supreme Williams, Tim Gomringer, Tyrone Griffin, Jr. e Ye",
+                Duracao = TimeSpan.Parse ("3:45")
+            },
+            new Musica() {
+                Id = 144,
+                Título = "PAPERWORK",
+                Compositores = "ADERLI RAMIREZ OVIEDO, Bruno Gioia Martins Funke Da Costa, Charles M. Njapa, Kasseem D. Dean, Leonardo Felipe Yasmil Garces, Nasir H. Pemberton, Quavious Keyate Marshall, Samuel C. Lindley, Ty Dolla $ign, Tyrone Griffin, Jr. e Victor Hugo Maciel dos Santos",
+                Duracao = TimeSpan.Parse ("2:25")
+            },
+            new Musica() {
+                Id = 145,
+                Título = "BURN",
+                Compositores = "Amir Stivie B, Christopher C. Dotson, John Beck, Joseph Goddard, Leon Thomas, Morten Ristorp, Samuel C. Lindley, Tyrone Griffin, Jr., Tyshane Thompson, Valentina Pappalardo e Ye",
+                Duracao = TimeSpan.Parse ("1:51")
+            },
+            new Musica() {
+                Id = 146,
+                Título = "FUK SUMN",
+                Compositores = "Chrishan, Barringington D. Hendricks, Christopher C. Dotson, Evan K. Hood-Atlas, Jacques B. Webster II, Jordan T. Carter, Quavious Keyate Marshall, Quentin Miller, Samuel C. Lindley, Tim Mosley, Tyrone Griffin, Jr. e Ye",
+                Duracao = TimeSpan.Parse ("3:29")
+            },
+            new Musica() {
+                Id = 147,
+                Título = "VULTURES",
+                Compositores = "Jasper Harris, Mark Williams, Cydel C. Young, Durk D. Banks, Gustave Rudman Rambali, Jason T. Harris, Jordan Houston, Marlon T. Barrow, Mathias D. Liyew, Paul Beauregard, Pharris Thomas, Raul I. Cubina, Terrace M. Boykin, Tyrone Griffin, Jr. e Ye ",
+                Duracao = TimeSpan.Parse ("4:36")
+            },
+            new Musica() {
+                Id = 148,
+                Título = "CARNIVAL",
+                Compositores = "Mark Williams, Raul Cubina(of Ojivolta), Dimitri Rogers, Grant Dickinson, Jordan T. Carter, Raul I. Cubina, Samuel C. Lindley, Tyrone Griffin, Jr. e Ye",
+                Duracao = TimeSpan.Parse ("4:24")
+            },
+            new Musica() {
+                Id = 149,
+                Título = "BEG FORGIVENESS",
+                Compositores = "Barrington D. Hendricks, Faouzia Ouihya, John Beck, Joseph Goddard, Latia T. Lindley, London T. Holmes, Quentin Miller, Tyrone Griffin, Jr., Valentina Pappalardo e Ye",
+                Duracao = TimeSpan.Parse ("6:08")
+            },
+            new Musica() {
+                Id = 150,
+                Título = "PROBLEMATIC",
+                Compositores = "Camper, Amber D. Streeter, Charles E. Hugo, Charles M. Njapa, Denzel A. Charles, Melvin Moore, Tyrone Griffin, Jr. e Ye",
+                Duracao = TimeSpan.Parse ("3:14")
+            },
+            new Musica() {
+                Id = 151,
+                Título = "KING",
+                Compositores = "Arturo Fratini, Barringington D. Hendricks, Charles M. Njapa, Dylan T. Cleary-Krell, Frederick Tipton, Tyrone Griffin, Jr., Victor Mensah e Ye",
+                Duracao = TimeSpan.Parse ("2:36")
+            },
         };
         builder.Entity<Musica>().HasData(musicas);
         #endregion
@@ -1057,6 +1128,10 @@ public class AppDbSeed
             new Artista() {
                 Id = 19,
                 Nome = "Ariana Grande"
+            },
+            new Artista() {
+                Id = 20,
+                Nome = "Kanye West"
             },
         };
         builder.Entity<Artista>().HasData(artistas);
@@ -1634,6 +1709,66 @@ public class AppDbSeed
             new MusicaGenero() {
                 MusicaId = 136,
                 GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 137,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 138,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 139,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 140,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 141,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 142,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 143,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 144,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 145,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 146,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 147,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 148,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 149,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 150,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 151,
+                GeneroId = 2,
             },
         };
         builder.Entity<MusicaGenero>().HasData(musicaGeneros);
@@ -2321,6 +2456,81 @@ public class AppDbSeed
                 AlbumId = 18,
                 ArtistaId = 19,
                 MusicaId = 136,
+            },
+            new AlbumArtista() {
+                AlbumId = 19,
+                ArtistaId = 20,
+                MusicaId = 137,
+            },
+            new AlbumArtista() {
+                AlbumId = 19,
+                ArtistaId = 20,
+                MusicaId = 138,
+            },
+            new AlbumArtista() {
+                AlbumId = 19,
+                ArtistaId = 20,
+                MusicaId = 139,
+            },
+            new AlbumArtista() {
+                AlbumId = 19,
+                ArtistaId = 20,
+                MusicaId = 140,
+            },
+            new AlbumArtista() {
+                AlbumId = 19,
+                ArtistaId = 20,
+                MusicaId = 141,
+            },
+            new AlbumArtista() {
+                AlbumId = 19,
+                ArtistaId = 20,
+                MusicaId = 142,
+            },
+            new AlbumArtista() {
+                AlbumId = 19,
+                ArtistaId = 20,
+                MusicaId = 143,
+            },
+            new AlbumArtista() {
+                AlbumId = 19,
+                ArtistaId = 20,
+                MusicaId = 144,
+            },
+            new AlbumArtista() {
+                AlbumId = 19,
+                ArtistaId = 20,
+                MusicaId = 145,
+            },
+            new AlbumArtista() {
+                AlbumId = 19,
+                ArtistaId = 20,
+                MusicaId = 146,
+            },
+            new AlbumArtista() {
+                AlbumId = 19,
+                ArtistaId = 20,
+                MusicaId = 147,
+            },
+            new AlbumArtista() {
+                AlbumId = 19,
+                ArtistaId = 20,
+                MusicaId = 148,
+            },
+            new AlbumArtista() {
+                AlbumId = 19,
+                ArtistaId = 20,
+                MusicaId = 149,
+            },
+            new AlbumArtista() {
+                AlbumId = 19,
+                ArtistaId = 20,
+                MusicaId = 150,
+            },
+            new AlbumArtista() {
+                AlbumId = 19,
+                ArtistaId = 20,
+                MusicaId = 151,
             },
         };
         builder.Entity<AlbumArtista>().HasData(albumArtistas);
