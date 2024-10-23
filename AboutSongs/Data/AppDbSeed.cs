@@ -112,20 +112,26 @@ public class AppDbSeed
             new Album() {
                 Id = 16,
                 Título = "MILLION DOLLAR BABY",
-                Foto = "/img/Albuns/16.",
+                Foto = "/img/Albuns/16.png",
                 DataDeLancamento = DateTime.Parse ("26/04/2024"),
             },
             new Album() {
                 Id = 17,
                 Título = "Feelslikeimfallinginlove",
-                Foto = "/img/Albuns/17.",
+                Foto = "/img/Albuns/17.png",
                 DataDeLancamento = DateTime.Parse ("21/06/2024"),
             },
             new Album() {
                 Id = 18,
                 Título = "Eternal Sunshine",
-                Foto = "/img/Albuns/18.",
+                Foto = "/img/Albuns/18.png",
                 DataDeLancamento = DateTime.Parse ("08/03/2024"),
+            },
+            new Album() {
+                Id = 19,
+                Título = "Vultures 1",
+                Foto = "/img/Albuns/19.png",
+                DataDeLancamento = DateTime.Parse ("09/02/2024"),
             },
             
         };
@@ -950,6 +956,24 @@ public class AppDbSeed
                 Título = "ordinary things (feat. Nonna)",
                 Compositores = "Ariana Grande, Nick Lee, Luka Kloser e Nonna",
                 Duracao = TimeSpan.Parse ("2:48")
+            },
+            new Musica() {
+                Id = 137,
+                Título = "STARS",
+                Compositores = "Lucien Parker,Barringington D. Hendricks, Billy Ray Schlag, Darhyl Camper Jr., Isaac De Boni, Michael Mule, Quentin Miller, Samuel C. Lindley, Tyrone Griffin, Jr. e Ye",
+                Duracao = TimeSpan.Parse ("1:55")
+            },
+            new Musica() {
+                Id = 138,
+                Título = "KEYS TO MY LIFE",
+                Compositores = "Cydel C. Young, Hubert E. Polinski, Konrad Żyrek, Samuel C. Lindley, Tim Mosley, Ty Dolla $ign, Veyis-Can Urun, Vincent Vendi e Ye",
+                Duracao = TimeSpan.Parse ("2:54")
+            },
+            new Musica() {
+                Id = 139,
+                Título = "PAID",
+                Compositores = "Chrishan, Anthony Kilhoffer, Cedric R Hailey, Christopher C. Dotson, Hamid Bashir, Louis K. Celestin, Samuel C. LindleyTyrone Griffin, Jr. e Ye",
+                Duracao = TimeSpan.Parse ("1:55")
             },
 
         };
