@@ -133,6 +133,18 @@ public class AppDbSeed
                 Foto = "/img/Albuns/19.png",
                 DataDeLancamento = DateTime.Parse ("09/02/2024"),
             },
+            new Album() {
+                Id = 20,
+                Título = "THE BOX MEDLEY FUNK 2",
+                Foto = "/img/Albuns/20.png",
+                DataDeLancamento = DateTime.Parse ("18/04/2024"),
+            },
+            new Album() {
+                Id = 21,
+                Título = "2093",
+                Foto = "/img/Albuns/21.png",
+                DataDeLancamento = DateTime.Parse ("16/02/2024"),
+            },
             
         };
         builder.Entity<Album>().HasData(albuns);
@@ -1047,6 +1059,126 @@ public class AppDbSeed
                 Compositores = "Arturo Fratini, Barringington D. Hendricks, Charles M. Njapa, Dylan T. Cleary-Krell, Frederick Tipton, Tyrone Griffin, Jr., Victor Mensah e Ye",
                 Duracao = TimeSpan.Parse ("2:36")
             },
+            new Musica() {
+                Id = 152,
+                Título = "THE BOX MEDLEY FUNK 2",
+                Compositores = "Mc Brinquedo, MC Cebezinho, Mc Laranjinha e MC Tuto",
+                Duracao = TimeSpan.Parse ("4:26")
+            },
+            new Musica() {
+                Id = 153,
+                Título = "Psycho CEO",
+                Compositores = "Abdul Moiz, George Kala, Michael Ojha e Noah Smith",
+                Duracao = TimeSpan.Parse ("3:45")
+            },
+            new Musica() {
+                Id = 154,
+                Título = "Power Trip",
+                Compositores = "Aaron Shadrow, Jasper Harris, Tom Levesque, Anton Martin Mendo, Arman Andican, Donald Glover, Noah Smith, Oscar Adler e Thomas Levesque",
+                Duracao = TimeSpan.Parse ("4:24")
+            },
+            new Musica() {
+                Id = 155,
+                Título = "Breathe",
+                Compositores = "Anton Martin Mendo, Bart van Hoewijk e Noah Smith",
+                Duracao = TimeSpan.Parse ("2:50")
+            },
+            new Musica() {
+                Id = 156,
+                Título = "Morë",
+                Compositores = "Daniel Pérez, Javier Mercado e Noah Smith",
+                Duracao = TimeSpan.Parse ("2:45")
+            },
+            new Musica() {
+                Id = 157,
+                Título = "Bought The Earth",
+                Compositores = "Aaron Cheung, Carlton McDowell Jr, Charlie Coffeen, Noah Smith e Rex Masamune Kudo",
+                Duracao = TimeSpan.Parse ("2:58")
+            },
+            new Musica() {
+                Id = 158,
+                Título = "Nothing Changë",
+                Compositores = "Cooper Coad, George Kala e Noah Smith",
+                Duracao = TimeSpan.Parse ("3:57")
+            },
+            new Musica() {
+                Id = 159,
+                Título = "U Should Know",
+                Compositores = "Abdul Moiz, Neile Ode e Noah Smith",
+                Duracao = TimeSpan.Parse ("3:06")
+            },
+            new Musica() {
+                Id = 160,
+                Título = "Lyfestylë (with Lil Wayne)",
+                Compositores = "Javier Mercado, Joey Fenderson, Noah Smith e Salah Nizami",
+                Duracao = TimeSpan.Parse ("3:56")
+            },
+            new Musica() {
+                Id = 161,
+                Título = "ILUV",
+                Compositores = "Edith Frances, Ethan Kath, Javier Mercado, Noah Smith e Rio Leyva",
+                Duracao = TimeSpan.Parse ("3:03")
+            },
+            new Musica() {
+                Id = 162,
+                Título = "Tell më",
+                Compositores = "Cyrus Spurlock, Gabriel St-Onge, Javier Mercado, Louis Esposito, Noah Smith e Spencer Mott",
+                Duracao = TimeSpan.Parse ("4:03")
+            },
+            new Musica() {
+                Id = 163,
+                Título = "Shade",
+                Compositores = "Christian Boggs, Daniel Mohammadi, Francesca Boszormenyi, Javier Mercado, Joy Evangeline Moreno, Louis Esposito, Nathan Andrew Chen e Noah Smith",
+                Duracao = TimeSpan.Parse ("4:02")
+            },
+            new Musica() {
+                Id = 164,
+                Título = "Keep Pushin",
+                Compositores = "Abdul Moiz, Anton Martin Mendo, Neile Ode, Noah Smith e Tobias Dekker",
+                Duracao = TimeSpan.Parse ("2:46")
+            },
+            new Musica() {
+                Id = 165,
+                Título = "Riot & Set it off",
+                Compositores = "Anton Martin Mendo, Clint Mansell e Noah Smith",
+                Duracao = TimeSpan.Parse ("2:38")
+            },
+            new Musica() {
+                Id = 166,
+                Título = "Team ceo",
+                Compositores = "Anton Martin Mendo, Noah Smith, Sam Lawalata e Tobias Dekker",
+                Duracao = TimeSpan.Parse ("3:17")
+            },
+            new Musica() {
+                Id = 167,
+                Título = "2093",
+                Compositores = "Anton Martin Mendo, Arman Andican, Ethan Andrade, Noah Smith e Oscar Adler",
+                Duracao = TimeSpan.Parse ("2:24")
+            },
+            new Musica() {
+                Id = 168,
+                Título = "Stand On It (with Future)",
+                Compositores = "George Kala, Nayvadius Wilburn e Noah Smith",
+                Duracao = TimeSpan.Parse ("3:00")
+            },
+            new Musica() {
+                Id = 169,
+                Título = "Familia",
+                Compositores = "Benjamin Saint Fort, Abdul Moiz, Cyrus Spurlock e Noah Smith",
+                Duracao = TimeSpan.Parse ("2:34")
+            },
+            new Musica() {
+                Id = 170,
+                Título = "Mr. Inbetweenit",
+                Compositores = "Matthew Shalnev, Nikita Zvorygin e Noah Smith",
+                Duracao = TimeSpan.Parse ("3:18")
+            },
+            new Musica() {
+                Id = 171,
+                Título = "Psychocainë",
+                Compositores = "Abdul Moiz, Michael Ojha,Noah Smith e Oscar Vidal",
+                Duracao = TimeSpan.Parse ("2:46")
+            },
         };
         builder.Entity<Musica>().HasData(musicas);
         #endregion
@@ -1132,6 +1264,10 @@ public class AppDbSeed
             new Artista() {
                 Id = 20,
                 Nome = "Kanye West"
+            },
+            new Artista() {
+                Id = 21,
+                Nome = "DJ Oreia, Mc Brinquedo, MC Cebezinho, Mc Laranjinha, MC Tuto e THE BOX"
             },
         };
         builder.Entity<Artista>().HasData(artistas);
@@ -1769,6 +1905,10 @@ public class AppDbSeed
             new MusicaGenero() {
                 MusicaId = 151,
                 GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 152,
+                GeneroId = 4,
             },
         };
         builder.Entity<MusicaGenero>().HasData(musicaGeneros);
@@ -2531,6 +2671,11 @@ public class AppDbSeed
                 AlbumId = 19,
                 ArtistaId = 20,
                 MusicaId = 151,
+            },
+            new AlbumArtista() {
+                AlbumId = 20,
+                ArtistaId = 21,
+                MusicaId = 152,
             },
         };
         builder.Entity<AlbumArtista>().HasData(albumArtistas);
