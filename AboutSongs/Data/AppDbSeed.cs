@@ -145,6 +145,12 @@ public class AppDbSeed
                 Foto = "/img/Albuns/21.png",
                 DataDeLancamento = DateTime.Parse ("16/02/2024"),
             },
+            new Album() {
+                Id = 22,
+                Título = "Chromakopia",
+                Foto = "/img/Albuns/22.png",
+                DataDeLancamento = DateTime.Parse ("28/10/2024"),
+            },
             
         };
         builder.Entity<Album>().HasData(albuns);
@@ -1179,6 +1185,60 @@ public class AppDbSeed
                 Compositores = "Abdul Moiz, Michael Ojha,Noah Smith e Oscar Vidal",
                 Duracao = TimeSpan.Parse ("2:46")
             },
+            new Musica() {
+                Id = 172,
+                Título = "Run Thëy Mouth",
+                Compositores = "George Kala, Noah Smith e Oscar Vidal",
+                Duracao = TimeSpan.Parse ("3:26")
+            },
+            new Musica() {
+                Id = 173,
+                Título = "If We Being Rëal",
+                Compositores = "Eric Kjell Jowett, Gabriel St-Onge, Javier Mercado, Joey Fenderson, Louis Esposito, Noah Smith e Spencer Mott",
+                Duracao = TimeSpan.Parse ("2:52")
+            },
+            new Musica() {
+                Id = 174,
+                Título = "1093",
+                Compositores = "Aaron Shadrow, Benjamin Bock, Noah Smith e Rex Masamune Kudo",
+                Duracao = TimeSpan.Parse ("2:36")
+            },
+            new Musica() {
+                Id = 175,
+                Título = "St. Chroma (feat. Daniel Caesar)",
+                Compositores = "Ashton Dumar Simmonds e Tyler Okonma",
+                Duracao = TimeSpan.Parse ("3:17")
+            },
+            new Musica() {
+                Id = 176,
+                Título = "Rah Tah Tah",
+                Compositores = "Tyler Okonma",
+                Duracao = TimeSpan.Parse ("2:45")
+            },
+            new Musica() {
+                Id = 177,
+                Título = "Rah Tah Tah",
+                Compositores = "Tyler Okonma",
+                Duracao = TimeSpan.Parse ("2:45")
+            },
+            new Musica() {
+                Id = 178,
+                Título = "Noid",
+                Compositores = "Paul Dobson Nyirongo e Tyler Okonma",
+                Duracao = TimeSpan.Parse ("4:44")
+            },
+            new Musica() {
+                Id = 179,
+                Título = "Darling, I (feat. Teezo Touchdown)",
+                Compositores = "Barry White, Kamaal Ibn John Fareed e Tyler Okonma",
+                Duracao = TimeSpan.Parse ("4:13")
+            },
+            new Musica() {
+                Id = 180,
+                Título = "Hey Jane",
+                Compositores = "Tyler Okonma",
+                Duracao = TimeSpan.Parse ("4:00")
+            },
         };
         builder.Entity<Musica>().HasData(musicas);
         #endregion
@@ -1268,6 +1328,14 @@ public class AppDbSeed
             new Artista() {
                 Id = 21,
                 Nome = "DJ Oreia, Mc Brinquedo, MC Cebezinho, Mc Laranjinha, MC Tuto e THE BOX"
+            },
+            new Artista() {
+                Id = 22,
+                Nome = "Yeat"
+            },
+            new Artista() {
+                Id = 23,
+                Nome = "Tyler, The Creator"
             },
         };
         builder.Entity<Artista>().HasData(artistas);
@@ -1909,6 +1977,94 @@ public class AppDbSeed
             new MusicaGenero() {
                 MusicaId = 152,
                 GeneroId = 4,
+            },
+            new MusicaGenero() {
+                MusicaId = 153,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 154,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 155,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 156,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 157,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 158,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 159,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 160,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 161,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 162,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 163,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 164,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 165,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 166,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 167,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 168,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 169,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 170,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 171,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 172,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 173,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 174,
+                GeneroId = 2,
             },
         };
         builder.Entity<MusicaGenero>().HasData(musicaGeneros);
@@ -2676,6 +2832,131 @@ public class AppDbSeed
                 AlbumId = 20,
                 ArtistaId = 21,
                 MusicaId = 152,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 153,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 153,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 153,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 153,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 154,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 155,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 156,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 157,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 158,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 159,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 160,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 161,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 162,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 163,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 164,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 165,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 166,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 167,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 168,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 169,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 170,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 171,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 172,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 173,
+            },
+            new AlbumArtista() {
+                AlbumId = 21,
+                ArtistaId = 22,
+                MusicaId = 174,
             },
         };
         builder.Entity<AlbumArtista>().HasData(albumArtistas);
