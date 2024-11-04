@@ -151,6 +151,12 @@ public class AppDbSeed
                 Foto = "/img/Albuns/22.png",
                 DataDeLancamento = DateTime.Parse ("28/10/2024"),
             },
+            new Album() {
+                Id = 23,
+                Título = "Barbie",
+                Foto = "/img/Albuns/23.png",
+                DataDeLancamento = DateTime.Parse ("18/10/2024"),
+            },
             
         };
         builder.Entity<Album>().HasData(albuns);
@@ -1217,27 +1223,75 @@ public class AppDbSeed
             },
             new Musica() {
                 Id = 177,
-                Título = "Rah Tah Tah",
-                Compositores = "Tyler Okonma",
-                Duracao = TimeSpan.Parse ("2:45")
-            },
-            new Musica() {
-                Id = 178,
                 Título = "Noid",
                 Compositores = "Paul Dobson Nyirongo e Tyler Okonma",
                 Duracao = TimeSpan.Parse ("4:44")
             },
             new Musica() {
-                Id = 179,
+                Id = 178,
                 Título = "Darling, I (feat. Teezo Touchdown)",
                 Compositores = "Barry White, Kamaal Ibn John Fareed e Tyler Okonma",
                 Duracao = TimeSpan.Parse ("4:13")
             },
             new Musica() {
-                Id = 180,
+                Id = 179,
                 Título = "Hey Jane",
                 Compositores = "Tyler Okonma",
                 Duracao = TimeSpan.Parse ("4:00")
+            },
+            new Musica() {
+                Id = 180,
+                Título = "I Killed You",
+                Compositores = "Tyler Okonma",
+                Duracao = TimeSpan.Parse ("2:48")
+            },
+            new Musica() {
+                Id = 181,
+                Título = "Judge Judy",
+                Compositores = "Tyler Okonma",
+                Duracao = TimeSpan.Parse ("4:29")
+            },
+            new Musica() {
+                Id = 182,
+                Título = "Sticky (feat. GloRilla, Sexyy Red & Lil Wayne)",
+                Compositores = "Aaron Bolton, David Darnell Brown, Dudley Alexander Duverne, Dwyane Carter, Jr., Elvis L. Jr. Williams, Gloria Woods, Jamal F Jones, Janae Wherry, Rex Zamor, Tim Mosley, Timothy clayton, Tyler Okonma e Zachary Anson Wallace",
+                Duracao = TimeSpan.Parse ("4:15")
+            },
+            new Musica() {
+                Id = 183,
+                Título = "Take Your Mask Off (feat. Daniel Caesar & LaToiya Williams)",
+                Compositores = "Greg Cook, K. Thomas e Tyler Okonma",
+                Duracao = TimeSpan.Parse ("4:13")
+            },
+            new Musica() {
+                Id = 184,
+                Título = "Tomorrow",
+                Compositores = "Ashton Dumar Simmonds e Tyler Okonma",
+                Duracao = TimeSpan.Parse ("3:02")
+            },
+            new Musica() {
+                Id = 185,
+                Título = "Thought I Was Dead (feat. ScHoolboy Q & Santigold)",
+                Compositores = "Quincy Hanley e Tyler Okonma",
+                Duracao = TimeSpan.Parse ("3:27")
+            },
+            new Musica() {
+                Id = 186,
+                Título = "Like Him (feat. Lola Young)",
+                Compositores = "Tyler Okonma",
+                Duracao = TimeSpan.Parse ("4:38")
+            },
+            new Musica() {
+                Id = 187,
+                Título = "Balloon (feat. Doechii)",
+                Compositores = "Harry Wayne Casey, James Brown, Jaylah Hickmon, Luther Campbell, Rick Finch, Robert Ginyard e Tyler Okonma",
+                Duracao = TimeSpan.Parse ("4:29")
+            },
+            new Musica() {
+                Id = 188,
+                Título = "Barbie",
+                Compositores = "Emerson Teixeira Muniz e Glenner Robert Cândido",
+                Duracao = TimeSpan.Parse ("4:29")
             },
         };
         builder.Entity<Musica>().HasData(musicas);
@@ -1336,6 +1390,10 @@ public class AppDbSeed
             new Artista() {
                 Id = 23,
                 Nome = "Tyler, The Creator"
+            },
+            new Artista() {
+                Id = 23,
+                Nome = "DJ Glenner e MC Tuto"
             },
         };
         builder.Entity<Artista>().HasData(artistas);
@@ -2065,6 +2123,62 @@ public class AppDbSeed
             new MusicaGenero() {
                 MusicaId = 174,
                 GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 175,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 176,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 177,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 178,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 179,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 180,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 181,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 182,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 183,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 184,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 185,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 186,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 187,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 188,
+                GeneroId = 4,
             },
         };
         builder.Entity<MusicaGenero>().HasData(musicaGeneros);
@@ -2957,6 +3071,76 @@ public class AppDbSeed
                 AlbumId = 21,
                 ArtistaId = 22,
                 MusicaId = 174,
+            },
+            new AlbumArtista() {
+                AlbumId = 22,
+                ArtistaId = 23,
+                MusicaId = 175,
+            },
+            new AlbumArtista() {
+                AlbumId = 22,
+                ArtistaId = 23,
+                MusicaId = 176,
+            },
+            new AlbumArtista() {
+                AlbumId = 22,
+                ArtistaId = 23,
+                MusicaId = 177,
+            },
+            new AlbumArtista() {
+                AlbumId = 22,
+                ArtistaId = 23,
+                MusicaId = 178,
+            },
+            new AlbumArtista() {
+                AlbumId = 22,
+                ArtistaId = 23,
+                MusicaId = 179,
+            },
+            new AlbumArtista() {
+                AlbumId = 22,
+                ArtistaId = 23,
+                MusicaId = 180,
+            },
+            new AlbumArtista() {
+                AlbumId = 22,
+                ArtistaId = 23,
+                MusicaId = 181,
+            },
+            new AlbumArtista() {
+                AlbumId = 22,
+                ArtistaId = 23,
+                MusicaId = 182,
+            },
+            new AlbumArtista() {
+                AlbumId = 22,
+                ArtistaId = 23,
+                MusicaId = 183,
+            },
+            new AlbumArtista() {
+                AlbumId = 22,
+                ArtistaId = 23,
+                MusicaId = 184,
+            },
+            new AlbumArtista() {
+                AlbumId = 22,
+                ArtistaId = 23,
+                MusicaId = 185,
+            },
+            new AlbumArtista() {
+                AlbumId = 22,
+                ArtistaId = 23,
+                MusicaId = 186,
+            },
+            new AlbumArtista() {
+                AlbumId = 22,
+                ArtistaId = 23,
+                MusicaId = 187,
+            },
+            new AlbumArtista() {
+                AlbumId = 23,
+                ArtistaId = 24,
+                MusicaId = 188,
             },
         };
         builder.Entity<AlbumArtista>().HasData(albumArtistas);
