@@ -15,7 +15,7 @@ namespace AboutSongs.Migrations
                 keyColumn: "Id",
                 keyValue: "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
                 columns: new[] { "ConcurrencyStamp", "PasswordHash", "SecurityStamp" },
-                values: new object[] { "6bf11ded-722a-4ec5-b655-57232b2deb65", "AQAAAAIAAYagAAAAEBOOn41czfMVv3JIZG641sWGaZnSyHyrOT6EDDgO1BFmYKIjKJHUGbQLPxFk4IxskA==", "be329259-1eea-4c78-a852-afd6aaafedee" });
+                values: new object[] { "7e526d53-12c5-4868-a2b1-48e922b54c2d", "AQAAAAIAAYagAAAAEL4/AbvIsBfHIJKHLzSIsb2wo/c1M/FmT0yZQRK1ZbOBxvTr6UE2BlM3M/TAxvPckw==", "cea824a6-1d2f-4e99-8921-331c462ba68d" });
         }
 
         /// <inheritdoc />
@@ -26,7 +26,7 @@ namespace AboutSongs.Migrations
                 keyColumn: "Id",
                 keyValue: "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
                 columns: new[] { "ConcurrencyStamp", "PasswordHash", "SecurityStamp" },
-                values: new object[] { "b510c3a9-4aac-48e4-ba22-1511167363c8", "AQAAAAIAAYagAAAAEJJAsxrJn2uwLUy4AdjmSwV6VRdcQ3/zzLUjtlZFZPLJyiGsE2dDtdnPC5Js0q3rEA==", "16a0848d-79a9-4e8a-913e-dea42700686b" });
+                values: new object[] { "b68b286a-df15-400b-9c99-c43be7f634c3", "AQAAAAIAAYagAAAAEDT/JopUagtLojHu77iBawctpvDKM2VdGJezWRQJgLCWtYKeD6+nLh4yMqDfXGpHrA==", "afd3ad80-38ab-4b75-89ce-3e283a60454d" });
         }
     }
 }

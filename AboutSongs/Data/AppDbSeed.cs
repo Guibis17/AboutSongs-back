@@ -157,6 +157,18 @@ public class AppDbSeed
                 Foto = "/img/Albuns/23.png",
                 DataDeLancamento = DateTime.Parse ("18/10/2024"),
             },
+            new Album() {
+                Id = 24,
+                Título = "APT.",
+                Foto = "/img/Albuns/24.png",
+                DataDeLancamento = DateTime.Parse ("18/10/2024"),
+            },
+            new Album() {
+                Id = 25,
+                Título = "Nada Como um Dia Após o Outro Dia, Vol. 1 & 2",
+                Foto = "/img/Albuns/25.png",
+                DataDeLancamento = DateTime.Parse ("07/10/2007"),
+            },
             
         };
         builder.Entity<Album>().HasData(albuns);
@@ -1291,7 +1303,139 @@ public class AppDbSeed
                 Id = 188,
                 Título = "Barbie",
                 Compositores = "Emerson Teixeira Muniz e Glenner Robert Cândido",
-                Duracao = TimeSpan.Parse ("4:29")
+                Duracao = TimeSpan.Parse ("3:12")
+            },
+            new Musica() {
+                Id = 189,
+                Título = "APT.",
+                Compositores = "Amy Allen, Bruno Mars, Chae Young Park, Christopher Brody Brown, Henry Walter, Michael Chapman, Nicholas Chinn, Omer Fedi, Philip Lawrence, Rogét Chahayed e Theron Thomas",
+                Duracao = TimeSpan.Parse ("2:49")
+            },
+            new Musica() {
+                Id = 190,
+                Título = "Sou + Você",
+                Compositores = "Caetano Veloso e Mano Brown",
+                Duracao = TimeSpan.Parse ("1:48")
+            },
+            new Musica() {
+                Id = 191,
+                Título = "Vivão e Vivendo",
+                Compositores = "Mano Brown",
+                Duracao = TimeSpan.Parse ("1:57")
+            },
+            new Musica() {
+                Id = 192,
+                Título = "Vida Loka (Intro)",
+                Compositores = "Mano Brown",
+                Duracao = TimeSpan.Parse ("0:24")
+            },
+            new Musica() {
+                Id = 193,
+                Título = "Vida Loka, Pt. 1",
+                Compositores = "Mano Brown",
+                Duracao = TimeSpan.Parse ("5:03")
+            },
+            new Musica() {
+                Id = 194,
+                Título = "Negro Drama",
+                Compositores = "Mano Brown",
+                Duracao = TimeSpan.Parse ("6:51")
+            },
+            new Musica() {
+                Id = 195,
+                Título = "A Vítima",
+                Compositores = "Mano Brown",
+                Duracao = TimeSpan.Parse ("7:20")
+            },
+            new Musica() {
+                Id = 196,
+                Título = "Na Fé Firmão",
+                Compositores = "Mano Brown",
+                Duracao = TimeSpan.Parse ("6:05")
+            },
+            new Musica() {
+                Id = 197,
+                Título = "12 de Outubro",
+                Compositores = "Mano Brown",
+                Duracao = TimeSpan.Parse ("3:30")
+            },
+            new Musica() {
+                Id = 198,
+                Título = "Eu Sou 157",
+                Compositores = "Mano Brown",
+                Duracao = TimeSpan.Parse ("8:49")
+            },
+            new Musica() {
+                Id = 199,
+                Título = "A Vida É Desafio",
+                Compositores = "Mano Brown",
+                Duracao = TimeSpan.Parse ("7:13")
+            },
+            new Musica() {
+                Id = 200,
+                Título = "1 por Amor, 2 por Dinheiro",
+                Compositores = "Mano Brown",
+                Duracao = TimeSpan.Parse ("6:58")
+            },
+            new Musica() {
+                Id = 201,
+                Título = "De Volta À Cena",
+                Compositores = "Mano Brown",
+                Duracao = TimeSpan.Parse ("2:01")
+            },
+            new Musica() {
+                Id = 202,
+                Título = "Otus 500",
+                Compositores = "Mano Brown",
+                Duracao = TimeSpan.Parse ("2:11")
+            },
+            new Musica() {
+                Id = 203,
+                Título = "Crime Vai e Vem",
+                Compositores = "Mano Brown",
+                Duracao = TimeSpan.Parse ("7:55")
+            },
+            new Musica() {
+                Id = 204,
+                Título = "Jesus Chorou",
+                Compositores = "Mano Brown",
+                Duracao = TimeSpan.Parse ("7:51")
+            },
+            new Musica() {
+                Id = 205,
+                Título = "Fone (Intro)",
+                Compositores = "Mano Brown",
+                Duracao = TimeSpan.Parse ("1:56")
+            },
+            new Musica() {
+                Id = 206,
+                Título = "Estilo Cachorro",
+                Compositores = "Mano Brown",
+                Duracao = TimeSpan.Parse ("6:17")
+            },
+            new Musica() {
+                Id = 207,
+                Título = "Vida Loka, Pt. 2",
+                Compositores = "Mano Brown",
+                Duracao = TimeSpan.Parse ("5:50")
+            },
+            new Musica() {
+                Id = 208,
+                Título = "Expresso da Meia-Noite",
+                Compositores = "Mano Brown",
+                Duracao = TimeSpan.Parse ("5:21")
+            },
+            new Musica() {
+                Id = 209,
+                Título = "Trutas e Quebradas",
+                Compositores = "Mano Brown",
+                Duracao = TimeSpan.Parse ("6:17")
+            },
+            new Musica() {
+                Id = 210,
+                Título = "Da Ponte pra Cá",
+                Compositores = "Mano Brown",
+                Duracao = TimeSpan.Parse ("8:47")
             },
         };
         builder.Entity<Musica>().HasData(musicas);
@@ -1392,8 +1536,16 @@ public class AppDbSeed
                 Nome = "Tyler, The Creator"
             },
             new Artista() {
-                Id = 23,
+                Id = 24,
                 Nome = "DJ Glenner e MC Tuto"
+            },
+            new Artista() {
+                Id = 25,
+                Nome = "Bruno Mars e ROSÉ"
+            },
+            new Artista() {
+                Id = 26,
+                Nome = "Racionais MC's"
             },
         };
         builder.Entity<Artista>().HasData(artistas);
@@ -2180,6 +2332,94 @@ public class AppDbSeed
                 MusicaId = 188,
                 GeneroId = 4,
             },
+            new MusicaGenero() {
+                MusicaId = 189,
+                GeneroId = 1,
+            },
+            new MusicaGenero() {
+                MusicaId = 190,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 191,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 192,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 193,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 194,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 195,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 196,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 197,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 198,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 199,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 200,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 201,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 202,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 203,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 204,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 205,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 206,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 207,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 208,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 209,
+                GeneroId = 2,
+            },
+            new MusicaGenero() {
+                MusicaId = 210,
+                GeneroId = 2,
+            },
         };
         builder.Entity<MusicaGenero>().HasData(musicaGeneros);
         #endregion
@@ -2955,21 +3195,6 @@ public class AppDbSeed
             new AlbumArtista() {
                 AlbumId = 21,
                 ArtistaId = 22,
-                MusicaId = 153,
-            },
-            new AlbumArtista() {
-                AlbumId = 21,
-                ArtistaId = 22,
-                MusicaId = 153,
-            },
-            new AlbumArtista() {
-                AlbumId = 21,
-                ArtistaId = 22,
-                MusicaId = 153,
-            },
-            new AlbumArtista() {
-                AlbumId = 21,
-                ArtistaId = 22,
                 MusicaId = 154,
             },
             new AlbumArtista() {
@@ -3141,6 +3366,116 @@ public class AppDbSeed
                 AlbumId = 23,
                 ArtistaId = 24,
                 MusicaId = 188,
+            },
+            new AlbumArtista() {
+                AlbumId = 24,
+                ArtistaId = 25,
+                MusicaId = 189,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 190,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 191,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 192,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 193,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 194,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 195,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 196,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 197,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 198,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 199,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 200,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 201,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 202,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 203,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 204,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 205,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 206,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 207,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 208,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 209,
+            },
+            new AlbumArtista() {
+                AlbumId = 25,
+                ArtistaId = 26,
+                MusicaId = 210,
             },
         };
         builder.Entity<AlbumArtista>().HasData(albumArtistas);

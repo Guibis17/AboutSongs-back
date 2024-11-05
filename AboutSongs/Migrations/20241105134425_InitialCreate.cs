@@ -111,19 +111,6 @@ namespace AboutSongs.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Comentario",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Comentario", x => x.Id);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
                 name: "Critica",
                 columns: table => new
                 {
@@ -433,6 +420,35 @@ namespace AboutSongs.Migrations
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
+            migrationBuilder.CreateTable(
+                name: "Comentario",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    AlbumId = table.Column<int>(type: "int", nullable: false),
+                    UsuarioId = table.Column<string>(type: "varchar(255)", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    DataDePublicacao = table.Column<DateTime>(type: "datetime(6)", maxLength: 1000, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Comentario", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Comentario_Album_AlbumId",
+                        column: x => x.AlbumId,
+                        principalTable: "Album",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Comentario_Usuario_UsuarioId",
+                        column: x => x.UsuarioId,
+                        principalTable: "Usuario",
+                        principalColumn: "UsuarioId",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
             migrationBuilder.InsertData(
                 table: "Album",
                 columns: new[] { "Id", "DataDeLancamento", "ExibirHome", "Foto", "Nome", "Título" },
@@ -452,7 +468,17 @@ namespace AboutSongs.Migrations
                     { 12, new DateTime(2024, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/12.png", null, "Family Matters" },
                     { 13, new DateTime(2024, 7, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/13.png", null, "MTG QUERO VER SE VOCÊ TEM ATITUDE" },
                     { 14, new DateTime(2024, 4, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/14.png", null, "Euphoria" },
-                    { 15, new DateTime(2024, 9, 27, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/15.png", null, "Timeless (with Playboi Carti)" }
+                    { 15, new DateTime(2024, 9, 27, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/15.png", null, "Timeless (with Playboi Carti)" },
+                    { 16, new DateTime(2024, 4, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/16.png", null, "MILLION DOLLAR BABY" },
+                    { 17, new DateTime(2024, 6, 21, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/17.png", null, "Feelslikeimfallinginlove" },
+                    { 18, new DateTime(2024, 3, 8, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/18.png", null, "Eternal Sunshine" },
+                    { 19, new DateTime(2024, 2, 9, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/19.png", null, "Vultures 1" },
+                    { 20, new DateTime(2024, 4, 18, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/20.png", null, "THE BOX MEDLEY FUNK 2" },
+                    { 21, new DateTime(2024, 2, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/21.png", null, "2093" },
+                    { 22, new DateTime(2024, 10, 28, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/22.png", null, "Chromakopia" },
+                    { 23, new DateTime(2024, 10, 18, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/23.png", null, "Barbie" },
+                    { 24, new DateTime(2024, 10, 18, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/24.png", null, "APT." },
+                    { 25, new DateTime(2007, 10, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/25.png", null, "Nada Como um Dia Após o Outro Dia, Vol. 1 & 2" }
                 });
 
             migrationBuilder.InsertData(
@@ -475,7 +501,17 @@ namespace AboutSongs.Migrations
                     { 13, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Charli XCX " },
                     { 14, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Dj Luan Gomes" },
                     { 15, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Drake" },
-                    { 16, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Playboi Carti e The Weeknd" }
+                    { 16, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Playboi Carti e The Weeknd" },
+                    { 17, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Tommy Richman" },
+                    { 18, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Coldplay" },
+                    { 19, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Ariana Grande" },
+                    { 20, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Kanye West" },
+                    { 21, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "DJ Oreia, Mc Brinquedo, MC Cebezinho, Mc Laranjinha, MC Tuto e THE BOX" },
+                    { 22, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Yeat" },
+                    { 23, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Tyler, The Creator" },
+                    { 24, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "DJ Glenner e MC Tuto" },
+                    { 25, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Bruno Mars e ROSÉ" },
+                    { 26, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Racionais MC's" }
                 });
 
             migrationBuilder.InsertData(
@@ -491,7 +527,7 @@ namespace AboutSongs.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", 0, "b510c3a9-4aac-48e4-ba22-1511167363c8", "admin@aboutsongs.com", true, false, null, "ADMIN@ABOUTSONGS.COM", "ADMIN", "AQAAAAIAAYagAAAAEJJAsxrJn2uwLUy4AdjmSwV6VRdcQ3/zzLUjtlZFZPLJyiGsE2dDtdnPC5Js0q3rEA==", null, false, "16a0848d-79a9-4e8a-913e-dea42700686b", false, "Admin" });
+                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", 0, "b68b286a-df15-400b-9c99-c43be7f634c3", "admin@aboutsongs.com", true, false, null, "ADMIN@ABOUTSONGS.COM", "ADMIN", "AQAAAAIAAYagAAAAEDT/JopUagtLojHu77iBawctpvDKM2VdGJezWRQJgLCWtYKeD6+nLh4yMqDfXGpHrA==", null, false, "afd3ad80-38ab-4b75-89ce-3e283a60454d", false, "Admin" });
 
             migrationBuilder.InsertData(
                 table: "Genero",
@@ -630,7 +666,96 @@ namespace AboutSongs.Migrations
                     { 118, "Alexander Guy Cook, Charlotte Aitchison e Ross Matthew Birchard", new TimeSpan(0, 3, 9, 0, 0), null, "Mean girls" },
                     { 119, "Alexander Guy Cook, Charlotte Aitchison, Finn Keane e Jonathan Christopher Shave", new TimeSpan(0, 2, 15, 0, 0), null, "I think about it all the time" },
                     { 120, "Alexander Guy Cook, Blake Slatkin, Charlotte Aitchison, Cirkut, Finn Keane (EasyFun) e Omer Fedi", new TimeSpan(0, 3, 23, 0, 0), null, "365" },
-                    { 121, "Linkin Park", new TimeSpan(0, 3, 10, 0, 0), null, "The Emptiness Machine" }
+                    { 121, "Linkin Park", new TimeSpan(0, 3, 10, 0, 0), null, "The Emptiness Machine" },
+                    { 122, "Ava La'RaeTommy Richman", new TimeSpan(0, 2, 35, 0, 0), null, "MILLION DOLLAR BABY" },
+                    { 123, "Max Martin, Apple Martin, Chris Martin, Guy Berryman, Jon Hopkins, Jonny Buckland, Oscar Holter, Tim Rutili e Will Champion", new TimeSpan(0, 3, 57, 0, 0), null, "Feelslikeimfallinginlove" },
+                    { 124, "Ariana Grande, Nick Lee, Shintaro Yasuda e Aaron Cheung", new TimeSpan(0, 1, 32, 0, 0), null, "Intro (end of the world)" },
+                    { 125, "Ariana Grande, LLya Salamanzadeh e Max Martin", new TimeSpan(0, 2, 44, 0, 0), null, "bye" },
+                    { 126, "Ariana Grande, LLya Salamanzadeh e Max Martin", new TimeSpan(0, 2, 54, 0, 0), null, "don't wanna break up again" },
+                    { 127, "Ariana Grande, LLya Salamanzadeh e Max Martin", new TimeSpan(0, 0, 42, 0, 0), null, "Saturn Returns Interlude" },
+                    { 128, "Ariana Grande, Max Martin, Shintaro Yasuda e DaviDior", new TimeSpan(0, 3, 30, 0, 0), null, "eternal sunshine" },
+                    { 129, "Ariana Grande, Max Martin e Oscar Görres", new TimeSpan(0, 2, 43, 0, 0), null, "supernatural" },
+                    { 130, "Ariana Grande e Max Martin", new TimeSpan(0, 2, 43, 0, 0), null, "true story" },
+                    { 131, "Ariana Grande, Max Martin, Shintaro Yasuda e DaviDior", new TimeSpan(0, 2, 53, 0, 0), null, "the boy is mine" },
+                    { 132, "Ariana Grande, LLya Salamanzadeh e Max Martin", new TimeSpan(0, 3, 34, 0, 0), null, "yes, and?" },
+                    { 133, "Ariana Grande, LLya Salamanzadeh e Max Martin", new TimeSpan(0, 3, 48, 0, 0), null, "we can't be friends (wait for your love)" },
+                    { 134, "Ariana Grande e LLya Salamanzadeh", new TimeSpan(0, 2, 33, 0, 0), null, "i wish i hated you" },
+                    { 135, "Ariana Grande, LLya Salamanzadeh, Max Martin e Peter Kahm", new TimeSpan(0, 3, 2, 0, 0), null, "imperfect for you" },
+                    { 136, "Ariana Grande, Nick Lee, Luka Kloser e Nonna", new TimeSpan(0, 2, 48, 0, 0), null, "ordinary things (feat. Nonna)" },
+                    { 137, "Lucien Parker,Barringington D. Hendricks, Billy Ray Schlag, Darhyl Camper Jr., Isaac De Boni, Michael Mule, Quentin Miller, Samuel C. Lindley, Tyrone Griffin, Jr. e Ye", new TimeSpan(0, 1, 55, 0, 0), null, "STARS" },
+                    { 138, "Cydel C. Young, Hubert E. Polinski, Konrad Żyrek, Samuel C. Lindley, Tim Mosley, Ty Dolla $ign, Veyis-Can Urun, Vincent Vendi e Ye", new TimeSpan(0, 2, 54, 0, 0), null, "KEYS TO MY LIFE" },
+                    { 139, "Chrishan, Anthony Kilhoffer, Cedric R Hailey, Christopher C. Dotson, Hamid Bashir, Louis K. Celestin, Samuel C. LindleyTyrone Griffin, Jr. e Ye", new TimeSpan(0, 3, 15, 0, 0), null, "PAID" },
+                    { 140, "Anthony Clemons Jr, Darhyl Camper Jr., Dominic Maker, Edward Davadi, James B. Litherland, Kasseem D. Dean, North West, Quentin Miller, Shawntoni A. Nichols, Tyrone Griffin, Jr. e Ye", new TimeSpan(0, 3, 5, 0, 0), null, "TALKING" },
+                    { 141, "Aswad Asif, Charles M. Njapa, Daniel Kin J. Chien, Frederick Tipton, James A. Hau, Nicholas M. Balding, Sasha Hashemi, Tyrone Griffin, Jr., Ye e Zachary R. Frenes", new TimeSpan(0, 4, 55, 0, 0), null, "BACK TO ME" },
+                    { 142, "Charles M. Njapa, Darhyl Camper Jr., Malik Y. Jones, Robert G. Booker, Tyrone Griffin, Jr. e Ye", new TimeSpan(0, 3, 42, 0, 0), null, "HOODRAT" },
+                    { 143, "Chrishan, Alexander West, Billy Ray Schlag, Darhyl Camper Jr., Denis Raab, Dijon I. McFarlane, Ermias J. Asghedom, Keenon Dequan R. Jackson, Kevin Gomringer, Lukas Benjamin Leth Kroll, Samuel C. Lindley, Supreme Williams, Tim Gomringer, Tyrone Griffin, Jr. e Ye", new TimeSpan(0, 3, 45, 0, 0), null, "DO IT" },
+                    { 144, "ADERLI RAMIREZ OVIEDO, Bruno Gioia Martins Funke Da Costa, Charles M. Njapa, Kasseem D. Dean, Leonardo Felipe Yasmil Garces, Nasir H. Pemberton, Quavious Keyate Marshall, Samuel C. Lindley, Ty Dolla $ign, Tyrone Griffin, Jr. e Victor Hugo Maciel dos Santos", new TimeSpan(0, 2, 25, 0, 0), null, "PAPERWORK" },
+                    { 145, "Amir Stivie B, Christopher C. Dotson, John Beck, Joseph Goddard, Leon Thomas, Morten Ristorp, Samuel C. Lindley, Tyrone Griffin, Jr., Tyshane Thompson, Valentina Pappalardo e Ye", new TimeSpan(0, 1, 51, 0, 0), null, "BURN" },
+                    { 146, "Chrishan, Barringington D. Hendricks, Christopher C. Dotson, Evan K. Hood-Atlas, Jacques B. Webster II, Jordan T. Carter, Quavious Keyate Marshall, Quentin Miller, Samuel C. Lindley, Tim Mosley, Tyrone Griffin, Jr. e Ye", new TimeSpan(0, 3, 29, 0, 0), null, "FUK SUMN" },
+                    { 147, "Jasper Harris, Mark Williams, Cydel C. Young, Durk D. Banks, Gustave Rudman Rambali, Jason T. Harris, Jordan Houston, Marlon T. Barrow, Mathias D. Liyew, Paul Beauregard, Pharris Thomas, Raul I. Cubina, Terrace M. Boykin, Tyrone Griffin, Jr. e Ye ", new TimeSpan(0, 4, 36, 0, 0), null, "VULTURES" },
+                    { 148, "Mark Williams, Raul Cubina(of Ojivolta), Dimitri Rogers, Grant Dickinson, Jordan T. Carter, Raul I. Cubina, Samuel C. Lindley, Tyrone Griffin, Jr. e Ye", new TimeSpan(0, 4, 24, 0, 0), null, "CARNIVAL" },
+                    { 149, "Barrington D. Hendricks, Faouzia Ouihya, John Beck, Joseph Goddard, Latia T. Lindley, London T. Holmes, Quentin Miller, Tyrone Griffin, Jr., Valentina Pappalardo e Ye", new TimeSpan(0, 6, 8, 0, 0), null, "BEG FORGIVENESS" },
+                    { 150, "Camper, Amber D. Streeter, Charles E. Hugo, Charles M. Njapa, Denzel A. Charles, Melvin Moore, Tyrone Griffin, Jr. e Ye", new TimeSpan(0, 3, 14, 0, 0), null, "PROBLEMATIC" },
+                    { 151, "Arturo Fratini, Barringington D. Hendricks, Charles M. Njapa, Dylan T. Cleary-Krell, Frederick Tipton, Tyrone Griffin, Jr., Victor Mensah e Ye", new TimeSpan(0, 2, 36, 0, 0), null, "KING" },
+                    { 152, "Mc Brinquedo, MC Cebezinho, Mc Laranjinha e MC Tuto", new TimeSpan(0, 4, 26, 0, 0), null, "THE BOX MEDLEY FUNK 2" },
+                    { 153, "Abdul Moiz, George Kala, Michael Ojha e Noah Smith", new TimeSpan(0, 3, 45, 0, 0), null, "Psycho CEO" },
+                    { 154, "Aaron Shadrow, Jasper Harris, Tom Levesque, Anton Martin Mendo, Arman Andican, Donald Glover, Noah Smith, Oscar Adler e Thomas Levesque", new TimeSpan(0, 4, 24, 0, 0), null, "Power Trip" },
+                    { 155, "Anton Martin Mendo, Bart van Hoewijk e Noah Smith", new TimeSpan(0, 2, 50, 0, 0), null, "Breathe" },
+                    { 156, "Daniel Pérez, Javier Mercado e Noah Smith", new TimeSpan(0, 2, 45, 0, 0), null, "Morë" },
+                    { 157, "Aaron Cheung, Carlton McDowell Jr, Charlie Coffeen, Noah Smith e Rex Masamune Kudo", new TimeSpan(0, 2, 58, 0, 0), null, "Bought The Earth" },
+                    { 158, "Cooper Coad, George Kala e Noah Smith", new TimeSpan(0, 3, 57, 0, 0), null, "Nothing Changë" },
+                    { 159, "Abdul Moiz, Neile Ode e Noah Smith", new TimeSpan(0, 3, 6, 0, 0), null, "U Should Know" },
+                    { 160, "Javier Mercado, Joey Fenderson, Noah Smith e Salah Nizami", new TimeSpan(0, 3, 56, 0, 0), null, "Lyfestylë (with Lil Wayne)" },
+                    { 161, "Edith Frances, Ethan Kath, Javier Mercado, Noah Smith e Rio Leyva", new TimeSpan(0, 3, 3, 0, 0), null, "ILUV" },
+                    { 162, "Cyrus Spurlock, Gabriel St-Onge, Javier Mercado, Louis Esposito, Noah Smith e Spencer Mott", new TimeSpan(0, 4, 3, 0, 0), null, "Tell më" },
+                    { 163, "Christian Boggs, Daniel Mohammadi, Francesca Boszormenyi, Javier Mercado, Joy Evangeline Moreno, Louis Esposito, Nathan Andrew Chen e Noah Smith", new TimeSpan(0, 4, 2, 0, 0), null, "Shade" },
+                    { 164, "Abdul Moiz, Anton Martin Mendo, Neile Ode, Noah Smith e Tobias Dekker", new TimeSpan(0, 2, 46, 0, 0), null, "Keep Pushin" },
+                    { 165, "Anton Martin Mendo, Clint Mansell e Noah Smith", new TimeSpan(0, 2, 38, 0, 0), null, "Riot & Set it off" },
+                    { 166, "Anton Martin Mendo, Noah Smith, Sam Lawalata e Tobias Dekker", new TimeSpan(0, 3, 17, 0, 0), null, "Team ceo" },
+                    { 167, "Anton Martin Mendo, Arman Andican, Ethan Andrade, Noah Smith e Oscar Adler", new TimeSpan(0, 2, 24, 0, 0), null, "2093" },
+                    { 168, "George Kala, Nayvadius Wilburn e Noah Smith", new TimeSpan(0, 3, 0, 0, 0), null, "Stand On It (with Future)" },
+                    { 169, "Benjamin Saint Fort, Abdul Moiz, Cyrus Spurlock e Noah Smith", new TimeSpan(0, 2, 34, 0, 0), null, "Familia" },
+                    { 170, "Matthew Shalnev, Nikita Zvorygin e Noah Smith", new TimeSpan(0, 3, 18, 0, 0), null, "Mr. Inbetweenit" },
+                    { 171, "Abdul Moiz, Michael Ojha,Noah Smith e Oscar Vidal", new TimeSpan(0, 2, 46, 0, 0), null, "Psychocainë" },
+                    { 172, "George Kala, Noah Smith e Oscar Vidal", new TimeSpan(0, 3, 26, 0, 0), null, "Run Thëy Mouth" },
+                    { 173, "Eric Kjell Jowett, Gabriel St-Onge, Javier Mercado, Joey Fenderson, Louis Esposito, Noah Smith e Spencer Mott", new TimeSpan(0, 2, 52, 0, 0), null, "If We Being Rëal" },
+                    { 174, "Aaron Shadrow, Benjamin Bock, Noah Smith e Rex Masamune Kudo", new TimeSpan(0, 2, 36, 0, 0), null, "1093" },
+                    { 175, "Ashton Dumar Simmonds e Tyler Okonma", new TimeSpan(0, 3, 17, 0, 0), null, "St. Chroma (feat. Daniel Caesar)" },
+                    { 176, "Tyler Okonma", new TimeSpan(0, 2, 45, 0, 0), null, "Rah Tah Tah" },
+                    { 177, "Paul Dobson Nyirongo e Tyler Okonma", new TimeSpan(0, 4, 44, 0, 0), null, "Noid" },
+                    { 178, "Barry White, Kamaal Ibn John Fareed e Tyler Okonma", new TimeSpan(0, 4, 13, 0, 0), null, "Darling, I (feat. Teezo Touchdown)" },
+                    { 179, "Tyler Okonma", new TimeSpan(0, 4, 0, 0, 0), null, "Hey Jane" },
+                    { 180, "Tyler Okonma", new TimeSpan(0, 2, 48, 0, 0), null, "I Killed You" },
+                    { 181, "Tyler Okonma", new TimeSpan(0, 4, 29, 0, 0), null, "Judge Judy" },
+                    { 182, "Aaron Bolton, David Darnell Brown, Dudley Alexander Duverne, Dwyane Carter, Jr., Elvis L. Jr. Williams, Gloria Woods, Jamal F Jones, Janae Wherry, Rex Zamor, Tim Mosley, Timothy clayton, Tyler Okonma e Zachary Anson Wallace", new TimeSpan(0, 4, 15, 0, 0), null, "Sticky (feat. GloRilla, Sexyy Red & Lil Wayne)" },
+                    { 183, "Greg Cook, K. Thomas e Tyler Okonma", new TimeSpan(0, 4, 13, 0, 0), null, "Take Your Mask Off (feat. Daniel Caesar & LaToiya Williams)" },
+                    { 184, "Ashton Dumar Simmonds e Tyler Okonma", new TimeSpan(0, 3, 2, 0, 0), null, "Tomorrow" },
+                    { 185, "Quincy Hanley e Tyler Okonma", new TimeSpan(0, 3, 27, 0, 0), null, "Thought I Was Dead (feat. ScHoolboy Q & Santigold)" },
+                    { 186, "Tyler Okonma", new TimeSpan(0, 4, 38, 0, 0), null, "Like Him (feat. Lola Young)" },
+                    { 187, "Harry Wayne Casey, James Brown, Jaylah Hickmon, Luther Campbell, Rick Finch, Robert Ginyard e Tyler Okonma", new TimeSpan(0, 4, 29, 0, 0), null, "Balloon (feat. Doechii)" },
+                    { 188, "Emerson Teixeira Muniz e Glenner Robert Cândido", new TimeSpan(0, 3, 12, 0, 0), null, "Barbie" },
+                    { 189, "Amy Allen, Bruno Mars, Chae Young Park, Christopher Brody Brown, Henry Walter, Michael Chapman, Nicholas Chinn, Omer Fedi, Philip Lawrence, Rogét Chahayed e Theron Thomas", new TimeSpan(0, 2, 49, 0, 0), null, "APT." },
+                    { 190, "Caetano Veloso e Mano Brown", new TimeSpan(0, 1, 48, 0, 0), null, "Sou + Você" },
+                    { 191, "Mano Brown", new TimeSpan(0, 1, 57, 0, 0), null, "Vivão e Vivendo" },
+                    { 192, "Mano Brown", new TimeSpan(0, 0, 24, 0, 0), null, "Vida Loka (Intro)" },
+                    { 193, "Mano Brown", new TimeSpan(0, 5, 3, 0, 0), null, "Vida Loka, Pt. 1" },
+                    { 194, "Mano Brown", new TimeSpan(0, 6, 51, 0, 0), null, "Negro Drama" },
+                    { 195, "Mano Brown", new TimeSpan(0, 7, 20, 0, 0), null, "A Vítima" },
+                    { 196, "Mano Brown", new TimeSpan(0, 6, 5, 0, 0), null, "Na Fé Firmão" },
+                    { 197, "Mano Brown", new TimeSpan(0, 3, 30, 0, 0), null, "12 de Outubro" },
+                    { 198, "Mano Brown", new TimeSpan(0, 8, 49, 0, 0), null, "Eu Sou 157" },
+                    { 199, "Mano Brown", new TimeSpan(0, 7, 13, 0, 0), null, "A Vida É Desafio" },
+                    { 200, "Mano Brown", new TimeSpan(0, 6, 58, 0, 0), null, "1 por Amor, 2 por Dinheiro" },
+                    { 201, "Mano Brown", new TimeSpan(0, 2, 1, 0, 0), null, "De Volta À Cena" },
+                    { 202, "Mano Brown", new TimeSpan(0, 2, 11, 0, 0), null, "Otus 500" },
+                    { 203, "Mano Brown", new TimeSpan(0, 7, 55, 0, 0), null, "Crime Vai e Vem" },
+                    { 204, "Mano Brown", new TimeSpan(0, 7, 51, 0, 0), null, "Jesus Chorou" },
+                    { 205, "Mano Brown", new TimeSpan(0, 1, 56, 0, 0), null, "Fone (Intro)" },
+                    { 206, "Mano Brown", new TimeSpan(0, 6, 17, 0, 0), null, "Estilo Cachorro" },
+                    { 207, "Mano Brown", new TimeSpan(0, 5, 50, 0, 0), null, "Vida Loka, Pt. 2" },
+                    { 208, "Mano Brown", new TimeSpan(0, 5, 21, 0, 0), null, "Expresso da Meia-Noite" },
+                    { 209, "Mano Brown", new TimeSpan(0, 6, 17, 0, 0), null, "Trutas e Quebradas" },
+                    { 210, "Mano Brown", new TimeSpan(0, 8, 47, 0, 0), null, "Da Ponte pra Cá" }
                 });
 
             migrationBuilder.InsertData(
@@ -758,7 +883,96 @@ namespace AboutSongs.Migrations
                     { 12, 15, 47 },
                     { 13, 14, 104 },
                     { 14, 7, 102 },
-                    { 15, 16, 105 }
+                    { 15, 16, 105 },
+                    { 16, 17, 122 },
+                    { 17, 18, 123 },
+                    { 18, 19, 124 },
+                    { 18, 19, 125 },
+                    { 18, 19, 126 },
+                    { 18, 19, 127 },
+                    { 18, 19, 128 },
+                    { 18, 19, 129 },
+                    { 18, 19, 130 },
+                    { 18, 19, 131 },
+                    { 18, 19, 132 },
+                    { 18, 19, 133 },
+                    { 18, 19, 134 },
+                    { 18, 19, 135 },
+                    { 18, 19, 136 },
+                    { 19, 20, 137 },
+                    { 19, 20, 138 },
+                    { 19, 20, 139 },
+                    { 19, 20, 140 },
+                    { 19, 20, 141 },
+                    { 19, 20, 142 },
+                    { 19, 20, 143 },
+                    { 19, 20, 144 },
+                    { 19, 20, 145 },
+                    { 19, 20, 146 },
+                    { 19, 20, 147 },
+                    { 19, 20, 148 },
+                    { 19, 20, 149 },
+                    { 19, 20, 150 },
+                    { 19, 20, 151 },
+                    { 20, 21, 152 },
+                    { 21, 22, 153 },
+                    { 21, 22, 154 },
+                    { 21, 22, 155 },
+                    { 21, 22, 156 },
+                    { 21, 22, 157 },
+                    { 21, 22, 158 },
+                    { 21, 22, 159 },
+                    { 21, 22, 160 },
+                    { 21, 22, 161 },
+                    { 21, 22, 162 },
+                    { 21, 22, 163 },
+                    { 21, 22, 164 },
+                    { 21, 22, 165 },
+                    { 21, 22, 166 },
+                    { 21, 22, 167 },
+                    { 21, 22, 168 },
+                    { 21, 22, 169 },
+                    { 21, 22, 170 },
+                    { 21, 22, 171 },
+                    { 21, 22, 172 },
+                    { 21, 22, 173 },
+                    { 21, 22, 174 },
+                    { 22, 23, 175 },
+                    { 22, 23, 176 },
+                    { 22, 23, 177 },
+                    { 22, 23, 178 },
+                    { 22, 23, 179 },
+                    { 22, 23, 180 },
+                    { 22, 23, 181 },
+                    { 22, 23, 182 },
+                    { 22, 23, 183 },
+                    { 22, 23, 184 },
+                    { 22, 23, 185 },
+                    { 22, 23, 186 },
+                    { 22, 23, 187 },
+                    { 23, 24, 188 },
+                    { 24, 25, 189 },
+                    { 25, 26, 190 },
+                    { 25, 26, 191 },
+                    { 25, 26, 192 },
+                    { 25, 26, 193 },
+                    { 25, 26, 194 },
+                    { 25, 26, 195 },
+                    { 25, 26, 196 },
+                    { 25, 26, 197 },
+                    { 25, 26, 198 },
+                    { 25, 26, 199 },
+                    { 25, 26, 200 },
+                    { 25, 26, 201 },
+                    { 25, 26, 202 },
+                    { 25, 26, 203 },
+                    { 25, 26, 204 },
+                    { 25, 26, 205 },
+                    { 25, 26, 206 },
+                    { 25, 26, 207 },
+                    { 25, 26, 208 },
+                    { 25, 26, 209 },
+                    { 25, 26, 210 }
                 });
 
             migrationBuilder.InsertData(
@@ -896,7 +1110,96 @@ namespace AboutSongs.Migrations
                     { 1, 118 },
                     { 1, 119 },
                     { 5, 120 },
-                    { 3, 121 }
+                    { 3, 121 },
+                    { 2, 122 },
+                    { 1, 123 },
+                    { 1, 124 },
+                    { 1, 125 },
+                    { 1, 126 },
+                    { 1, 127 },
+                    { 1, 128 },
+                    { 5, 129 },
+                    { 1, 130 },
+                    { 1, 131 },
+                    { 1, 132 },
+                    { 1, 133 },
+                    { 1, 134 },
+                    { 1, 135 },
+                    { 1, 136 },
+                    { 2, 137 },
+                    { 2, 138 },
+                    { 2, 139 },
+                    { 2, 140 },
+                    { 2, 141 },
+                    { 2, 142 },
+                    { 2, 143 },
+                    { 2, 144 },
+                    { 2, 145 },
+                    { 2, 146 },
+                    { 2, 147 },
+                    { 2, 148 },
+                    { 2, 149 },
+                    { 2, 150 },
+                    { 2, 151 },
+                    { 4, 152 },
+                    { 2, 153 },
+                    { 2, 154 },
+                    { 2, 155 },
+                    { 2, 156 },
+                    { 2, 157 },
+                    { 2, 158 },
+                    { 2, 159 },
+                    { 2, 160 },
+                    { 2, 161 },
+                    { 2, 162 },
+                    { 2, 163 },
+                    { 2, 164 },
+                    { 2, 165 },
+                    { 2, 166 },
+                    { 2, 167 },
+                    { 2, 168 },
+                    { 2, 169 },
+                    { 2, 170 },
+                    { 2, 171 },
+                    { 2, 172 },
+                    { 2, 173 },
+                    { 2, 174 },
+                    { 2, 175 },
+                    { 2, 176 },
+                    { 2, 177 },
+                    { 2, 178 },
+                    { 2, 179 },
+                    { 2, 180 },
+                    { 2, 181 },
+                    { 2, 182 },
+                    { 2, 183 },
+                    { 2, 184 },
+                    { 2, 185 },
+                    { 2, 186 },
+                    { 2, 187 },
+                    { 4, 188 },
+                    { 1, 189 },
+                    { 2, 190 },
+                    { 2, 191 },
+                    { 2, 192 },
+                    { 2, 193 },
+                    { 2, 194 },
+                    { 2, 195 },
+                    { 2, 196 },
+                    { 2, 197 },
+                    { 2, 198 },
+                    { 2, 199 },
+                    { 2, 200 },
+                    { 2, 201 },
+                    { 2, 202 },
+                    { 2, 203 },
+                    { 2, 204 },
+                    { 2, 205 },
+                    { 2, 206 },
+                    { 2, 207 },
+                    { 2, 208 },
+                    { 2, 209 },
+                    { 2, 210 }
                 });
 
             migrationBuilder.InsertData(
@@ -957,6 +1260,16 @@ namespace AboutSongs.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Comentario_AlbumId",
+                table: "Comentario",
+                column: "AlbumId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comentario_UsuarioId",
+                table: "Comentario",
+                column: "UsuarioId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_GeneroArtista_ArtistaId",
                 table: "GeneroArtista",
                 column: "ArtistaId");
@@ -1004,13 +1317,13 @@ namespace AboutSongs.Migrations
                 name: "MusicaGenero");
 
             migrationBuilder.DropTable(
-                name: "Usuario");
+                name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "Album");
 
             migrationBuilder.DropTable(
-                name: "AspNetRoles");
+                name: "Usuario");
 
             migrationBuilder.DropTable(
                 name: "Artista");
