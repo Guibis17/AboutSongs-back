@@ -14,7 +14,7 @@ public class Album
 
     [Required(ErrorMessage = "Por favor, informe o Título")]
     [StringLength(100)]
-    public string Título { get; set; }
+    public string Titulo { get; set; }
 
     [StringLength(100)]
     public string Foto { get; set; }
