@@ -47,26 +47,30 @@ function adjustFontSize() {
 }
 
 // Carrossel de cards
-const cardContainer = document.querySelector('.card-container');
+const cardContainer = document.querySelector('.carousel-track');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
+const cardWidth = 192 + 2.2; // Largura do card + margem
+const cardsPerView = 6; // Total de cards visíveis
+const totalCards = 12; // Total fixo de cards
+const totalSteps = totalCards / cardsPerView; // Total de movimentos possíveis (2 no caso de 12 cards)
+
 let currentPosition = 0;
-const cardsPerView = 5;
-const cardWidth = 260;
-const totalCards = document.querySelectorAll('.card').length;
 
 function updatePosition() {
-    const maxPosition = Math.max(0, totalCards - cardsPerView);
-    const offset = Math.min(currentPosition * cardsPerView, maxPosition);
-    const translateXValue = -offset * cardWidth;
+    // Calcula o deslocamento em pixels
+    const translateXValue = -(currentPosition * cardsPerView * cardWidth);
 
+    // Aplica o deslocamento ao contêiner
     cardContainer.style.transform = `translateX(${translateXValue}px)`;
 
+    // Gerencia a visibilidade dos botões
     prevBtn.disabled = currentPosition === 0;
-    nextBtn.disabled = offset >= maxPosition;
+    nextBtn.disabled = currentPosition === totalSteps - 1;
 }
 
+// Eventos de clique nos botões
 prevBtn.addEventListener('click', () => {
     if (currentPosition > 0) {
         currentPosition--;
@@ -75,10 +79,11 @@ prevBtn.addEventListener('click', () => {
 });
 
 nextBtn.addEventListener('click', () => {
-    if ((currentPosition + 1) * cardsPerView < totalCards) {
+    if (currentPosition < totalSteps - 1) {
         currentPosition++;
         updatePosition();
     }
 });
 
+// Inicializa o estado do carrossel
 updatePosition();

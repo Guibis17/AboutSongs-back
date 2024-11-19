@@ -58,15 +58,15 @@
                 <i class="icon-a fa-solid fa-star-half-stroke"></i>
                 <hr>
                 <div class="b-text">
-                    <h1>Lorem ipsum <span style="color: #cc01ff; font-weight: 600;">dolor</span></h1>
-                    <p>sit amet consectetur adipisicing elit. Pariatur dolorem sint eligendi </p>
+                    <h1><span style="color: #cc01ff; font-weight: 600;">Avalie</span> Sons</h1>
+                    <p>Avalie às músicas e veja como elas se destacam. </p>
                 </div>
             </a>
             <a href="./AbaSobreCon.html#second" class="hidden b-content">
                 <i class="icon-b fa-solid fa-magnifying-glass"></i>
                 <hr>
                 <div class="b-text">
-                    <h1>Lorem ipsum <span style="color: #cc01ff; font-weight: 600;">dolor</span></h1>
+                    <h1>Comente Sobre Músicas <span style="color: #cc01ff; font-weight: 600;">dolor</span></h1>
                     <p>sit amet consectetur adipisicing elit. Pariatur dolorem sint eligendi </p>
                 </div>
             </a>
@@ -87,35 +87,42 @@
         <!-- Sections de músicas -->
         <section class="hidden musicas">
             <div class="superior">
-                <h1 class="title-s">Músicas</h1>
-                <a class="all-s" href="./AbaMusicAlbum.html">Ver tudo.</a>
+                <h1 class="title-s">Algumas músicas</h1>
             </div>
-            <div class="cards">
-                @foreach (var albuns in Model.Albuns)
-                {
-                    <a asp-action="PageAlbum.cshtml">
-                        <div class="c-card">
-                            <img src="@albuns.Foto" alt="">
-                            <div class="text">
-                                <h1 class="c-title">@albuns.Titulo</h1>
-                                <h2 class="c-artist">@string.Join(", ", albuns.Artistas.Select(a => a.Artista.Nome).Distinct().ToList())</h2>
-                                <p class="c-designation">@albuns</p>
-                            </div>
-                            <div class="plataformas">
-                                <a class="p" href="#" target="_blank"><i class="i-spotify fa-brands fa-spotify"></i></a>
-                                <a class="p" href="#" target="_blank"><i class="i-youtube fa-brands fa-youtube"></i></a>
-                                <a class="p" href="#" target="_blank"><i class="i-apple fa-brands fa-apple"></i></a>
-                            </div>
-                        </div>
-                    </a>
-                }
-
+            <div class="carousel-container">
+                <button id="prevBtn" class="arrow" disabled><i class="fa-solid fa-angle-left"></i></button>
+                <div class="carousel">
+                    <div class="carousel-track">
+                        @foreach (var albuns in Model.Albuns.Take(12))
+                        {
+                            <a asp-action="PageAlbum.cshtml">
+                                <div class="c-card">
+                                    <img src="@albuns.Foto" alt="">
+                                    <div class="text">
+                                        <h1 class="c-title">@albuns.Titulo</h1>
+                                        <h2 class="c-artist">@string.Join(", ", albuns.Artistas.Select(a =>
+                                        a.Artista.Nome).Distinct().ToList())</h2>
+                                        <p class="c-designation">@albuns</p>
+                                    </div>
+                                    <div class="plataformas">
+                                        <a class="p" href="#" target="_blank"><i
+                                                class="i-spotify fa-brands fa-spotify"></i></a>
+                                        <a class="p" href="#" target="_blank"><i
+                                                class="i-youtube fa-brands fa-youtube"></i></a>
+                                        <a class="p" href="#" target="_blank"><i class="i-apple fa-brands fa-apple"></i></a>
+                                    </div>
+                                </div>
+                            </a>
+                        }
+                    </div>
+                </div>
+                <button id="nextBtn" class="arrow"><i class="fa-solid fa-angle-right"></i></button>
             </div>
         </section>
 
         <section class="hidden albuns">
             <div class="superior">
-                <h1 class="title-a">Álbuns</h1>
+                <h1 class="title-a">Diga o que acha...</h1>
                 <a class="all-a" href="./AbaMusicAlbum.html">Ver tudo.</a>
             </div>
             <div class="cards">
@@ -126,7 +133,8 @@
                             <img src="@albuns.Foto" alt="">
                             <div class="text">
                                 <h1 class="c-title">@albuns.Titulo</h1>
-                                <h2 class="c-artist">@string.Join(", ", albuns.Artistas.Select(a => a.Artista.Nome).Distinct().ToList())</h2>
+                                <h2 class="c-artist">@string.Join(", ", albuns.Artistas.Select(a =>
+                                a.Artista.Nome).Distinct().ToList())</h2>
                                 <p class="c-designation">@albuns</p>
                             </div>
                             <div class="plataformas">
@@ -137,15 +145,9 @@
                         </div>
                     </a>
                 }
-
             </div>
         </section>
     </main>
-
-    <!-- Perfil -->
-    <a href="./PagePerfil.html" class="perfil">
-        <img class="img-perfil" src="~/img/modelo.png" alt="Imagem de Perfl">
-    </a>
 
     <!-- Botão de voltar ao topo -->
     <button id="topButton" onclick="scrollToTop()"><i class="fa-solid fa-angle-up"></i></button>

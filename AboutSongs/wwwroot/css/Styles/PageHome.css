@@ -162,7 +162,7 @@
     }
 }
 
-.musicas, .albuns {
+.albuns {
     width: 100%;
     height: 100%;
     display: flex;
@@ -318,6 +318,190 @@
             }
         }
     }
+}
+
+.musicas {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 10px;
+
+    & .superior {
+        width: 1165px;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .title-s, .title-a {
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        & .all-s, .all-a {
+            font-size: 16px;
+            font-weight: 500;
+            color: #6e6e6e;
+            transition: all .25s ease-out;
+
+            &:hover {
+                color: #bebebe;
+                text-decoration: underline;
+                transition: all .25s ease-in;
+            }
+        }
+    }
+
+    & .carousel-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    
+    & .carousel {
+        width: 1167px;
+        overflow: hidden;
+        
+    }
+    
+    & .carousel-track {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+        gap: 2.5px;
+        margin-left: 3px;
+
+        & .c-card {
+            width: 192px;
+            height: auto;
+            padding: 7px 12px;
+            border-radius: 3px;
+            transition: .25s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all .15s ease-out;
+            background-color: #13131300;
+            gap: 3px;
+
+            &:hover {
+                background: #2e2e2e46;
+                transition: all .15s ease-in;
+            }
+
+            & img {
+                width: 165px;
+                height: 165px;
+                border-radius: 7px;
+                box-shadow: 0 0 15px black;
+                filter: saturate(2);
+            }
+
+            & .text {
+                width: 153px;
+                height: auto;
+                padding-top: 10px;
+                border-radius: 6.3px;
+                margin-left: 0;
+            }
+
+            & .c-title {
+                font-size: 12pt;
+                font-weight: 700;
+                color: var(--cor-t-lvl-01);
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+            & .c-artist {
+                font-size: 10pt;
+                font-weight: 500;
+                color: #a7a7a7;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+            & .c-designation {
+                font-size: 9.7pt;
+                font-weight: 500;
+                color: #888888;
+                transition: .25s ease-out;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+            & .plataformas {
+                width: 60%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                padding: 3px;
+                background: #131313;
+                border: 1px solid #2c2c2c;
+                box-shadow: 0 0 5px #0000006c;
+                border-radius: 8px;
+
+                & .p {
+                    width: 30px;
+                    height: 30px;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                & .p:hover .i-spotify {
+                    color: #00f100;
+                    text-shadow: 0 0 10px #019201;
+                    transition: all .3s ease-in;
+                }
+
+                & .p:hover .i-youtube {
+                    color: #f10000;
+                    text-shadow: 0 0 10px #920101;
+                    transition: all .3s ease-in;
+                }
+
+                & .p:hover .i-apple {
+                    color: #ffffff;
+                    text-shadow: 0 0 10px #d6d6d6;
+                    transition: all .3s ease-in;
+                }
+
+                & i {
+                    color: #868686;
+                    font-size: 17pt;
+                    transition: all .3s ease-out;
+                }
+            }
+        }
+    }
+}
+
+.arrow {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px;
+}
+
+.arrow[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
 }
 
 .albuns {
