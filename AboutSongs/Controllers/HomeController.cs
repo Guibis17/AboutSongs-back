@@ -26,6 +26,8 @@ public class HomeController : Controller
         Albuns = _context.Albuns
             .AsNoTracking()
             .Where(a => a.ExibirHome)
+            .Include(a => a.Artistas)
+            .ThenInclude(a => a.Artista)
             .ToList(),
         Musicas = _context.Musicas
             .Include(m => m.AlbunsArtistas)

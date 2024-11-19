@@ -98,7 +98,7 @@
                             <img src="@albuns.Foto" alt="">
                             <div class="text">
                                 <h1 class="c-title">@albuns.Titulo</h1>
-                                <h2 class="c-artist">@albuns.Artistas</h2>
+                                <h2 class="c-artist">@string.Join(", ", albuns.Artistas.Select(a => a.Artista.Nome).Distinct().ToList())</h2>
                                 <p class="c-designation">@albuns</p>
                             </div>
                             <div class="plataformas">
@@ -119,21 +119,24 @@
                 <a class="all-a" href="./AbaMusicAlbum.html">Ver tudo.</a>
             </div>
             <div class="cards">
-                <a href="PageAlbum.html">
-                    <div class="c-card">
-                        <img src="~/img/modelo.png" alt="">
-                        <div class="text">
-                            <h1 class="c-title">Título</h2>
-                                <h2 class="c-artist">Artista(s)</h2>
-                                <p class="c-designation">Álbum/Música</p>
+                @foreach (var albuns in Model.Albuns.Take(6))
+                {
+                    <a asp-action="PageAlbum.cshtml">
+                        <div class="c-card">
+                            <img src="@albuns.Foto" alt="">
+                            <div class="text">
+                                <h1 class="c-title">@albuns.Titulo</h1>
+                                <h2 class="c-artist">@string.Join(", ", albuns.Artistas.Select(a => a.Artista.Nome).Distinct().ToList())</h2>
+                                <p class="c-designation">@albuns</p>
+                            </div>
+                            <div class="plataformas">
+                                <a class="p" href="#" target="_blank"><i class="i-spotify fa-brands fa-spotify"></i></a>
+                                <a class="p" href="#" target="_blank"><i class="i-youtube fa-brands fa-youtube"></i></a>
+                                <a class="p" href="#" target="_blank"><i class="i-apple fa-brands fa-apple"></i></a>
+                            </div>
                         </div>
-                        <div class="plataformas">
-                            <a class="p" href="#" target="_blank"><i class="i-spotify fa-brands fa-spotify"></i></a>
-                            <a class="p" href="#" target="_blank"><i class="i-youtube fa-brands fa-youtube"></i></a>
-                            <a class="p" href="#" target="_blank"><i class="i-apple fa-brands fa-apple"></i></a>
-                        </div>
-                    </div>
-                </a>
+                    </a>
+                }
 
             </div>
         </section>
