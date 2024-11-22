@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AboutSongs.Migrations
 {
     /// <inheritdoc />
-    public partial class banco : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -460,11 +460,11 @@ namespace AboutSongs.Migrations
                     { 4, new DateTime(2024, 1, 12, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "/img/Albuns/4.jpg", null, "American Dream" },
                     { 5, new DateTime(2023, 7, 28, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/5.png", null, "Utopia" },
                     { 6, new DateTime(2024, 9, 9, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "/img/Albuns/6.jpg", null, "333" },
-                    { 7, new DateTime(2024, 7, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "img/Albuns/7.png", null, "Vagabundo de Luxo" },
+                    { 7, new DateTime(2024, 7, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "img/Albuns/7.png", null, "Vagabundo de Luxo" },
                     { 8, new DateTime(2024, 6, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "/img/Albuns/8.jpg", null, "Brat" },
                     { 9, new DateTime(2024, 5, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/9.png", null, "Not Like Us" },
                     { 10, new DateTime(2024, 8, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "/img/Albuns/10.jpeg", null, "Die With A Smile" },
-                    { 11, new DateTime(2024, 5, 21, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "/img/Albuns/11.png", null, "WOKE UP" },
+                    { 11, new DateTime(2024, 5, 21, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/11.png", null, "WOKE UP" },
                     { 12, new DateTime(2024, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/12.png", null, "Family Matters" },
                     { 13, new DateTime(2024, 7, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/13.png", null, "MTG QUERO VER SE VOCÊ TEM ATITUDE" },
                     { 14, new DateTime(2024, 4, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/14.png", null, "Euphoria" },
@@ -475,10 +475,11 @@ namespace AboutSongs.Migrations
                     { 19, new DateTime(2024, 2, 9, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/19.png", null, "Vultures 1" },
                     { 20, new DateTime(2024, 4, 18, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/20.png", null, "THE BOX MEDLEY FUNK 2" },
                     { 21, new DateTime(2024, 2, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/21.png", null, "2093" },
-                    { 22, new DateTime(2024, 10, 28, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/22.png", null, "Chromakopia" },
+                    { 22, new DateTime(2024, 10, 28, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "/img/Albuns/22.png", null, "Chromakopia" },
                     { 23, new DateTime(2024, 10, 18, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/23.png", null, "Barbie" },
                     { 24, new DateTime(2024, 10, 18, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/24.png", null, "APT." },
-                    { 25, new DateTime(2007, 10, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/25.png", null, "Nada Como um Dia Após o Outro Dia, Vol. 1 & 2" }
+                    { 25, new DateTime(2007, 10, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/25.png", null, "Nada Como um Dia Após o Outro Dia, Vol. 1 & 2" },
+                    { 26, new DateTime(2024, 11, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/26.png", null, "The Emptiness Machine" }
                 });
 
             migrationBuilder.InsertData(
@@ -486,7 +487,7 @@ namespace AboutSongs.Migrations
                 columns: new[] { "Id", "Biografia", "DataDeNascimento", "Nome" },
                 values: new object[,]
                 {
-                    { 1, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Future,Metro Boomin" },
+                    { 1, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Future, Metro Boomin" },
                     { 2, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Billie Eilish" },
                     { 3, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Lady Gaga, Bruno Mars" },
                     { 4, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sabrina Carpenter" },
@@ -527,7 +528,7 @@ namespace AboutSongs.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", 0, "c44b1b64-f3b7-4b8d-add3-904b95dca189", "admin@aboutsongs.com", true, false, null, "ADMIN@ABOUTSONGS.COM", "ADMIN", "AQAAAAIAAYagAAAAEFOZUSypqc8T0qsZljh/piznlblEWjG7nMp5ErPBXATLtIA1Zu5+rpXSHnTxNIJ2Sg==", null, false, "a3a7fb1f-a836-4fca-b55e-73742c225f26", false, "Admin" });
+                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", 0, "23549069-0577-4d8a-860a-f8c668c841ea", "admin@aboutsongs.com", true, false, null, "ADMIN@ABOUTSONGS.COM", "ADMIN", "AQAAAAIAAYagAAAAEPZgh26I5rKLAC3WTY60yLVWj8M0bFeUyTjIpIxiFOrcglWzZQM9yQJmOY9X2RjYvA==", null, false, "892a243f-4237-4999-b437-8cdbe050e2f0", false, "Admin" });
 
             migrationBuilder.InsertData(
                 table: "Genero",
@@ -786,10 +787,10 @@ namespace AboutSongs.Migrations
                     { 2, 2, 21 },
                     { 2, 2, 22 },
                     { 2, 2, 23 },
-                    { 3, 4, 24 },
-                    { 3, 4, 25 },
-                    { 3, 4, 26 },
-                    { 3, 4, 27 },
+                    { 2, 2, 24 },
+                    { 2, 2, 25 },
+                    { 2, 2, 26 },
+                    { 2, 2, 27 },
                     { 3, 4, 29 },
                     { 3, 4, 30 },
                     { 3, 4, 31 },
@@ -797,17 +798,17 @@ namespace AboutSongs.Migrations
                     { 3, 4, 33 },
                     { 3, 4, 34 },
                     { 3, 4, 35 },
-                    { 4, 4, 40 },
-                    { 4, 5, 36 },
-                    { 4, 5, 37 },
-                    { 4, 5, 38 },
-                    { 4, 5, 39 },
+                    { 3, 4, 36 },
+                    { 3, 4, 37 },
+                    { 3, 4, 38 },
+                    { 3, 4, 39 },
+                    { 3, 4, 40 },
                     { 4, 5, 41 },
                     { 4, 5, 42 },
                     { 4, 5, 43 },
                     { 4, 5, 44 },
                     { 4, 5, 45 },
-                    { 4, 5, 46 },
+                    { 4, 5, 47 },
                     { 4, 5, 48 },
                     { 4, 5, 49 },
                     { 4, 5, 50 },
@@ -817,28 +818,27 @@ namespace AboutSongs.Migrations
                     { 4, 5, 54 },
                     { 4, 5, 55 },
                     { 4, 5, 56 },
-                    { 4, 5, 57 },
-                    { 4, 5, 58 },
-                    { 4, 5, 59 },
-                    { 4, 5, 60 },
-                    { 4, 5, 61 },
-                    { 4, 5, 62 },
-                    { 4, 5, 63 },
-                    { 4, 5, 64 },
-                    { 4, 5, 65 },
-                    { 4, 5, 66 },
-                    { 4, 5, 67 },
-                    { 4, 5, 68 },
-                    { 4, 5, 69 },
-                    { 4, 5, 70 },
-                    { 4, 5, 71 },
-                    { 4, 5, 72 },
-                    { 4, 5, 73 },
-                    { 4, 5, 74 },
-                    { 4, 5, 75 },
-                    { 4, 5, 76 },
-                    { 4, 5, 77 },
-                    { 5, 5, 78 },
+                    { 5, 6, 58 },
+                    { 5, 6, 59 },
+                    { 5, 6, 60 },
+                    { 5, 6, 61 },
+                    { 5, 6, 62 },
+                    { 5, 6, 63 },
+                    { 5, 6, 64 },
+                    { 5, 6, 65 },
+                    { 5, 6, 66 },
+                    { 5, 6, 67 },
+                    { 5, 6, 68 },
+                    { 5, 6, 69 },
+                    { 5, 6, 70 },
+                    { 5, 6, 71 },
+                    { 5, 6, 72 },
+                    { 5, 6, 73 },
+                    { 5, 6, 74 },
+                    { 5, 6, 75 },
+                    { 5, 6, 76 },
+                    { 6, 8, 77 },
+                    { 6, 8, 78 },
                     { 6, 8, 79 },
                     { 6, 8, 80 },
                     { 6, 8, 81 },
@@ -862,7 +862,6 @@ namespace AboutSongs.Migrations
                     { 7, 9, 99 },
                     { 7, 9, 100 },
                     { 7, 9, 101 },
-                    { 8, 12, 121 },
                     { 8, 13, 106 },
                     { 8, 13, 107 },
                     { 8, 13, 108 },
@@ -878,9 +877,10 @@ namespace AboutSongs.Migrations
                     { 8, 13, 118 },
                     { 8, 13, 119 },
                     { 8, 13, 120 },
-                    { 10, 4, 28 },
+                    { 9, 7, 57 },
+                    { 10, 3, 28 },
                     { 11, 10, 103 },
-                    { 12, 15, 47 },
+                    { 12, 15, 46 },
                     { 13, 14, 104 },
                     { 14, 7, 102 },
                     { 15, 16, 105 },
@@ -972,7 +972,8 @@ namespace AboutSongs.Migrations
                     { 25, 26, 207 },
                     { 25, 26, 208 },
                     { 25, 26, 209 },
-                    { 25, 26, 210 }
+                    { 25, 26, 210 },
+                    { 26, 12, 121 }
                 });
 
             migrationBuilder.InsertData(

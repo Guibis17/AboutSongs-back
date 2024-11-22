@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AboutSongs.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241115011212_banco")]
-    partial class banco
+    [Migration("20241122142614_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -108,7 +108,7 @@ namespace AboutSongs.Migrations
                         {
                             Id = 7,
                             DataDeLancamento = new DateTime(2024, 7, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExibirHome = true,
+                            ExibirHome = false,
                             Foto = "img/Albuns/7.png",
                             Titulo = "Vagabundo de Luxo"
                         },
@@ -140,7 +140,7 @@ namespace AboutSongs.Migrations
                         {
                             Id = 11,
                             DataDeLancamento = new DateTime(2024, 5, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExibirHome = true,
+                            ExibirHome = false,
                             Foto = "/img/Albuns/11.png",
                             Titulo = "WOKE UP"
                         },
@@ -228,7 +228,7 @@ namespace AboutSongs.Migrations
                         {
                             Id = 22,
                             DataDeLancamento = new DateTime(2024, 10, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ExibirHome = false,
+                            ExibirHome = true,
                             Foto = "/img/Albuns/22.png",
                             Titulo = "Chromakopia"
                         },
@@ -255,6 +255,14 @@ namespace AboutSongs.Migrations
                             ExibirHome = false,
                             Foto = "/img/Albuns/25.png",
                             Titulo = "Nada Como um Dia Após o Outro Dia, Vol. 1 & 2"
+                        },
+                        new
+                        {
+                            Id = 26,
+                            DataDeLancamento = new DateTime(2024, 11, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ExibirHome = false,
+                            Foto = "/img/Albuns/26.png",
+                            Titulo = "The Emptiness Machine"
                         });
                 });
 
@@ -421,32 +429,32 @@ namespace AboutSongs.Migrations
                         },
                         new
                         {
-                            AlbumId = 3,
-                            ArtistaId = 4,
+                            AlbumId = 2,
+                            ArtistaId = 2,
                             MusicaId = 24
                         },
                         new
                         {
-                            AlbumId = 3,
-                            ArtistaId = 4,
+                            AlbumId = 2,
+                            ArtistaId = 2,
                             MusicaId = 25
                         },
                         new
                         {
-                            AlbumId = 3,
-                            ArtistaId = 4,
+                            AlbumId = 2,
+                            ArtistaId = 2,
                             MusicaId = 26
                         },
                         new
                         {
-                            AlbumId = 3,
-                            ArtistaId = 4,
+                            AlbumId = 2,
+                            ArtistaId = 2,
                             MusicaId = 27
                         },
                         new
                         {
                             AlbumId = 10,
-                            ArtistaId = 4,
+                            ArtistaId = 3,
                             MusicaId = 28
                         },
                         new
@@ -493,31 +501,31 @@ namespace AboutSongs.Migrations
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 3,
+                            ArtistaId = 4,
                             MusicaId = 36
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 3,
+                            ArtistaId = 4,
                             MusicaId = 37
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 3,
+                            ArtistaId = 4,
                             MusicaId = 38
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 3,
+                            ArtistaId = 4,
                             MusicaId = 39
                         },
                         new
                         {
-                            AlbumId = 4,
+                            AlbumId = 3,
                             ArtistaId = 4,
                             MusicaId = 40
                         },
@@ -553,14 +561,14 @@ namespace AboutSongs.Migrations
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 12,
+                            ArtistaId = 15,
                             MusicaId = 46
                         },
                         new
                         {
-                            AlbumId = 12,
-                            ArtistaId = 15,
+                            AlbumId = 4,
+                            ArtistaId = 5,
                             MusicaId = 47
                         },
                         new
@@ -619,134 +627,134 @@ namespace AboutSongs.Migrations
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 9,
+                            ArtistaId = 7,
                             MusicaId = 57
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 5,
+                            ArtistaId = 6,
                             MusicaId = 58
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 5,
+                            ArtistaId = 6,
                             MusicaId = 59
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 5,
+                            ArtistaId = 6,
                             MusicaId = 60
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 5,
+                            ArtistaId = 6,
                             MusicaId = 61
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 5,
+                            ArtistaId = 6,
                             MusicaId = 62
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 5,
+                            ArtistaId = 6,
                             MusicaId = 63
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 5,
+                            ArtistaId = 6,
                             MusicaId = 64
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 5,
+                            ArtistaId = 6,
                             MusicaId = 65
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 5,
+                            ArtistaId = 6,
                             MusicaId = 66
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 5,
+                            ArtistaId = 6,
                             MusicaId = 67
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 5,
+                            ArtistaId = 6,
                             MusicaId = 68
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 5,
+                            ArtistaId = 6,
                             MusicaId = 69
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 5,
+                            ArtistaId = 6,
                             MusicaId = 70
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 5,
+                            ArtistaId = 6,
                             MusicaId = 71
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 5,
+                            ArtistaId = 6,
                             MusicaId = 72
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 5,
+                            ArtistaId = 6,
                             MusicaId = 73
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 5,
+                            ArtistaId = 6,
                             MusicaId = 74
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 5,
+                            ArtistaId = 6,
                             MusicaId = 75
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 5,
+                            ArtistaId = 6,
                             MusicaId = 76
                         },
                         new
                         {
-                            AlbumId = 4,
-                            ArtistaId = 5,
+                            AlbumId = 6,
+                            ArtistaId = 8,
                             MusicaId = 77
                         },
                         new
                         {
-                            AlbumId = 5,
-                            ArtistaId = 5,
+                            AlbumId = 6,
+                            ArtistaId = 8,
                             MusicaId = 78
                         },
                         new
@@ -1003,7 +1011,7 @@ namespace AboutSongs.Migrations
                         },
                         new
                         {
-                            AlbumId = 8,
+                            AlbumId = 26,
                             ArtistaId = 12,
                             MusicaId = 121
                         },
@@ -1589,7 +1597,7 @@ namespace AboutSongs.Migrations
                         {
                             Id = 1,
                             DataDeNascimento = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Nome = "Future,Metro Boomin"
+                            Nome = "Future, Metro Boomin"
                         },
                         new
                         {
@@ -4595,15 +4603,15 @@ namespace AboutSongs.Migrations
                         {
                             Id = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c44b1b64-f3b7-4b8d-add3-904b95dca189",
+                            ConcurrencyStamp = "23549069-0577-4d8a-860a-f8c668c841ea",
                             Email = "admin@aboutsongs.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@ABOUTSONGS.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEFOZUSypqc8T0qsZljh/piznlblEWjG7nMp5ErPBXATLtIA1Zu5+rpXSHnTxNIJ2Sg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPZgh26I5rKLAC3WTY60yLVWj8M0bFeUyTjIpIxiFOrcglWzZQM9yQJmOY9X2RjYvA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a3a7fb1f-a836-4fca-b55e-73742c225f26",
+                            SecurityStamp = "892a243f-4237-4999-b437-8cdbe050e2f0",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });
