@@ -56,7 +56,6 @@ public class AppDbSeed
                 Titulo = "Vagabundo de Luxo",
                 Foto = "img/Albuns/7.png",
                 DataDeLancamento = DateTime.Parse ("10/07/2024"),
-                ExibirHome = true
             },
             new Album() {
                 Id = 8,
@@ -83,7 +82,6 @@ public class AppDbSeed
                 Titulo = "WOKE UP",
                 Foto = "/img/Albuns/11.png",
                 DataDeLancamento = DateTime.Parse ("21/05/2024"),
-                ExibirHome = true
             },
             new Album() {
                 Id = 12,
@@ -150,6 +148,7 @@ public class AppDbSeed
                 Titulo = "Chromakopia",
                 Foto = "/img/Albuns/22.png",
                 DataDeLancamento = DateTime.Parse ("28/10/2024"),
+                ExibirHome = true
             },
             new Album() {
                 Id = 23,
@@ -1445,7 +1444,7 @@ public class AppDbSeed
         List<Artista> artistas = new(){
             new Artista() {
                 Id = 1,
-                Nome = "Future,Metro Boomin"
+                Nome = "Future, Metro Boomin"
             },
             new Artista() {
                 Id = 2,
@@ -2564,7 +2563,7 @@ public class AppDbSeed
             },
             new AlbumArtista() {
                 AlbumId = 10,
-                ArtistaId = 4,
+                ArtistaId = 3,
                 MusicaId = 28,
             },
             new AlbumArtista() {
