@@ -23,13 +23,20 @@ public class HomeController : Controller
     {
         HomeVM home = new()
         {
-        Albuns = _context.Albuns
+            Albuns = _context.Albuns
             .AsNoTracking()
             .Where(a => a.ExibirHome)
             .Include(a => a.Artistas)
             .ThenInclude(a => a.Artista)
+            .Include(g => g.Generos)
+            .ThenInclude(g => g.Genero)
+            .Include(a => a.Artistas)
+            .ThenInclude(a => a.Musica)
+            .ThenInclude(m => m.Generos)
+            .ThenInclude(g => g.Genero)
             .ToList(),
-        Musicas = _context.Musicas
+
+            Musicas = _context.Musicas
             .Include(m => m.AlbunsArtistas)
             .Include(m => m.Generos)
             .AsNoTracking()

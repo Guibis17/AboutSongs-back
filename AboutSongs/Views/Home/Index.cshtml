@@ -100,9 +100,8 @@
                                     <img src="@albuns.Foto" alt="">
                                     <div class="text">
                                         <h1 class="c-title">@albuns.Titulo</h1>
-                                        <h2 class="c-artist">@string.Join(", ", albuns.Artistas.Select(a =>
-                                        a.Artista.Nome).Distinct().ToList())</h2>
-                                        <p class="c-designation">@albuns</p>
+                                        <h2 class="c-artist">@string.Join(", ", albuns.Artistas.Select(a => a.Artista.Nome).Distinct().ToList())</h2>
+                                        <p class="c-designation">@string.Join(", ", albuns.Artistas.Select(g => g.Musica.Generos).   Distinct().ToList())</p>
                                     </div>
                                     <div class="plataformas">
                                         <a class="p" href="#" target="_blank"><i

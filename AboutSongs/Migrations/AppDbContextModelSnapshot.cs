@@ -4600,15 +4600,15 @@ namespace AboutSongs.Migrations
                         {
                             Id = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "6ea76d04-916c-4431-972d-67411915245f",
+                            ConcurrencyStamp = "42cb276e-5fa4-4aac-b92a-9fd370676926",
                             Email = "admin@aboutsongs.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@ABOUTSONGS.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEE7Z/C6lZlYogBRT3wtVIsPlU641dRoqy2XAwd30hG6bnrrZ/+UL+haqHX2oayFVeQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEHcjJLvqpbtT+OHDGBB3q1EBmwEB7GLkRXvEK1Lum3BwLr6YbiVa2EeyM4bxgQs6fw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "5ef257c9-1dee-4790-a21f-67ba2da536cf",
+                            SecurityStamp = "2223fdc6-ae3b-49ae-8da4-60801811ceb9",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });
