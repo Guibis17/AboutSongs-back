@@ -4,6 +4,7 @@ using AboutSongs.Models;
 using AboutSongs.Data;
 using AboutSongs.ViewModels;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 
 
 namespace AboutSongs.Controllers;
@@ -21,28 +22,49 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        HomeVM home = new()
-        {
-            Albuns = _context.Albuns
+        var albuns = _context.AlbumArtistas
             .AsNoTracking()
-            .Where(a => a.ExibirHome)
-            .Include(a => a.Artistas)
-            .ThenInclude(a => a.Artista)
-            .Include(g => g.Generos)
-            .ThenInclude(g => g.Genero)
-            .Include(a => a.Artistas)
-            .ThenInclude(a => a.Musica)
-            .ThenInclude(m => m.Generos)
-            .ThenInclude(g => g.Genero)
-            .ToList(),
+            .Include(aa => aa.Artista)
+            .Include(aa => aa.Album)
+            .Include(aa => aa.Musica)
+            .ToList();
 
-            Musicas = _context.Musicas
-            .Include(m => m.AlbunsArtistas)
-            .Include(m => m.Generos)
-            .AsNoTracking()
-            .ToList()
-        };
-        return View(home);
+        HomeVM homeVM = new();
+        int idAlbum = 0;
+        foreach (var album in albuns)
+        {
+            if (album.AlbumId != idAlbum)
+            {
+                // Adiciona um album a Lista de Albuns
+                AlbumHome albumHome = new()
+                {
+                    Id = album.AlbumId,
+                    Nome = album.Album.Titulo,
+                    FotoCapa = album.Album.Foto,
+                };
+                idAlbum = album.AlbumId;
+                albumHome.Artistas = string.Join(", ", albuns.Where(a => a.AlbumId == idAlbum).Select(a => a.Artista.Nome).ToList());
+                var ids = albuns.Where(a => a.AlbumId == idAlbum).Select(a => a.Musica.Id).ToList();
+                var generos = _context.MusicaGeneros.Where(mg => ids.Contains(mg.MusicaId)).Select(mg => mg.Genero.Nome).Distinct().ToList();
+                albumHome.Generos = string.Join(", ", generos);
+                homeVM.AlbumHomes.Add(albumHome);
+
+                if (idAlbum > 12)
+                {
+                    // Adiciona uma musica a lista de Musicas
+                    MusicaHome musicaHome = new()
+                    {
+                        Id = album.AlbumId,
+                        Nome = album.Musica.Título,
+                        FotoAlbum = album.Album.Foto,
+                    };
+                    musicaHome.Artistas = albumHome.Artistas;
+                    musicaHome.Generos = string.Join(", ", _context.MusicaGeneros.Where(mg => mg.MusicaId == musicaHome.Id).Select(mg => mg.Genero.Nome).Distinct().ToList());
+                    homeVM.MusicaHomes.Add(musicaHome);
+                }
+            }
+        }
+        return View(homeVM);
     }
 
     public IActionResult Login()

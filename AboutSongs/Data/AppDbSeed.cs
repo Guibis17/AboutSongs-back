@@ -41,7 +41,7 @@ public class AppDbSeed
             new Album() {
                 Id = 5,
                 Titulo = "Utopia",
-                Foto = "/img/Albuns/5.png",
+                Foto = "/img/Albuns/5.jpg",
                 DataDeLancamento = DateTime.Parse ("28/07/2023"),
             },
             new Album() {
@@ -185,7 +185,10 @@ public class AppDbSeed
                 Id = 1,
                 Título = "We Don’t Trust You ",
                 Compositores = "Barrett Strong, Christopher Townsend, Dwayne Richardson, Leland Wayne, Mejdi Rhars, Nayvadius Wilburn, Norman Whitfield e Paul Fishman",
-                Duracao = TimeSpan.Parse ("3:46")
+                Duracao = TimeSpan.Parse ("3:46"),
+                Spotify = "",
+                AppleMusic = "",
+                Youtube = ""
             },
             new Musica() {
                 Id = 2,

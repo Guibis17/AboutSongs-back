@@ -19,16 +19,20 @@ public class Musica
     public string Título { get; set; }
 
     [Required(ErrorMessage = "Por favor, informe os Compositores")]
-    [StringLength(100)]
+    [StringLength(1000)]
     public string Compositores { get; set; }
 
     public string Foto { get; set; }
 
-    
+    public string Spotify { get; set; }
+
+    public string AppleMusic { get; set; }
+    public string Youtube { get; set; }
+
     public TimeSpan Duracao { get; set; }
 
     public ICollection<MusicaGenero> Generos { get; set; }
-    
+
     public ICollection<AlbumArtista> AlbunsArtistas { get; set; }
 
 }

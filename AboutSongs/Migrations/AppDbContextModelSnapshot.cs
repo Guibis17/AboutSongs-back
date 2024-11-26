@@ -90,7 +90,7 @@ namespace AboutSongs.Migrations
                             Id = 5,
                             DataDeLancamento = new DateTime(2023, 7, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExibirHome = false,
-                            Foto = "/img/Albuns/5.png",
+                            Foto = "/img/Albuns/5.jpg",
                             Titulo = "Utopia"
                         },
                         new
@@ -1582,8 +1582,8 @@ namespace AboutSongs.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("varchar(30)");
+                        .HasMaxLength(80)
+                        .HasColumnType("varchar(80)");
 
                     b.HasKey("Id");
 
@@ -1868,10 +1868,13 @@ namespace AboutSongs.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("AppleMusic")
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Compositores")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("varchar(100)");
+                        .HasMaxLength(1000)
+                        .HasColumnType("varchar(1000)");
 
                     b.Property<TimeSpan>("Duracao")
                         .HasColumnType("time(6)");
@@ -1879,10 +1882,16 @@ namespace AboutSongs.Migrations
                     b.Property<string>("Foto")
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Spotify")
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Título")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)");
+
+                    b.Property<string>("Youtube")
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
@@ -1892,9 +1901,12 @@ namespace AboutSongs.Migrations
                         new
                         {
                             Id = 1,
+                            AppleMusic = "",
                             Compositores = "Barrett Strong, Christopher Townsend, Dwayne Richardson, Leland Wayne, Mejdi Rhars, Nayvadius Wilburn, Norman Whitfield e Paul Fishman",
                             Duracao = new TimeSpan(0, 3, 46, 0, 0),
-                            Título = "We Don’t Trust You "
+                            Spotify = "",
+                            Título = "We Don’t Trust You ",
+                            Youtube = ""
                         },
                         new
                         {
@@ -4600,15 +4612,15 @@ namespace AboutSongs.Migrations
                         {
                             Id = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "42cb276e-5fa4-4aac-b92a-9fd370676926",
+                            ConcurrencyStamp = "825fc9d2-06f9-440b-84b9-e0ddba791524",
                             Email = "admin@aboutsongs.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@ABOUTSONGS.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEHcjJLvqpbtT+OHDGBB3q1EBmwEB7GLkRXvEK1Lum3BwLr6YbiVa2EeyM4bxgQs6fw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEMh3xuWtD0XQeOm5TarofSAn7qN1ZJy0sm6A69XsZ3sZla4WuowZZNMxX/Q7Hhd3uw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "2223fdc6-ae3b-49ae-8da4-60801811ceb9",
+                            SecurityStamp = "ab04ee8f-0d53-48a6-84d1-8dd8d54ae07d",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });
