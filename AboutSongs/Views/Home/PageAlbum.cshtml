@@ -1,5 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+@model AboutSongs.ViewModels.HomeVM
+
+@{
+    ViewData["Title"] = "PageAlbum";
+}
 
 <head>
     <meta charset="UTF-8">
@@ -12,9 +15,9 @@
     <link rel="shortcut icon" href="../Assets/Images/favicon.png" type="image/x-icon">
 
     <!-- Links CSS/Font -->
-    <link rel="stylesheet" href="../Assets/CSS/Styles/PageAlbum.css">
-    <link rel="stylesheet" href="../Assets/CSS/Responsivo/ResAlbum.css">
-    <link rel="stylesheet" href="../Assets/CSS/Global.css">
+    <link rel="stylesheet" href="~/css/Styles/PageAlbum.css">
+    <link rel="stylesheet" href="~/css/Responsivo/ResAlbum.css">
+    <link rel="stylesheet" href="~/css/Global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -24,11 +27,11 @@
     <!-- Fundo -->
     <div class="stars"></div>
     <div class="stars2"></div>
-    
+
     <!-- Cabeçalho -->
     <header class="cabecalho">
         <!-- Conteúdo principal do cabeçalho -->
-        <a href="./PageHome.html"><img class="h-logo" src="../Assets/Images/logo-home.png" alt="Logo do site"></a>
+        <a href="./PageHome.html"><img class="h-logo" src="~/img/logo-home.png" alt="Logo do site"></a>
         <nav class="nav-bar">
             <ul>
                 <li><a href="./AbaMusicAlbum.html">Descubra</a></li>
@@ -40,17 +43,19 @@
 
     <main class="page">
         <section id="about" class="hidden v-album">
-            <img src="../Assets/Images/albuns/v2.jpeg" alt="" class="album">
+
+            <img src="~/img/" alt="" class="album">
             <div class="infos">
                 <h3 class="categoria">Album</h3>
-                <h1 class="n-album" id="name-album">VULTURES 2</h1>
-                <h2 class="n-artist">Y$, Kanye West, Ty Dolla $ign</h2>
+                <h1 class="n-album" id="name-album">albumNome</h1>
+                <h2 class="n-artist">album.Artistas</h2>
                 <div class="options">
                     <a class="comentar" href="#comments-s"><i class="fa-regular fa-comment"></i></a>
                     <button class="curtida"><i class="fa-regular fa-heart"></i></button>
                     <p>1mil curtidas</p>
                 </div>
             </div>
+
         </section>
 
         <div class="hr">
@@ -85,13 +90,27 @@
             <h2>Músicas do álbum</h2>
             <div class="musicas">
                 <div class="conteudo">
-                    <a href="#"><p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i></a>
-                    <a href="#"><p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i></a>
-                    <a href="#"><p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i></a>
-                    <a href="#"><p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i></a>
-                    <a href="#"><p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i></a>
-                    <a href="#"><p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i></a>
-                    <a href="#"><p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i></a>
+                    <a href="#">
+                        <p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i>
+                    </a>
+                    <a href="#">
+                        <p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i>
+                    </a>
+                    <a href="#">
+                        <p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i>
+                    </a>
+                    <a href="#">
+                        <p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i>
+                    </a>
+                    <a href="#">
+                        <p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i>
+                    </a>
+                    <a href="#">
+                        <p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i>
+                    </a>
+                    <a href="#">
+                        <p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -105,7 +124,7 @@
             </div>
             <div id="commentsContainer"></div>
         </div>
-    
+
         <!-- Modal para editar comentários -->
         <div id="editModal" class="modal">
             <div class="modal-content">
@@ -117,7 +136,7 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- Modal de confirmação para excluir comentários -->
         <div id="confirmDeleteModal" class="modal">
             <div class="modal-content">
@@ -139,9 +158,9 @@
     <button id="topButton" onclick="scrollToTop()"><i class="fa-solid fa-angle-up"></i></button>
 
     <!-- Link JS -->
-    <script src="../Assets/JS/scripts.js"></script>
-    <script src="../Assets/JS/top-btn.js"></script>
-    <script src="../Assets/JS/comments.js"></script>
+    <script src="~/js/scripts.js"></script>
+    <script src="~/js/top-btn.js"></script>
+    <script src="~/js/comments.js"></script>
 </body>
 
 </html>

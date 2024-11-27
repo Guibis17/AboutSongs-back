@@ -2290,7 +2290,7 @@ public class AppDbSeed
             },
             new MusicaGenero() {
                 MusicaId = 19,
-                GeneroId = 5,
+                GeneroId = 1,
             },
             new MusicaGenero() {
                 MusicaId = 20,
@@ -2626,7 +2626,7 @@ public class AppDbSeed
             },
             new MusicaGenero() {
                 MusicaId = 103,
-                GeneroId = 4,
+                GeneroId = 2,
             },
             new MusicaGenero() {
                 MusicaId = 104,

@@ -5238,15 +5238,15 @@ namespace AboutSongs.Migrations
                         {
                             Id = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "adbed1a3-9af0-4483-acd4-79a34d70d5e1",
+                            ConcurrencyStamp = "d04f6890-6fce-4fc3-8edd-3f0867502d76",
                             Email = "admin@aboutsongs.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@ABOUTSONGS.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEH9YemK+okmfefD1i21Ao99Mr22lqDT+x4O2XT0x2PuxFXCErAAgQfcXYq+0I0m8fw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAELOzIOJlJjJWqqP73nuG8IxPFEjUvEbOLoGnWAq3YBc3SfRbmuSnt5gN5CAZJXCwAw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "0a483157-5db3-42dc-b084-c22dcdf1cd51",
+                            SecurityStamp = "fb7c8025-40ef-40d3-b7b8-f3dfa0807038",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });

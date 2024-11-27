@@ -25,4 +25,7 @@ public class MusicaHome
     public string FotoAlbum { get; set; }
     public string Artistas { get; set; }
     public string Generos { get; set; }
+    public string Spotify { get; set; }
+    public string AppleMusic { get; set; }
+    public string Youtube { get; set; }
 }

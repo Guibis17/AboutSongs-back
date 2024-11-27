@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AboutSongs.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class inicializarBanco : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -534,7 +534,7 @@ namespace AboutSongs.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", 0, "adbed1a3-9af0-4483-acd4-79a34d70d5e1", "admin@aboutsongs.com", true, false, null, "ADMIN@ABOUTSONGS.COM", "ADMIN", "AQAAAAIAAYagAAAAEH9YemK+okmfefD1i21Ao99Mr22lqDT+x4O2XT0x2PuxFXCErAAgQfcXYq+0I0m8fw==", null, false, "0a483157-5db3-42dc-b084-c22dcdf1cd51", false, "Admin" });
+                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", 0, "d04f6890-6fce-4fc3-8edd-3f0867502d76", "admin@aboutsongs.com", true, false, null, "ADMIN@ABOUTSONGS.COM", "ADMIN", "AQAAAAIAAYagAAAAELOzIOJlJjJWqqP73nuG8IxPFEjUvEbOLoGnWAq3YBc3SfRbmuSnt5gN5CAZJXCwAw==", null, false, "fb7c8025-40ef-40d3-b7b8-f3dfa0807038", false, "Admin" });
 
             migrationBuilder.InsertData(
                 table: "Genero",

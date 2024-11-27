@@ -43,7 +43,7 @@ public class HomeController : Controller
                     FotoCapa = album.Album.Foto,
                 };
                 idAlbum = album.AlbumId;
-                albumHome.Artistas = string.Join(", ", albuns.Where(a => a.AlbumId == idAlbum).Select(a => a.Artista.Nome).ToList());
+                albumHome.Artistas = string.Join(", ", albuns.Where(a => a.AlbumId == idAlbum).Select(a => a.Artista.Nome).Distinct().ToList());
                 var ids = albuns.Where(a => a.AlbumId == idAlbum).Select(a => a.Musica.Id).ToList();
                 var generos = _context.MusicaGeneros.Where(mg => ids.Contains(mg.MusicaId)).Select(mg => mg.Genero.Nome).Distinct().ToList();
                 albumHome.Generos = string.Join(", ", generos);
@@ -57,6 +57,9 @@ public class HomeController : Controller
                         Id = album.AlbumId,
                         Nome = album.Musica.Título,
                         FotoAlbum = album.Album.Foto,
+                        AppleMusic = album.Musica.AppleMusic,
+                        Spotify = album.Musica.Spotify,
+                        Youtube = album.Musica.Youtube
                     };
                     musicaHome.Artistas = albumHome.Artistas;
                     musicaHome.Generos = string.Join(", ", _context.MusicaGeneros.Where(mg => mg.MusicaId == musicaHome.Id).Select(mg => mg.Genero.Nome).Distinct().ToList());
@@ -67,6 +70,19 @@ public class HomeController : Controller
         return View(homeVM);
     }
 
+    public IActionResult PageAlbum(int id)
+    {
+        var album = _context.Albuns.FirstOrDefault(a => a.Id == id);
+        {
+            var viewModel = new 
+            {
+                Album = album,
+                Albuns = _context.Albuns.ToList()
+            };
+
+            return View(viewModel);
+        }
+    }
     public IActionResult Login()
     {
         return View();
