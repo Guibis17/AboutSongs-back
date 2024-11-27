@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AboutSongs.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241126134919_initialdb")]
-    partial class initialdb
+    [Migration("20241127105545_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -173,7 +173,7 @@ namespace AboutSongs.Migrations
                             Id = 15,
                             DataDeLancamento = new DateTime(2024, 9, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExibirHome = false,
-                            Foto = "/img/Albuns/15.png",
+                            Foto = "/img/Albuns/15.jpg",
                             Titulo = "Timeless (with Playboi Carti)"
                         },
                         new
@@ -1904,1475 +1904,2101 @@ namespace AboutSongs.Migrations
                         new
                         {
                             Id = 1,
-                            AppleMusic = "",
+                            AppleMusic = "https://music.apple.com/br/album/we-dont-trust-you/1737149923",
                             Compositores = "Barrett Strong, Christopher Townsend, Dwayne Richardson, Leland Wayne, Mejdi Rhars, Nayvadius Wilburn, Norman Whitfield e Paul Fishman",
                             Duracao = new TimeSpan(0, 3, 46, 0, 0),
-                            Spotify = "",
+                            Spotify = "https://open.spotify.com/intl-pt/album/2vHRMDYWkdjZLRsLD4l76m",
                             Título = "We Don’t Trust You ",
-                            Youtube = ""
+                            Youtube = "https://music.youtube.com/watch?v=ntP8vvswhYM&si=M-b2L6_XjMRkJfxm"
                         },
                         new
                         {
                             Id = 2,
+                            AppleMusic = "https://music.apple.com/br/song/ice-attack/1737150153",
                             Compositores = "Abel Tesfaye, Eren Yüksel, Leland Wayne e Nayvadius Wilburn",
                             Duracao = new TimeSpan(0, 3, 25, 0, 0),
-                            Título = "Young Metro"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2pt55UXA7ycI7zlTqWoUWp",
+                            Título = "Young Metro",
+                            Youtube = "https://music.youtube.com/watch?v=ntP8vvswhYM&list=OLAK5uy_nexYBihVfegVxOxvYnnhlZyTqLDW_wjY8"
                         },
                         new
                         {
                             Id = 3,
+                            AppleMusic = "https://music.apple.com/br/song/ice-attack/1737150153",
                             Compositores = "Darnell Carlton, Jordan Houston, Leland Wayne, Nayvadius Wilburn, Nik Frascona, Paul Beauregard e Ricky Dunigan",
                             Duracao = new TimeSpan(0, 3, 19, 0, 0),
-                            Título = "Ice Attack"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0ftg9eDVh0t4qEBhdbPld8",
+                            Título = "Ice Attack",
+                            Youtube = "https://music.youtube.com/watch?v=ycRKgIDciG4&list=OLAK5uy_nexYBihVfegVxOxvYnnhlZyTqLDW_wjY8"
                         },
                         new
                         {
                             Id = 4,
+                            AppleMusic = "https://music.apple.com/br/song/type-shit/1737150156",
                             Compositores = "Joe Cooley,Kendrick Lamar Duckworth, Kobe Hood, Leland Wayne, Nayvadius Wilburn e Rodney Oliver",
                             Duracao = new TimeSpan(0, 3, 48, 0, 0),
-                            Título = "Type Shit"
+                            Spotify = "https://open.spotify.com/intl-pt/track/15dWsK6pH4OAEKD2aUt1aY",
+                            Título = "Type Shit",
+                            Youtube = "https://music.youtube.com/watch?v=I0fgkcTbBoI&list=OLAK5uy_nexYBihVfegVxOxvYnnhlZyTqLDW_wjY8"
                         },
                         new
                         {
                             Id = 5,
+                            AppleMusic = "https://music.apple.com/br/song/claustrophobic/1737150164",
                             Compositores = "Leland Wayne e Nayvadius Wilburn",
                             Duracao = new TimeSpan(0, 3, 42, 0, 0),
-                            Título = "Claustrophobic"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2dEnQVj4DqzvaUgWOy33UW",
+                            Título = "Claustrophobic",
+                            Youtube = "https://music.youtube.com/watch?v=LP2WmJCaUfU&list=OLAK5uy_nexYBihVfegVxOxvYnnhlZyTqLDW_wjY8"
                         },
                         new
                         {
                             Id = 6,
+                            AppleMusic = "https://open.spotify.com/intl-pt/track/5M2KX4eOJLWlPdjV1UPwzS",
                             Compositores = "Billie Eilish e Finneas O'Connell",
                             Duracao = new TimeSpan(0, 4, 27, 0, 0),
-                            Título = "Like That"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5M2KX4eOJLWlPdjV1UPwzS",
+                            Título = "Like That",
+                            Youtube = "https://music.youtube.com/watch?v=N9bKBAA22Go&list=OLAK5uy_nexYBihVfegVxOxvYnnhlZyTqLDW_wjY8"
                         },
                         new
                         {
                             Id = 7,
+                            AppleMusic = "https://music.apple.com/br/song/slimed-in/1737150442",
                             Compositores = "Boi-1da, Bobby Raps, Leland Wayne, Nayvadius Wilburn e Shantae Allen",
                             Duracao = new TimeSpan(0, 3, 14, 0, 0),
-                            Título = "Slimed In"
+                            Spotify = "https://open.spotify.com/intl-pt/track/66lptTO1aTEYHzamQKupjG",
+                            Título = "Slimed In",
+                            Youtube = "https://music.youtube.com/watch?v=ZJ0d2c3FOow&list=OLAK5uy_nexYBihVfegVxOxvYnnhlZyTqLDW_wjY8"
                         },
                         new
                         {
                             Id = 8,
+                            AppleMusic = "https://music.apple.com/br/song/magic-don-juan-princess-diana/1737150443",
                             Compositores = "Boi-1da, Bobby Raps, Leland Wayne, Nayvadius Wilburn e Shantae Allen",
                             Duracao = new TimeSpan(0, 3, 40, 0, 0),
-                            Título = "Magic Don Juan (Princess Diana)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/6mT6KW30jV7sz9TFW2G5S1",
+                            Título = "Magic Don Juan (Princess Diana)",
+                            Youtube = "https://music.youtube.com/watch?v=MfTFbkKHPGI&list=OLAK5uy_nexYBihVfegVxOxvYnnhlZyTqLDW_wjY8"
                         },
                         new
                         {
                             Id = 9,
+                            AppleMusic = "https://music.apple.com/br/song/cinderella/1737150446",
                             Compositores = "Allen Ritter, Andre Proctor, Ethan Stevens, Jacques Webster, Leland Wayne e Nayvadius Wilburn",
                             Duracao = new TimeSpan(0, 2, 49, 0, 0),
-                            Título = "Cinderella"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4xAuVetRNiHvfZYppbTLPF",
+                            Título = "Cinderella",
+                            Youtube = "https://music.youtube.com/watch?v=onP2eoO7byc&list=OLAK5uy_nexYBihVfegVxOxvYnnhlZyTqLDW_wjY8"
                         },
                         new
                         {
                             Id = 10,
+                            AppleMusic = "https://music.apple.com/br/song/runnin-outta-time/1737150450",
                             Compositores = "Bobby Raps, Leland Wayne, Nayvadius Wilburn",
                             Duracao = new TimeSpan(0, 3, 25, 0, 0),
-                            Título = "Runnin Outta Time"
+                            Spotify = "https://open.spotify.com/intl-pt/track/67i0lzzfTYrhxthfxBqYq6",
+                            Título = "Runnin Outta Time",
+                            Youtube = "https://music.youtube.com/watch?v=Vv5UuKSBhZg&list=OLAK5uy_nexYBihVfegVxOxvYnnhlZyTqLDW_wjY8"
                         },
                         new
                         {
                             Id = 11,
+                            AppleMusic = "https://music.apple.com/br/song/fried-she-a-vibe/1737150451",
                             Compositores = "Leland Wayne e Nayvadius Wilburn",
                             Duracao = new TimeSpan(0, 3, 30, 0, 0),
-                            Título = "Fried (She a Vibe)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/6ucsW32idjJuE6OIUeqsNB",
+                            Título = "Fried (She a Vibe)",
+                            Youtube = "https://music.youtube.com/watch?v=0Z8eMHVwFDw&list=OLAK5uy_nexYBihVfegVxOxvYnnhlZyTqLDW_wjY8"
                         },
                         new
                         {
                             Id = 12,
+                            AppleMusic = "https://music.apple.com/br/song/everyday-hustle/1737150458",
                             Compositores = "Leland Wayne e Nayvadius Wilburn",
                             Duracao = new TimeSpan(0, 3, 2, 0, 0),
-                            Título = "Ain’t No Love"
+                            Spotify = "https://open.spotify.com/intl-pt/track/6FV9QPuQIhLFCC0EF2hn3c",
+                            Título = "Ain’t No Love",
+                            Youtube = "https://music.youtube.com/watch?v=Dat993XlIf0&list=OLAK5uy_nexYBihVfegVxOxvYnnhlZyTqLDW_wjY8"
                         },
                         new
                         {
                             Id = 13,
+                            AppleMusic = "https://music.apple.com/br/song/everyday-hustle/1737150458",
                             Compositores = "Alfreda Brockington, Leland Wayne, Nayvadius Wilburn e William Leonard Roberts II",
                             Duracao = new TimeSpan(0, 3, 46, 0, 0),
-                            Título = "Everyday Hustle"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4eRqmUWBmEdnVEEDHu765H",
+                            Título = "Everyday Hustle",
+                            Youtube = "https://music.youtube.com/watch?v=cdxE4QtUz-8&list=OLAK5uy_nexYBihVfegVxOxvYnnhlZyTqLDW_wjY8"
                         },
                         new
                         {
                             Id = 14,
+                            AppleMusic = "https://music.apple.com/br/song/gta/1737150460",
                             Compositores = "Leland Wayne e Nayvadius Wilburn",
                             Duracao = new TimeSpan(0, 3, 53, 0, 0),
-                            Título = "GTA"
+                            Spotify = "https://open.spotify.com/intl-pt/track/7e3fAVgYa6rLAWVZtcXYlN",
+                            Título = "GTA",
+                            Youtube = "https://music.youtube.com/watch?v=A8bE-MPs0K0&list=OLAK5uy_nexYBihVfegVxOxvYnnhlZyTqLDW_wjY8"
                         },
                         new
                         {
                             Id = 15,
+                            AppleMusic = "https://music.apple.com/br/song/seen-it-all/1737150465",
                             Compositores = "Allen Ritter, Leland Wayne e Nayvadius Wilburn",
                             Duracao = new TimeSpan(0, 2, 59, 0, 0),
-                            Título = "Seen it All"
+                            Spotify = "https://open.spotify.com/intl-pt/track/7e3fAVgYa6rLAWVZtcXYlN",
+                            Título = "Seen it All",
+                            Youtube = "https://music.youtube.com/watch?v=NZJGKmGhbwY&list=OLAK5uy_nexYBihVfegVxOxvYnnhlZyTqLDW_wjY8"
                         },
                         new
                         {
                             Id = 16,
+                            AppleMusic = "https://music.apple.com/br/album/we-dont-trust-you/1737149923",
                             Compositores = "Leland Wayne e Nayvadius Wilburn",
                             Duracao = new TimeSpan(0, 4, 52, 0, 0),
-                            Título = "WTFYM"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5NJjhW5AtfaMM14pbqAOtn",
+                            Título = "WTFYM",
+                            Youtube = "https://music.youtube.com/watch?v=bDgZEPAaXyw&list=OLAK5uy_nexYBihVfegVxOxvYnnhlZyTqLDW_wjY8"
                         },
                         new
                         {
                             Id = 17,
+                            AppleMusic = "https://music.apple.com/br/song/where-my-twin-bonus-track/1737150980",
                             Compositores = "Leland Wayne e Nayvadius Wilburn",
                             Duracao = new TimeSpan(0, 2, 2, 0, 0),
-                            Título = "Where My Twin @ - Bonus"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5Hu9qHhcDlDbXG7EiGYZhR",
+                            Título = "Where My Twin @ - Bonus",
+                            Youtube = "https://music.youtube.com/watch?v=jiMDe3U6_5M&list=OLAK5uy_nexYBihVfegVxOxvYnnhlZyTqLDW_wjY8"
                         },
                         new
                         {
                             Id = 18,
+                            AppleMusic = "https://music.apple.com/br/song/skinny/1739659137",
                             Compositores = "Billie Eilish e Finneas O'Connell",
                             Duracao = new TimeSpan(0, 3, 39, 0, 0),
-                            Título = "SKINNY"
+                            Spotify = "https://open.spotify.com/intl-pt/track/1CsMKhwEmNnmvHUuO5nryA",
+                            Título = "SKINNY",
+                            Youtube = "https://music.youtube.com/watch?v=GcY-5alayP8&list=OLAK5uy_kxB-Qzc9hso0Ipd3TJaDW5n8C8iz39ik0"
                         },
                         new
                         {
                             Id = 19,
+                            AppleMusic = "https://music.apple.com/br/song/lunch/1739659140",
                             Compositores = "Billie Eilish e Finneas O'Connell",
                             Duracao = new TimeSpan(0, 2, 59, 0, 0),
-                            Título = "LUNCH"
+                            Spotify = "https://open.spotify.com/intl-pt/track/629DixmZGHc7ILtEntuiWE",
+                            Título = "LUNCH",
+                            Youtube = "https://music.youtube.com/watch?v=MB3VkzPdgLA&list=OLAK5uy_kxB-Qzc9hso0Ipd3TJaDW5n8C8iz39ik0"
                         },
                         new
                         {
                             Id = 20,
+                            AppleMusic = "https://music.apple.com/br/song/chihiro/1739659141",
                             Compositores = "Billie Eilish e Finneas O'Connell",
                             Duracao = new TimeSpan(0, 5, 3, 0, 0),
-                            Título = "CHIHIRO"
+                            Spotify = "https://open.spotify.com/intl-pt/track/7BRD7x5pt8Lqa1eGYC4dzj",
+                            Título = "CHIHIRO",
+                            Youtube = "https://music.youtube.com/watch?v=BY_XwvKogC8&list=OLAK5uy_kxB-Qzc9hso0Ipd3TJaDW5n8C8iz39ik0"
                         },
                         new
                         {
                             Id = 21,
+                            AppleMusic = "https://music.apple.com/br/song/birds-of-a-feather/1739659142",
                             Compositores = "Billie Eilish e Finneas O'Connell",
                             Duracao = new TimeSpan(0, 3, 30, 0, 0),
-                            Título = "BIRDS OF A FEATHER "
+                            Spotify = "https://open.spotify.com/intl-pt/track/6dOtVTDdiauQNBQEDOtlAB",
+                            Título = "BIRDS OF A FEATHER",
+                            Youtube = "https://music.youtube.com/watch?v=BY_XwvKogC8&list=OLAK5uy_kxB-Qzc9hso0Ipd3TJaDW5n8C8iz39ik0"
                         },
                         new
                         {
                             Id = 22,
+                            AppleMusic = "https://music.apple.com/br/song/wildflower/1739659144",
                             Compositores = "Billie Eilish e Finneas O'Connell",
                             Duracao = new TimeSpan(0, 4, 21, 0, 0),
-                            Título = "WILDFLOWER"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3QaPy1KgI7nu9FJEQUgn6h",
+                            Título = "WILDFLOWER",
+                            Youtube = "https://music.youtube.com/watch?v=IWKyykQBRKo&list=OLAK5uy_kxB-Qzc9hso0Ipd3TJaDW5n8C8iz39ik0"
                         },
                         new
                         {
                             Id = 23,
+                            AppleMusic = "https://music.apple.com/br/song/the-greatest/1739659145",
                             Compositores = "Billie Eilish e Finneas O'Connell",
                             Duracao = new TimeSpan(0, 4, 53, 0, 0),
-                            Título = "THE GREATEST "
+                            Spotify = "https://open.spotify.com/intl-pt/track/6TGd66r0nlPaYm3KIoI7ET",
+                            Título = "THE GREATEST",
+                            Youtube = "https://music.youtube.com/watch?v=xozgvccBHk8&list=OLAK5uy_kxB-Qzc9hso0Ipd3TJaDW5n8C8iz39ik0"
                         },
                         new
                         {
                             Id = 24,
+                            AppleMusic = "https://music.apple.com/br/song/lamour-de-ma-vie/1739659149",
                             Compositores = "Billie Eilish e Finneas O'Connell",
                             Duracao = new TimeSpan(0, 5, 33, 0, 0),
-                            Título = "L’AMOUR DE MA VIE "
+                            Spotify = "https://open.spotify.com/intl-pt/track/6fPan2saHdFaIHuTSatORv",
+                            Título = "L’AMOUR DE MA VIE",
+                            Youtube = "https://music.youtube.com/watch?v=lWzjDk5sJRc&list=OLAK5uy_kxB-Qzc9hso0Ipd3TJaDW5n8C8iz39ik0"
                         },
                         new
                         {
                             Id = 25,
+                            AppleMusic = "https://music.apple.com/br/song/the-diner/1739659150",
                             Compositores = "Billie Eilish e Finneas O'Connell",
                             Duracao = new TimeSpan(0, 3, 6, 0, 0),
-                            Título = "THE DINER"
+                            Spotify = "https://open.spotify.com/intl-pt/track/1LLUoftvmTjVNBHZoQyveF",
+                            Título = "THE DINER",
+                            Youtube = "https://music.youtube.com/watch?v=UKkObvtycq8&list=OLAK5uy_kxB-Qzc9hso0Ipd3TJaDW5n8C8iz39ik0"
                         },
                         new
                         {
                             Id = 26,
+                            AppleMusic = "https://music.apple.com/br/song/bittersuite/1739659277",
                             Compositores = "Billie Eilish e Finneas O'Connell",
                             Duracao = new TimeSpan(0, 4, 58, 0, 0),
-                            Título = "BITTERSUITE"
+                            Spotify = "https://open.spotify.com/intl-pt/track/7DpUoxGSdlDHfqCYj0otzU",
+                            Título = "BITTERSUITE",
+                            Youtube = "https://music.youtube.com/watch?v=5qIUoTIHwac&list=OLAK5uy_kxB-Qzc9hso0Ipd3TJaDW5n8C8iz39ik0"
                         },
                         new
                         {
                             Id = 27,
+                            AppleMusic = "https://music.apple.com/br/song/blue/1739659278",
                             Compositores = "Billie Eilish e Finneas O'Connell",
                             Duracao = new TimeSpan(0, 5, 43, 0, 0),
-                            Título = "BLUE"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2prqm9sPLj10B4Wg0wE5x9",
+                            Título = "BLUE",
+                            Youtube = "https://music.youtube.com/watch?v=mZqiawnNCQg&list=OLAK5uy_kxB-Qzc9hso0Ipd3TJaDW5n8C8iz39ik0"
                         },
                         new
                         {
                             Id = 28,
+                            AppleMusic = "https://music.apple.com/br/album/die-with-a-smile-single/1762656724",
                             Compositores = "Andrew Watt,Bruno Mars, Dernst Emile IIJames Faunt, leroy e Lady Gaga",
                             Duracao = new TimeSpan(0, 4, 11, 0, 0),
-                            Título = "Die With A Smile"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2plbrEY59IikOBgBGLjaoe",
+                            Título = "Die With A Smile",
+                            Youtube = "https://music.youtube.com/watch?v=kPa7bsKwL-c&si=bMVzjSb-hhGRsgQY"
                         },
                         new
                         {
                             Id = 29,
+                            AppleMusic = "https://music.apple.com/br/album/taste/1750307020?i=1750307079",
                             Compositores = "Amy Allen, Ian Kirkpatrick, John Ryan, Julia Michaels e Sabrina Carpenter",
                             Duracao = new TimeSpan(0, 2, 37, 0, 0),
-                            Título = "Taste"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5G2f63n7IPVPPjfNIGih7Q",
+                            Título = "Taste",
+                            Youtube = "https://music.youtube.com/watch?v=KEG7b851Ric&si=KRCelRKdDsTmFNk0"
                         },
                         new
                         {
                             Id = 30,
+                            AppleMusic = "https://music.apple.com/br/album/please-please-please/1750307020?i=1750307080",
                             Compositores = "Amy Allen, Jack Antonoff e Sabrina Carpenter",
                             Duracao = new TimeSpan(0, 3, 6, 0, 0),
-                            Título = "Please Please Please"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2tHwzyyOLoWSFqYNjeVMzj?si=779dd46eb00c4d29",
+                            Título = "Please Please Please",
+                            Youtube = "https://music.youtube.com/watch?v=cF1Na4AIecM&si=Ct5BV2uaRkzQyZJS"
                         },
                         new
                         {
                             Id = 31,
+                            AppleMusic = "https://music.apple.com/br/album/good-graces/1750307020?i=1750307081",
                             Compositores = "Amy Allen, Julia Michaels, John Ryan, Julian Bunetta e Sabrina Carpenter",
                             Duracao = new TimeSpan(0, 3, 5, 0, 0),
-                            Título = "Good Graces"
+                            Spotify = "https://open.spotify.com/intl-pt/track/102YUQbYmwdBXS7jwamI90?si=dee78dcff6c1468b",
+                            Título = "Good Graces",
+                            Youtube = "https://music.youtube.com/watch?v=alYCYZvB3yo&si=ECxbbLSlQKFR6_gu"
                         },
                         new
                         {
                             Id = 32,
+                            AppleMusic = "https://music.apple.com/br/album/sharpest-tool/1750307020?i=1750307082",
                             Compositores = "Amy Allen, Jack Antonoff e Sabrina Carpenter",
                             Duracao = new TimeSpan(0, 3, 38, 0, 0),
-                            Título = "Sharpest Tool"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3iPIDAFybaoyqX7hvAfWkl?si=2a50e66fe6fa42a0",
+                            Título = "Sharpest Tool",
+                            Youtube = "https://music.youtube.com/watch?v=TuOwCuECUvM&si=RKdelYesnjvqUz58"
                         },
                         new
                         {
                             Id = 33,
+                            AppleMusic = "https://music.apple.com/br/album/coincidence/1750307020?i=1750307084",
                             Compositores = "Amy Allen, Ian Kirkpatrick, Julia Michaels, John Ryan e Sabrina Carpenter",
                             Duracao = new TimeSpan(0, 2, 44, 0, 0),
-                            Título = "Coincidence"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5oIVNm56t6OIf9ZjdEG3ud?si=3ae5c699e46b4b37",
+                            Título = "Coincidence",
+                            Youtube = "https://music.youtube.com/watch?v=jbJhdc2zLz0&si=y5jHGgcKgWS2P67-"
                         },
                         new
                         {
                             Id = 34,
+                            AppleMusic = "https://music.apple.com/br/album/bed-chem/1750307020?i=1750307088",
                             Compositores = "Amy Allen, Ian Kirkpatrick, Julia Michaels, John Ryan e Sabrina Carpenter",
                             Duracao = new TimeSpan(0, 2, 51, 0, 0),
-                            Título = "Bed Chem"
+                            Spotify = "https://open.spotify.com/intl-pt/track/1UHS8Rf6h5Ar3CDWRd3wjF?si=a961cb3290044147",
+                            Título = "Bed Chem",
+                            Youtube = "https://music.youtube.com/watch?v=x8VkB8ap_FQ&si=qEX7xZ6fetSszG1j"
                         },
                         new
                         {
                             Id = 35,
+                            AppleMusic = "https://music.apple.com/br/album/espresso/1750307020?i=1750307362",
                             Compositores = "Amy Allen, Julian Bunetta, Steph Jones e Sabrina Carpenter",
                             Duracao = new TimeSpan(0, 2, 55, 0, 0),
-                            Título = "Espresso"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2HRqTpkrJO5ggZyyK6NPWz?si=b6ca528011d24c28",
+                            Título = "Espresso",
+                            Youtube = "https://music.youtube.com/watch?v=eVli-tstM5E&si=YR217Xcajos35f3f"
                         },
                         new
                         {
                             Id = 36,
+                            AppleMusic = "https://music.apple.com/br/album/dumb-poetic/1750307020?i=1750307368",
                             Compositores = "Amy Allen, John Ryan, Julia Michaels e Sabrina Carpenter",
                             Duracao = new TimeSpan(0, 2, 13, 0, 0),
-                            Título = "Dumb & Poetic"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5VhvD0AKRprEaFtPNKGBQR?si=eb1a88a7dd954a2c",
+                            Título = "Dumb & Poetic",
+                            Youtube = "https://music.youtube.com/watch?v=moMdJBDCblE&si=Nfz-7Fbs4wdB3tZr"
                         },
                         new
                         {
                             Id = 37,
+                            AppleMusic = "https://music.apple.com/br/album/slim-pickins/1750307020?i=1750307371",
                             Compositores = "Amy Allen, Jack Antonoff e Sabrina Carpenter",
                             Duracao = new TimeSpan(0, 2, 32, 0, 0),
-                            Título = "Slim Pickins"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0XkZmBCCcdMY0EPY8ij6Gb?si=35c4c8d6e63a4a6f",
+                            Título = "Slim Pickins",
+                            Youtube = "https://music.youtube.com/watch?v=TmP-d1KQqQo&si=z1AbTQBWUYRXnFF8"
                         },
                         new
                         {
                             Id = 38,
+                            AppleMusic = "https://music.apple.com/br/album/juno/1750307020?i=1750307372",
                             Compositores = "Amy Allen, John Ryan e Sabrina Carpenter",
                             Duracao = new TimeSpan(0, 4, 11, 0, 0),
-                            Título = "Juno"
+                            Spotify = "https://open.spotify.com/intl-pt/track/21B4gaTWnTkuSh77iWEXdS?si=4dba330e243c4896",
+                            Título = "Juno",
+                            Youtube = "https://music.youtube.com/watch?v=1aMCVgRKcP4&si=HZ7SkYc0NnMwKDqM"
                         },
                         new
                         {
                             Id = 39,
+                            AppleMusic = "https://music.apple.com/br/album/lie-to-girls/1750307020?i=1750307375",
                             Compositores = "Amy Allen, Jack Antonoff e Sabrina Carpenter",
                             Duracao = new TimeSpan(0, 3, 22, 0, 0),
-                            Título = "Lie To Girls"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5il0jwWUlvgtIzWvzJi12z?si=ac92528c47f44a13",
+                            Título = "Lie To Girls",
+                            Youtube = "https://music.youtube.com/watch?v=xYQT5qx1ROE&si=D7arwfmuEmqCGj-E"
                         },
                         new
                         {
                             Id = 40,
+                            AppleMusic = "https://music.apple.com/br/album/dont-smile/1750307020?i=1750307379",
                             Compositores = "Amy Allen, John Ryan, Julian Bunetta e Sabrina Carpenter",
                             Duracao = new TimeSpan(0, 3, 26, 0, 0),
-                            Título = "Don't Smile"
+                            Spotify = "https://open.spotify.com/intl-pt/track/09LrGvT9KsACH66RHYMDyR?si=db4eb49cb20f46fc",
+                            Título = "Don't Smile",
+                            Youtube = "https://music.youtube.com/watch?v=Ju9X2HMMid4&si=2BIy_n2EDrhuo7eM"
                         },
                         new
                         {
                             Id = 41,
+                            AppleMusic = "https://music.apple.com/br/album/american-dream/1724494274?i=1724494706",
                             Compositores = "BK Rube, Isaiah Brown, James Owens, Sterling White",
                             Duracao = new TimeSpan(0, 1, 3, 0, 0),
-                            Título = "american dream"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4yreExU3eRNTe2iJz6X6k3?si=f362a1073ea74d90",
+                            Título = "american dream",
+                            Youtube = "https://music.youtube.com/watch?v=xH3nqcOA2DA&si=d0GuF0QRkilMEPlV"
                         },
                         new
                         {
                             Id = 42,
+                            AppleMusic = "https://music.apple.com/br/album/all-of-me/1724494274?i=1724494713",
                             Compositores = "Billie Rae Calvin, Isaiah Brown, Jalen Jackson, Jared Brown, Khaya Gilika, Raphael Oliveira, Shéyaa Bin Abraham-Joseph, Sterling White Jr. e Yakki Davis",
                             Duracao = new TimeSpan(0, 3, 18, 0, 0),
-                            Título = "all of me"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2FoahzOSxJnalPA8aBUme3?si=4dcf0ff36dfc41bf",
+                            Título = "all of me",
+                            Youtube = "https://music.youtube.com/watch?v=UpYb4C2--UY&si=SLZyVKaMHj_L5Iqu"
                         },
                         new
                         {
                             Id = 43,
+                            AppleMusic = "https://music.apple.com/br/album/redrum/1724494274?i=1724494724",
                             Compositores = "London Tyler Holmes, Mateen Kyle Niknam, Shéyaa Bin Abraham-Joseph e Vinícius de Moraes",
                             Duracao = new TimeSpan(0, 4, 30, 0, 0),
-                            Título = "redrum"
+                            Spotify = "https://open.spotify.com/intl-pt/track/52eIcoLUM25zbQupAZYoFh?si=6e6e2de7c6424585",
+                            Título = "redrum",
+                            Youtube = "https://music.youtube.com/watch?v=U4mADkt6o-M&si=3Q_fwieZCwEz5AK7"
                         },
                         new
                         {
                             Id = 44,
+                            AppleMusic = "https://music.apple.com/br/album/n-h-i-e/1724494274?i=1724494847",
                             Compositores = "Anthony Paul Jefferies, Amala Dlamini, Douglas Ford, Jonah Stevens, Kurtis McKenzie, Michael Orabiyi e Shéyaa Bin Abraham-Joseph",
                             Duracao = new TimeSpan(0, 2, 23, 0, 0),
-                            Título = "n.h.i.e"
+                            Spotify = "https://open.spotify.com/intl-pt/track/6x9pCndnXEoea0CMcfjs9W?si=77313696de6c4d69",
+                            Título = "n.h.i.e",
+                            Youtube = "https://music.youtube.com/watch?v=xDmb610okx0&si=LR6vKS48X8AKKR4n"
                         },
                         new
                         {
                             Id = 45,
+                            AppleMusic = "https://music.apple.com/br/album/sneaky/1724494274?i=1724494853",
                             Compositores = "Edward Maclin Cooper III e Shéyaa Bin Abraham-Joseph",
                             Duracao = new TimeSpan(0, 3, 21, 0, 0),
-                            Título = "sneakey"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2K7sv1mno9PvbXVBpqvSKn?si=ca4fc57f5aa046c5",
+                            Título = "sneaky",
+                            Youtube = "https://music.youtube.com/watch?v=gnwBjjXjuH4&si=WL2v7DfHg7SPtkz2"
                         },
                         new
                         {
                             Id = 46,
+                            AppleMusic = "https://music.apple.com/br/album/family-matters/1744684618?i=1744684622",
                             Compositores = "A. Graham",
                             Duracao = new TimeSpan(0, 7, 36, 0, 0),
-                            Título = "Family Matters"
+                            Spotify = "https://open.spotify.com/intl-pt/track/1wFFFzJ5EsKbBWZriAcubN?si=db2108699e654142",
+                            Título = "Family Matters",
+                            Youtube = "https://music.youtube.com/watch?v=ZkXG3ZrXlbc&si=PxyMmF1rflZ2L1JI"
                         },
                         new
                         {
                             Id = 47,
+                            AppleMusic = "https://music.apple.com/br/album/pop-ur-shit/1724494274?i=1724494854",
                             Compositores = "Allen Ritter, Jeffery Lamar Williams, Leland Tyler Wayne e Shéyaa Bin Abraham-Joseph",
                             Duracao = new TimeSpan(0, 3, 13, 0, 0),
-                            Título = "pop ur shit"
+                            Spotify = "https://open.spotify.com/intl-pt/track/47yD0e9MCRIB8dgUXPfyW3?si=452a79acf0d14699",
+                            Título = "pop ur shit",
+                            Youtube = "https://music.youtube.com/watch?v=GnhJziHDzCg&si=n3DpCY13siLvdWgM"
                         },
                         new
                         {
                             Id = 48,
+                            AppleMusic = "https://music.apple.com/br/album/letter-to-my-brudda/1724494274?i=1724494860",
                             Compositores = "Kavi Lybarger, Paola Barba, Park Min Geon, Shéyaa Bin Abraham-Joseph, Tchakalla Anthony Romeo, Tyrese McGriff e William Boyette",
                             Duracao = new TimeSpan(0, 2, 39, 0, 0),
-                            Título = "letter to my brudda"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5P1z8XwsCStb74emERTx9v?si=89a85f813b8846fe",
+                            Título = "letter to my brudda",
+                            Youtube = "https://music.youtube.com/watch?v=jBnzs_UMtGk&si=w3G787ZuJv15PhZT"
                         },
                         new
                         {
                             Id = 49,
+                            AppleMusic = "https://music.apple.com/br/album/dangerous/1724494274?i=1724494865",
                             Compositores = "Durk Banks, Jahmal Gwin, Jahshua Brown, Leland Tyler Wayne e Shéyaa Bin Abraham-Joseph",
                             Duracao = new TimeSpan(0, 4, 25, 0, 0),
-                            Título = "dangerous"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0fyP96TikhD9sM4eKqw5Yp?si=1c60bf3ca1e047a0",
+                            Título = "dangerous",
+                            Youtube = "https://music.youtube.com/watch?v=Gy6urUcig5A&si=CayiEMOdzvNBJ5Xt"
                         },
                         new
                         {
                             Id = 50,
+                            AppleMusic = "https://music.apple.com/br/album/n%C3%A9e-nah/1724494274?i=1724494870",
                             Compositores = "Douglas Ford, Jacques Webster, Leland Tyler Wayne, Malcolm McLaren, Rodney Argent, Shéyaa Bin Abraham-Joseph e William Handy",
                             Duracao = new TimeSpan(0, 3, 40, 0, 0),
-                            Título = "née-nah"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2yUzr8Sr6ldG8vmHhZwTnz?si=88ef52cb03f445de",
+                            Título = "née-nah",
+                            Youtube = "https://music.youtube.com/watch?v=hSitXYlIqKI&si=buF2LOhcYZmawLRH"
                         },
                         new
                         {
                             Id = 51,
+                            AppleMusic = "https://music.apple.com/br/album/see-the-real/1724494274?i=1724494876",
                             Compositores = "Dylan Cleary-Krell, Joshua Parker, Jason Cornet, Jocelyn Donald, Jordan Holt-May, Samuel David Jimenez e Shéyaa Bin Abraham-Joseph",
                             Duracao = new TimeSpan(0, 3, 2, 0, 0),
-                            Título = "see the real"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4E64eAph6AYI98ucunrGH8?si=fb8bc79e7f6943a0",
+                            Título = "see the real",
+                            Youtube = "https://music.youtube.com/watch?v=InwWpxgt6DE&si=B-BSGVTKu6kQIY1p"
                         },
                         new
                         {
                             Id = 52,
+                            AppleMusic = "https://music.apple.com/br/album/prove-it/1724494274?i=1724495061",
                             Compositores = "Carl Thompson, Edward Maclin Cooper III, Faith Evans, Isaiah Brown, James Owens,Keith Thomas, Shéyaa Bin Abraham-Joseph, Summer Walker, Tauren kngs Stovall e Tye Beats",
                             Duracao = new TimeSpan(0, 3, 27, 0, 0),
-                            Título = "prove it"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5wttBUDyaHAR5q9fYnN3YF?si=3074cc7786e94921",
+                            Título = "prove it",
+                            Youtube = "https://music.youtube.com/watch?v=oa8kjoT-MrM&si=cWMoHjuEPd02CwLU"
                         },
                         new
                         {
                             Id = 53,
+                            AppleMusic = "https://music.apple.com/br/album/shouldve-wore-a-bonnet/1724494274?i=1724495063",
                             Compositores = "Ronald LaTour, Christopher Wood, Darryl Pearson, Daveon Jackson, David Patino, Donald Earle De Grate Jr Francis Esteban, Joel Hailey, John Julian e Shéyaa Bin Abraham-Joseph",
                             Duracao = new TimeSpan(0, 3, 6, 0, 0),
-                            Título = "should've wore a bonnet"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4Xzq2WibDHR5Eufi21HlEZ?si=24153cc7554b496f",
+                            Título = "should've wore a bonnet",
+                            Youtube = "https://music.youtube.com/watch?v=EGJ7lxoRhlA&si=ZgOT4RzZk5MPN7lm"
                         },
                         new
                         {
                             Id = 54,
+                            AppleMusic = "https://music.apple.com/br/album/just-like-me/1724494274?i=1724495068",
                             Compositores = "Isaac De Boni, Michael Mule, Akeel Henry, Damini Ebunoluwa Ogulu, Jahmal Gwin, Jordon Manswell, Kevin Ekofo, Khadijah Lopez, Kira Huszar, Leland Tyler Wayne, Nevon Sinclair e Shéyaa Bin Abraham-Joseph",
                             Duracao = new TimeSpan(0, 3, 51, 0, 0),
-                            Título = "just like me"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5KI7I4mEtulXcv5VQJaV35?si=2e63f26a441844d8",
+                            Título = "just like me",
+                            Youtube = "https://music.youtube.com/watch?v=lgj851mZcfA&si=u60cjiwLuEVSovP5"
                         },
                         new
                         {
                             Id = 55,
+                            AppleMusic = "https://music.apple.com/br/album/red-sky/1724494274?i=1724495070",
                             Compositores = "4th Pyramid, Carlton Davis Mays, Jr.,Courtney Dwight, John Stephen Sudduth, Shaan Ramaprasad, Shéyaa Bin Abraham-Joseph e Tommy Newport",
                             Duracao = new TimeSpan(0, 2, 56, 0, 0),
-                            Título = "red sky"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4yLyVdEqV790aIXyGif85v?si=f5b4bfcff3604f52",
+                            Título = "red sky",
+                            Youtube = "https://music.youtube.com/watch?v=5_-sIkbYd_M&si=KvXwtEY0gvHd7uBM"
                         },
                         new
                         {
                             Id = 56,
+                            AppleMusic = "https://music.apple.com/br/album/dark-days/1724494274?i=1724495073",
                             Compositores = "Ahmar Bailey, Atia Boggs, JONAS LEE, Kavi Lybarger,Mariah Buckles, Paola Madelaine Barba Amado, Shéyaa Bin Abraham-Joseph, Yakki Davis e Yousef Sameh",
                             Duracao = new TimeSpan(0, 4, 55, 0, 0),
-                            Título = "dark days"
+                            Spotify = "https://open.spotify.com/intl-pt/track/02Cp3VTUWNed8hr69BhKz6?si=7925d9440a6b467f",
+                            Título = "dark days",
+                            Youtube = "https://music.youtube.com/watch?v=CiFxS8JaUfM&si=ZX5084H4Jb7neQC8"
                         },
                         new
                         {
                             Id = 57,
+                            AppleMusic = "https://music.apple.com/br/album/not-like-us/1781353928?i=1781353929",
                             Compositores = "Kendrick LamarRay Charles e Sean Momberger",
                             Duracao = new TimeSpan(0, 4, 34, 0, 0),
-                            Título = "Not Like Us"
+                            Spotify = "https://open.spotify.com/intl-pt/track/6AI3ezQ4o3HUoP6Dhudph3?si=b8dca7f0f8354702",
+                            Título = "Not Like Us",
+                            Youtube = "https://music.youtube.com/watch?v=phLb_SoPBlA&si=pqlYAoGqNFjwLXSk"
                         },
                         new
                         {
                             Id = 58,
+                            AppleMusic = "https://music.apple.com/br/album/hyaena/1699712635?i=1699712637",
                             Compositores = "Mike Dean, Noah Goldstein, Andy Votel, Derek Shulman, Ebony Oshunrinde, Edward Hazel, George Clinton, Jacques Webster, Jahaan Sweet, Kerry Minnear e Ray Shulman",
                             Duracao = new TimeSpan(0, 3, 42, 0, 0),
-                            Título = "HYAENA"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0hL9gOw6XBWsygEUcVjxEc?si=fd1cf4efcfe345bc",
+                            Título = "HYAENA",
+                            Youtube = "https://music.youtube.com/watch?v=N20q-391r48&si=aik_98jTi19G-E35"
                         },
                         new
                         {
                             Id = 59,
+                            AppleMusic = "https://music.apple.com/br/album/thank-god/1699712635?i=1699712638",
                             Compositores = "Allen Ritter, Ebony Oshunrinde, Finatik(of FNZ), Zac(of FNZ), Isaac Boni, Jacques Webster, Jahmal Gwin, Mark Mbogo, Micheal Mule, Stormi Webster e Ye",
                             Duracao = new TimeSpan(0, 3, 4, 0, 0),
-                            Título = "THANK GOD"
+                            Spotify = "https://open.spotify.com/intl-pt/track/1PH2MDbcBAU094DlgTIND1?si=3b17478bf986451d",
+                            Título = "THANK GOD",
+                            Youtube = "https://music.youtube.com/watch?v=UVtTc4zqbxQ&si=UqaAdmHLIggAy48d"
                         },
                         new
                         {
                             Id = 60,
+                            AppleMusic = "https://music.apple.com/br/album/modern-jam-feat-teezo-touchdown/1699712635?i=1699712643",
                             Compositores = "Mike Dean, Aaron Thomas, Guy-Manuel de Homem, Jacques Webster e Jahaan Sweet",
                             Duracao = new TimeSpan(0, 4, 15, 0, 0),
-                            Título = "MODERN JAM (feat. Teezo Touchdown)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3KCNiDi9Pza6ZD8FggNoaw?si=87a05d35086b4b1d",
+                            Título = "MODERN JAM (feat. Teezo Touchdown)",
+                            Youtube = "https://music.youtube.com/watch?v=g8IvO7OwdaM&si=sHLaSerO7bIgc4OP"
                         },
                         new
                         {
                             Id = 61,
+                            AppleMusic = "https://music.apple.com/br/album/my-eyes/1699712635?i=1699712644",
                             Compositores = "Josiah Sherman, Wesley Glass,Dua Saleh, Ebony Oshunrinde, Jacques Webster, Joseph Thornalley, Justin Vernon, Phil Cook e Sampha Sisay ",
                             Duracao = new TimeSpan(0, 4, 11, 0, 0),
-                            Título = "MY EYES"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4kjI1gwQZRKNDkw1nI475M?si=f041f16fa3cb41e6",
+                            Título = "MY EYES",
+                            Youtube = "https://music.youtube.com/watch?v=pildU9lK6vM&si=-LbHFPpS4QCGSa1e"
                         },
                         new
                         {
                             Id = 62,
+                            AppleMusic = "https://music.apple.com/br/album/gods-country/1699712635?i=1699712646",
                             Compositores = "Dez Wright, Samuel Gloade, Jacques Webster e Ye ",
                             Duracao = new TimeSpan(0, 2, 7, 0, 0),
-                            Título = "GOD'S COUNTRY"
+                            Spotify = "https://open.spotify.com/intl-pt/track/04WxWo7XeVyx22xEsrWRUb?si=34148e061c8942be",
+                            Título = "GOD'S COUNTRY",
+                            Youtube = "https://music.youtube.com/watch?v=E9VVEdw5Dng&si=tpz7f-KYteNMrrKN"
                         },
                         new
                         {
                             Id = 63,
+                            AppleMusic = "https://music.apple.com/br/album/sirens/1699712635?i=1699712647",
                             Compositores = "Josiah Sherman, Noah Goldstein, Psymun, Ebony Oshunrinde, Isaac Mpofu, Jacques Webster, Jahaan Sweet, John Fannon, Keith Kawbe e Evan mast",
                             Duracao = new TimeSpan(0, 3, 24, 0, 0),
-                            Título = "SIRENS"
+                            Spotify = "https://open.spotify.com/intl-pt/track/7LSpFCvRZZot2AlmkUzy9k?si=3c3b221b2fa146fd",
+                            Título = "SIRENS",
+                            Youtube = "https://music.youtube.com/watch?v=6gUiQ8CqLcY&si=u4S6n119zOmBNtqT"
                         },
                         new
                         {
                             Id = 64,
+                            AppleMusic = "https://music.apple.com/br/album/meltdown-feat-drake/1699712635?i=1699712649",
                             Compositores = "ANDERSON HERNANDEZ, Brytavious Chambers, Coleman, Matthew Samuels, A. Graham, Benjamin Saint Fort e Jacques Webster",
                             Duracao = new TimeSpan(0, 4, 6, 0, 0),
-                            Título = "MELTDOWN (feat. Drake)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/67nepsnrcZkowTxMWigSbb?si=01448f585c8a40d5",
+                            Título = "MELTDOWN (feat. Drake)",
+                            Youtube = "https://music.youtube.com/watch?v=LuKm4L9ryB0&si=t9yAnLlfbZd3zePd"
                         },
                         new
                         {
                             Id = 65,
+                            AppleMusic = "https://music.apple.com/br/album/fe-n-feat-playboi-carti/1699712635?i=1699712651",
                             Compositores = "Jahaan Sweet, Jacques Webster, Jordan Carter e Khadimou Fall",
                             Duracao = new TimeSpan(0, 3, 11, 0, 0),
-                            Título = "FE!N (feat. Playboi Carti)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/42VsgItocQwOQC3XWZ8JNA?si=6eb554e558b4426e",
+                            Título = "FE!N (feat. Playboi Carti)",
+                            Youtube = "https://music.youtube.com/watch?v=B9synWjqBn8&si=lqdU6AoMhcy5dY3G"
                         },
                         new
                         {
                             Id = 66,
+                            AppleMusic = "https://music.apple.com/br/album/delresto-echoes-feat-beyonc%C3%A9/1699712635?i=1699712652",
                             Compositores = "Allen Ritter, Chauncey Hollis, MIke Dean, Beyoncé, Jacques Webster, James Blake e Terius Gesteelde-Diamant",
                             Duracao = new TimeSpan(0, 4, 34, 0, 0),
-                            Título = "DELRESTO (ECHOES) (feat. Beyoncé)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0OEe83mMZ5kaNw5uZQ7ilG?si=c8e91268170245ff",
+                            Título = "DELRESTO (ECHOES) (feat. Beyoncé)",
+                            Youtube = "https://music.youtube.com/watch?v=vM34QWOrz4A&si=8KI7cVKZb-88ypMs"
                         },
                         new
                         {
                             Id = 67,
+                            AppleMusic = "https://music.apple.com/br/album/i-know/1699712635?i=1699712653",
                             Compositores = "Josiah Sherman, Ozan Yildrim, Scotty Coleman, Jacques Webster, Kobe Hood e Terrance George",
                             Duracao = new TimeSpan(0, 3, 31, 0, 0),
-                            Título = "I KNOW ?"
+                            Spotify = "https://open.spotify.com/intl-pt/track/6wsqVwoiVH2kde4k4KKAFU?si=9a584bbedb1a49f3",
+                            Título = "I KNOW ?",
+                            Youtube = "https://music.youtube.com/watch?v=X7aF3nZOS98&si=2ZBLmlOBdD-s_x8B"
                         },
                         new
                         {
                             Id = 68,
+                            AppleMusic = "https://music.apple.com/br/album/topia-twins-feat-rob49-21-savage/1699712635?i=1699712655",
                             Compositores = "Dez Wright, Wesley Glass, Cash Esmailian,Douglas Ford, Harry Edwards, Henri Velasco, Jacques Webster, Oliver Rodigan, Robert Thomas e Shéyaa Bin Abraham-Joseph",
                             Duracao = new TimeSpan(0, 3, 43, 0, 0),
-                            Título = "TOPIA TWINS (feat. Rob49 & 21 Savage)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0lodMO0qK83vfPiiD7FMEt?si=ff6685695b0f4661",
+                            Título = "TOPIA TWINS (feat. Rob49 & 21 Savage)",
+                            Youtube = "https://music.youtube.com/watch?v=BsHcPP9KQdU&si=NoBXPJu5Lcdkk2tv"
                         },
                         new
                         {
                             Id = 69,
+                            AppleMusic = "https://music.apple.com/br/album/circus-maximus-feat-the-weeknd-swae-lee/1699712635?i=1699712656",
                             Compositores = "Noah Goldstein, Abel Tesfaye, Ebony Oshunrinde, Gary Klebe, Jacques Webster, Jahaan Sweet, Khalif Brown e Mike Dean",
                             Duracao = new TimeSpan(0, 4, 18, 0, 0),
-                            Título = "CIRCUS MAXIMUS (feat. The Weeknd & Swae Lee)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4GL9GMX9t7Qkprvf1YighZ?si=7d37e9b3349c49b2",
+                            Título = "CIRCUS MAXIMUS (feat. The Weeknd & Swae Lee)",
+                            Youtube = "https://music.youtube.com/watch?v=BwhRWpHxKdM&si=cYJQ7AFEQBKTdGTM"
                         },
                         new
                         {
                             Id = 70,
+                            AppleMusic = "https://music.apple.com/br/album/parasail-feat-yung-lean-dave-chappelle/1699712635?i=1699712657",
                             Compositores = "Buddy Ross, Jahaan Sweet, Noah Goldstein, Anthony Ruiz, Dave Bixby, David Chappelle, Jacques Webster, Jonatan Håsted e Joseph Thornalley",
                             Duracao = new TimeSpan(0, 2, 34, 0, 0),
-                            Título = "PARASAIL (feat. Yung Lean & Dave Chappelle)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2Q0aElTZQtEUsoiaQfizu6?si=136ad3df1be44995",
+                            Título = "PARASAIL (feat. Yung Lean & Dave Chappelle)",
+                            Youtube = "https://music.youtube.com/watch?v=aEiD3UZDmiY&si=DCQTuyv1dsQLVB-s"
                         },
                         new
                         {
                             Id = 71,
+                            AppleMusic = "https://music.apple.com/br/album/skitzo-feat-young-thug/1699712635?i=1699712660",
                             Compositores = "Dylan Teixeira, Matthew Samuels, Scotty Coleman, Sevn Thomas, Blue Miller, Douglas Ford, Ebony Oshunrinde, India Simpson, Jacques Webster, Jahaan Sweet, Jeffrey Williams, Nami Ondas, Nik Dean, Slim Pharoah e Travis Sayles",
                             Duracao = new TimeSpan(0, 6, 6, 0, 0),
-                            Título = "SKITZO (feat. Young Thug)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0bkV1iQHSxBaksUqgEkcbc?si=30f1f7458f424794",
+                            Título = "SKITZO (feat. Young Thug)",
+                            Youtube = "https://music.youtube.com/watch?v=Zk-4WvSPpac&si=bTYs5izCSgIPdmX-"
                         },
                         new
                         {
                             Id = 72,
+                            AppleMusic = "https://music.apple.com/br/album/lost-forever-feat-westside-gunn/1699712635?i=1699712661",
                             Compositores = "Alan Maman, Alvin Worthy, Dominic Maker, Douglas Ford, Elliott Baker, Jacques Webster e James Litherland",
                             Duracao = new TimeSpan(0, 2, 43, 0, 0),
-                            Título = "LOST FOREVER (feat. Westside Gunn)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/7EiUtdeoWcKqLi5ELZCjYf?si=d184061f602f474b",
+                            Título = "LOST FOREVER (feat. Westside Gunn)",
+                            Youtube = "https://music.youtube.com/watch?v=AppJbl-wODs&si=E196LCdbPfhommXf"
                         },
                         new
                         {
                             Id = 73,
+                            AppleMusic = "https://music.apple.com/br/album/looove-feat-kid-cudi/1699712635?i=1699712662",
                             Compositores = "Buddy Ross, Jacques Webster, Pharrell Williams e Scott Mescudi",
                             Duracao = new TimeSpan(0, 3, 46, 0, 0),
-                            Título = "LOOOVE (feat. Kid Cudi)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0a4SMs889NwP8oWI7Vemle?si=86ab55a806e44995",
+                            Título = "LOOOVE (feat. Kid Cudi)",
+                            Youtube = "https://music.youtube.com/watch?v=tPdPgFhdp58&si=a1wpujn9PmhKos6O"
                         },
                         new
                         {
                             Id = 74,
+                            AppleMusic = "https://music.apple.com/br/album/k-pop-feat-bad-bunny-the-weeknd/1699712635?i=1699712663",
                             Compositores = "Bigram John Zayas, Carlo Montagnese, Jahaan Sweet, Matthew Samuels, Abel Tesfaye, Benito Antonio Martínez Ocasio, Benjamin Saint Fort e Jacques Webster",
                             Duracao = new TimeSpan(0, 3, 5, 0, 0),
-                            Título = "K-POP (feat. Bad Bunny & The Weeknd)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4o82J5zr4DFEs9yj5szCVX?si=87917e1dfcfd4892",
+                            Título = "K-POP (feat. Bad Bunny & The Weeknd)",
+                            Youtube = "https://music.youtube.com/watch?v=_kS7F4VpJa0&si=YD2f9XolQuM5_Ng8"
                         },
                         new
                         {
                             Id = 75,
+                            AppleMusic = "https://music.apple.com/br/album/telekinesis-feat-sza-future/1699712635?i=1699712664",
                             Compositores = "Edgar Nabeyin Pandord, Jacques Webster, Jahaan Sweet, Jahmal Gwin, Nayvadius Wilburn, Nima Jahanbin, Paimon Jahanbin, Solana Rowe, Victory Boyd e Ye",
                             Duracao = new TimeSpan(0, 5, 53, 0, 0),
-                            Título = "TELEKINESIS (feat. SZA & Future)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/1i9lZvlaDdWDPyXEE95aiq?si=3d84e6abb37e4a9a",
+                            Título = "TELEKINESIS (feat. SZA & Future)",
+                            Youtube = "https://music.youtube.com/watch?v=zptRsa1pqsk&si=WVocK7o1SZe3fPZI"
                         },
                         new
                         {
                             Id = 76,
+                            AppleMusic = "https://music.apple.com/br/album/til-further-notice-feat-james-blake-21-savage/1699712635?i=1699712667",
                             Compositores = "Jacques Webster, James Litherland, Leland Wayne e Shéyaa Bin Abraham-Joseph",
                             Duracao = new TimeSpan(0, 5, 14, 0, 0),
-                            Título = "TIL FURTHER NOTICE (feat. James Blake & 21 Savage)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/76gcXhY3Zv6wW0BTe9nHJo?si=8c00b0ac3a1d403e",
+                            Título = "TIL FURTHER NOTICE (feat. James Blake & 21 Savage)",
+                            Youtube = "https://music.youtube.com/watch?v=zptRsa1pqsk&si=8W45t0fmrNacgXLd"
                         },
                         new
                         {
                             Id = 77,
+                            AppleMusic = "https://music.apple.com/br/song/crack-com-mussilon/1767049265",
                             Compositores = "Citação: Oceano - Djavan, Djavan e Matuê",
                             Duracao = new TimeSpan(0, 2, 34, 0, 0),
-                            Título = "Crack com Mussilon"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4ssHL7bSnOAE7HjiuLx6Co",
+                            Título = "Crack com Mussilon",
+                            Youtube = "https://music.youtube.com/watch?v=zctKiN-okXI&list=OLAK5uy_l1VAkYkb3kDuWpTSAvRplwnLdVCUHT0A"
                         },
                         new
                         {
                             Id = 78,
+                            AppleMusic = "https://music.apple.com/br/song/imagina-essecen%C3%A1rio/1767049268",
                             Compositores = "Matuê e Veigh",
                             Duracao = new TimeSpan(0, 2, 35, 0, 0),
-                            Título = "Imagina esse Cenário"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2fjqfFUq64thFsqfKN01kS",
+                            Título = "Imagina esse Cenário",
+                            Youtube = "https://music.youtube.com/watch?v=Leep9KouXMo&list=OLAK5uy_l1V-AkYkb3kDuWpTSAvRplwnLdVCUHT0A"
                         },
                         new
                         {
                             Id = 79,
+                            AppleMusic = "https://music.apple.com/br/album/isso-%C3%A9-s%C3%A9rio/1767049264?i=1767049270",
                             Compositores = "Brandão85 e Matuê",
                             Duracao = new TimeSpan(0, 4, 45, 0, 0),
-                            Título = "Isso é Sério"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3Sa2gVQioE31DcG4nKNDqD",
+                            Título = "Isso é Sério",
+                            Youtube = "https://music.youtube.com/watch?v=d-6DzlhlBxA&list=OLAK5uy_l1VAkYkb3kDuWpTSAvRplwnLdVCUHT0A"
                         },
                         new
                         {
                             Id = 80,
+                            AppleMusic = "https://music.apple.com/br/song/1993/1767049273",
                             Compositores = "Matuê",
                             Duracao = new TimeSpan(0, 2, 7, 0, 0),
-                            Título = "1993"
+                            Spotify = "https://open.spotify.com/intl-pt/track/6QsHhB0W9GtLF3cI7mUVkQ",
+                            Título = "1993",
+                            Youtube = "https://music.youtube.com/watch?v=gyVmdwtvKwg&list=OLAK5uy_l1V-AkYkb3kDuWpTSAvRplwnLdVCUHT0A"
                         },
                         new
                         {
                             Id = 81,
+                            AppleMusic = "https://music.apple.com/br/song/4tal/1767049274",
                             Compositores = "Matuê e Teto",
                             Duracao = new TimeSpan(0, 3, 24, 0, 0),
-                            Título = "4Tal"
+                            Spotify = "https://open.spotify.com/intl-pt/track/6OcZP4rUfuxms2r8Mwx5BQ",
+                            Título = "4Tal",
+                            Youtube = "https://music.youtube.com/watch?v=mr_AunTy2pk&list=OLAK5uy_l1VAkYkb3kDuWpTSAvRplwnLdVCUHT0A"
                         },
                         new
                         {
                             Id = 82,
+                            AppleMusic = "https://music.apple.com/br/song/o-som/1767049277",
                             Compositores = "Matuê",
                             Duracao = new TimeSpan(0, 5, 12, 0, 0),
-                            Título = "O Som"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4v0VOuuaZSQHjnjzkC3cnk",
+                            Título = "O Som",
+                            Youtube = "https://music.youtube.com/watch?v=iEb-OKbn-w8&list=OLAK5uy_l1VAkYkb3kDuWpTSAvRplwnLdVCUHT0A"
                         },
                         new
                         {
                             Id = 83,
+                            AppleMusic = "https://music.apple.com/br/song/04am/1767049401",
                             Compositores = "Matuê",
                             Duracao = new TimeSpan(0, 3, 19, 0, 0),
-                            Título = "04AM"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2fTTmjyF7pfarDBAbsJkvb",
+                            Título = "04AM",
+                            Youtube = "https://music.youtube.com/watch?v=-bYNcpEBY9E&list=OLAK5uy_l1VAkYkb3kDuWpTSAvRplwnLdVCUHT0A"
                         },
                         new
                         {
                             Id = 84,
+                            AppleMusic = "https://music.apple.com/br/song/castlevania/1767049403",
                             Compositores = "Matuê",
                             Duracao = new TimeSpan(0, 3, 50, 0, 0),
-                            Título = "Castlevania"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3Kh5a6vXMiJtC35jMEfmyy",
+                            Título = "Castlevania",
+                            Youtube = "https://music.youtube.com/watch?v=A4FRq2QK6mw&list=OLAK5uy_l1V-AkYkb3kDuWpTSAvRplwnLdVCUHT0A"
                         },
                         new
                         {
                             Id = 85,
+                            AppleMusic = "https://music.apple.com/br/song/v-de-vil%C3%A3o/1767049407",
                             Compositores = "Matuê",
                             Duracao = new TimeSpan(0, 2, 26, 0, 0),
-                            Título = "V de Vilão"
+                            Spotify = "https://open.spotify.com/intl-pt/track/7pMfMzfYSTbNxj5lJEbQIp",
+                            Título = "V de Vilão",
+                            Youtube = "https://music.youtube.com/watch?v=QGSdmEsv4G0&list=OLAK5uy_l1V-AkYkb3kDuWpTSAvRplwnLdVCUHT0A"
                         },
                         new
                         {
                             Id = 86,
+                            AppleMusic = "https://music.apple.com/br/song/maria/1767049408",
                             Compositores = "Matuê",
                             Duracao = new TimeSpan(0, 3, 24, 0, 0),
-                            Título = "Maria"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2ux3Sb90r5aA74nLMls1u0",
+                            Título = "Maria",
+                            Youtube = "https://music.youtube.com/watch?v=-x2cE--r3L8&list=OLAK5uy_l1VAkYkb3kDuWpTSAvRplwnLdVCUHT0A"
                         },
                         new
                         {
                             Id = 87,
+                            AppleMusic = "https://music.apple.com/br/song/333/1767049409",
                             Compositores = "Matuê",
                             Duracao = new TimeSpan(0, 5, 24, 0, 0),
-                            Título = "333"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0qsKefQyXCzaxjHbOcd8IU",
+                            Título = "333",
+                            Youtube = "https://music.youtube.com/watch?v=aq-DH4iwviE&list=OLAK5uy_l1VAkYkb3kDuWpTSAvRplwnLdVCUHT0A"
                         },
                         new
                         {
                             Id = 88,
+                            AppleMusic = "https://music.apple.com/br/song/like-this/1767049410",
                             Compositores = "Matuê",
                             Duracao = new TimeSpan(0, 3, 28, 0, 0),
-                            Título = "Like This!"
+                            Spotify = "https://open.spotify.com/intl-pt/track/49gGZLLm1d7fBFQkTqskXo",
+                            Título = "Like This!",
+                            Youtube = "https://music.youtube.com/watch?v=0zamf27iJ1E&list=OLAK5uy_l1VAkYkb3kDuWpTSAvRplwnLdVCUHT0A"
                         },
                         new
                         {
                             Id = 89,
+                            AppleMusic = "https://music.apple.com/br/album/medo-de-quem/1755821257?i=1755821259",
                             Compositores = "msahlholdt, RUXN e WIU",
                             Duracao = new TimeSpan(0, 2, 54, 0, 0),
-                            Título = "Medo de Quem?"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5EKCczncKlpSmDoP074cVF?si=bd980e97ceac47ee",
+                            Título = "Medo de Quem?",
+                            Youtube = "https://music.youtube.com/watch?v=O1AD591l-3Y&si=P7pgSsJLLsCgz6zn"
                         },
                         new
                         {
                             Id = 90,
+                            AppleMusic = "https://music.apple.com/br/album/casa-do-tio-wiu/1755821257?i=1755821262",
                             Compositores = "WIU",
                             Duracao = new TimeSpan(0, 3, 2, 0, 0),
-                            Título = "Casa do Tio Wiu"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2umpEVeKbYxx1Qx2Dy1mcz?si=528997fb07824862",
+                            Título = "Casa do Tio Wiu",
+                            Youtube = "https://music.youtube.com/watch?v=MXf6fcSLUyU&si=Wth2jKGkGXM5-jZV"
                         },
                         new
                         {
                             Id = 91,
+                            AppleMusic = "https://music.apple.com/br/album/rainha-da-finesse/1755821257?i=1755821263",
                             Compositores = "WIU",
                             Duracao = new TimeSpan(0, 2, 46, 0, 0),
-                            Título = "Rainha da Finesse"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0w7vodPWFEcuEYvWpbNbOu?si=2468dd3b313248b4",
+                            Título = "Rainha da Finesse",
+                            Youtube = "https://music.youtube.com/watch?v=dC6NPbqJV6k&si=8x-hIFTVccdbi0DM"
                         },
                         new
                         {
                             Id = 92,
+                            AppleMusic = "https://music.apple.com/br/album/vidigal/1755821257?i=1755821267",
                             Compositores = "BlueFire, WIU e Yako",
                             Duracao = new TimeSpan(0, 3, 17, 0, 0),
-                            Título = "Vidigal"
+                            Spotify = "https://open.spotify.com/intl-pt/track/42XLOKRo2bv2Ne9lTOGSQA?si=ecaff77709804ed1",
+                            Título = "Vidigal",
+                            Youtube = "https://music.youtube.com/watch?v=Zpe-s1ROP50&si=ZrHEDo6FYvZfaGi6"
                         },
                         new
                         {
                             Id = 93,
+                            AppleMusic = "https://music.apple.com/br/album/amor-de-1h/1755821257?i=1755821268",
                             Compositores = "WIU",
                             Duracao = new TimeSpan(0, 3, 28, 0, 0),
-                            Título = "Amor de 1h"
+                            Spotify = "https://open.spotify.com/intl-pt/track/688p6uyAS8MBxWSfExaXx5?si=738ed23c7c5c4ea9",
+                            Título = "Amor de 1h",
+                            Youtube = "https://music.youtube.com/watch?v=cy6K9SLa8h4&si=INI3F5VjNeWx0jwX"
                         },
                         new
                         {
                             Id = 94,
+                            AppleMusic = "https://music.apple.com/br/album/se-eu-ver-sua-m%C3%A3e-na-rua/1755821257?i=1755821419",
                             Compositores = "Saint Blunts e WIU",
                             Duracao = new TimeSpan(0, 3, 2, 0, 0),
-                            Título = "Se eu ver sua mãe na rua"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2ifEk0oT5FYOLIsvjvdxIK?si=c9b26407581e42ff",
+                            Título = "Se eu ver sua mãe na rua",
+                            Youtube = "https://music.youtube.com/watch?v=7Jv-PLTy6WA&si=6wDTEWgCa01GQKYs"
                         },
                         new
                         {
                             Id = 95,
+                            AppleMusic = "https://music.apple.com/br/album/desgra%C3%A7adagostosamaldita/1755821257?i=1755821420",
                             Compositores = "Desro, Dragzi, Moras e WIU",
                             Duracao = new TimeSpan(0, 3, 0, 0, 0),
-                            Título = "desgraçadagostosamaldita"
+                            Spotify = "https://open.spotify.com/intl-pt/track/1Goev6cA7GPslY2CdxXzDG?si=ae19d108602a43dc",
+                            Título = "desgraçadagostosamaldita",
+                            Youtube = "https://music.youtube.com/watch?v=9p4M9Jc8CT8&si=Mlsmuamsf4w4jGqz"
                         },
                         new
                         {
                             Id = 96,
+                            AppleMusic = "https://music.apple.com/br/album/teimosa/1755821257?i=1755821421",
                             Compositores = "AK On De Beat, Stoneraider e WIU",
                             Duracao = new TimeSpan(0, 3, 3, 0, 0),
-                            Título = "Teimosa"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3FcxqTlyvhCNH0j3gxWy8u?si=8176ba72b1704bbd",
+                            Título = "Teimosa",
+                            Youtube = "https://music.youtube.com/watch?v=1_djuKtQHG8&si=zSxrN9mx6j-4yP1D"
                         },
                         new
                         {
                             Id = 97,
+                            AppleMusic = "https://music.apple.com/br/album/olha-oq-ce-fez-comigo/1755821257?i=1755821424",
                             Compositores = "WIU",
                             Duracao = new TimeSpan(0, 3, 28, 0, 0),
-                            Título = "Olha oq ce fez comigo"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5SD6Hqq4oI64KSfAyEUrRV?si=578747aa05a84359",
+                            Título = "Olha oq ce fez comigo",
+                            Youtube = "https://music.youtube.com/watch?v=iNOyX10Nqgc&si=p5LZRSmjwishroCK"
                         },
                         new
                         {
                             Id = 98,
+                            AppleMusic = "https://music.apple.com/br/album/guala/1755821257?i=1755821427",
                             Compositores = "INQBOI BEATZ e WIU",
                             Duracao = new TimeSpan(0, 3, 2, 0, 0),
-                            Título = "Guala"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5emXCWhIK8qnUJeB2CCcIl?si=827631d0c804414a",
+                            Título = "Guala",
+                            Youtube = "https://music.youtube.com/watch?v=plRxytI9hvo&si=Ug2SPfeA-0Ja0g90"
                         },
                         new
                         {
                             Id = 99,
+                            AppleMusic = "https://music.apple.com/br/album/maria-do-olho-verde/1755821257?i=1755821428",
                             Compositores = "RRareBear e WIU",
                             Duracao = new TimeSpan(0, 3, 24, 0, 0),
-                            Título = "Maria do Olho Verde"
+                            Spotify = "https://open.spotify.com/intl-pt/track/6c5AQO3llPWxeAK4b3cAut?si=74599532ff394d8e",
+                            Título = "Maria do Olho Verde",
+                            Youtube = "https://music.youtube.com/watch?v=cD0tBkCG9AI&si=j4FbxZ-CipsGJUKB"
                         },
                         new
                         {
                             Id = 100,
+                            AppleMusic = "https://music.apple.com/br/album/eu-n%C3%A3o-ou%C3%A7o-mais-trap/1755821257?i=1755821430",
                             Compositores = "Cheek, Hulls e WIU",
                             Duracao = new TimeSpan(0, 3, 16, 0, 0),
-                            Título = "Eu Não Ouço Mais Trap"
+                            Spotify = "https://open.spotify.com/intl-pt/track/54mhCPc4XuWiv7aaFBqTAk?si=246db7ec7ccc434b",
+                            Título = "Eu Não Ouço Mais Trap",
+                            Youtube = "https://music.youtube.com/watch?v=z5R9JzNpvPc&si=zmF2DvFPtPgnb5CT"
                         },
                         new
                         {
                             Id = 101,
+                            AppleMusic = "https://music.apple.com/br/album/rol%C3%AA-de-sempre/1755821257?i=1755821431",
                             Compositores = "WIU",
                             Duracao = new TimeSpan(0, 5, 32, 0, 0),
-                            Título = "Rolê de Sempre"
+                            Spotify = "https://open.spotify.com/intl-pt/track/1IA7U01tZDZmMarnf9QIa4?si=ec68be502f2b4ff8",
+                            Título = "Rolê de Sempre",
+                            Youtube = "https://music.youtube.com/watch?v=bDOVDVgEJl4&si=d8VtI4W051y6ZWDI"
                         },
                         new
                         {
                             Id = 102,
+                            AppleMusic = "https://music.apple.com/br/album/euphoria/1744024729?i=1744024751",
                             Compositores = "Cardo, Kenneth Gamble, Jordan Houston, Kendrick Lamar, Leon Huff e Paul Beauregard",
                             Duracao = new TimeSpan(0, 6, 23, 0, 0),
-                            Título = "Euphoria"
+                            Spotify = "https://open.spotify.com/intl-pt/track/77DRzu7ERs0TX3roZcre7Q?si=1dc67c5f16d0400e",
+                            Título = "Euphoria",
+                            Youtube = "https://music.youtube.com/watch?v=fAqa1ozCuj8&si=cHwY_Lb-Ps-q9GKU"
                         },
                         new
                         {
                             Id = 103,
+                            AppleMusic = "https://music.apple.com/br/album/woke-up-single/1742262122",
                             Compositores = "Chancellor´, JAEYOUNG, JAKOPS, LYRICKS e Shintaro Yasuda",
                             Duracao = new TimeSpan(0, 3, 8, 0, 0),
-                            Título = "WOKE UP"
+                            Spotify = "https://open.spotify.com/intl-pt/album/2e9eizo3Euh2aaBef2B2bw?highlight=spotify:track:4keuUM29CtIWgsPRzRhXoW",
+                            Título = "WOKE UP",
+                            Youtube = "https://music.youtube.com/watch?v=Q06IepqwpVc&si=IfuwwE3G4tEb-wsU"
                         },
                         new
                         {
                             Id = 104,
                             Compositores = "Luan Gabriel",
                             Duracao = new TimeSpan(0, 1, 57, 0, 0),
-                            Título = "MTG QUERO VER SE VOCÊ TEM ATITUDE"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4PDw1XpsurgUnN7YSZmh1Q?si=f03b26626a09443f",
+                            Título = "MTG QUERO VER SE VOCÊ TEM ATITUDE",
+                            Youtube = "https://music.youtube.com/watch?v=Ahr9n7xjNDg&si=sGTIz79UMzLfrHwa"
                         },
                         new
                         {
                             Id = 105,
+                            AppleMusic = "https://music.apple.com/br/album/timeless-single/1770380869",
                             Compositores = "Abel Tesfaye, Blessed, Devon Chisolm (Lawson), Jarrod Morgan, Jordan Terrell Carter, Kobe Hood, Mark Williams (Oji), MIKE DEAN, Pharrell Williams, Raul Cubina (Volta) e Tariq Sharrieff",
                             Duracao = new TimeSpan(0, 4, 16, 0, 0),
-                            Título = "Timeless (with Playboi Carti)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/1Es7AUAhQvapIcoh3qMKDL?si=880329414f5e4c39",
+                            Título = "Timeless (with Playboi Carti)",
+                            Youtube = "https://music.youtube.com/watch?v=JpOgr4s3GrE&si=_ZvEAyaAQGwdQ-90"
                         },
                         new
                         {
                             Id = 106,
+                            AppleMusic = "https://music.apple.com/br/album/360/1739079974?i=1739079976",
                             Compositores = "Alexander Guy Cook, Blake Slatkin, Charlotte Aitchison, Finn Keane, Henry Walter e Omer Fedi",
                             Duracao = new TimeSpan(0, 2, 13, 0, 0),
-                            Título = "360"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4w2GLmK2wnioVnb5CPQeex?si=304419c971634e60 ",
+                            Título = "360",
+                            Youtube = "https://music.youtube.com/watch?v=nI6GP8wKJ6o&si=ge1eCroEQEv4gDlL"
                         },
                         new
                         {
                             Id = 107,
+                            AppleMusic = "https://music.apple.com/br/album/club-classics/1739079974?i=1739080339",
                             Compositores = "A.G.Cook, Charlotte Aitchison e George Daniel",
                             Duracao = new TimeSpan(0, 2, 33, 0, 0),
-                            Título = "Club classics"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0CySZwyRJ0vyUqtSjM9i2k?si=c47c9971ed94424c",
+                            Título = "Club classics",
+                            Youtube = "https://music.youtube.com/watch?v=bg9EmWTRt3Y&si=KLHrSIaMskTlI9zT"
                         },
                         new
                         {
                             Id = 108,
+                            AppleMusic = "https://music.apple.com/br/album/sympathy-is-a-knife/1739079974?i=1739080343",
                             Compositores = "Charlotte Aitchison, Finn Keane e Jonathan Christopher Shave",
                             Duracao = new TimeSpan(0, 2, 31, 0, 0),
-                            Título = "Sympathy is a knife"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5c9tBmJKbTdn1vhzXHeAwW?si=ada15865e96a4196",
+                            Título = "Sympathy is a knife",
+                            Youtube = "https://music.youtube.com/watch?v=EFdiM0f2FWE&si=nZliM-HO_1iJS92V"
                         },
                         new
                         {
                             Id = 109,
+                            AppleMusic = "https://music.apple.com/br/album/i-might-say-something-stupid/1739079974?i=1739080345",
                             Compositores = "Charlotte Aitchison e Mike Levy",
                             Duracao = new TimeSpan(0, 1, 49, 0, 0),
-                            Título = "I might isay something stupid"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0PFZCt7UNmpas24HejQGu8?si=1971006689074161",
+                            Título = "I might isay something stupid",
+                            Youtube = "https://music.youtube.com/watch?v=TD2j1OuHoik&si=AV-16SwXdgQugKVz"
                         },
                         new
                         {
                             Id = 110,
+                            AppleMusic = "https://music.apple.com/br/album/talk-talk/1739079974?i=1739080348",
                             Compositores = "Alexander Guy Cook, Charlotte Aitchison e Ross Matthew Birchard",
                             Duracao = new TimeSpan(0, 2, 41, 0, 0),
-                            Título = "Talk talk"
+                            Spotify = "https://open.spotify.com/intl-pt/track/62fqMvguJbsSs9HKhhRfuS?si=9c0182c60f9343af",
+                            Título = "Talk talk",
+                            Youtube = "https://music.youtube.com/watch?v=pIs46LzZUws&si=h6eQ04HjF07lfvdY"
                         },
                         new
                         {
                             Id = 111,
+                            AppleMusic = "https://music.apple.com/br/album/von-dutch/1739079974?i=1739080354",
                             Compositores = "Charlotte Aitchison e Finn Keane",
                             Duracao = new TimeSpan(0, 2, 44, 0, 0),
-                            Título = "Von dutch"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3Y1EvIgEVw51XtgNEgpz5c?si=f5410f920d4b4102",
+                            Título = "Von dutch",
+                            Youtube = "https://music.youtube.com/watch?v=cwZ1L_0QLjw&si=qOEkJQwF_KG1FYZk"
                         },
                         new
                         {
                             Id = 112,
+                            AppleMusic = "https://music.apple.com/br/album/everything-is-romantic/1739079974?i=1739080358",
                             Compositores = "A.G.Cook, Charlotte Aitchison, Jasper Harris, Jae Deal, Marlon Travis Barrow e Pablo Diaz-Reixa",
                             Duracao = new TimeSpan(0, 3, 23, 0, 0),
-                            Título = "Everything is romantic"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5sMEEjviCkH6Rp5X2ZvIIc?si=61fdf4b6b61548cc",
+                            Título = "Everything is romantic",
+                            Youtube = "https://music.youtube.com/watch?v=FTIvFD7TCVg&si=KTAEgxCSbkVMI3W6"
                         },
                         new
                         {
                             Id = 113,
+                            AppleMusic = "https://music.apple.com/br/album/rewind/1739079974?i=1739080366",
                             Compositores = "Alexander Guy Cook, Charlotte Aitchison, e Henry Walter",
                             Duracao = new TimeSpan(0, 2, 48, 0, 0),
-                            Título = "Rewind"
+                            Spotify = "https://open.spotify.com/intl-pt/track/50GxvQA2KEWNt31EdwIlzY?si=2059e6a0bdea47b5",
+                            Título = "Rewind",
+                            Youtube = "https://music.youtube.com/watch?v=WlM7nm3TLnY&si=N2OMJ-ZdPZGmgifB"
                         },
                         new
                         {
                             Id = 114,
+                            AppleMusic = "https://music.apple.com/br/album/so-i/1739079974?i=1739080637",
                             Compositores = "Charlotte Aitchison, Finn Keane e Jonathan Christopher Shave",
                             Duracao = new TimeSpan(0, 3, 31, 0, 0),
-                            Título = "So I"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0AkiAfilrTUXV49dleC5SB?si=fe4deb019dc941b9",
+                            Título = "So I",
+                            Youtube = "https://music.youtube.com/watch?v=r9k1CR4LBjk&si=TyR8oMOXtDo2vg1J"
                         },
                         new
                         {
                             Id = 115,
+                            AppleMusic = "https://music.apple.com/br/album/girl-so-confusing/1739079974?i=1739080642",
                             Compositores = "Alexander Guy Cook e Charlotte Aitchison",
                             Duracao = new TimeSpan(0, 2, 54, 0, 0),
-                            Título = "Girl, so confusing"
+                            Spotify = "https://open.spotify.com/intl-pt/track/41krZZovstMJKeJZJtbL78?si=5dd90ceb33284137",
+                            Título = "Girl, so confusing",
+                            Youtube = "https://music.youtube.com/watch?v=QXKvjyoH5lM&si=iO9eEHkRUTsGocNk"
                         },
                         new
                         {
                             Id = 116,
+                            AppleMusic = "https://music.apple.com/br/album/apple/1739079974?i=1739080645",
                             Compositores = "Charlotte Aitchison, Linus Wiklund, Noonie Bao e George",
                             Duracao = new TimeSpan(0, 2, 31, 0, 0),
-                            Título = "Apple"
+                            Spotify = "https://open.spotify.com/intl-pt/track/19RybK6XDbAVpcdxSbZL1o?si=872e3df52a854914",
+                            Título = "Apple",
+                            Youtube = "https://music.youtube.com/watch?v=CPWxExGk7PM&si=bLpquEdjse8ivk_3"
                         },
                         new
                         {
                             Id = 117,
+                            AppleMusic = "https://music.apple.com/br/album/b2b/1739079974?i=1739080650",
                             Compositores = "Alexander Guy Cook, Charlotte Aitchison, Omer Fedi e Mike Levy",
                             Duracao = new TimeSpan(0, 2, 58, 0, 0),
-                            Título = "B2b"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4wTvw1dBiPXNiHTh0zzpcI?si=b793d2254c6542a7",
+                            Título = "B2b",
+                            Youtube = "https://music.youtube.com/watch?v=If4-ckGcr0c&si=bK1QagE7EYx9Rcx4"
                         },
                         new
                         {
                             Id = 118,
+                            AppleMusic = "https://music.apple.com/br/album/mean-girls/1739079974?i=1739080652",
                             Compositores = "Alexander Guy Cook, Charlotte Aitchison e Ross Matthew Birchard",
                             Duracao = new TimeSpan(0, 3, 9, 0, 0),
-                            Título = "Mean girls"
+                            Spotify = "https://open.spotify.com/intl-pt/track/1qKCO2Tocwg8CbepJ9uDtd?si=badd5edde12f4db5",
+                            Título = "Mean girls",
+                            Youtube = "https://music.youtube.com/watch?v=IKUQDMEBXN0&si=A_DCSuIiYNpM-p-A"
                         },
                         new
                         {
                             Id = 119,
+                            AppleMusic = "https://music.apple.com/br/album/i-think-about-it-all-the-time/1739079974?i=1739080653",
                             Compositores = "Alexander Guy Cook, Charlotte Aitchison, Finn Keane e Jonathan Christopher Shave",
                             Duracao = new TimeSpan(0, 2, 15, 0, 0),
-                            Título = "I think about it all the time"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3OaFGqHUyxGVkOcSILw8Kx?si=f58dd756b3154952",
+                            Título = "I think about it all the time",
+                            Youtube = "https://music.youtube.com/watch?v=Mn0aho8Ayfk&si=V-fdhPAxEUZ9YhPh"
                         },
                         new
                         {
                             Id = 120,
+                            AppleMusic = "https://music.apple.com/br/album/365/1739079974?i=1739080656",
                             Compositores = "Alexander Guy Cook, Blake Slatkin, Charlotte Aitchison, Cirkut, Finn Keane (EasyFun) e Omer Fedi",
                             Duracao = new TimeSpan(0, 3, 23, 0, 0),
-                            Título = "365"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5h68SoVFGleijCtjEja3xG?si=2c866d204c6e466a",
+                            Título = "365",
+                            Youtube = "https://music.youtube.com/watch?v=Ol9CCM240Ag&si=XgTSu7paaDBFS2gK"
                         },
                         new
                         {
                             Id = 121,
+                            AppleMusic = "https://music.apple.com/br/album/the-emptiness-machine/1766137049?i=1766137051",
                             Compositores = "Linkin Park",
                             Duracao = new TimeSpan(0, 3, 10, 0, 0),
-                            Título = "The Emptiness Machine"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2PnlsTsOTLE5jnBnNe2K0A?si=4e0b25da6b25415b",
+                            Título = "The Emptiness Machine",
+                            Youtube = "https://music.youtube.com/watch?v=KBV_zpMm_0Q&si=amcNs3gO9fxshGrO"
                         },
                         new
                         {
                             Id = 122,
+                            AppleMusic = "https://music.apple.com/br/album/million-dollar-baby/1749616853?i=1749616863",
                             Compositores = "Ava La'RaeTommy Richman",
                             Duracao = new TimeSpan(0, 2, 35, 0, 0),
-                            Título = "MILLION DOLLAR BABY"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5AJ9hqTS2wcFQCELCFRO7A?si=b3438597a14a49e9",
+                            Título = "MILLION DOLLAR BABY",
+                            Youtube = "https://music.youtube.com/watch?v=LF2LGaCsMbc&si=Jhw2LoK82XEMCbEX"
                         },
                         new
                         {
                             Id = 123,
+                            AppleMusic = "https://music.apple.com/br/album/feelslikeimfallinginlove/1751728791?i=1751728802",
                             Compositores = "Max Martin, Apple Martin, Chris Martin, Guy Berryman, Jon Hopkins, Jonny Buckland, Oscar Holter, Tim Rutili e Will Champion",
                             Duracao = new TimeSpan(0, 3, 57, 0, 0),
-                            Título = "Feelslikeimfallinginlove"
+                            Spotify = "https://open.spotify.com/intl-pt/track/49S3znqBAQyPyMpEuKeyJ6?si=875946f59e014c90",
+                            Título = "Feelslikeimfallinginlove",
+                            Youtube = "https://music.youtube.com/watch?v=mG5jXd3MlE0&si=yMwWYbEQLsCfMoIk"
                         },
                         new
                         {
                             Id = 124,
+                            AppleMusic = "https://music.apple.com/br/album/intro-end-of-the-world/1725877944?i=1725877946",
                             Compositores = "Ariana Grande, Nick Lee, Shintaro Yasuda e Aaron Cheung",
                             Duracao = new TimeSpan(0, 1, 32, 0, 0),
-                            Título = "Intro (end of the world)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2o1pb13quMReXZqE7jWsgq?si=4374e14482564ae2",
+                            Título = "Intro (end of the world)",
+                            Youtube = "https://music.youtube.com/watch?v=p7jATa6Soag&si=D7-rTk3pplkgsRqt"
                         },
                         new
                         {
                             Id = 125,
+                            AppleMusic = "https://music.apple.com/br/album/bye/1725877944?i=1725877947",
                             Compositores = "Ariana Grande, LLya Salamanzadeh e Max Martin",
                             Duracao = new TimeSpan(0, 2, 44, 0, 0),
-                            Título = "bye"
+                            Spotify = "https://open.spotify.com/intl-pt/track/1Rweq7vNjK4kZBbGrmxQsl?si=b19329ca14c74f2c",
+                            Título = "bye",
+                            Youtube = "https://music.youtube.com/watch?v=PlaiDnJyabE&si=64c5X_3TLskiFmXw"
                         },
                         new
                         {
                             Id = 126,
+                            AppleMusic = "https://music.apple.com/br/album/dont-wanna-break-up-again/1725877944?i=1725877948",
                             Compositores = "Ariana Grande, LLya Salamanzadeh e Max Martin",
                             Duracao = new TimeSpan(0, 2, 54, 0, 0),
-                            Título = "don't wanna break up again"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0o3ua5ufFK7nfRzbDUNoGA?si=fe78b91da3024d30",
+                            Título = "don't wanna break up again",
+                            Youtube = "https://music.youtube.com/watch?v=_ZSuyl3BZHY&si=YQt6HGyMNVi2tktS"
                         },
                         new
                         {
                             Id = 127,
+                            AppleMusic = "https://music.apple.com/br/album/saturn-returns-interlude/1725877944?i=1725877958",
                             Compositores = "Ariana Grande, LLya Salamanzadeh e Max Martin",
                             Duracao = new TimeSpan(0, 0, 42, 0, 0),
-                            Título = "Saturn Returns Interlude"
+                            Spotify = "https://open.spotify.com/intl-pt/track/13jRSCLoWbCoU1XEdJRbgn?si=c8def65641074f94",
+                            Título = "Saturn Returns Interlude",
+                            Youtube = "https://music.youtube.com/watch?v=f68Og1FPFfw&si=d4LPkT0E2_h-wWmN"
                         },
                         new
                         {
                             Id = 128,
+                            AppleMusic = "https://music.apple.com/br/album/eternal-sunshine/1725877944?i=1725877964",
                             Compositores = "Ariana Grande, Max Martin, Shintaro Yasuda e DaviDior",
                             Duracao = new TimeSpan(0, 3, 30, 0, 0),
-                            Título = "eternal sunshine"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3RwWW7KeVhHGayYJgUL5eZ?si=32acb57d292f4bc8",
+                            Título = "eternal sunshine",
+                            Youtube = "https://music.youtube.com/watch?v=dS_HLHozs1E&si=t9lFD0pCSviunMeB"
                         },
                         new
                         {
                             Id = 129,
+                            AppleMusic = "https://music.apple.com/br/album/supernatural/1725877944?i=1725877965",
                             Compositores = "Ariana Grande, Max Martin e Oscar Görres",
                             Duracao = new TimeSpan(0, 2, 43, 0, 0),
-                            Título = "supernatural"
+                            Spotify = "https://open.spotify.com/intl-pt/track/142PiXzA84lmEw2RstFHFa?si=b0945fa7a0244d9a",
+                            Título = "supernatural",
+                            Youtube = "https://music.youtube.com/watch?v=4bwnO0FQp1s&si=pJgDjA2-b1lg4HIS"
                         },
                         new
                         {
                             Id = 130,
+                            AppleMusic = "https://music.apple.com/br/album/true-story/1725877944?i=1725878238",
                             Compositores = "Ariana Grande e Max Martin",
                             Duracao = new TimeSpan(0, 2, 43, 0, 0),
-                            Título = "true story"
+                            Spotify = "https://open.spotify.com/intl-pt/track/14kyXBpg91RVq8bNRDS1q2?si=e33bfabbd7d1460b",
+                            Título = "true story",
+                            Youtube = "https://music.youtube.com/watch?v=sZTugkGSxSg&si=HCSx7OUHLBnD__XQ"
                         },
                         new
                         {
                             Id = 131,
+                            AppleMusic = "https://music.apple.com/br/album/the-boy-is-mine/1725877944?i=1725878239",
                             Compositores = "Ariana Grande, Max Martin, Shintaro Yasuda e DaviDior",
                             Duracao = new TimeSpan(0, 2, 53, 0, 0),
-                            Título = "the boy is mine"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0Lmbke3KNVFXtoH2mMSHCw?si=8fc0516c3e8546ed",
+                            Título = "the boy is mine",
+                            Youtube = "https://music.youtube.com/watch?v=KwRxeZ9Ro24&si=sjrN78C-uv1Kac_s"
                         },
                         new
                         {
                             Id = 132,
+                            AppleMusic = "https://music.apple.com/br/album/yes-and/1725877944?i=1725878240",
                             Compositores = "Ariana Grande, LLya Salamanzadeh e Max Martin",
                             Duracao = new TimeSpan(0, 3, 34, 0, 0),
-                            Título = "yes, and?"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5D34wRmbFS29AjtTOP2QJe?si=b7294dfd89fa42d5",
+                            Título = "yes, and?",
+                            Youtube = "https://music.youtube.com/watch?v=eB6txyhHFG4&si=AtSKx75D9cXOtKvd"
                         },
                         new
                         {
                             Id = 133,
+                            AppleMusic = "https://music.apple.com/br/album/we-cant-be-friends-wait-for-your-love/1725877944?i=1725878242",
                             Compositores = "Ariana Grande, LLya Salamanzadeh e Max Martin",
                             Duracao = new TimeSpan(0, 3, 48, 0, 0),
-                            Título = "we can't be friends (wait for your love)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/51ZQ1vr10ffzbwIjDCwqm4?si=8e3431c973bc49d7",
+                            Título = "we can't be friends (wait for your love)",
+                            Youtube = "https://music.youtube.com/watch?v=KNtJGQkC-WI&si=_XZcfDVk2eNPknZe"
                         },
                         new
                         {
                             Id = 134,
+                            AppleMusic = "https://music.apple.com/br/album/i-wish-i-hated-you/1725877944?i=1725878245",
                             Compositores = "Ariana Grande e LLya Salamanzadeh",
                             Duracao = new TimeSpan(0, 2, 33, 0, 0),
-                            Título = "i wish i hated you"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5cQX9BexkPIEESTZijJhXg?si=f26b2bc6b2b94dc4",
+                            Título = "i wish i hated you",
+                            Youtube = "https://music.youtube.com/watch?v=T5k2-0yRzKc&si=arzgZRNiUA-v-H2x"
                         },
                         new
                         {
                             Id = 135,
+                            AppleMusic = "https://music.apple.com/br/album/imperfect-for-you/1725877944?i=1725878247",
                             Compositores = "Ariana Grande, LLya Salamanzadeh, Max Martin e Peter Kahm",
                             Duracao = new TimeSpan(0, 3, 2, 0, 0),
-                            Título = "imperfect for you"
+                            Spotify = "https://open.spotify.com/intl-pt/track/6XXKB32Om6WuXg3uEWwTob?si=ab7add9bcfd646ff",
+                            Título = "imperfect for you",
+                            Youtube = "https://music.youtube.com/watch?v=VtQorLzzbQw&si=Ae7IxhrhTw2LJLzP"
                         },
                         new
                         {
                             Id = 136,
+                            AppleMusic = "https://music.apple.com/br/album/ordinary-things-feat-nonna/1725877944?i=1725878248",
                             Compositores = "Ariana Grande, Nick Lee, Luka Kloser e Nonna",
                             Duracao = new TimeSpan(0, 2, 48, 0, 0),
-                            Título = "ordinary things (feat. Nonna)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4mHM5d2fK3n8xgymjf92w2?si=a1bf604ddb3f4a88",
+                            Título = "ordinary things (feat. Nonna)",
+                            Youtube = "https://music.youtube.com/watch?v=6XWMiMlZHfA&si=fcUbIQgEq8Fc2OZp"
                         },
                         new
                         {
                             Id = 137,
+                            AppleMusic = "https://music.apple.com/br/album/stars/1732096585?i=1732096589",
                             Compositores = "Lucien Parker,Barringington D. Hendricks, Billy Ray Schlag, Darhyl Camper Jr., Isaac De Boni, Michael Mule, Quentin Miller, Samuel C. Lindley, Tyrone Griffin, Jr. e Ye",
                             Duracao = new TimeSpan(0, 1, 55, 0, 0),
-                            Título = "STARS"
+                            Spotify = "https://open.spotify.com/intl-pt/track/1LaTWJ35Atk7Esoqxdb1WG?si=22fb62a7df514fcf",
+                            Título = "STARS",
+                            Youtube = "https://music.youtube.com/watch?v=j1BkA7KXV3c&si=QJcF30jQGeFCxvL2"
                         },
                         new
                         {
                             Id = 138,
+                            AppleMusic = "https://music.apple.com/br/album/keys-to-my-life/1732096585?i=1732096602",
                             Compositores = "Cydel C. Young, Hubert E. Polinski, Konrad Żyrek, Samuel C. Lindley, Tim Mosley, Ty Dolla $ign, Veyis-Can Urun, Vincent Vendi e Ye",
                             Duracao = new TimeSpan(0, 2, 54, 0, 0),
-                            Título = "KEYS TO MY LIFE"
+                            Spotify = "https://open.spotify.com/intl-pt/track/7oPlYYNWDSEQRDb978Bhhc?si=e3c4597993e34afc",
+                            Título = "KEYS TO MY LIFE",
+                            Youtube = "https://music.youtube.com/watch?v=kX3ivxNp9PY&si=p94mtlap1V6mQ5iP"
                         },
                         new
                         {
                             Id = 139,
+                            AppleMusic = "https://music.apple.com/br/album/paid/1732096585?i=1732096927",
                             Compositores = "Chrishan, Anthony Kilhoffer, Cedric R Hailey, Christopher C. Dotson, Hamid Bashir, Louis K. Celestin, Samuel C. LindleyTyrone Griffin, Jr. e Ye",
                             Duracao = new TimeSpan(0, 3, 15, 0, 0),
-                            Título = "PAID"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2uK5bMcng3sT2tv0BOyhCt?si=5040bbb44a494ae9",
+                            Título = "PAID",
+                            Youtube = "https://music.youtube.com/watch?v=oG1xb5KOcN4&si=Gu8HzGL7e6x1kEdi"
                         },
                         new
                         {
                             Id = 140,
+                            AppleMusic = "https://music.apple.com/br/album/talking/1732096585?i=1732097210",
                             Compositores = "Anthony Clemons Jr, Darhyl Camper Jr., Dominic Maker, Edward Davadi, James B. Litherland, Kasseem D. Dean, North West, Quentin Miller, Shawntoni A. Nichols, Tyrone Griffin, Jr. e Ye",
                             Duracao = new TimeSpan(0, 3, 5, 0, 0),
-                            Título = "TALKING"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3cPz4AkNOXwDf4DlWmKmIE?si=2b7231910abd41fa",
+                            Título = "TALKING",
+                            Youtube = "https://music.youtube.com/watch?v=Tqlw87XV4kU&si=4nHKH-sRJ1Yj7WpJ"
                         },
                         new
                         {
                             Id = 141,
+                            AppleMusic = "https://music.apple.com/br/album/back-to-me/1732096585?i=1732097229",
                             Compositores = "Aswad Asif, Charles M. Njapa, Daniel Kin J. Chien, Frederick Tipton, James A. Hau, Nicholas M. Balding, Sasha Hashemi, Tyrone Griffin, Jr., Ye e Zachary R. Frenes",
                             Duracao = new TimeSpan(0, 4, 55, 0, 0),
-                            Título = "BACK TO ME"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5d4XWuMLbTuPMTPaMYA0VG?si=c6068e0319cb4707",
+                            Título = "BACK TO ME",
+                            Youtube = "https://music.youtube.com/watch?v=MiTIhSb-b2k&si=e1E4kHtSU2bHKGnY"
                         },
                         new
                         {
                             Id = 142,
+                            AppleMusic = "https://music.apple.com/br/album/hoodrat/1732096585?i=1732097780",
                             Compositores = "Charles M. Njapa, Darhyl Camper Jr., Malik Y. Jones, Robert G. Booker, Tyrone Griffin, Jr. e Ye",
                             Duracao = new TimeSpan(0, 3, 42, 0, 0),
-                            Título = "HOODRAT"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5FlpNdFCZfcrtV6HcAg9Rx?si=14d61eb84b0b43fe",
+                            Título = "HOODRAT",
+                            Youtube = "https://music.youtube.com/watch?v=eHHwQMxvVOU&si=nHNRhYPjcsBzLxqy"
                         },
                         new
                         {
                             Id = 143,
+                            AppleMusic = "https://music.apple.com/br/album/do-it/1732096585?i=1732097972",
                             Compositores = "Chrishan, Alexander West, Billy Ray Schlag, Darhyl Camper Jr., Denis Raab, Dijon I. McFarlane, Ermias J. Asghedom, Keenon Dequan R. Jackson, Kevin Gomringer, Lukas Benjamin Leth Kroll, Samuel C. Lindley, Supreme Williams, Tim Gomringer, Tyrone Griffin, Jr. e Ye",
                             Duracao = new TimeSpan(0, 3, 45, 0, 0),
-                            Título = "DO IT"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5iroQL70VoSFrC8ZhVnskA?si=91b801d494d442aa",
+                            Título = "DO IT",
+                            Youtube = "https://music.youtube.com/watch?v=G0hxhn7-Hps&si=UFaZzy6f_DaoiE6Q"
                         },
                         new
                         {
                             Id = 144,
+                            AppleMusic = "https://music.apple.com/br/album/paperwork/1732096585?i=1732098149",
                             Compositores = "ADERLI RAMIREZ OVIEDO, Bruno Gioia Martins Funke Da Costa, Charles M. Njapa, Kasseem D. Dean, Leonardo Felipe Yasmil Garces, Nasir H. Pemberton, Quavious Keyate Marshall, Samuel C. Lindley, Ty Dolla $ign, Tyrone Griffin, Jr. e Victor Hugo Maciel dos Santos",
                             Duracao = new TimeSpan(0, 2, 25, 0, 0),
-                            Título = "PAPERWORK"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4QrJxzBxuIWWW0NxA6FRNF?si=8571179049d74e0e",
+                            Título = "PAPERWORK",
+                            Youtube = "https://music.youtube.com/watch?v=FmrXYkfv2eU&si=5_ooPr4toBJ08ccl"
                         },
                         new
                         {
                             Id = 145,
+                            AppleMusic = "https://music.apple.com/br/album/burn/1732096585?i=1732098274",
                             Compositores = "Amir Stivie B, Christopher C. Dotson, John Beck, Joseph Goddard, Leon Thomas, Morten Ristorp, Samuel C. Lindley, Tyrone Griffin, Jr., Tyshane Thompson, Valentina Pappalardo e Ye",
                             Duracao = new TimeSpan(0, 1, 51, 0, 0),
-                            Título = "BURN"
+                            Spotify = "https://open.spotify.com/intl-pt/track/38BgRP0EX5p0sBj0fFhqN9?si=7e91c8bbcfad4f75",
+                            Título = "BURN",
+                            Youtube = "https://music.youtube.com/watch?v=oAbX14IadBo&si=HnrVjugcjbur-Fuz"
                         },
                         new
                         {
                             Id = 146,
+                            AppleMusic = "https://music.apple.com/br/album/fuk-sumn/1732096585?i=1732098446",
                             Compositores = "Chrishan, Barringington D. Hendricks, Christopher C. Dotson, Evan K. Hood-Atlas, Jacques B. Webster II, Jordan T. Carter, Quavious Keyate Marshall, Quentin Miller, Samuel C. Lindley, Tim Mosley, Tyrone Griffin, Jr. e Ye",
                             Duracao = new TimeSpan(0, 3, 29, 0, 0),
-                            Título = "FUK SUMN"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4eIYnlcgI2chjQBuW1VRr7?si=ec536947ed2e47f7",
+                            Título = "FUK SUMN",
+                            Youtube = "https://music.youtube.com/watch?v=xd2SEKy6HIM&si=eRW1RTw63Vfc59WL"
                         },
                         new
                         {
                             Id = 147,
+                            AppleMusic = "https://music.apple.com/br/album/vultures/1732096585?i=1732098460",
                             Compositores = "Jasper Harris, Mark Williams, Cydel C. Young, Durk D. Banks, Gustave Rudman Rambali, Jason T. Harris, Jordan Houston, Marlon T. Barrow, Mathias D. Liyew, Paul Beauregard, Pharris Thomas, Raul I. Cubina, Terrace M. Boykin, Tyrone Griffin, Jr. e Ye ",
                             Duracao = new TimeSpan(0, 4, 36, 0, 0),
-                            Título = "VULTURES"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0Cz12ejDQ5L1c1f4sVck4n?si=796bf14c24014f42",
+                            Título = "VULTURES",
+                            Youtube = "https://music.youtube.com/watch?v=kCMz7HW6O-g&si=q2HirAxnrr2i8hus"
                         },
                         new
                         {
                             Id = 148,
+                            AppleMusic = "https://music.apple.com/br/album/carnival-feat-playboi-carti/1732096585?i=1732098695",
                             Compositores = "Mark Williams, Raul Cubina(of Ojivolta), Dimitri Rogers, Grant Dickinson, Jordan T. Carter, Raul I. Cubina, Samuel C. Lindley, Tyrone Griffin, Jr. e Ye",
                             Duracao = new TimeSpan(0, 4, 24, 0, 0),
-                            Título = "CARNIVAL"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4OssqCixV2Xsxd43wMIQyS?si=ae9a6ec5cef04764",
+                            Título = "CARNIVAL",
+                            Youtube = "https://music.youtube.com/watch?v=pEskP0ulPlA&si=YAVfefsckULF308S"
                         },
                         new
                         {
                             Id = 149,
+                            AppleMusic = "https://music.apple.com/br/album/beg-forgiveness/1732096585?i=1732098706",
                             Compositores = "Barrington D. Hendricks, Faouzia Ouihya, John Beck, Joseph Goddard, Latia T. Lindley, London T. Holmes, Quentin Miller, Tyrone Griffin, Jr., Valentina Pappalardo e Ye",
                             Duracao = new TimeSpan(0, 6, 8, 0, 0),
-                            Título = "BEG FORGIVENESS"
+                            Spotify = "https://open.spotify.com/intl-pt/track/6hMzSNx3vrFu3y27lnEDWE?si=1b0247569f434bf2",
+                            Título = "BEG FORGIVENESS",
+                            Youtube = "https://music.youtube.com/watch?v=EXmMiBNDVz4&si=EBT-1QiZlBCbDIVS"
                         },
                         new
                         {
                             Id = 150,
+                            AppleMusic = "https://music.apple.com/br/album/problematic/1732096585?i=1732099023",
                             Compositores = "Camper, Amber D. Streeter, Charles E. Hugo, Charles M. Njapa, Denzel A. Charles, Melvin Moore, Tyrone Griffin, Jr. e Ye",
                             Duracao = new TimeSpan(0, 3, 14, 0, 0),
-                            Título = "PROBLEMATIC"
+                            Spotify = "https://open.spotify.com/intl-pt/track/1zO4yPBdlaRSLko5BY33od?si=4c4af39dfa5848da",
+                            Título = "PROBLEMATIC",
+                            Youtube = "https://music.youtube.com/watch?v=xcprkHw4cd8&si=QeRtrihJH0YqNE1p"
                         },
                         new
                         {
                             Id = 151,
+                            AppleMusic = "https://music.apple.com/br/album/king/1732096585?i=1732099368",
                             Compositores = "Arturo Fratini, Barringington D. Hendricks, Charles M. Njapa, Dylan T. Cleary-Krell, Frederick Tipton, Tyrone Griffin, Jr., Victor Mensah e Ye",
                             Duracao = new TimeSpan(0, 2, 36, 0, 0),
-                            Título = "KING"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3nmtzobpqStsxsfRNykwFC?si=e0db7d8749f544b4",
+                            Título = "KING",
+                            Youtube = "https://music.youtube.com/watch?v=g6vAQpxo35g&si=u8HDaW3Z1EISRbdK"
                         },
                         new
                         {
                             Id = 152,
+                            AppleMusic = "https://music.apple.com/br/album/the-box-medley-funk-2/1740221242?i=1740221258",
                             Compositores = "Mc Brinquedo, MC Cebezinho, Mc Laranjinha e MC Tuto",
                             Duracao = new TimeSpan(0, 4, 26, 0, 0),
-                            Título = "THE BOX MEDLEY FUNK 2"
+                            Spotify = "https://open.spotify.com/intl-pt/track/7IFsTX5H1sWcEl8joV0IdD?si=dbd352ce7f3749c8",
+                            Título = "THE BOX MEDLEY FUNK 2",
+                            Youtube = "https://music.youtube.com/watch?v=ZRcA5aH0Wto&si=XYJ0RcMHdJ5Oq349"
                         },
                         new
                         {
                             Id = 153,
+                            AppleMusic = "https://music.apple.com/br/album/psycho-ceo/1731490449?i=1731490455",
                             Compositores = "Abdul Moiz, George Kala, Michael Ojha e Noah Smith",
                             Duracao = new TimeSpan(0, 3, 45, 0, 0),
-                            Título = "Psycho CEO"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2dyAiC9k6s0mWnMSQRQJGd?si=a33dec0a4fdb47b9",
+                            Título = "Psycho CEO",
+                            Youtube = "https://music.youtube.com/watch?v=mJgpzJpodk8&si=dW6JlWC8E1vtMCdf"
                         },
                         new
                         {
                             Id = 154,
+                            AppleMusic = "https://music.apple.com/br/album/power-trip/1731490449?i=1731490456",
                             Compositores = "Aaron Shadrow, Jasper Harris, Tom Levesque, Anton Martin Mendo, Arman Andican, Donald Glover, Noah Smith, Oscar Adler e Thomas Levesque",
                             Duracao = new TimeSpan(0, 4, 24, 0, 0),
-                            Título = "Power Trip"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3bDH7eIQ84QWdBeWwffUZD?si=38916b289c4a4e79",
+                            Título = "Power Trip",
+                            Youtube = "https://music.youtube.com/watch?v=cVEa5o9W77U&si=MJPG1QO23kl-BxXs"
                         },
                         new
                         {
                             Id = 155,
+                            AppleMusic = "https://music.apple.com/br/album/breathe/1731490449?i=1731490577",
                             Compositores = "Anton Martin Mendo, Bart van Hoewijk e Noah Smith",
                             Duracao = new TimeSpan(0, 2, 50, 0, 0),
-                            Título = "Breathe"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5NAOhPAZ57eFAXr3qatS6i?si=6968dbda934c483c",
+                            Título = "Breathe",
+                            Youtube = "https://music.youtube.com/watch?v=zWaVz9m3S_k&si=0eCNdWEqgIezqEQt"
                         },
                         new
                         {
                             Id = 156,
+                            AppleMusic = "https://music.apple.com/br/album/mor%C3%AB/1731490449?i=1731490578",
                             Compositores = "Daniel Pérez, Javier Mercado e Noah Smith",
                             Duracao = new TimeSpan(0, 2, 45, 0, 0),
-                            Título = "Morë"
+                            Spotify = "https://open.spotify.com/intl-pt/track/7KdQOqCspznOjPDT0KAnuq?si=2f132730a72b439f",
+                            Título = "Morë",
+                            Youtube = "https://music.youtube.com/watch?v=L4U1ByXfHGo&si=uxTZP653wwf88Q4Q"
                         },
                         new
                         {
                             Id = 157,
+                            AppleMusic = "https://music.apple.com/br/album/bought-the-earth/1731490449?i=1731490579",
                             Compositores = "Aaron Cheung, Carlton McDowell Jr, Charlie Coffeen, Noah Smith e Rex Masamune Kudo",
                             Duracao = new TimeSpan(0, 2, 58, 0, 0),
-                            Título = "Bought The Earth"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5Bno6wFa22tRbFUwh4iZdk?si=ce79ad844f46409d",
+                            Título = "Bought The Earth",
+                            Youtube = "https://music.youtube.com/watch?v=NuZoznmvo88&si=n6OBRFm2kDEO_3ZW"
                         },
                         new
                         {
                             Id = 158,
+                            AppleMusic = "https://music.apple.com/br/album/nothing-chang%C3%AB/1731490449?i=1731490583",
                             Compositores = "Cooper Coad, George Kala e Noah Smith",
                             Duracao = new TimeSpan(0, 3, 57, 0, 0),
-                            Título = "Nothing Changë"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3rLjenWhYQNFGI1xrvTHWy?si=5757612570db4d7e",
+                            Título = "Nothing Changë",
+                            Youtube = "https://music.youtube.com/watch?v=8yTPJ15dSz4&si=MEoIvCkHC2VRXDww"
                         },
                         new
                         {
                             Id = 159,
+                            AppleMusic = "https://music.apple.com/br/album/u-should-know/1731490449?i=1731490590",
                             Compositores = "Abdul Moiz, Neile Ode e Noah Smith",
                             Duracao = new TimeSpan(0, 3, 6, 0, 0),
-                            Título = "U Should Know"
+                            Spotify = "https://open.spotify.com/intl-pt/track/17vVm6v7GE2tP2KRVbCwqv?si=d72f7dc05c744298",
+                            Título = "U Should Know",
+                            Youtube = "https://music.youtube.com/watch?v=H9lmz6dFhi8&si=5UAQHEEhdp4mM_Mt"
                         },
                         new
                         {
                             Id = 160,
+                            AppleMusic = "https://music.apple.com/br/album/lyfestyl%C3%AB/1731490449?i=1731490593",
                             Compositores = "Javier Mercado, Joey Fenderson, Noah Smith e Salah Nizami",
                             Duracao = new TimeSpan(0, 3, 56, 0, 0),
-                            Título = "Lyfestylë (with Lil Wayne)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/15qRV1yUqFR6ViOwxoopod?si=137f05bf6d624d5d",
+                            Título = "Lyfestylë (with Lil Wayne)",
+                            Youtube = "https://music.youtube.com/watch?v=uRWvjctfhqo&si=G-yHsv0XOmd52OxF"
                         },
                         new
                         {
                             Id = 161,
+                            AppleMusic = "https://music.apple.com/br/album/iluv/1731490449?i=1731490594",
                             Compositores = "Edith Frances, Ethan Kath, Javier Mercado, Noah Smith e Rio Leyva",
                             Duracao = new TimeSpan(0, 3, 3, 0, 0),
-                            Título = "ILUV"
+                            Spotify = "https://open.spotify.com/intl-pt/track/30ln1OwxEZdXDfEploBcsU?si=f40ff35e01d840af",
+                            Título = "ILUV",
+                            Youtube = "https://music.youtube.com/watch?v=dMC9SZH-HrU&si=x8F9uqNqAutOMuuB"
                         },
                         new
                         {
                             Id = 162,
+                            AppleMusic = "https://music.apple.com/br/album/tell-m%C3%AB/1731490449?i=1731490595",
                             Compositores = "Cyrus Spurlock, Gabriel St-Onge, Javier Mercado, Louis Esposito, Noah Smith e Spencer Mott",
                             Duracao = new TimeSpan(0, 4, 3, 0, 0),
-                            Título = "Tell më"
+                            Spotify = "https://open.spotify.com/intl-pt/track/1ObrUCFugAMJoXcvpggbOd?si=862ba6ef4208451d",
+                            Título = "Tell më",
+                            Youtube = "https://music.youtube.com/watch?v=f8JEilGmNUM&si=B6MFteNQJVKnwIAV"
                         },
                         new
                         {
                             Id = 163,
+                            AppleMusic = "https://music.apple.com/br/album/shade/1731490449?i=1731490596",
                             Compositores = "Christian Boggs, Daniel Mohammadi, Francesca Boszormenyi, Javier Mercado, Joy Evangeline Moreno, Louis Esposito, Nathan Andrew Chen e Noah Smith",
                             Duracao = new TimeSpan(0, 4, 2, 0, 0),
-                            Título = "Shade"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3vpocwyn0RvKzeXo1tzSrW?si=e06f5884a0d04800",
+                            Título = "Shade",
+                            Youtube = "https://music.youtube.com/watch?v=1sXnH2l0Pfw&si=e7zB9G7QEa-6T6Ap"
                         },
                         new
                         {
                             Id = 164,
+                            AppleMusic = "https://music.apple.com/br/album/keep-pushin/1731490449?i=1731490601",
                             Compositores = "Abdul Moiz, Anton Martin Mendo, Neile Ode, Noah Smith e Tobias Dekker",
                             Duracao = new TimeSpan(0, 2, 46, 0, 0),
-                            Título = "Keep Pushin"
+                            Spotify = "https://open.spotify.com/intl-pt/track/49wkg1xBo56T3oSa778RWA?si=1bc0195014784d15",
+                            Título = "Keep Pushin",
+                            Youtube = "https://music.youtube.com/watch?v=biHsQTXavBs&si=hnCsp_xZ0J5cCn5l"
                         },
                         new
                         {
                             Id = 165,
+                            AppleMusic = "https://music.apple.com/br/album/riot-set-it-off/1731490449?i=1731490602",
                             Compositores = "Anton Martin Mendo, Clint Mansell e Noah Smith",
                             Duracao = new TimeSpan(0, 2, 38, 0, 0),
-                            Título = "Riot & Set it off"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2qzkFJtbIFrGpOctOBeCbi?si=7bfbe9843ffc4635",
+                            Título = "Riot & Set it off",
+                            Youtube = "https://music.youtube.com/watch?v=n28xgaiXy8g&si=2dUBlYuTVUesOyPc"
                         },
                         new
                         {
                             Id = 166,
+                            AppleMusic = "https://music.apple.com/br/album/team-ceo/1731490449?i=1731490604",
                             Compositores = "Anton Martin Mendo, Noah Smith, Sam Lawalata e Tobias Dekker",
                             Duracao = new TimeSpan(0, 3, 17, 0, 0),
-                            Título = "Team ceo"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0D01toUYF9V47nYuzov5BZ?si=ded582ea7a8e492e",
+                            Título = "Team ceo",
+                            Youtube = "https://music.youtube.com/watch?v=2ZGMuOuE6Fc&si=1P_rxXEPbw8uqN-p"
                         },
                         new
                         {
                             Id = 167,
+                            AppleMusic = "https://music.apple.com/br/album/2093/1731490449?i=1731490605",
                             Compositores = "Anton Martin Mendo, Arman Andican, Ethan Andrade, Noah Smith e Oscar Adler",
                             Duracao = new TimeSpan(0, 2, 24, 0, 0),
-                            Título = "2093"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3si9GTRnTpVGI1UIysHtrC?si=3e91bf8d569441dd",
+                            Título = "2093",
+                            Youtube = "https://music.youtube.com/watch?v=NNUbwA-oS1c&si=QP7i5E7IimMLwwQ3"
                         },
                         new
                         {
                             Id = 168,
+                            AppleMusic = "https://music.apple.com/br/album/stand-on-it/1731490449?i=1731490606",
                             Compositores = "George Kala, Nayvadius Wilburn e Noah Smith",
                             Duracao = new TimeSpan(0, 3, 0, 0, 0),
-                            Título = "Stand On It (with Future)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/7H3lr9bsPBGFx5NyTuBBGc?si=abf787df56da4bb8",
+                            Título = "Stand On It (with Future)",
+                            Youtube = "https://music.youtube.com/watch?v=Mnw4LnbU8hQ&si=AZRE1iVDjMxcom-C"
                         },
                         new
                         {
                             Id = 169,
+                            AppleMusic = "https://music.apple.com/br/album/familia/1731490449?i=1731490817",
                             Compositores = "Benjamin Saint Fort, Abdul Moiz, Cyrus Spurlock e Noah Smith",
                             Duracao = new TimeSpan(0, 2, 34, 0, 0),
-                            Título = "Familia"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2OM0MeY7mPIRbs8SCzRdTH?si=2aa77c4e08324b8d",
+                            Título = "Familia",
+                            Youtube = "https://music.youtube.com/watch?v=Ye02TykznWI&si=IGf_wnnVABMWOlyd"
                         },
                         new
                         {
                             Id = 170,
+                            AppleMusic = "https://music.apple.com/br/album/mr-inbetweenit/1731490449?i=1731490818",
                             Compositores = "Matthew Shalnev, Nikita Zvorygin e Noah Smith",
                             Duracao = new TimeSpan(0, 3, 18, 0, 0),
-                            Título = "Mr. Inbetweenit"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0S4xIJdaXd30Y7Lqe5WQws?si=57b812dfa6e246ce",
+                            Título = "Mr. Inbetweenit",
+                            Youtube = "https://music.youtube.com/watch?v=e02uqFGuiJA&si=SeiV8lHSsSCfLGql"
                         },
                         new
                         {
                             Id = 171,
+                            AppleMusic = "https://music.apple.com/br/album/psychocain%C3%AB/1731490449?i=1731490819",
                             Compositores = "Abdul Moiz, Michael Ojha,Noah Smith e Oscar Vidal",
                             Duracao = new TimeSpan(0, 2, 46, 0, 0),
-                            Título = "Psychocainë"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3xGMKrKN8DdLltEfA17ivN?si=aaba553dd14240c2",
+                            Título = "Psychocainë",
+                            Youtube = "https://music.youtube.com/watch?v=VfkDWye904A&si=2MClzoX2YHWIjdQy"
                         },
                         new
                         {
                             Id = 172,
+                            AppleMusic = "https://music.apple.com/br/album/run-th%C3%ABy-mouth/1731490449?i=1731490820",
                             Compositores = "George Kala, Noah Smith e Oscar Vidal",
                             Duracao = new TimeSpan(0, 3, 26, 0, 0),
-                            Título = "Run Thëy Mouth"
+                            Spotify = "https://open.spotify.com/intl-pt/track/6Y9LODoptY2RDhLJtZXAG7?si=39ca64e7405746c3",
+                            Título = "Run Thëy Mouth",
+                            Youtube = "https://music.youtube.com/watch?v=p_sNK5qZir4&si=rNx0i95Bgi2ZYgEi"
                         },
                         new
                         {
                             Id = 173,
+                            AppleMusic = "https://music.apple.com/br/album/if-we-being-r%C3%ABal/1731490449?i=1731490822",
                             Compositores = "Eric Kjell Jowett, Gabriel St-Onge, Javier Mercado, Joey Fenderson, Louis Esposito, Noah Smith e Spencer Mott",
                             Duracao = new TimeSpan(0, 2, 52, 0, 0),
-                            Título = "If We Being Rëal"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0YThXX1dqUpYBLyJNAsF9N?si=82d0573bfdf649e5",
+                            Título = "If We Being Rëal",
+                            Youtube = "https://music.youtube.com/watch?v=1xcvWmN0Pe4&si=u4VM7ygf_5nny3_W"
                         },
                         new
                         {
                             Id = 174,
+                            AppleMusic = "https://music.apple.com/br/album/1093/1731490449?i=1731490824",
                             Compositores = "Aaron Shadrow, Benjamin Bock, Noah Smith e Rex Masamune Kudo",
                             Duracao = new TimeSpan(0, 2, 36, 0, 0),
-                            Título = "1093"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4ueAQTrrK9U3gx1VubzdcD?si=e55b5e7125984074",
+                            Título = "1093",
+                            Youtube = "https://music.youtube.com/watch?v=Q_YqjsDZRFk&si=_QORzzvSxOzieo1Z"
                         },
                         new
                         {
                             Id = 175,
+                            AppleMusic = "https://music.apple.com/br/album/st-chroma-feat-daniel-caesar/1776500452?i=1776500453",
                             Compositores = "Ashton Dumar Simmonds e Tyler Okonma",
                             Duracao = new TimeSpan(0, 3, 17, 0, 0),
-                            Título = "St. Chroma (feat. Daniel Caesar)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/1QoyuMHNBe7lg3YW4Qtll4?si=98a8898576d4436a",
+                            Título = "St. Chroma (feat. Daniel Caesar)",
+                            Youtube = "https://music.youtube.com/watch?v=hCcwCv3G1FQ&si=tXIXoE0u-mQcbmXx"
                         },
                         new
                         {
                             Id = 176,
+                            AppleMusic = "https://music.apple.com/br/album/rah-tah-tah/1776500452?i=1776500454",
                             Compositores = "Tyler Okonma",
                             Duracao = new TimeSpan(0, 2, 45, 0, 0),
-                            Título = "Rah Tah Tah"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5RePVWy39tLpHH0WwXgBsK?si=8e403a9c400f45ba",
+                            Título = "Rah Tah Tah",
+                            Youtube = "https://music.youtube.com/watch?v=R_clisSImS4&si=-fj8lWF5j2_iOiR0"
                         },
                         new
                         {
                             Id = 177,
+                            AppleMusic = "https://music.apple.com/br/album/noid/1776500452?i=1776500455",
                             Compositores = "Paul Dobson Nyirongo e Tyler Okonma",
                             Duracao = new TimeSpan(0, 4, 44, 0, 0),
-                            Título = "Noid"
+                            Spotify = "https://open.spotify.com/intl-pt/track/1YdtGoSYDvVQKoUqSDXX41?si=b896b5f548924285",
+                            Título = "Noid",
+                            Youtube = "https://music.youtube.com/watch?v=Qer3lwd5hyA&si=nsF3qTxgb_lJdqNO"
                         },
                         new
                         {
                             Id = 178,
+                            AppleMusic = "https://music.apple.com/br/album/darling-i-feat-teezo-touchdown/1776500452?i=1776500456",
                             Compositores = "Barry White, Kamaal Ibn John Fareed e Tyler Okonma",
                             Duracao = new TimeSpan(0, 4, 13, 0, 0),
-                            Título = "Darling, I (feat. Teezo Touchdown)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0VaeksJaXy5R1nvcTMh3Xk?si=448d803d41e94079",
+                            Título = "Darling, I (feat. Teezo Touchdown)",
+                            Youtube = "https://music.youtube.com/watch?v=ZWDoUsxpkKE&si=i7oDOuvRlvho3wZp"
                         },
                         new
                         {
                             Id = 179,
+                            AppleMusic = "https://music.apple.com/br/album/hey-jane/1776500452?i=1776500457",
                             Compositores = "Tyler Okonma",
                             Duracao = new TimeSpan(0, 4, 0, 0, 0),
-                            Título = "Hey Jane"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3Umj02ZNl4d356pS1D38mn?si=66f86cfd705542ad",
+                            Título = "Hey Jane",
+                            Youtube = "https://music.youtube.com/watch?v=qFfjnPOXmUM&si=FKujOBnHZmq3iH8w"
                         },
                         new
                         {
                             Id = 180,
+                            AppleMusic = "https://music.apple.com/br/album/i-killed-you/1776500452?i=1776500458",
                             Compositores = "Tyler Okonma",
                             Duracao = new TimeSpan(0, 2, 48, 0, 0),
-                            Título = "I Killed You"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3GdwjAsCsoE79ObhsJFyYb?si=9c7b1cb2cdc441e2",
+                            Título = "I Killed You",
+                            Youtube = "https://music.youtube.com/watch?v=bKTmpKPjJxs&si=9OeobLDbzk27gd10"
                         },
                         new
                         {
                             Id = 181,
+                            AppleMusic = "https://music.apple.com/br/album/judge-judy/1776500452?i=1776500459",
                             Compositores = "Tyler Okonma",
                             Duracao = new TimeSpan(0, 4, 29, 0, 0),
-                            Título = "Judge Judy"
+                            Spotify = "https://open.spotify.com/intl-pt/track/6ie0uyyvOKTTuIFBMPiNIl?si=29b0e9ffba9a417b",
+                            Título = "Judge Judy",
+                            Youtube = "https://music.youtube.com/watch?v=FQUI8KmRUw0&si=Mf2MHlr6nuqK94N-"
                         },
                         new
                         {
                             Id = 182,
+                            AppleMusic = "https://music.apple.com/br/album/sticky-feat-glorilla-sexyy-red-lil-wayne/1776500452?i=1776500460",
                             Compositores = "Aaron Bolton, David Darnell Brown, Dudley Alexander Duverne, Dwyane Carter, Jr., Elvis L. Jr. Williams, Gloria Woods, Jamal F Jones, Janae Wherry, Rex Zamor, Tim Mosley, Timothy clayton, Tyler Okonma e Zachary Anson Wallace",
                             Duracao = new TimeSpan(0, 4, 15, 0, 0),
-                            Título = "Sticky (feat. GloRilla, Sexyy Red & Lil Wayne)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3tFed7YsjGnIfxeLEQwx3R?si=ee53712adbf347b6",
+                            Título = "Sticky (feat. GloRilla, Sexyy Red & Lil Wayne)",
+                            Youtube = "https://music.youtube.com/watch?v=16KSivdIGjQ&si=VzRo3NkIah_-IxS0"
                         },
                         new
                         {
                             Id = 183,
+                            AppleMusic = "https://music.apple.com/br/album/take-your-mask-off-feat-daniel-caesar-latoiya-williams/1776500452?i=1776500462",
                             Compositores = "Greg Cook, K. Thomas e Tyler Okonma",
                             Duracao = new TimeSpan(0, 4, 13, 0, 0),
-                            Título = "Take Your Mask Off (feat. Daniel Caesar & LaToiya Williams)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4BSR9I4ExlCJdXJo2GpBD5?si=5a9f26477a664f84",
+                            Título = "Take Your Mask Off (feat. Daniel Caesar & LaToiya Williams)",
+                            Youtube = "https://music.youtube.com/watch?v=JPOjiXoPmOk&si=xrxpK24OV7YkNOzj"
                         },
                         new
                         {
                             Id = 184,
+                            AppleMusic = "https://music.apple.com/br/album/tomorrow/1776500452?i=1776500463",
                             Compositores = "Ashton Dumar Simmonds e Tyler Okonma",
                             Duracao = new TimeSpan(0, 3, 2, 0, 0),
-                            Título = "Tomorrow"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3yw3m8wgRB4ptDyAvtdhq5?si=696ce821c3d74e4d",
+                            Título = "Tomorrow",
+                            Youtube = "https://music.youtube.com/watch?v=n2KOgQJbZAw&si=fmns2mOlVSnLhVrW"
                         },
                         new
                         {
                             Id = 185,
+                            AppleMusic = "https://music.apple.com/br/album/thought-i-was-dead-feat-schoolboy-q-santigold/1776500452?i=1776500464",
                             Compositores = "Quincy Hanley e Tyler Okonma",
                             Duracao = new TimeSpan(0, 3, 27, 0, 0),
-                            Título = "Thought I Was Dead (feat. ScHoolboy Q & Santigold)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2aYHxnMF2umAavtgBvmkY1?si=b9d5d0360b694ac9",
+                            Título = "Thought I Was Dead (feat. ScHoolboy Q & Santigold)",
+                            Youtube = "https://music.youtube.com/watch?v=HS1OUFCfFdY&si=jgeUBqL_J94IISxe"
                         },
                         new
                         {
                             Id = 186,
+                            AppleMusic = "https://music.apple.com/br/album/like-him-feat-lola-young/1776500452?i=1776500465",
                             Compositores = "Tyler Okonma",
                             Duracao = new TimeSpan(0, 4, 38, 0, 0),
-                            Título = "Like Him (feat. Lola Young)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/6jbYpRPTEFl1HFKHk1IC0m?si=b078f08e8ee1437a",
+                            Título = "Like Him (feat. Lola Young)",
+                            Youtube = "https://music.youtube.com/watch?v=dgUHE8wWhiE&si=onANzdP8S1Zcg8E_"
                         },
                         new
                         {
                             Id = 187,
+                            AppleMusic = "https://music.apple.com/br/album/balloon-feat-doechii/1776500452?i=1776500466",
                             Compositores = "Harry Wayne Casey, James Brown, Jaylah Hickmon, Luther Campbell, Rick Finch, Robert Ginyard e Tyler Okonma",
                             Duracao = new TimeSpan(0, 4, 29, 0, 0),
-                            Título = "Balloon (feat. Doechii)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/35D1RA5uVFVhMc1qX80TaQ?si=6ad6caa61f5a4b39",
+                            Título = "Balloon (feat. Doechii)",
+                            Youtube = "https://music.youtube.com/watch?v=eZNxD4NbxLA&si=nyre0TlPAQovIFhh"
                         },
                         new
                         {
                             Id = 188,
+                            AppleMusic = "https://music.apple.com/br/album/barbie/1774463235?i=1774463237",
                             Compositores = "Emerson Teixeira Muniz e Glenner Robert Cândido",
                             Duracao = new TimeSpan(0, 3, 12, 0, 0),
-                            Título = "Barbie"
+                            Spotify = "https://open.spotify.com/intl-pt/track/6s1kzj4EbhFLXbuAGJbhbn?si=8ce7f820135746df",
+                            Título = "Barbie",
+                            Youtube = "https://music.youtube.com/watch?v=4t7au8Tm9xY&si=4JDPe0rNykqFWdqI"
                         },
                         new
                         {
                             Id = 189,
+                            AppleMusic = "https://music.apple.com/br/album/apt/1773452219?i=1773452221",
                             Compositores = "Amy Allen, Bruno Mars, Chae Young Park, Christopher Brody Brown, Henry Walter, Michael Chapman, Nicholas Chinn, Omer Fedi, Philip Lawrence, Rogét Chahayed e Theron Thomas",
                             Duracao = new TimeSpan(0, 2, 49, 0, 0),
-                            Título = "APT."
+                            Spotify = "https://open.spotify.com/intl-pt/track/5vNRhkKd0yEAg8suGBpjeY?si=2ac95c59109944e6",
+                            Título = "APT.",
+                            Youtube = "https://music.youtube.com/watch?v=58-AKkNMZNQ&si=h8WaQTEorxCsFRP-"
                         },
                         new
                         {
                             Id = 190,
+                            AppleMusic = "https://music.apple.com/br/album/sou-voc%C3%AA/1198317040?i=1198317073",
                             Compositores = "Caetano Veloso e Mano Brown",
                             Duracao = new TimeSpan(0, 1, 48, 0, 0),
-                            Título = "Sou + Você"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5G1T3Cj4vP7uiGMUb278ut?si=e3e3f28f397d4787",
+                            Título = "Sou + Você",
+                            Youtube = "https://music.youtube.com/watch?v=TB5gzXCAx7o&si=NoTmImmFRsWvyq3_"
                         },
                         new
                         {
                             Id = 191,
+                            AppleMusic = "https://music.apple.com/br/album/viv%C3%A3o-e-vivendo/1198317040?i=1198317074",
                             Compositores = "Mano Brown",
                             Duracao = new TimeSpan(0, 1, 57, 0, 0),
-                            Título = "Vivão e Vivendo"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2igfCmo0TuciHyKMB8zWrr?si=8e944ca5c4ff45ac",
+                            Título = "Vivão e Vivendo",
+                            Youtube = "https://music.youtube.com/watch?v=wnkougMAqog&si=blIGPj5ieViMGThx"
                         },
                         new
                         {
                             Id = 192,
+                            AppleMusic = "https://music.apple.com/br/album/vida-loka-intro/1198317040?i=1198317075",
                             Compositores = "Mano Brown",
                             Duracao = new TimeSpan(0, 0, 24, 0, 0),
-                            Título = "Vida Loka (Intro)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/7ATfKy3NYMRfK5JZvFQJYX?si=8e69f06f7b1d4a52",
+                            Título = "Vida Loka (Intro)",
+                            Youtube = "https://music.youtube.com/watch?v=mnhX41tvuUU&si=-XUUKBHYLj8beWkF"
                         },
                         new
                         {
                             Id = 193,
+                            AppleMusic = "https://music.apple.com/br/album/vida-loka-pt-1/1198317040?i=1198317076",
                             Compositores = "Mano Brown",
                             Duracao = new TimeSpan(0, 5, 3, 0, 0),
-                            Título = "Vida Loka, Pt. 1"
+                            Spotify = "https://open.spotify.com/intl-pt/track/6m8AgjfI28ER6odzMxmHtR?si=04abde4ef81e45c7",
+                            Título = "Vida Loka, Pt. 1",
+                            Youtube = "https://music.youtube.com/watch?v=IL1epaZCTmk&si=-nw1u-Q6Z5kk1grD"
                         },
                         new
                         {
                             Id = 194,
+                            AppleMusic = "https://music.apple.com/br/album/negro-drama/1198317040?i=1198317077",
                             Compositores = "Mano Brown",
                             Duracao = new TimeSpan(0, 6, 51, 0, 0),
-                            Título = "Negro Drama"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3ytXzEJFeVydFfmUhHvti8?si=49ba04f17c6a44bb",
+                            Título = "Negro Drama",
+                            Youtube = "https://music.youtube.com/watch?v=u4lcUooNNLY&si=RKuecvXNwdW6pJas"
                         },
                         new
                         {
                             Id = 195,
+                            AppleMusic = "https://music.apple.com/br/album/a-v%C3%ADtima/1198317040?i=1198317078",
                             Compositores = "Mano Brown",
                             Duracao = new TimeSpan(0, 7, 20, 0, 0),
-                            Título = "A Vítima"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2ki0ZW9m5HIAdALRldfXM1?si=890dc6add925447d",
+                            Título = "A Vítima",
+                            Youtube = "https://music.youtube.com/watch?v=Hr2Kn6CozzY&si=XnBW5vZj2z7OgIVS"
                         },
                         new
                         {
                             Id = 196,
+                            AppleMusic = "https://music.apple.com/br/album/na-f%C3%A9-firm%C3%A3o/1198317040?i=1198317079",
                             Compositores = "Mano Brown",
                             Duracao = new TimeSpan(0, 6, 5, 0, 0),
-                            Título = "Na Fé Firmão"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0TYKO6toBeKLbyD18AVTNU?si=44ae992d5d094d98",
+                            Título = "Na Fé Firmão",
+                            Youtube = "https://music.youtube.com/watch?v=3Qjrtsg5HXo&si=n1ScgQKzIRZU7xbZ"
                         },
                         new
                         {
                             Id = 197,
+                            AppleMusic = "https://music.apple.com/br/album/12-de-outubro/1198317040?i=1198317080",
                             Compositores = "Mano Brown",
                             Duracao = new TimeSpan(0, 3, 30, 0, 0),
-                            Título = "12 de Outubro"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4Nqj9K6kxvIr4PnvtI1RRA?si=79ea86d595ac4e84",
+                            Título = "12 de Outubro",
+                            Youtube = "https://music.youtube.com/watch?v=b6XO9GGQDqw&si=m_cteFipo47DyWxl"
                         },
                         new
                         {
                             Id = 198,
+                            AppleMusic = "https://music.apple.com/br/album/eu-sou-157/1198317040?i=1198317081",
                             Compositores = "Mano Brown",
                             Duracao = new TimeSpan(0, 8, 49, 0, 0),
-                            Título = "Eu Sou 157"
+                            Spotify = "https://open.spotify.com/intl-pt/track/33UECsx4DcDRampb2ah316?si=02f3f8f8415d4e0a",
+                            Título = "Eu Sou 157",
+                            Youtube = "https://music.youtube.com/watch?v=fgysUhl98As&si=Ayvo-g0jwcsvhbI4"
                         },
                         new
                         {
                             Id = 199,
+                            AppleMusic = "https://music.apple.com/br/album/a-vida-%C3%A9-desafio/1198317040?i=1198317082",
                             Compositores = "Mano Brown",
                             Duracao = new TimeSpan(0, 7, 13, 0, 0),
-                            Título = "A Vida É Desafio"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4mZu6NuOntvYZqCZPrxTqT?si=dd6baafb4c344173",
+                            Título = "A Vida É Desafio",
+                            Youtube = "https://music.youtube.com/watch?v=Wb3rvC6z5ao&si=B48ryiwGGr0oT4PU"
                         },
                         new
                         {
                             Id = 200,
+                            AppleMusic = "https://music.apple.com/br/album/1-por-amor-2-por-dinheiro/1198317040?i=1198317083",
                             Compositores = "Mano Brown",
                             Duracao = new TimeSpan(0, 6, 58, 0, 0),
-                            Título = "1 por Amor, 2 por Dinheiro"
+                            Spotify = "https://open.spotify.com/intl-pt/track/0VQ1mXWqoXynNmc0wdligL?si=7d472a2b750641cd",
+                            Título = "1 por Amor, 2 por Dinheiro",
+                            Youtube = "https://music.youtube.com/watch?v=JovdffVqJF4&si=PoBdSA4uUHXp0o7t"
                         },
                         new
                         {
                             Id = 201,
+                            AppleMusic = "https://music.apple.com/br/album/de-volta-%C3%A0-cena/1198317040?i=1198317084",
                             Compositores = "Mano Brown",
                             Duracao = new TimeSpan(0, 2, 1, 0, 0),
-                            Título = "De Volta À Cena"
+                            Spotify = "https://open.spotify.com/intl-pt/track/16oVqtzrcrdzQvtIRnA2Wx?si=6ce171ba988043b2",
+                            Título = "De Volta À Cena",
+                            Youtube = "https://music.youtube.com/watch?v=-2XWmz3BL2E&si=KEvmDmZjB5a6FioP"
                         },
                         new
                         {
                             Id = 202,
+                            AppleMusic = "https://music.apple.com/br/album/otus-500/1198317040?i=1198317085",
                             Compositores = "Mano Brown",
                             Duracao = new TimeSpan(0, 2, 11, 0, 0),
-                            Título = "Otus 500"
+                            Spotify = "https://open.spotify.com/intl-pt/track/3tuMjoF61Uo54BPVzV4e0d?si=928873c4f72b4899",
+                            Título = "Otus 500",
+                            Youtube = "https://music.youtube.com/watch?v=JWQDQgkjOFY&si=b0p7znSk28BvERQH"
                         },
                         new
                         {
                             Id = 203,
+                            AppleMusic = "https://music.apple.com/br/album/crime-vai-e-vem/1198317040?i=1198317086",
                             Compositores = "Mano Brown",
                             Duracao = new TimeSpan(0, 7, 55, 0, 0),
-                            Título = "Crime Vai e Vem"
+                            Spotify = "https://open.spotify.com/intl-pt/track/29JxbOQf5YFFpqWgNauToo?si=5ec33c26b3ff4846",
+                            Título = "Crime Vai e Vem",
+                            Youtube = "https://music.youtube.com/watch?v=Npl2rJ5lzHE&si=8LzEtK11rHcQdzlf"
                         },
                         new
                         {
                             Id = 204,
+                            AppleMusic = "https://music.apple.com/br/album/jesus-chorou/1198317040?i=1198317087",
                             Compositores = "Mano Brown",
                             Duracao = new TimeSpan(0, 7, 51, 0, 0),
-                            Título = "Jesus Chorou"
+                            Spotify = "https://open.spotify.com/intl-pt/track/5wZUvwWGKaZ6NG8yckZcTM?si=b9e6a27d33734497",
+                            Título = "Jesus Chorou",
+                            Youtube = "https://music.youtube.com/watch?v=jLfWZ0nhTAE&si=rJJENiAdy1nCjkED"
                         },
                         new
                         {
                             Id = 205,
+                            AppleMusic = "https://music.apple.com/br/album/fone-intro/1198317040?i=1198317088",
                             Compositores = "Mano Brown",
                             Duracao = new TimeSpan(0, 1, 56, 0, 0),
-                            Título = "Fone (Intro)"
+                            Spotify = "https://open.spotify.com/intl-pt/track/1QEit92Juvj8i9QrM60gpn?si=da7e1a81dba64d70",
+                            Título = "Fone (Intro)",
+                            Youtube = "https://music.youtube.com/watch?v=7zHFe8qaf9Q&si=1P8Gp1vX2zQT4kg8"
                         },
                         new
                         {
                             Id = 206,
+                            AppleMusic = "https://music.apple.com/br/album/estilo-cachorro/1198317040?i=1198317089",
                             Compositores = "Mano Brown",
                             Duracao = new TimeSpan(0, 6, 17, 0, 0),
-                            Título = "Estilo Cachorro"
+                            Spotify = "https://open.spotify.com/intl-pt/track/2tR8iLdCeYhVcyPZvN6T7X?si=2dad9da569b8475d",
+                            Título = "Estilo Cachorro",
+                            Youtube = "https://music.youtube.com/watch?v=q_xeCu3P9hU&si=XS3RUSMGTEK9vkx_"
                         },
                         new
                         {
                             Id = 207,
+                            AppleMusic = "https://music.apple.com/br/album/vida-loka-pt-2/1198317040?i=1198317090",
                             Compositores = "Mano Brown",
                             Duracao = new TimeSpan(0, 5, 50, 0, 0),
-                            Título = "Vida Loka, Pt. 2"
+                            Spotify = "https://open.spotify.com/intl-pt/track/4nTrxp4aH0g2yLVPkFmljF?si=e66780a58a57434e",
+                            Título = "Vida Loka, Pt. 2",
+                            Youtube = "https://music.youtube.com/watch?v=Fu5kcgz73TY&si=ZxOg0rfHwPiyQ24T"
                         },
                         new
                         {
                             Id = 208,
+                            AppleMusic = "https://music.apple.com/br/album/expresso-da-meia-noite/1198317040?i=1198317091",
                             Compositores = "Mano Brown",
                             Duracao = new TimeSpan(0, 5, 21, 0, 0),
-                            Título = "Expresso da Meia-Noite"
+                            Spotify = "https://open.spotify.com/intl-pt/track/6CI6QHlg9ejvkWOTOni5oX?si=efb0f334ac0a415b",
+                            Título = "Expresso da Meia-Noite",
+                            Youtube = "https://music.youtube.com/watch?v=flpOCM7OXDQ&si=bML-4jKlbY2bkuyF"
                         },
                         new
                         {
                             Id = 209,
+                            AppleMusic = "https://music.apple.com/br/album/trutas-e-quebradas/1198317040?i=1198317096",
                             Compositores = "Mano Brown",
                             Duracao = new TimeSpan(0, 6, 17, 0, 0),
-                            Título = "Trutas e Quebradas"
+                            Spotify = "https://open.spotify.com/intl-pt/track/6xmtjVIcjMRdgdB1sywkjb?si=7901eb3bbf744144",
+                            Título = "Trutas e Quebradas",
+                            Youtube = "https://music.youtube.com/watch?v=tiPAMEtI38k&si=5MjRak4G7wE3ptxz"
                         },
                         new
                         {
                             Id = 210,
+                            AppleMusic = "https://music.apple.com/br/album/da-ponte-pra-c%C3%A1/1198317040?i=1198317097",
                             Compositores = "Mano Brown",
                             Duracao = new TimeSpan(0, 8, 47, 0, 0),
-                            Título = "Da Ponte pra Cá"
+                            Spotify = "https://open.spotify.com/intl-pt/track/77ZXEJcwC7r4gfodNwERJz?si=8f38d0eaa5534781",
+                            Título = "Da Ponte pra Cá",
+                            Youtube = "https://music.youtube.com/watch?v=Xe8DN92jtbg&si=uM7wwS4WXkEbidVu"
                         });
                 });
 
@@ -4615,15 +5241,15 @@ namespace AboutSongs.Migrations
                         {
                             Id = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "825fc9d2-06f9-440b-84b9-e0ddba791524",
+                            ConcurrencyStamp = "adbed1a3-9af0-4483-acd4-79a34d70d5e1",
                             Email = "admin@aboutsongs.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@ABOUTSONGS.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEMh3xuWtD0XQeOm5TarofSAn7qN1ZJy0sm6A69XsZ3sZla4WuowZZNMxX/Q7Hhd3uw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEH9YemK+okmfefD1i21Ao99Mr22lqDT+x4O2XT0x2PuxFXCErAAgQfcXYq+0I0m8fw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "ab04ee8f-0d53-48a6-84d1-8dd8d54ae07d",
+                            SecurityStamp = "0a483157-5db3-42dc-b084-c22dcdf1cd51",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });
