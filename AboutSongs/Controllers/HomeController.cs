@@ -54,7 +54,7 @@ public class HomeController : Controller
                     // Adiciona uma musica a lista de Musicas
                     MusicaHome musicaHome = new()
                     {
-                        Id = album.AlbumId,
+                        Id = album.MusicaId,
                         Nome = album.Musica.Título,
                         FotoAlbum = album.Album.Foto,
                         AppleMusic = album.Musica.AppleMusic,
@@ -78,18 +78,28 @@ public class HomeController : Controller
         };
         return View(album);
     }
+
     public IActionResult PageMusic(int id)
     {
+        var album = _context.AlbumArtistas
+            .Where(aa => aa.MusicaId == id)
+            .AsNoTracking()
+            .Include(aa => aa.Album)
+            .FirstOrDefault();
+
         MusicaVM musica = new()
         {
             Musica = _context.Musicas.AsNoTracking().FirstOrDefault(e => e.Id == id),
+            FotoAlbum = album.Album.Foto
         };
         return View(musica);
     }
+
     public IActionResult AbaSobreCon()
     {
         return View();
     }
+
     public IActionResult AbaMusicAlbum()
     {
         AbaMusicVM abaMusic = new()

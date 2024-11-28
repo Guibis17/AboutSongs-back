@@ -1,7 +1,7 @@
 @model AboutSongs.ViewModels.MusicaVM
-
 @{
     ViewData["Title"] = "PageMusic";
+    Layout = null;
 }
 
 <head>
@@ -43,7 +43,7 @@
 
     <main class="page">
         <section id="about" class="hidden v-music">
-            <img src="@Model.Musica.Foto" alt="Foto da Música" class="music">
+            <img src="@Model.FotoAlbum" alt="Foto da Música" class="music">
             <div class="infos">
                 <h3 class="categoria">Música</h3>
                 <h1 class="n-music" id="name-music">@Model.Musica.Título</h1>

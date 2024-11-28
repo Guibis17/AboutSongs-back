@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AboutSongs.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241127183835_criar-banco")]
+    [Migration("20241128142202_criar-banco")]
     partial class criarbanco
     {
         /// <inheritdoc />
@@ -5241,15 +5241,15 @@ namespace AboutSongs.Migrations
                         {
                             Id = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "859be360-a82e-4a45-8764-a6d18df495f5",
+                            ConcurrencyStamp = "134a0e03-2a4e-43e3-96b4-bc8d50454882",
                             Email = "admin@aboutsongs.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@ABOUTSONGS.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEMGiYJMlaXqhFraKHXi3mW/Epnru3bJU6UHO0IyhSa06EmBe3a8XMtjJv2tGCQnlVA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAENa4H2ph4hCFCTPyc32NH5TtQLvizyU33tK25ibXC0ovoTSuh3o+yMgus5dT+D4RDw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "db71d394-530b-42e0-be99-a9ea122edad1",
+                            SecurityStamp = "9463be8f-9e83-4b58-968d-de68b9ad9308",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });

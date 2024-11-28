@@ -534,7 +534,7 @@ namespace AboutSongs.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", 0, "859be360-a82e-4a45-8764-a6d18df495f5", "admin@aboutsongs.com", true, false, null, "ADMIN@ABOUTSONGS.COM", "ADMIN", "AQAAAAIAAYagAAAAEMGiYJMlaXqhFraKHXi3mW/Epnru3bJU6UHO0IyhSa06EmBe3a8XMtjJv2tGCQnlVA==", null, false, "db71d394-530b-42e0-be99-a9ea122edad1", false, "Admin" });
+                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", 0, "134a0e03-2a4e-43e3-96b4-bc8d50454882", "admin@aboutsongs.com", true, false, null, "ADMIN@ABOUTSONGS.COM", "ADMIN", "AQAAAAIAAYagAAAAENa4H2ph4hCFCTPyc32NH5TtQLvizyU33tK25ibXC0ovoTSuh3o+yMgus5dT+D4RDw==", null, false, "9463be8f-9e83-4b58-968d-de68b9ad9308", false, "Admin" });
 
             migrationBuilder.InsertData(
                 table: "Genero",
