@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AboutSongs.Migrations
 {
     /// <inheritdoc />
-    public partial class inicializarBanco : Migration
+    public partial class criarbanco : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -534,7 +534,7 @@ namespace AboutSongs.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", 0, "d04f6890-6fce-4fc3-8edd-3f0867502d76", "admin@aboutsongs.com", true, false, null, "ADMIN@ABOUTSONGS.COM", "ADMIN", "AQAAAAIAAYagAAAAELOzIOJlJjJWqqP73nuG8IxPFEjUvEbOLoGnWAq3YBc3SfRbmuSnt5gN5CAZJXCwAw==", null, false, "fb7c8025-40ef-40d3-b7b8-f3dfa0807038", false, "Admin" });
+                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", 0, "859be360-a82e-4a45-8764-a6d18df495f5", "admin@aboutsongs.com", true, false, null, "ADMIN@ABOUTSONGS.COM", "ADMIN", "AQAAAAIAAYagAAAAEMGiYJMlaXqhFraKHXi3mW/Epnru3bJU6UHO0IyhSa06EmBe3a8XMtjJv2tGCQnlVA==", null, false, "db71d394-530b-42e0-be99-a9ea122edad1", false, "Admin" });
 
             migrationBuilder.InsertData(
                 table: "Genero",
@@ -1015,7 +1015,7 @@ namespace AboutSongs.Migrations
                     { 2, 16 },
                     { 2, 17 },
                     { 1, 18 },
-                    { 5, 19 },
+                    { 1, 19 },
                     { 1, 20 },
                     { 3, 21 },
                     { 2, 22 },
@@ -1099,7 +1099,7 @@ namespace AboutSongs.Migrations
                     { 2, 100 },
                     { 2, 101 },
                     { 4, 102 },
-                    { 4, 103 },
+                    { 2, 103 },
                     { 2, 104 },
                     { 2, 105 },
                     { 5, 106 },

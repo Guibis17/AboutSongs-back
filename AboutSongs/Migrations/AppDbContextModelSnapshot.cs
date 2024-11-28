@@ -4109,7 +4109,7 @@ namespace AboutSongs.Migrations
                         new
                         {
                             MusicaId = 19,
-                            GeneroId = 5
+                            GeneroId = 1
                         },
                         new
                         {
@@ -4529,7 +4529,7 @@ namespace AboutSongs.Migrations
                         new
                         {
                             MusicaId = 103,
-                            GeneroId = 4
+                            GeneroId = 2
                         },
                         new
                         {
@@ -5238,15 +5238,15 @@ namespace AboutSongs.Migrations
                         {
                             Id = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "d04f6890-6fce-4fc3-8edd-3f0867502d76",
+                            ConcurrencyStamp = "859be360-a82e-4a45-8764-a6d18df495f5",
                             Email = "admin@aboutsongs.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@ABOUTSONGS.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAELOzIOJlJjJWqqP73nuG8IxPFEjUvEbOLoGnWAq3YBc3SfRbmuSnt5gN5CAZJXCwAw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEMGiYJMlaXqhFraKHXi3mW/Epnru3bJU6UHO0IyhSa06EmBe3a8XMtjJv2tGCQnlVA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "fb7c8025-40ef-40d3-b7b8-f3dfa0807038",
+                            SecurityStamp = "db71d394-530b-42e0-be99-a9ea122edad1",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });

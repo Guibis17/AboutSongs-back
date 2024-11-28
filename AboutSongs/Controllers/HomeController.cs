@@ -72,16 +72,31 @@ public class HomeController : Controller
 
     public IActionResult PageAlbum(int id)
     {
-        var album = _context.Albuns.FirstOrDefault(a => a.Id == id);
+        AlbumVM album = new()
         {
-            var viewModel = new 
-            {
-                Album = album,
-                Albuns = _context.Albuns.ToList()
-            };
-
-            return View(viewModel);
-        }
+            Album = _context.Albuns.AsNoTracking().FirstOrDefault(e => e.Id == id),
+        };
+        return View(album);
+    }
+    public IActionResult PageMusic(int id)
+    {
+        MusicaVM musica = new()
+        {
+            Musica = _context.Musicas.AsNoTracking().FirstOrDefault(e => e.Id == id),
+        };
+        return View(musica);
+    }
+    public IActionResult AbaSobreCon()
+    {
+        return View();
+    }
+    public IActionResult AbaMusicAlbum()
+    {
+        AbaMusicVM abaMusic = new()
+        {
+            Musicas = _context.Musicas.AsNoTracking().ToList(),
+        };
+        return View(abaMusic);
     }
     public IActionResult Login()
     {

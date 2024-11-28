@@ -6,7 +6,6 @@ public class HomeVM
 {
     public List<AlbumHome> AlbumHomes { get; set; } = [];
     public List<MusicaHome> MusicaHomes { get; set; } = [];
-
 }
 
 public class AlbumHome

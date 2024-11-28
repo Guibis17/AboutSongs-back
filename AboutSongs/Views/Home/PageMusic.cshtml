@@ -1,7 +1,7 @@
-@model AboutSongs.ViewModels.AlbumVM
+@model AboutSongs.ViewModels.MusicaVM
 
 @{
-    ViewData["Title"] = "PageAlbum";
+    ViewData["Title"] = "PageMusic";
 }
 
 <head>
@@ -15,8 +15,8 @@
     <link rel="shortcut icon" href="../Assets/Images/favicon.png" type="image/x-icon">
 
     <!-- Links CSS/Font -->
-    <link rel="stylesheet" href="~/css/Styles/PageAlbum.css">
-    <link rel="stylesheet" href="~/css/Responsivo/ResAlbum.css">
+    <link rel="stylesheet" href="~/css/Styles/PageMusic.css">
+    <link rel="stylesheet" href="~/css/Responsivo/ResMusic.css">
     <link rel="stylesheet" href="~/css/Global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,20 +42,18 @@
     </header>
 
     <main class="page">
-        <section id="about" class="hidden v-album">
-
-            <img src="@Model.Album.Foto" alt="" class="album">
+        <section id="about" class="hidden v-music">
+            <img src="@Model.Musica.Foto" alt="Foto da Música" class="music">
             <div class="infos">
-                <h3 class="categoria">Album</h3>
-                <h1 class="n-album" id="name-album">@Model.Album.Titulo</h1>
-                <h2 class="n-artist">@Model.Album.Artistas</h2>
+                <h3 class="categoria">Música</h3>
+                <h1 class="n-music" id="name-music">@Model.Musica.Título</h1>
+                <h2 class="n-artist">Artistas</h2>
                 <div class="options">
                     <a class="comentar" href="#comments-s"><i class="fa-regular fa-comment"></i></a>
                     <button class="curtida"><i class="fa-regular fa-heart"></i></button>
                     <p>1mil curtidas</p>
                 </div>
             </div>
-
         </section>
 
         <div class="hr">
@@ -85,35 +83,6 @@
         <div class="hr-1">
             <hr class="line">
         </div>
-
-        <section id="musics" class="hidden musics">
-            <h2>Músicas do álbum</h2>
-            <div class="musicas">
-                <div class="conteudo">
-                    <a href="#">
-                        <p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i>
-                    </a>
-                    <a href="#">
-                        <p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i>
-                    </a>
-                    <a href="#">
-                        <p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i>
-                    </a>
-                    <a href="#">
-                        <p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i>
-                    </a>
-                    <a href="#">
-                        <p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i>
-                    </a>
-                    <a href="#">
-                        <p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i>
-                    </a>
-                    <a href="#">
-                        <p class="n-music">I Thought About Killing You</p><i class="icon fa-solid fa-circle-info"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
 
         <div class="comment-section" id="comments-s">
             <h2>Comentários</h2>
@@ -149,11 +118,6 @@
         </div>
     </main>
 
-    <!-- Perfil -->
-    <a href="./PagePerfil.html" class="perfil">
-        <img class="img-perfil" src="../Assets/Images/albuns/v2.jpeg" alt="Imagem de Perfl">
-    </a>
-
     <!-- Botão de voltar ao topo -->
     <button id="topButton" onclick="scrollToTop()"><i class="fa-solid fa-angle-up"></i></button>
 
@@ -168,14 +132,14 @@
         window.addEventListener('resize', adjustFontSize);
 
         function adjustFontSize() {
-            const albumName = document.getElementById('name-album');
+            const musicName = document.getElementById('name-music');
             let fontSize = 60; // Tamanho inicial da fonte
-            albumName.style.fontSize = `${fontSize}px`;
+            musicName.style.fontSize = `${fontSize}px`;
 
             // Reduz o tamanho da fonte enquanto o título não caber na largura
-            while (albumName.scrollWidth > albumName.offsetWidth && fontSize > 10) {
+            while (musicName.scrollWidth > musicName.offsetWidth && fontSize > 10) {
                 fontSize--;
-                albumName.style.fontSize = `${fontSize}px`;
+                musicName.style.fontSize = `${fontSize}px`;
             }
         }
     </script>

@@ -34,9 +34,9 @@
         <a href="#"><img class="h-logo" src="~/img/logo-home.png" alt="Logo do site"></a>
         <nav class="nav-bar">
             <ul>
-                <li><a href="./AbaMusicAlbum.html">Descubra</a></li>
+                <li><a asp-action="AbaMusicAlbum" asp-controller="Home">Descubra</a></li>
                 <li><a href="./AbaFavorites.html">Favoritos</a></li>
-                <li><a href="./AbaSobreCon.html">Sobre</a></li>
+                <li><a asp-action="AbaSobreCon" asp-controller="Home">Sobre</a></li>
             </ul>
         </nav>
     </header>
@@ -95,7 +95,7 @@
                     <div class="carousel-track">
                         @foreach (var musica in Model.MusicaHomes)
                         {
-                            <a asp-action="PageAlbum.cshtml">
+                            <a asp-action="PageMusic" asp-controller="Home" asp-route-id="@musica.Id">
                                 <div class="c-card">
                                     <img src="@musica.FotoAlbum" alt="">
                                     <div class="text">
@@ -127,7 +127,7 @@
             <div class="cards">
                 @foreach (var album in Model.AlbumHomes)
                 {
-                    <a asp-action="PageAlbum" asp-controller="Home" asp-route-id="albumId">
+                    <a asp-action="PageAlbum" asp-controller="Home" asp-route-id="@album.Id">
                         <div class="c-card">
                             <img src="@album.FotoCapa" alt="">
                             <div class="text">

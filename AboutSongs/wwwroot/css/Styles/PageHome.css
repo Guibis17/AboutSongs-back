@@ -269,53 +269,6 @@
                 overflow: hidden;
                 white-space: nowrap;
             }
-
-            & .plataformas {
-                width: 60%;
-                height: auto;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 5px;
-                padding: 3px;
-                background: #131313;
-                border: 1px solid #2c2c2c;
-                box-shadow: 0 0 5px #0000006c;
-                border-radius: 8px;
-
-                & .p {
-                    width: 30px;
-                    height: 30px;
-
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-
-                & .p:hover .i-spotify {
-                    color: #00f100;
-                    text-shadow: 0 0 10px #019201;
-                    transition: all .3s ease-in;
-                }
-
-                & .p:hover .i-youtube {
-                    color: #f10000;
-                    text-shadow: 0 0 10px #920101;
-                    transition: all .3s ease-in;
-                }
-
-                & .p:hover .i-apple {
-                    color: #ffffff;
-                    text-shadow: 0 0 10px #d6d6d6;
-                    transition: all .3s ease-in;
-                }
-
-                & i {
-                    color: #868686;
-                    font-size: 17pt;
-                    transition: all .3s ease-out;
-                }
-            }
         }
     }
 }
@@ -392,7 +345,7 @@
             gap: 3px;
 
             &:hover {
-                background: #2e2e2e46;
+                background: #72727246;
                 transition: all .15s ease-in;
             }
 
@@ -401,7 +354,7 @@
                 height: 165px;
                 border-radius: 7px;
                 box-shadow: 0 0 15px black;
-                filter: saturate(2);
+                filter: saturate(1.5) brightness(95%);
             }
 
             & .text {
@@ -415,7 +368,7 @@
             & .c-title {
                 font-size: 12pt;
                 font-weight: 700;
-                color: var(--cor-t-lvl-01);
+                color: var(--cor-01-r);
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;
@@ -424,7 +377,7 @@
             & .c-artist {
                 font-size: 10pt;
                 font-weight: 500;
-                color: #a7a7a7;
+                color: #e6e6e6;
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;
@@ -433,7 +386,7 @@
             & .c-designation {
                 font-size: 9.7pt;
                 font-weight: 500;
-                color: #888888;
+                color: #b6b6b6;
                 transition: .25s ease-out;
                 text-overflow: ellipsis;
                 overflow: hidden;
@@ -441,7 +394,7 @@
             }
 
             & .plataformas {
-                width: 60%;
+                width: 80%;
                 height: auto;
                 display: flex;
                 justify-content: center;
