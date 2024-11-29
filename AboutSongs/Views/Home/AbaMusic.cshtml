@@ -67,18 +67,18 @@
             <div class="cards">
                 @foreach (var musica in Model.Musicas)
                 {
-                    <a href="PageAlbum.html">
+                    <a asp-action="PageAlbum" asp-controller="Home" asp-route-id="@musica.AlbumId">
                         <div class="c-card">
-                            <img src="@Model.Albuns." alt="" />
+                            <img src="@musica.FotoAlbum" alt="@musica.Nome" />
                             <div class="text">
-                                <h1 class="c-title">@musica.Título</h1>
-                                <h2 class="c-artist">@musica.AlbunsArtistas</h2>
+                                <h1 class="c-title">@musica.Nome</h1>
+                                <h2 class="c-artist">@musica.Artistas</h2>
                                 <p class="c-designation">@musica.Generos</p>
                             </div>
                             <div class="plataformas">
-                                <a class="p" href="#" target="_blank"><i class="i-spotify fa-brands fa-spotify"></i></a>
-                                <a class="p" href="#" target="_blank"><i class="i-youtube fa-brands fa-youtube"></i></a>
-                                <a class="p" href="#" target="_blank"><i class="i-apple fa-brands fa-apple"></i></a>
+                                <a class="p" href="@musica.Spotify" target="_blank"><i class="i-spotify fa-brands fa-spotify"></i></a>
+                                <a class="p" href="@musica.Youtube" target="_blank"><i class="i-youtube fa-brands fa-youtube"></i></a>
+                                <a class="p" href="@musica.AppleMusic" target="_blank"><i class="i-apple fa-brands fa-apple"></i></a>
                             </div>
                         </div>
                     </a>

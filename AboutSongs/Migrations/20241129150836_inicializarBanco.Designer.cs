@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AboutSongs.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241129132905_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20241129150836_inicializarBanco")]
+    partial class inicializarBanco
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -77,7 +77,7 @@ namespace AboutSongs.Migrations
                             Id = 3,
                             DataDeLancamento = new DateTime(2024, 8, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExibirHome = true,
-                            Foto = "img/Albuns/3.png",
+                            Foto = "/img/Albuns/3.png",
                             Titulo = "Short n'Sweet"
                         },
                         new
@@ -109,7 +109,7 @@ namespace AboutSongs.Migrations
                             Id = 7,
                             DataDeLancamento = new DateTime(2024, 7, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ExibirHome = false,
-                            Foto = "img/Albuns/7.png",
+                            Foto = "/img/Albuns/7.png",
                             Titulo = "Vagabundo de Luxo"
                         },
                         new
@@ -5241,15 +5241,15 @@ namespace AboutSongs.Migrations
                         {
                             Id = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "5416eb5f-6274-4b8e-b4c7-7d6baf172bb4",
+                            ConcurrencyStamp = "1c675874-90a3-4d28-9a43-807a1197e228",
                             Email = "admin@aboutsongs.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@ABOUTSONGS.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEG0SWPqXKAiT9XXgMEnvtLBeWTPr2eabhl/1JZN3Cy44Oy/whuSVHVeOlY4sNmbWZQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAECEkC4KphPX4ETiRNabhKG3xbm2E123MovjtnMYxhQQLx4Vk3vk4A8YvLFXuqwAysQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1c8009d3-cc49-4d3e-a9be-385dfc34d6c2",
+                            SecurityStamp = "275b017d-1540-4a43-beee-3b7f7628d7ea",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });

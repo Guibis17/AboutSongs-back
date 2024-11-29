@@ -20,6 +20,7 @@ public class AlbumHome
 public class MusicaHome
 {
     public int Id { get; set; }
+    public int AlbumId { get; set; }
     public string Nome { get; set; }
     public string FotoAlbum { get; set; }
     public string Artistas { get; set; }

@@ -27,7 +27,7 @@ public class AppDbSeed
             new Album() {
                 Id = 3,
                 Titulo = "Short n'Sweet",
-                Foto = "img/Albuns/3.png",
+                Foto = "/img/Albuns/3.png",
                 DataDeLancamento = DateTime.Parse ("23/08/2024"),
                 ExibirHome = true
             },
@@ -54,7 +54,7 @@ public class AppDbSeed
             new Album() {
                 Id = 7,
                 Titulo = "Vagabundo de Luxo",
-                Foto = "img/Albuns/7.png",
+                Foto = "/img/Albuns/7.png",
                 DataDeLancamento = DateTime.Parse ("10/07/2024"),
             },
             new Album() {

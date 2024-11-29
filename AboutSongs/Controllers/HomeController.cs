@@ -102,10 +102,28 @@ public class HomeController : Controller
 
     public IActionResult AbaMusic()
     {
-        AbaMusicVM abaMusic = new()
+        var albuns = _context.AlbumArtistas
+                    .AsNoTracking()
+                    .Include(aa => aa.Artista)
+                    .Include(aa => aa.Album)
+                    .Include(aa => aa.Musica)
+                    .ToList();
+        AbaMusicVM abaMusic = new();
+        foreach (var album in albuns)
         {
-            Musicas = _context.Musicas.AsNoTracking().ToList(),
-            Albuns = _context.Albuns.AsNoTracking().ToList(),
+            MusicaHome musicaHome = new()
+            {
+                Id = album.MusicaId,
+                Nome = album.Musica.Título,
+                AlbumId = album.AlbumId,
+                FotoAlbum = album.Album.Foto,
+                AppleMusic = album.Musica.AppleMusic,
+                Spotify = album.Musica.Spotify,
+                Youtube = album.Musica.Youtube
+            };
+            musicaHome.Artistas = string.Join(", ", albuns.Where(a => a.AlbumId == album.AlbumId).Select(a => a.Artista.Nome).Distinct().ToList());
+            musicaHome.Generos = string.Join(", ", _context.MusicaGeneros.Where(mg => mg.MusicaId == musicaHome.Id).Select(mg => mg.Genero.Nome).Distinct().ToList());
+            abaMusic.Musicas.Add(musicaHome);
         };
         return View(abaMusic);
     }
@@ -127,7 +145,7 @@ public class HomeController : Controller
     {
         return View();
     }
-    
+
     public IActionResult Privacy()
     {
         return View();

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AboutSongs.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class inicializarBanco : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -462,11 +462,11 @@ namespace AboutSongs.Migrations
                 {
                     { 1, new DateTime(2024, 3, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "/img/Albuns/1.png", null, "We Don't Trust You" },
                     { 2, new DateTime(2024, 5, 17, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "/img/Albuns/2.jpg", null, "HIT ME HARD AND SOFT" },
-                    { 3, new DateTime(2024, 8, 23, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "img/Albuns/3.png", null, "Short n'Sweet" },
+                    { 3, new DateTime(2024, 8, 23, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "/img/Albuns/3.png", null, "Short n'Sweet" },
                     { 4, new DateTime(2024, 1, 12, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "/img/Albuns/4.jpg", null, "American Dream" },
                     { 5, new DateTime(2023, 7, 28, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/5.jpg", null, "Utopia" },
                     { 6, new DateTime(2024, 9, 9, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "/img/Albuns/6.jpg", null, "333" },
-                    { 7, new DateTime(2024, 7, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "img/Albuns/7.png", null, "Vagabundo de Luxo" },
+                    { 7, new DateTime(2024, 7, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/7.png", null, "Vagabundo de Luxo" },
                     { 8, new DateTime(2024, 6, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "/img/Albuns/8.jpg", null, "Brat" },
                     { 9, new DateTime(2024, 5, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), false, "/img/Albuns/9.png", null, "Not Like Us" },
                     { 10, new DateTime(2024, 8, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "/img/Albuns/10.jpeg", null, "Die With A Smile" },
@@ -534,7 +534,7 @@ namespace AboutSongs.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", 0, "5416eb5f-6274-4b8e-b4c7-7d6baf172bb4", "admin@aboutsongs.com", true, false, null, "ADMIN@ABOUTSONGS.COM", "ADMIN", "AQAAAAIAAYagAAAAEG0SWPqXKAiT9XXgMEnvtLBeWTPr2eabhl/1JZN3Cy44Oy/whuSVHVeOlY4sNmbWZQ==", null, false, "1c8009d3-cc49-4d3e-a9be-385dfc34d6c2", false, "Admin" });
+                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", 0, "1c675874-90a3-4d28-9a43-807a1197e228", "admin@aboutsongs.com", true, false, null, "ADMIN@ABOUTSONGS.COM", "ADMIN", "AQAAAAIAAYagAAAAECEkC4KphPX4ETiRNabhKG3xbm2E123MovjtnMYxhQQLx4Vk3vk4A8YvLFXuqwAysQ==", null, false, "275b017d-1540-4a43-beee-3b7f7628d7ea", false, "Admin" });
 
             migrationBuilder.InsertData(
                 table: "Genero",
