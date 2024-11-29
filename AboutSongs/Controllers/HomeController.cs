@@ -100,14 +100,25 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult AbaMusicAlbum()
+    public IActionResult AbaMusic()
     {
         AbaMusicVM abaMusic = new()
         {
             Musicas = _context.Musicas.AsNoTracking().ToList(),
+            Albuns = _context.Albuns.AsNoTracking().ToList(),
         };
         return View(abaMusic);
     }
+
+    public IActionResult AbaAlbum()
+    {
+        AbaAlbumVM abaAlbum = new()
+        {
+            Albuns = _context.Albuns.AsNoTracking().ToList(),
+        };
+        return View(abaAlbum);
+    }
+
     public IActionResult Login()
     {
         return View();

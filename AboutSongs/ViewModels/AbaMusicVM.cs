@@ -5,4 +5,5 @@ namespace AboutSongs.ViewModels;
 public class AbaMusicVM
 {
     public List<Musica> Musicas { get; set; } = [];
+    public List<Album> Albuns { get; set; }
 }

@@ -1,4 +1,5 @@
 using AboutSongs.Data;
+using AboutSongs.Services; // Certifique-se de incluir o namespace correto para IUsuarioService e UsuarioService
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,13 +13,15 @@ builder.Services.AddDbContext<AppDbContext>(
 );
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-.AddEntityFrameworkStores<AppDbContext>()
-.AddDefaultTokenProviders();
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
+
+// Registre o IUsuarioService
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
-
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

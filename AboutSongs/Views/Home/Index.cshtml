@@ -34,11 +34,13 @@
         <a href="#"><img class="h-logo" src="~/img/logo-home.png" alt="Logo do site"></a>
         <nav class="nav-bar">
             <ul>
-                <li><a asp-action="AbaMusicAlbum" asp-controller="Home">Descubra</a></li>
-                <li><a href="./AbaFavorites.html">Favoritos</a></li>
+                <li><a asp-action="AbaMusic" asp-controller="Home">Músicas</a></li>
+                <li><a asp-action="AbaAlbum" asp-controller="Home">Álbuns</a></li>
                 <li><a asp-action="AbaSobreCon" asp-controller="Home">Sobre</a></li>
             </ul>
         </nav>
+
+        <partial name="_LoginPartial"></partial>
     </header>
 
     <!-- Página -->
@@ -85,7 +87,7 @@
         </div>
 
         <!-- Sections de músicas -->
-         <section class="hidden musicas">
+        <section class="hidden musicas">
             <div class="superior">
                 <h1 class="title-s">Algumas músicas</h1>
             </div>
@@ -108,7 +110,8 @@
                                                 class="i-spotify fa-brands fa-spotify"></i></a>
                                         <a class="p" href="@musica.Youtube" target="_blank"><i
                                                 class="i-youtube fa-brands fa-youtube"></i></a>
-                                        <a class="p" href="@musica.AppleMusic" target="_blank"><i class="i-apple fa-brands fa-apple"></i></a>
+                                        <a class="p" href="@musica.AppleMusic" target="_blank"><i
+                                                class="i-apple fa-brands fa-apple"></i></a>
                                     </div>
                                 </div>
                             </a>
@@ -117,7 +120,7 @@
                 </div>
                 <button id="nextBtn" class="arrow"><i class="fa-solid fa-angle-right"></i></button>
             </div>
-        </section> 
+        </section>
 
         <section class="hidden albuns">
             <div class="superior">
