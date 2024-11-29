@@ -16,7 +16,9 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 
+
 // Registre o IUsuarioService
+builder.Services.AddScoped<IEmailSender, EmailSender>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 
 builder.Services.AddControllersWithViews();
@@ -36,6 +38,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

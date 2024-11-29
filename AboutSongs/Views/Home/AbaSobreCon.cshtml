@@ -31,11 +31,13 @@
         <a asp-action="Index" asp-controller="Home"><img class="h-logo" src="~/img/logo-home.png" alt="Logo do site"></a>
         <nav class="nav-bar">
             <ul>
-                <li><a href="./AbaMusicAlbum.html">Descubra</a></li>
-                <li><a href="./AbaFavorites.html">Favoritos</a></li>
-                <li><a href="./AbaSobreCon.html">Sobre</a></li>
+                <li><a asp-action="AbaMusic" asp-controller="Home">Músicas</a></li>
+                <li><a asp-action="AbaAlbum" asp-controller="Home">Álbuns</a></li>
+                <li><a asp-action="#">Sobre</a></li>
             </ul>
         </nav>
+
+        <partial name="_LoginPartial"></partial>
     </header>
 
     <!-- Página -->
@@ -113,11 +115,6 @@
             </form>
         </div>
     </footer>
-
-    <!-- Perfil -->
-    <a href="./PagePerfil.html" class="perfil">
-        <img class="img-perfil" src="../Assets/Images/albuns/v2.jpeg" alt="Imagem de Perfl">
-    </a>
 
     <!-- Botão de voltar ao topo -->
     <button id="topButton" onclick="scrollToTop()"><i class="fa-solid fa-angle-up"></i></button>

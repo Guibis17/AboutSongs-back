@@ -206,7 +206,7 @@
             background-color: #13131300;
 
             &:hover {
-                background: #2e2e2e46;
+                background: #72727246;
                 transition: all .15s ease-in;
             }
 
@@ -227,7 +227,7 @@
             & .c-title {
                 font-size: 12pt;
                 font-weight: 700;
-                color: var(--cor-t-lvl-01);
+                color: var(--cor-01-r);
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;
@@ -236,7 +236,7 @@
             & .c-artist {
                 font-size: 10pt;
                 font-weight: 500;
-                color: #a7a7a7;
+                color: #e6e6e6;
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;
@@ -245,7 +245,7 @@
             & .c-designation {
                 font-size: 9.7pt;
                 font-weight: 500;
-                color: #888888;
+                color: #b6b6b6;
                 transition: .25s ease-out;
                 text-overflow: ellipsis;
                 overflow: hidden;
@@ -272,8 +272,6 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-
-
                 }
 
                 & .p:hover .i-spotify {

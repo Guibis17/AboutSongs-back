@@ -127,19 +127,7 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult Música()
-    {
-        return View();
-    }
-
-    public IActionResult Album()
-    {
-        return View();
-    }
-    public IActionResult Favoritos()
-    {
-        return View();
-    }
+    
     public IActionResult Privacy()
     {
         return View();

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AboutSongs.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241128235020_criar-banco")]
-    partial class criarbanco
+    [Migration("20241129132905_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -5241,15 +5241,15 @@ namespace AboutSongs.Migrations
                         {
                             Id = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f1779bfd-b95e-42e3-80c9-015c1fce662e",
+                            ConcurrencyStamp = "5416eb5f-6274-4b8e-b4c7-7d6baf172bb4",
                             Email = "admin@aboutsongs.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@ABOUTSONGS.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEDvY18TkTX1UkbiFcX7eKWgZQdNChuiusyPV10RGlEIXnOBwpYQ8ca8++FNshPwD9Q==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEG0SWPqXKAiT9XXgMEnvtLBeWTPr2eabhl/1JZN3Cy44Oy/whuSVHVeOlY4sNmbWZQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "0370dd48-d970-4024-841c-8a2e30204f07",
+                            SecurityStamp = "1c8009d3-cc49-4d3e-a9be-385dfc34d6c2",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });
