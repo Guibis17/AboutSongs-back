@@ -128,7 +128,7 @@ public class UsuarioService : IUsuarioService
             //code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
             //var url = $"http://localhost:5143/Account/ConfirmarEmail?userId={userId}&code={code}";
 
-            await _userManager.AddToRoleAsync(user, "Visitante");
+            await _userManager.AddToRoleAsync(user, "Usuário");
 
             //await _emailSender.SendEmailAsync(registro.Email, "GCook - Criação de Conta", GetConfirmEmailHtml(HtmlEncoder.Default.Encode(url)));
 
@@ -141,13 +141,13 @@ public class UsuarioService : IUsuarioService
             if (registro.Foto != null)
             {
                 string fileName = userId + Path.GetExtension(registro.Foto.FileName);
-                string uploads = Path.Combine(_hostEnvironment.WebRootPath, @"img\User");
+                string uploads = Path.Combine(_hostEnvironment.WebRootPath, @"img\usuarios");
                 string newFile = Path.Combine(uploads, fileName);
                 using (var stream = new FileStream(newFile, FileMode.Create))
                 {
                     registro.Foto.CopyTo(stream);
                 }
-                usuario.Foto = @"\img\User\" + fileName;
+                usuario.Foto = "/img/usuarios/" + fileName;
             }
             _contexto.Usuarios.Add(usuario);
             await _contexto.SaveChangesAsync();

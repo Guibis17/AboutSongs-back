@@ -1,7 +1,7 @@
 @model AboutSongs.ViewModels.RegistroVM
 @{
     ViewData["Title"] = "Registro";
-    ViewData["SubTitle"] = Model.Enviado ? "Conta Criada com Sucesso" : "Criar Conta";
+    ViewData["SubTitle"] = Model.Enviado ? "Sua Conta AboutSongs foi Criada com Sucesso" : "Criar Conta";
     Layout = "~/Views/Shared/_LayoutAccount.cshtml";
 }
 
@@ -15,7 +15,7 @@
             <span asp-validation-for="Nome" class="text-danger text-sm"></span>
         </div>
         <div class="form-floating mb-3">
-            <input asp-for="Email" class="form-control" autocomplete="false" readonly onfocus="this.removeAttribute('readonly');">
+            <input asp-for="Email" class="form-control" readonly onfocus="this.removeAttribute('readonly');">
             <label asp-for="Email" class="label-input"></label>
             <span asp-validation-for="Email" class="text-danger text-sm"></span>
         </div>
@@ -71,7 +71,7 @@ else
 {
     <div class="container">
         <div class="text-center text-white mb-4">
-            <p class="h5 mb-5">Acesse o email informado para concluir o processo de criação!</p>
+            <p class="h5 mb-5">Agora você pode consultar e comentar seus artistas, músicas e albuns favoritos!</p>
             <a asp-action="Login" asp-controller="Account" class="btn btn-danger text-white">Ir para o Login</a>
             <a asp-action="Index" asp-controller="Home" class="btn btn-primary text-white">Voltar a página inicial</a>
         </div>
@@ -86,7 +86,7 @@ else
         });
         if (mensagemErro != '') {
             swal.fire(
-                'Acesso Negado',
+                'Problemas ao criar a conta',
                 mensagemErro,
                 'error'
             );
@@ -115,9 +115,5 @@ else
                 s.setAttribute("disabled", true);
             }
         }
-
-        $(document).ready(function () {
-            document.getElementById('Email').innerHTML = '';
-        });
     </script>
 }

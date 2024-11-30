@@ -1,5 +1,5 @@
 using AboutSongs.Data;
-using AboutSongs.Services; // Certifique-se de incluir o namespace correto para IUsuarioService e UsuarioService
+using AboutSongs.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,9 +12,11 @@ builder.Services.AddDbContext<AppDbContext>(
     options => options.UseMySql(conn, versao)
 );
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-    .AddEntityFrameworkStores<AppDbContext>()
-    .AddDefaultTokenProviders();
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(
+    opt => opt.SignIn.RequireConfirmedEmail = false
+)
+.AddEntityFrameworkStores<AppDbContext>()
+.AddDefaultTokenProviders();
 
 
 // Registre o IUsuarioService
