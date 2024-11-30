@@ -9,7 +9,7 @@
     .line-1 {
 
         & .hr-1 {
-            width: 40%;
+            width: 70%;
             height: .35px;
         }
     }
@@ -51,7 +51,7 @@
     .line-2 {
 
         & .hr-2 {
-            width: 67%;
+            width: 70%;
             height: .35px;
         }
     }

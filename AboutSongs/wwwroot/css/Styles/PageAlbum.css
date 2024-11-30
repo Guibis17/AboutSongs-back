@@ -95,12 +95,18 @@
             border-radius: 10px;
             margin-top: 15px;
             gap: 5px;
+            align-items: center;
 
             & .comentar {
                 width: auto;
+<<<<<<< HEAD
+                background: transparent;
+                cursor: pointer;
+=======
                 height: auto;
                 display: flex;
                 align-items: center;
+>>>>>>> ad029b99e2476f8c052d4ebd8469843fafa25e4b
 
                 & i {
                     color: #dddddd;
@@ -138,6 +144,17 @@
                     font-weight: 500;
                     margin-top: 15px;
                 }
+<<<<<<< HEAD
+            }
+
+            & p {
+                margin-left: 30px;
+                color: #313131;
+                padding-top: 3px;
+                font-weight: 500;
+                margin-bottom: 0;
+=======
+>>>>>>> ad029b99e2476f8c052d4ebd8469843fafa25e4b
             }
         }
     }
