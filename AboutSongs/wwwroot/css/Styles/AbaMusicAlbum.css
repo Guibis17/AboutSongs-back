@@ -224,6 +224,7 @@
             }
 
             & .c-title {
+                margin-top: 10px;
                 font-size: 12pt;
                 font-weight: 700;
                 color: var(--cor-01-r);
