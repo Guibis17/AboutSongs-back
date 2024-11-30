@@ -1,0 +1,64 @@
+@model List<AboutSongs.ViewModels.AlbumVM>
+@{
+    ViewData["Title"] = "Albuns";
+}
+
+@section Styles {
+    <!-- Links CSS/Font -->
+    <link rel="stylesheet" href="~/css/Styles/AbaMusicAlbum.css">
+    <link rel="stylesheet" href="~/css/Global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+}
+
+<section class="hidden filter">
+    <div class="filtering">
+        <button>HipHop</button>
+        <button>Pop</button>
+        <button>Eletrônica</button>
+        <button>Rock</button>
+        <button>Funk</button>
+    </div>
+    <div class="search">
+        <div class="icon-search"></div>
+        <div class="input">
+            <input type="text" placeholder="Pesquise por." id="mysearch">
+        </div>
+        <span class="clear" onclick="document.getElementById('mysearch').value = ''"></span>
+    </div>
+</section>
+
+<section class="hidden musicas">
+    <h1 class="title-s">Álbuns</h1>
+    <div class="cards">
+        @foreach (var album in Model)
+        {
+            <a asp-action="Album" asp-route-id="@album.Id">
+                <div class="c-card">
+                    <img src="@album.Foto" alt="" />
+                    <div class="text">
+                        <h1 class="c-title">@album.Nome</h1>
+                        <h2 class="c-artist">@string.Join(", ", album.Artistas.Select(a => a.Nome).ToList())</h2>
+                        <p class="c-designation">@string.Join(", ", album.Generos.Select(a => a.Nome).ToList())</p>
+                    </div>
+                    <div class="plataformas">
+                        <a class="p" href="#" target="_blank"><i class="i-spotify fa-brands fa-spotify"></i></a>
+                        <a class="p" href="#" target="_blank"><i class="i-youtube fa-brands fa-youtube"></i></a>
+                        <a class="p" href="#" target="_blank"><i class="i-apple fa-brands fa-apple"></i></a>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        const icon = document.querySelector('.icon-search');
+        const search = document.querySelector('.search');
+        icon.onclick = function () {
+            search.classList.toggle('active')
+        }
+    </script>
+}

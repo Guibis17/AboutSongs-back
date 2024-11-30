@@ -1,0 +1,72 @@
+@model List<AboutSongs.ViewModels.MusicaVM>
+@{
+    ViewData["Title"] = "Músicas";
+}
+
+@section Styles {
+    <!-- Links CSS/Font -->
+    <link rel="stylesheet" href="~/css/Styles/AbaMusicAlbum.css">
+    <link rel="stylesheet" href="~/css/Global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+}
+<section class="hidden filter">
+    <div class="filtering">
+        <button>HipHop</button>
+        <button>Pop</button>
+        <button>Eletrônica</button>
+        <button>Rock</button>
+        <button>Funk</button>
+    </div>
+    <div class="search">
+        <div class="icon-search"></div>
+        <div class="input">
+            <input type="text" placeholder="Pesquise por." id="mysearch">
+        </div>
+        <span class="clear" onclick="document.getElementById('mysearch').value = ''"></span>
+    </div>
+</section>
+
+<section class="hidden musicas">
+    <h1 class="title-s">Músicas</h1>
+    <div class="cards">
+        @foreach (var musica in Model)
+        {
+            <a asp-action="Musica" asp-controller="Home" asp-route-id="@musica.Id">
+                <div class="c-card">
+                    <img src="@musica.Foto" alt="@musica.Nome" />
+                    <div class="text">
+                        <h1 class="c-title">@musica.Nome</h1>
+                        <h2 class="c-artist">@string.Join(", ", musica.Artistas.Select(a => a.Nome).ToList())</h2>
+                        <p class="c-designation">@string.Join(", ", musica.Generos.Select(a => a.Nome).ToList())</p>
+                    </div>
+                    <div class="plataformas">
+                        @if (musica.Spotify != null)
+                        {
+                            <li><a href="@musica.Spotify"><i class="icon-s fa-brands fa-spotify"></i></a></li>
+                        }
+                        @if (musica.Youtube != null)
+                        {
+                            <li><a href="@musica.Youtube"><i class="icon-y fa-brands fa-youtube"></i></a></li>
+                        }
+                        @if (musica.AppleMusic != null)
+                        {
+                            <li><a href="@musica.AppleMusic"><i class="icon-a fa-brands fa-apple"></i></a></li>
+                        }
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        const icon = document.querySelector('.icon-search');
+        const search = document.querySelector('.search');
+        icon.onclick = function () {
+            search.classList.toggle('active')
+        }
+    </script>
+}

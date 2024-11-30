@@ -4,6 +4,13 @@ namespace AboutSongs.ViewModels;
 
 public class MusicaVM
 {
-    public Musica Musica { get; set; }
-    public string FotoAlbum { get; set; }
+    public int Id { get; set; }
+    public string Nome { get; set; }
+    public string Foto { get; set; }
+    public string Spotify { get; set; }
+    public string AppleMusic { get; set; }
+    public string Youtube { get; set; }
+    public List<Album> Albuns { get; set; }
+    public List<Artista> Artistas { get; set; }
+    public List<Genero> Generos { get; set; }
 }

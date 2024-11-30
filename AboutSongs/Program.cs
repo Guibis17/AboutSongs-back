@@ -20,6 +20,7 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>()
 // Registre o IUsuarioService
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<IMusicService, MusicService>();
 
 builder.Services.AddControllersWithViews();
 
