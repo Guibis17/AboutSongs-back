@@ -35,4 +35,6 @@ public class Musica
 
     public ICollection<AlbumArtista> AlbunsArtistas { get; set; }
 
+    public ICollection<ComentarioMusica> Comentarios { get; set; }
+
 }

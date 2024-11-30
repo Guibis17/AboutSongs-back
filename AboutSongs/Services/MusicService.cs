@@ -125,6 +125,8 @@ public class MusicService : IMusicService
                 .ThenInclude(aa => aa.Album)
             .Include(m => m.Generos)
                 .ThenInclude(mg => mg.Genero)
+            .Include(m => m.Comentarios)
+                .ThenInclude(mc => mc.Usuario)
             .AsEnumerable()
             .Select(item => new MusicaVM
             {
@@ -134,6 +136,7 @@ public class MusicService : IMusicService
                 Spotify= item.Spotify,
                 Youtube = item.Youtube,
                 AppleMusic = item.AppleMusic,
+                Comentarios = item.Comentarios.ToList(),
                 Albuns = item.AlbunsArtistas
                     .Select(a => a.Album)
                     .Distinct()

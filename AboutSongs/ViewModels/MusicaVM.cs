@@ -13,4 +13,5 @@ public class MusicaVM
     public List<Album> Albuns { get; set; }
     public List<Artista> Artistas { get; set; }
     public List<Genero> Generos { get; set; }
+    public List<ComentarioMusica> Comentarios { get; set; } = [];
 }

@@ -17,7 +17,8 @@ public class AppDbContext : IdentityDbContext<IdentityUser>
     public DbSet<AlbumArtista> AlbumArtistas { get; set; }
     public DbSet<AlbumGenero> AlbumGeneros { get; set; }
     public DbSet<Artista> Artistas { get; set; }
-    public DbSet<Comentario> Comentarios { get; set; }
+    public DbSet<ComentarioAlbum> ComentarioAlbuns { get; set; }
+    public DbSet<ComentarioMusica> ComentarioMusicas { get; set; }
     public DbSet<Critica> Criticas { get; set; }
     public DbSet<Genero> Generos { get; set; }
     public DbSet<GeneroArtista> GeneroArtistas { get; set; }

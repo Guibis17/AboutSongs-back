@@ -6,13 +6,13 @@
 @if (usuario == null)
 {
     <a asp-action="Login" asp-controller="Account" class="me-2">
-        <img src="~/img/icon-user.png" class="usuario">
+        <img src="@Url.Content("~/img/icon-user.png")" class="usuario">
     </a>
 }
 else
 {
     <div class="dropdown">
-        <img src='@(usuario.Foto ?? Url.Content("~/img/outros/icon-user.png"))'
+        <img src='@(usuario.Foto ?? Url.Content("~/img/icon-user.png"))'
             class="usuario" alt="Foto do usuário" onclick="toggleDropdown(event)">
         <div class="dropdown-content" id="dropdownMenu">
             @if (usuario.IsAdmin)

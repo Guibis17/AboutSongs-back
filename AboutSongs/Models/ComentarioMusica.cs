@@ -3,17 +3,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AboutSongs.Models;
 
-[Table("Comentario")]
+[Table("ComentarioMusica")]
 
-public class Comentario
+public class ComentarioMusica
 {
     [Key]
     public int Id { get; set; }
 
     [Required]
-    public int AlbumId { get; set; }
-    [ForeignKey("AlbumId")]
-    public Album Album { get; set; }
+    public int MusicaId { get; set; }
+    [ForeignKey("MusicaId")]
+    public Musica Musica { get; set; }
 
     [Required]
     public string UsuarioId { get; set; }
@@ -23,4 +23,8 @@ public class Comentario
     [DataType(DataType.Date)]
     [StringLength(1000)]
     public DateTime DataDePublicacao { get; set; }
+
+    [Required]
+    [StringLength(1000)]
+    public string Comentario { get; set; }
 }

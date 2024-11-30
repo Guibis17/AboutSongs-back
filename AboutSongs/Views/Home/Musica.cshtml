@@ -22,7 +22,7 @@
         <div class="options">
             <button class="comentar" href="#comments-s"><i class="fa-regular fa-comment"></i></button>
             <button class="curtida"><i class="fa-regular fa-heart"></i></button>
-            <p>1mil curtidas</p>
+            <p>1 mil curtidas</p>
         </div>
     </div>
 </section>
@@ -44,9 +44,20 @@
     </div>
     <div class="s-content">
         <ul>
-            @if (Model.Spotify != null) { <li><a href="@Model.Spotify"><i class="icon-s fa-brands fa-spotify"></i></a></li> }
-            @if (Model.Youtube != null) { <li><a href="@Model.Youtube"><i class="icon-y fa-brands fa-youtube"></i></a></li> }
-            @if (Model.AppleMusic != null ) { <li><a href="@Model.AppleMusic"><i class="icon-a fa-brands fa-apple"></i></a></li> }
+            @if (Model.Spotify != null)
+            {
+                <li><a href="@Model.Spotify"><i class="icon-s fa-brands fa-spotify"></i></a>
+                </li>
+            }
+            @if (Model.Youtube != null)
+            {
+                <li><a href="@Model.Youtube"><i class="icon-y fa-brands fa-youtube"></i></a>
+                </li>
+            }
+            @if (Model.AppleMusic != null)
+            {
+                <li><a href="@Model.AppleMusic"><i class="icon-a fa-brands fa-apple"></i></a></li>
+            }
         </ul>
     </div>
 </section>
@@ -62,7 +73,28 @@
         <textarea id="newComment" placeholder="Adicione um comentário..."></textarea>
         <button onclick="postComment()">Comentar</button>
     </div>
-    <div id="commentsContainer"></div>
+    <div id="commentsContainer">
+        @foreach (var comentario in Model.Comentarios)
+        {
+            <div class="comment">
+                @if (comentario.Usuario.Foto != null)
+                {
+                    <img src="https://via.placeholder.com/40" alt="Usuário 1" class="comment-avatar">
+                } else {
+                    <img src="~/img/icon-user.png" alt="Usuário 1" class="comment-avatar">
+                }
+                <div class="comment-content">
+                    <div class="comment-name">@comentario.Usuario.Nome</div>
+                    <div class="comment-text">@comentario.Comentario!</div>
+                    <div class="comment-actions"><span class="like "><i class="fas fa-thumbs-up"></i> 0</span><span
+                            class="dislike "><i class="fas fa-thumbs-down"></i> 0</span><span><i class="fas fa-edit"></i>
+                            Editar</span><span><i class="fas fa-trash-alt"></i> Excluir</span><span><i
+                                class="fas fa-reply"></i>
+                            Responder</span></div>
+                </div>
+            </div>
+        }
+    </div>
 </div>
 
 <!-- Modal para editar comentários -->
@@ -89,7 +121,7 @@
 </div>
 
 @section Scripts {
-    <script src="~/js/comments.js"></script>
+    @* <script src="~/js/comments.js"></script> *@
     <script>
         // Script para diminuir a fonte caso o texto ultrapasse o tamanho máximo
         // Álbum
