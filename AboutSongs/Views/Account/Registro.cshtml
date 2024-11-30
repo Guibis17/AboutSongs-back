@@ -50,7 +50,7 @@
                 <input class="form-check-input text-danger fs-5" asp-for="Termos" onclick="verificarTermos()" />
                 <label class="form-check-label mt-1" asp-for="Termos">
                     Eu concordo com os
-                        <a class="tect-danger" href="javascript:void(0);">termos e politica de privacidade</a>
+                    <a class="tect-danger" href="javascript:void(0);">termos e politica de privacidade</a>
                 </label>
             </div>
         </div>
@@ -63,16 +63,24 @@
             </a>
         </p>
     </form>
+
 }
-else 
+
+<style>
+    .btn-danger {
+        background-color: #CC01FF !important;
+    }
+</style>
+
+else
 {
-    <div class="container">
-        <div class="text-center text-white mb-4">
-            <p class="h5 mb-5">Acesse o email informado para concluir o processo de criação!</p>
-            <a asp-action="Login" asp-controller="Account" class="btn btn-danger text-white">Ir para o Login</a>
-            <a asp-action="Index" asp-controller="Home" class="btn btn-primary text-white">Voltar a página inicial</a>
-        </div>
+<div class="container">
+    <div class="text-center text-white mb-4">
+        <p class="h5 mb-5">Acesse o email informado para concluir o processo de criação!</p>
+        <a asp-action="Login" asp-controller="Account" class="btn btn-danger text-white">Ir para o Login</a>
+        <a asp-action="Index" asp-controller="Home" class="btn btn-primary text-white">Voltar a página inicial</a>
     </div>
+</div>
 }
 
 @section Scripts {
@@ -99,7 +107,7 @@ else
                     var img = document.getElementById('PreviewImage');
                     img.src = URL.createObjectURL(this.files[0]);
                 }
-            }); 
+            });
         });
 
         function verificarTermos() {

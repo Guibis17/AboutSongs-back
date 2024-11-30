@@ -1,7 +1,6 @@
 @model AboutSongs.ViewModels.MusicaVM
 @{
     ViewData["Title"] = "PageMusic";
-    Layout = null;
 }
 
 <head>
@@ -49,11 +48,13 @@
             <div class="infos">
                 <h3 class="categoria">Música</h3>
                 <h1 class="n-music" id="name-music">@Model.Musica.Título</h1>
-                <h2 class="n-artist">Artistas</h2>
+                <h2 class="n-artist">Playboi Carti e The Weeknd</h2>
                 <div class="options">
                     <a class="comentar" href="#comments-s"><i class="fa-regular fa-comment"></i></a>
-                    <button class="curtida"><i class="fa-regular fa-heart"></i></button>
-                    <p>1mil curtidas</p>
+                    <div class="curtir">
+                        <button class="curtida"><i class="fa-regular fa-heart"></i></button>
+                        <p>1mil curtidas</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -64,13 +65,13 @@
 
         <section class="informations">
             <div class="hidden f-content">
-                <div class="credits">
-                    <h1 class="title-c">Créditos.</h1>
-                    <p class="c-credit">Nome dos compositores responsáveis pela produção</p>
-                </div>
                 <div class="classification">
                     <h1 class="title-cl">Gêneros Musicais.</h1>
                     <p class="s-musical">HipHop, Pop, Rock</p>
+                </div>
+                <div class="credits">
+                    <h1 class="title-c">Créditos.</h1>
+                    <p class="c-credit">Nome dos compositores responsáveis pela produção</p>
                 </div>
             </div>
             <div class="s-content">
