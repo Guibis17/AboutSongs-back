@@ -13,5 +13,6 @@ public class AlbumGenero
     [Key, Column(Order = 2)]
     public int GeneroId { get; set; }
     [ForeignKey("GeneroId")]
-    public Genero Genero { get; set;} 
+    public Genero Genero { get; set;}
+ 
 }

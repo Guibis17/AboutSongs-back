@@ -130,12 +130,22 @@ public class HomeController : Controller
 
     public IActionResult AbaAlbum()
     {
+        var albuns = _context.Albuns
+            .Include(a => a.Artistas)
+            .ThenInclude(aa => aa.Artista)
+            .Include(a => a.Generos)
+            .ThenInclude(ag => ag.Genero) 
+            .AsNoTracking()
+            .ToList();
+
         AbaAlbumVM abaAlbum = new()
         {
-            Albuns = _context.Albuns.AsNoTracking().ToList(),
+            Albuns = albuns
         };
+
         return View(abaAlbum);
     }
+
 
     public IActionResult Login()
     {

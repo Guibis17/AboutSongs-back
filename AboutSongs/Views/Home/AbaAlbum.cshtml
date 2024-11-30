@@ -31,7 +31,8 @@
     <!-- Cabeçalho -->
     <header class="cabecalho">
         <!-- Conteúdo principal do cabeçalho -->
-        <a asp-action="Index" asp-controller="Home"><img class="h-logo" src="~/img/logo-home.png" alt="Logo do site"></a>
+        <a asp-action="Index" asp-controller="Home"><img class="h-logo" src="~/img/logo-home.png"
+                alt="Logo do site"></a>
         <nav class="nav-bar">
             <ul>
                 <li><a asp-action="AbaMusic" asp-controller="Home">Músicas</a></li>
@@ -72,13 +73,8 @@
                             <img src="@album.Foto" alt="" />
                             <div class="text">
                                 <h1 class="c-title">@album.Titulo</h1>
-                                <h2 class="c-artist">@album.Artistas</h2>
-                                <p class="c-designation">@album.Generos</p>
-                            </div>
-                            <div class="plataformas">
-                                <a class="p" href="#" target="_blank"><i class="i-spotify fa-brands fa-spotify"></i></a>
-                                <a class="p" href="#" target="_blank"><i class="i-youtube fa-brands fa-youtube"></i></a>
-                                <a class="p" href="#" target="_blank"><i class="i-apple fa-brands fa-apple"></i></a>
+                                <h2 class="c-artist">@string.Join(", ", album.Artistas.Select(aa => aa.Artista.Nome).Distinct())</h2>
+                                <p class="text-white c-designation">@string.Join(", ", album.Generos.Select(ag => ag.Genero.Nome).Distinct())</p> 
                             </div>
                         </div>
                     </a>
