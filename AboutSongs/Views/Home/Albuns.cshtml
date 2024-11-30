@@ -42,11 +42,6 @@
                         <h2 class="c-artist">@string.Join(", ", album.Artistas.Select(a => a.Nome).ToList())</h2>
                         <p class="c-designation">@string.Join(", ", album.Generos.Select(a => a.Nome).ToList())</p>
                     </div>
-                    <div class="plataformas">
-                        <a class="p" href="#" target="_blank"><i class="i-spotify fa-brands fa-spotify"></i></a>
-                        <a class="p" href="#" target="_blank"><i class="i-youtube fa-brands fa-youtube"></i></a>
-                        <a class="p" href="#" target="_blank"><i class="i-apple fa-brands fa-apple"></i></a>
-                    </div>
                 </div>
             </a>
         }
