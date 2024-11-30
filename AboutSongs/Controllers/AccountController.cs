@@ -11,19 +11,12 @@ namespace AboutSongs.Controllers;
 public class AccountController : Controller
 {
     private readonly ILogger<AccountController> _logger;
-    private readonly SignInManager<IdentityUser> _signInManager;
-    private readonly UserManager<IdentityUser> _userInManager;
     private readonly IUsuarioService _usuarioService;
 
-    public AccountController(
-        ILogger<AccountController> logger,
-        SignInManager<IdentityUser> signInManager,
-        UserManager<IdentityUser> userManager
-        )
+    public AccountController(ILogger<AccountController> logger, IUsuarioService usuarioService)
     {
         _logger = logger;
-        _signInManager = signInManager;
-        _userInManager = userManager;
+        _usuarioService = usuarioService;
     }
 
     [HttpGet]
@@ -42,31 +35,15 @@ public class AccountController : Controller
     {
         if (ModelState.IsValid)
         {
-            string userName = login.Email;
-            if (IsValidEmail(userName))
-            {
-                var user = await _userInManager.FindByEmailAsync(userName);
-                if (user != null)
-                    userName = user.UserName;
-            }
-
-            var result = await _signInManager.PasswordSignInAsync(
-                userName, login.Senha, login.Lembrar, lockoutOnFailure: true
-            );
-
+            var result = await _usuarioService.LoginUsuario(login);
             if (result.Succeeded)
-            {
-                _logger.LogInformation($"Usuário {userName} acessou o sistema!");
                 return LocalRedirect(login.UrlRetorno);
-            }
-
             if (result.IsLockedOut)
-            {
-                _logger.LogWarning($"Usuário {userName} está bloqueado");
-                ModelState.AddModelError(string.Empty, "Conta Bloqueado! Aguarde alguns minutos para continuar!");
-            }
-
-            ModelState.AddModelError(string.Empty, "Usuário e/ou Senha Inválidos!!!");
+                return RedirectToAction("Lockout");
+            if (result.IsNotAllowed)
+                ModelState.AddModelError(string.Empty, "Sua conta não está confirmada, verifique seu email!!");
+            else
+                ModelState.AddModelError(string.Empty, "Usuário e/ou Senha Inválidos!!!");
         }
         return View(login);
     }
@@ -100,8 +77,7 @@ public class AccountController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Logout()
     {
-        _logger.LogInformation($"Usuário {ClaimTypes.Email} saiu do sistema!");
-        await _signInManager.SignOutAsync();
+        await _usuarioService.LogoffUsuario();
         return RedirectToAction("Index", "Home");
     }
 
@@ -114,17 +90,5 @@ public class AccountController : Controller
     public IActionResult Error()
     {
         return View();
-    }
-    private static bool IsValidEmail(string email)
-    {
-        try
-        {
-            MailAddress mail = new(email);
-            return true;
-        }
-        catch
-        {
-            return false;
-        }
     }
 }

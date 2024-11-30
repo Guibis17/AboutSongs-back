@@ -4161,8 +4161,8 @@ public class AppDbSeed
         List<Usuario> usuarios = new(){
             new Usuario(){
                 UsuarioId = users[0].Id,
-                Nome = "Guilherme Bispo da Silva",
-                Foto = ""
+                Nome = "Administrador",
+                Foto = "/img/usuarios/admin.png"
             }
         };
         builder.Entity<Usuario>().HasData(usuarios);
@@ -4186,8 +4186,6 @@ public class AppDbSeed
         };
         builder.Entity<IdentityUserRole<string>>().HasData(userRoles);
         #endregion
-
-
 
     }
 }
