@@ -67,11 +67,53 @@ public class HomeController : Controller
         var usuarioId = User.FindFirstValue(ClaimTypes.NameIdentifier);
         var usuario = _context.Usuarios.Find(usuarioId);
         if (usuario == null)
-        return RedirectToAction("Login","Account");
+            return RedirectToAction("Login", "Account");
 
-        if (usuario == null) {
+        if (usuario == null)
+        {
             return NotFound();
         }
+        return View(usuario);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> EditarPerfil(Usuario usuario, IFormFile foto)
+    {
+        if (ModelState.IsValid)
+        {
+            var usuarioId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var usuarioExistente = await _context.Usuarios.FindAsync(usuarioId);
+            if (usuarioExistente == null)
+                return RedirectToAction("Login", "Account");
+
+            if (usuarioExistente != null)
+            {
+                usuarioExistente.Nome = usuario.Nome;
+                usuarioExistente.Foto = usuario.Foto;
+
+                if (foto != null && foto.Length > 0)
+                {
+                    var caminhoDiretorio = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "img", "usuarios");
+
+                    if (!Directory.Exists(caminhoDiretorio))
+                    {
+                        Directory.CreateDirectory(caminhoDiretorio);
+                    }
+
+                    var filePath = Path.Combine(caminhoDiretorio, foto.FileName);
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await foto.CopyToAsync(stream);
+                    }
+
+                    usuarioExistente.Foto = $"/img/usuarios/{foto.FileName}";
+                }
+
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Perfil");
+            }
+        }
+
         return View(usuario);
     }
 
