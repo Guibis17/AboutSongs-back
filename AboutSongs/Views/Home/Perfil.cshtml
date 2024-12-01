@@ -1,0 +1,47 @@
+@model AboutSongs.Models.Usuario
+@{
+    ViewData["Title"] = "Perfil";
+}
+
+@section Styles {
+    <!-- Links CSS/Font -->
+    <link rel="stylesheet" href="~/css/Styles/PagePerfil.css">
+    <link rel="stylesheet" href="~/css/Global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+}
+
+<main class="page">
+    <section id="about" class="hidden v-perfil">
+        <form method="post" enctype="multipart/form-data">
+            <div class="imagem-perfil">
+                <img src="@Model.Foto" alt="Imagem de perfil" class="img-p" onclick="document.getElementById('foto').click();">
+            </div>
+            <div class="infos">
+                <div class="names">
+                    <h1 class="n-perfil">@Model.Nome</h1>
+                </div>
+            </div>
+        </form>
+    </section>
+</main>
+
+<!-- Botão de voltar ao topo -->
+<button id="topButton" onclick="scrollToTop()"><i class="fa-solid fa-angle-up"></i></button>
+
+<!-- Link JS -->
+<script src="~/js/scripts.js"></script>
+
+@section Scripts {
+    <script>
+        window.addEventListener('load', function () {
+            document.querySelector('input[type="file"]').addEventListener('change', function () {
+                if (this.files && this.files[0]) {
+                    var img = document.getElementById('PreviewImage');
+                    img.src = URL.createObjectURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+}

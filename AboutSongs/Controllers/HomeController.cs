@@ -6,6 +6,7 @@ using AboutSongs.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using AboutSongs.Services;
+using System.Security.Claims;
 
 
 namespace AboutSongs.Controllers;
@@ -15,12 +16,14 @@ public class HomeController : Controller
     private readonly ILogger<HomeController> _logger;
     private readonly AppDbContext _context;
     private readonly IMusicService _musicService;
+    private readonly IUsuarioService _usuarioService;
 
-    public HomeController(ILogger<HomeController> logger, AppDbContext context, IMusicService musicService)
+    public HomeController(ILogger<HomeController> logger, AppDbContext context, IMusicService musicService, IUsuarioService usuarioService)
     {
         _logger = logger;
         _context = context;
         _musicService = musicService;
+        _usuarioService = usuarioService;
     }
 
     public IActionResult Index()
@@ -57,6 +60,19 @@ public class HomeController : Controller
     {
         var musicas = _musicService.GetMusicas();
         return View(musicas);
+    }
+
+    public IActionResult Perfil()
+    {
+        var usuarioId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        var usuario = _context.Usuarios.Find(usuarioId);
+        if (usuario == null)
+        return RedirectToAction("Login","Account");
+
+        if (usuario == null) {
+            return NotFound();
+        }
+        return View(usuario);
     }
 
     public IActionResult Sobre()
