@@ -1,6 +1,8 @@
 @model AboutSongs.ViewModels.MusicaVM
+@inject AboutSongs.Services.IUsuarioService _usuarioService
 @{
     ViewData["Title"] = "Música";
+    var usuario = await _usuarioService.GetUsuarioLogado();
 }
 
 @section Styles {
@@ -17,7 +19,7 @@
     <div class="infos">
         <h3 class="categoria">Música</h3>
         <h1 class="n-music" id="name-music">@Model.Nome</h1>
-        <h2 class="n-artist">Artistas</h2>
+        <h2 class="n-artist mb-0">Artistas</h2>
         <h2 class="n-artist">@string.Join(", ", Model.Artistas.Select(a => a.Nome).ToList())</h2>
         <div class="options">
             <button class="comentar" href="#comments-s"><i class="fa-regular fa-comment"></i></button>
@@ -66,31 +68,47 @@
     <hr class="line">
 </div>
 
-<div class="comment-section" id="comments-s">
+<div class="comment-section mb-5" id="comments-s">
     <h2>Comentários</h2>
-    <div class="comment-input">
-        <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
-        <textarea id="newComment" placeholder="Adicione um comentário..."></textarea>
-        <button onclick="postComment()">Comentar</button>
-    </div>
+
+    @if (usuario != null)
+    {
+        <form class="comment-input" asp-action="ComentarMusica" method="post">
+            <input type="hidden" asp-for="Id">
+            <img src="@(usuario.Foto ?? Url.Content("~/img/icon-user.png"))" alt="User Avatar" class="user-avatar">
+            <textarea id="newComment" name="Comentario" placeholder="Adicione um comentário..." required></textarea>
+            <button type="submit">Comentar</button>
+        </form>
+    }
+    else
+    {
+        if (Model.Comentarios.Count == 0)
+        {
+            <div class="comment">
+                <p class="text-white text-center">Ainda não existem comentários para essa música,
+                    faça <a asp-action="Login" asp-controller="Account" style="color: #CC01FF !important;">login</a> e seja o
+                    primeiro!!!
+                </p>
+            </div>
+        }
+    }
+
     <div id="commentsContainer">
         @foreach (var comentario in Model.Comentarios)
         {
             <div class="comment">
-                @if (comentario.Usuario.Foto != null)
-                {
-                    <img src="https://via.placeholder.com/40" alt="Usuário 1" class="comment-avatar">
-                } else {
-                    <img src="~/img/icon-user.png" alt="Usuário 1" class="comment-avatar">
-                }
+                <img src="@(comentario.Usuario.Foto ?? Url.Content("~/img/icon-user.png"))" alt="@comentario.Usuario.Nome"
+                    class="comment-avatar">
                 <div class="comment-content">
                     <div class="comment-name">@comentario.Usuario.Nome</div>
-                    <div class="comment-text">@comentario.Comentario!</div>
-                    <div class="comment-actions"><span class="like "><i class="fas fa-thumbs-up"></i> 0</span><span
-                            class="dislike "><i class="fas fa-thumbs-down"></i> 0</span><span><i class="fas fa-edit"></i>
-                            Editar</span><span><i class="fas fa-trash-alt"></i> Excluir</span><span><i
-                                class="fas fa-reply"></i>
-                            Responder</span></div>
+                    <div class="comment-text" style="white-space: pre-line">@comentario.Comentario</div>
+                    <div class="comment-actions">
+                        <span class="like"><i class="fas fa-thumbs-up me-2"></i> 0</span>
+                        <span class="dislike"><i class="fas fa-thumbs-down me-2"></i> 0</span>
+                        <span><i class="fas fa-edit me-2"></i> Editar</span>
+                        <span><i class="fas fa-trash-alt me-2"></i> Excluir</span>
+                        <span><i class="fas fa-reply me-2"></i> Responder</span>
+                    </div>
                 </div>
             </div>
         }

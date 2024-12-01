@@ -1,6 +1,8 @@
 @model AboutSongs.ViewModels.AlbumVM
+@inject AboutSongs.Services.IUsuarioService _usuarioService
 @{
     ViewData["Title"] = "Album";
+    var usuario = await _usuarioService.GetUsuarioLogado();
 }
 
 @section Styles {
@@ -71,14 +73,50 @@
     </div>
 </section>
 
-<div class="comment-section" id="comments-s">
+<div class="comment-section mb-5" id="comments-s">
     <h2>Comentários</h2>
-    <div class="comment-input">
-        <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
-        <textarea id="newComment" placeholder="Adicione um comentário..."></textarea>
-        <button onclick="postComment()">Comentar</button>
+    @if (usuario != null)
+    {
+        <form class="comment-input" asp-action="ComentarAlbum" method="post">
+            <input type="hidden" asp-for="Id">
+            <img src="@(usuario.Foto ?? Url.Content("~/img/icon-user.png"))" alt="User Avatar" class="user-avatar">
+            <textarea id="newComment" name="Comentario" placeholder="Adicione um comentário..." required></textarea>
+            <button type="submit">Comentar</button>
+        </form>
+    }
+    else
+    {
+        if (Model.Comentarios.Count == 0)
+        {
+            <div class="comment">
+                <p class="text-white text-center">Ainda não existem comentários para essa música,
+                    faça <a asp-action="Login" asp-controller="Account" style="color: #CC01FF !important;">login</a> e seja
+                    o primeiro!!!
+                </p>
+            </div>
+        }
+    }
+
+    <div id="commentsContainer">
+        @foreach (var comentario in Model.Comentarios)
+        {
+            <div class="comment">
+                <img src="@(comentario.Usuario.Foto ?? Url.Content("~/img/icon-user.png"))" alt="@comentario.Usuario.Nome"
+                    class="comment-avatar">
+                <div class="comment-content">
+                    <div class="comment-name">@comentario.Usuario.Nome</div>
+                    <div class="comment-text" style="white-space: pre-line">@comentario.Comentario</div>
+                    <div class="comment-actions">
+                        <span class="like"><i class="fas fa-thumbs-up me-2"></i> 0</span>
+                        <span class="dislike"><i class="fas fa-thumbs-down me-2"></i> 0</span>
+                        <span><i class="fas fa-edit me-2"></i> Editar</span>
+                        <span><i class="fas fa-trash-alt me-2"></i> Excluir</span>
+                        <span><i class="fas fa-reply me-2"></i> Responder</span>
+                    </div>
+                </div>
+            </div>
+        }
     </div>
-    <div id="commentsContainer"></div>
 </div>
 
 <!-- Modal para editar comentários -->
@@ -105,7 +143,6 @@
 </div>
 
 @section Scripts {
-    <script src="~/js/comments.js"></script>
     <script>
         // Script para diminuir a fonte caso o texto ultrapasse o tamanho máximo
         // Álbum

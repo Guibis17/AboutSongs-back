@@ -57,12 +57,15 @@ public class MusicService : IMusicService
                 .ThenInclude(aa => aa.Musica)
                 .ThenInclude(m => m.Generos)
                 .ThenInclude(mg => mg.Genero)
+            .Include(m => m.Comentarios)
+                .ThenInclude(mc => mc.Usuario)
             .AsEnumerable()
             .Select(item => new AlbumVM
             {
                 Id = item.Id,
                 Nome = item.Nome ?? item.Titulo,
                 Foto = item.Foto,
+                Comentarios = item.Comentarios.ToList(),
                 Musicas = item.Artistas
                     .Select(a => a.Musica)
                     .Distinct()

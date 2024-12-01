@@ -6,6 +6,7 @@ using AboutSongs.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using AboutSongs.Services;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 
 namespace AboutSongs.Controllers;
@@ -15,12 +16,14 @@ public class HomeController : Controller
     private readonly ILogger<HomeController> _logger;
     private readonly AppDbContext _context;
     private readonly IMusicService _musicService;
+    private readonly IUsuarioService _usuarioService;
 
-    public HomeController(ILogger<HomeController> logger, AppDbContext context, IMusicService musicService)
+    public HomeController(ILogger<HomeController> logger, AppDbContext context, IMusicService musicService, IUsuarioService usuarioService)
     {
         _logger = logger;
         _context = context;
         _musicService = musicService;
+        _usuarioService = usuarioService;
     }
 
     public IActionResult Index()
@@ -57,6 +60,48 @@ public class HomeController : Controller
     {
         var musicas = _musicService.GetMusicas();
         return View(musicas);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> ComentarMusica(ComentarioVM comenta)
+    {
+        if (ModelState.IsValid)
+        {
+            var usuario = await _usuarioService.GetUsuarioLogado();
+            ComentarioMusica comentarioMusica = new()
+            {
+                MusicaId = comenta.Id,
+                DataDePublicacao = DateTime.Now,
+                UsuarioId = usuario.UsuarioId,
+                Comentario = comenta.Comentario
+            };
+            await _context.ComentarioMusicas.AddAsync(comentarioMusica);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Musica", "Home", new { comenta.Id });
+        }
+        return RedirectToAction("Musicas");
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> ComentarAlbum(ComentarioVM comenta)
+    {
+        if (ModelState.IsValid)
+        {
+            var usuario = await _usuarioService.GetUsuarioLogado();
+            ComentarioAlbum comentarioAlbum = new()
+            {
+                AlbumId = comenta.Id,
+                DataDePublicacao = DateTime.Now,
+                UsuarioId = usuario.UsuarioId,
+                Comentario = comenta.Comentario
+            };
+            await _context.ComentarioAlbuns.AddAsync(comentarioAlbum);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Album", "Home", new { comenta.Id });
+        }
+        return RedirectToAction("Albuns");
     }
 
     public IActionResult Sobre()

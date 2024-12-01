@@ -22,8 +22,10 @@ public class Album
     [DataType(DataType.Date)]
     public DateTime DataDeLancamento { get; set; }
 
+    public bool ExibirHome { get; set; } = false;
+
     public ICollection<AlbumArtista> Artistas { get; set; }
     public ICollection<AlbumGenero> Generos { get; set; }
-
-    public bool ExibirHome { get; set; } = false;
+    public ICollection<ComentarioAlbum> Comentarios { get; set; }
+    
 }
