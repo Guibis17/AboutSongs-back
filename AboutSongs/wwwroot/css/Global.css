@@ -10,7 +10,6 @@
     --cor-04-f3: #222222;
     --cor-t-lvl-01: #FBFDFF;
     --cor-t-lvl-02: #cecece;
-    --cor-fundoo: linear-gradient(#000000 97%, #1d0024 98%, #63007c 99%, #aa00d4 100%);
 }
 
 /* Reset */
@@ -28,7 +27,7 @@ body {
     width: 100%;
     height: auto;
     scroll-behavior: smooth;
-    background: var(--cor-fundoo);
+    background: #000000;
     background-size: cover;
 }
 
@@ -175,8 +174,8 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0px 1000px #292929 inset !important;
-    -webkit-text-fill-color: var(--cor-t-lvl-02) !important;
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+    -webkit-text-fill-color: #000000 !important;
     transition: background-color 5000s ease-in-out 0s;
 }
 

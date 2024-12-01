@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using AboutSongs.Services;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Security.Claims;
 
 
 namespace AboutSongs.Controllers;
@@ -42,6 +43,30 @@ public class HomeController : Controller
     {
         var albuns = _musicService.GetAlbuns();
         return View(albuns);
+    }
+
+    [HttpGet]
+    public IActionResult BuscarAlbuns(string genero, string termo)
+    {
+        var albuns = _musicService.GetAlbuns();
+
+        // Filtro por gênero
+        if (!string.IsNullOrEmpty(genero))
+        {
+            albuns = albuns.Where(a =>
+                a.Generos.Any(g => g.Nome.Equals(genero, StringComparison.OrdinalIgnoreCase))
+            ).ToList();
+        }
+
+        // Filtro por termo de pesquisa
+        if (!string.IsNullOrEmpty(termo))
+        {
+            albuns = albuns.Where(a =>
+                a.Nome.Contains(termo, StringComparison.OrdinalIgnoreCase)
+            ).ToList();
+        }
+
+        return PartialView("_AlbunsList", albuns);
     }
 
     public IActionResult Album(int id)
@@ -102,6 +127,85 @@ public class HomeController : Controller
             return RedirectToAction("Album", "Home", new { comenta.Id });
         }
         return RedirectToAction("Albuns");
+    }
+    
+    [HttpGet]
+    public IActionResult BuscarMusicas(string genero, string termo)
+    {
+        var musicas = _musicService.GetMusicas();
+
+        // Filtro por gênero
+        if (!string.IsNullOrEmpty(genero))
+        {
+            musicas = musicas.Where(m =>
+                m.Generos.Any(g => g.Nome.Equals(genero, StringComparison.OrdinalIgnoreCase))
+            ).ToList();
+        }
+
+        // Filtro por termo de pesquisa
+        if (!string.IsNullOrEmpty(termo))
+        {
+            musicas = musicas.Where(m =>
+                m.Nome.Contains(termo, StringComparison.OrdinalIgnoreCase)
+            ).ToList();
+        }
+
+        return PartialView("_MusicasList", musicas);
+    }
+
+    public IActionResult Perfil()
+    {
+        // var usuarioId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        // var usuario = _context.Usuarios.Find(usuarioId);
+        // if (usuario == null)
+        //     return RedirectToAction("Login", "Account");
+
+        // if (usuario == null)
+        // {
+        //     return NotFound();
+        // }
+        return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> EditarPerfil(Usuario usuario, IFormFile foto)
+    {
+        // if (ModelState.IsValid)
+        // {
+        //     var usuarioId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        //     var usuarioExistente = await _context.Usuarios.FindAsync(usuarioId);
+        //     if (usuarioExistente == null)
+        //         return RedirectToAction("Login", "Account");
+
+        //     if (usuarioExistente != null)
+        //     {
+        //         usuarioExistente.Nome = usuario.Nome;
+        //         usuarioExistente.Foto = usuario.Foto;
+
+        //         if (foto != null && foto.Length > 0)
+        //         {
+        //             var caminhoDiretorio = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "img", "usuarios");
+
+        //             if (!Directory.Exists(caminhoDiretorio))
+        //             {
+        //                 Directory.CreateDirectory(caminhoDiretorio);
+        //             }
+
+        //             var filePath = Path.Combine(caminhoDiretorio, foto.FileName);
+        //             using (var stream = new FileStream(filePath, FileMode.Create))
+        //             {
+        //                 await foto.CopyToAsync(stream);
+        //             }
+
+        //             usuarioExistente.Foto = $"/img/usuarios/{foto.FileName}";
+        //         }
+
+        //         await _context.SaveChangesAsync();
+        //         return RedirectToAction("Perfil");
+        //     }
+        // }
+
+        return View(usuario);
     }
 
     public IActionResult Sobre()

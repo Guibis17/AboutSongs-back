@@ -13,7 +13,7 @@
 }
 <section class="hidden filter">
     <div class="filtering">
-        <button>HipHop</button>
+        <button>Rap/Hip-Hop</button>
         <button>Pop</button>
         <button>Eletrônica</button>
         <button>Rock</button>
@@ -30,34 +30,8 @@
 
 <section class="hidden musicas">
     <h1 class="title-s">Músicas</h1>
-    <div class="cards">
-        @foreach (var musica in Model)
-        {
-            <a asp-action="Musica" asp-controller="Home" asp-route-id="@musica.Id">
-                <div class="c-card">
-                    <img src="@musica.Foto" alt="@musica.Nome" />
-                    <div class="text">
-                        <h1 class="c-title">@musica.Nome</h1>
-                        <h2 class="c-artist">@string.Join(", ", musica.Artistas.Select(a => a.Nome).ToList())</h2>
-                        <p class="c-designation">@string.Join(", ", musica.Generos.Select(a => a.Nome).ToList())</p>
-                    </div>
-                    <div class="plataformas">
-                        @if (musica.Spotify != null)
-                        {
-                            <a class="p" href="@musica.Spotify"><i class="i-spotify fa-brands fa-spotify"></i></a>
-                        }
-                        @if (musica.Youtube != null)
-                        {
-                            <a class="p" href="@musica.Youtube"><i class="i-youtube fa-brands fa-youtube"></i></a>
-                        }
-                        @if (musica.AppleMusic != null)
-                        {
-                            <a class="p" href="@musica.AppleMusic"><i class="i-apple fa-brands fa-apple"></i></a>
-                        }
-                    </div>
-                </div>
-            </a>
-        }
+    <div class="cards" id="musics-container">
+        @await Html.PartialAsync("_MusicasList", Model)
     </div>
 </section>
 
@@ -68,5 +42,45 @@
         icon.onclick = function () {
             search.classList.toggle('active')
         }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const filterButtons = document.querySelectorAll('.filtering button');
+            const musicContainer = document.getElementById('musics-container');
+            const searchInput = document.getElementById('mysearch');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const genre = button.textContent.trim();
+                    const termo = searchInput.value.trim();
+                    fetchMusicas({ genero: genre, termo: termo });
+                });
+            });
+
+            searchInput.addEventListener('input', () => {
+                const termo = searchInput.value.trim();
+                fetchMusicas({ termo: termo });
+            });
+
+            function fetchMusicas(params) {
+                const url = new URL('/Home/BuscarMusicas', window.location.origin);
+                Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Erro ao buscar músicas: ${response.statusText}`);
+                        }
+                        return response.text();
+                    })
+                    .then(html => {
+                        musicContainer.innerHTML = html;
+                    })
+                    .catch(err => {
+                        console.error(err);
+                        musicContainer.innerHTML = `<p class="error">Erro ao carregar as músicas. Tente novamente mais tarde.</p>`;
+                    });
+            }
+        });
     </script>
 }
