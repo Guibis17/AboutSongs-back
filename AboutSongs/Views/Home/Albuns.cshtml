@@ -14,7 +14,7 @@
 
 <section class="hidden filter">
     <div class="filtering">
-        <button>HipHop</button>
+        <button>Rap/Hip-Hop</button>
         <button>Pop</button>
         <button>Eletrônica</button>
         <button>Rock</button>
@@ -31,20 +31,8 @@
 
 <section class="hidden musicas">
     <h1 class="title-s">Álbuns</h1>
-    <div class="cards">
-        @foreach (var album in Model)
-        {
-            <a asp-action="Album" asp-route-id="@album.Id">
-                <div class="c-card">
-                    <img src="@album.Foto" alt="" />
-                    <div class="text">
-                        <h1 class="c-title">@album.Nome</h1>
-                        <h2 class="c-artist">@string.Join(", ", album.Artistas.Select(a => a.Nome).ToList())</h2>
-                        <p class="c-designation">@string.Join(", ", album.Generos.Select(a => a.Nome).ToList())</p>
-                    </div>
-                </div>
-            </a>
-        }
+    <div class="cards" id="albums-container">
+        @Html.Partial("_AlbunsList", Model)
     </div>
 </section>
 
@@ -55,5 +43,80 @@
         icon.onclick = function () {
             search.classList.toggle('active')
         }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const filterButtons = document.querySelectorAll('.filtering button');
+            const searchInput = document.getElementById('mysearch');
+            const albumsContainer = document.getElementById('albums-container');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const genre = button.textContent.trim();
+                    const termo = document.getElementById('mysearch').value.trim();
+                    fetchAlbuns({ genero: genre, termo: termo });
+                });
+            });
+
+            // Atualizar álbuns com pesquisa
+            searchInput.addEventListener('input', () => {
+                const termo = searchInput.value.trim();
+                fetchAlbuns({ termo: termo });
+            });
+
+            // Função para buscar álbuns
+            function fetchAlbuns(params) {
+                const url = new URL('/Home/BuscarAlbuns', window.location.origin);
+                Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Erro ao buscar álbuns: ${response.statusText}`);
+                        }
+                        return response.text();
+                    })
+                    .then(html => {
+                        albumsContainer.innerHTML = html;
+                    })
+                    .catch(err => {
+                        console.error(err);
+                        albumsContainer.innerHTML = `<p class="error">Erro ao carregar os álbuns. Tente novamente mais tarde.</p>`;
+                    });
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const filterButtons = document.querySelectorAll('.filtering button');
+            const albumsContainer = document.getElementById('albums-container');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const genre = button.textContent.trim(); // Obtém o texto do botão como gênero
+                    fetchAlbuns({ genero: genre });
+                });
+            });
+
+            function fetchAlbuns(params) {
+                const url = new URL('/Home/BuscarAlbuns', window.location.origin);
+                Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Erro ao buscar álbuns: ${response.statusText}`);
+                        }
+                        return response.text();
+                    })
+                    .then(html => {
+                        albumsContainer.innerHTML = html; // Atualiza o container dos álbuns
+                    })
+                    .catch(err => {
+                        console.error(err);
+                        albumsContainer.innerHTML = `<p class="error">Erro ao carregar os álbuns. Tente novamente mais tarde.</p>`;
+                    });
+            }
+        });
     </script>
 }

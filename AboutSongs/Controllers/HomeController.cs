@@ -44,6 +44,30 @@ public class HomeController : Controller
         return View(albuns);
     }
 
+    [HttpGet]
+    public IActionResult BuscarAlbuns(string genero, string termo)
+    {
+        var albuns = _musicService.GetAlbuns();
+
+        // Filtro por gênero
+        if (!string.IsNullOrEmpty(genero))
+        {
+            albuns = albuns.Where(a =>
+                a.Generos.Any(g => g.Nome.Equals(genero, StringComparison.OrdinalIgnoreCase))
+            ).ToList();
+        }
+
+        // Filtro por termo de pesquisa
+        if (!string.IsNullOrEmpty(termo))
+        {
+            albuns = albuns.Where(a =>
+                a.Nome.Contains(termo, StringComparison.OrdinalIgnoreCase)
+            ).ToList();
+        }
+
+        return PartialView("_AlbunsList", albuns);
+    }
+
     public IActionResult Album(int id)
     {
         AlbumVM album = _musicService.GetAlbum(id);
@@ -60,6 +84,30 @@ public class HomeController : Controller
     {
         var musicas = _musicService.GetMusicas();
         return View(musicas);
+    }
+
+    [HttpGet]
+    public IActionResult BuscarMusicas(string genero, string termo)
+    {
+        var musicas = _musicService.GetMusicas();
+
+        // Filtro por gênero
+        if (!string.IsNullOrEmpty(genero))
+        {
+            musicas = musicas.Where(m =>
+                m.Generos.Any(g => g.Nome.Equals(genero, StringComparison.OrdinalIgnoreCase))
+            ).ToList();
+        }
+
+        // Filtro por termo de pesquisa
+        if (!string.IsNullOrEmpty(termo))
+        {
+            musicas = musicas.Where(m =>
+                m.Nome.Contains(termo, StringComparison.OrdinalIgnoreCase)
+            ).ToList();
+        }
+
+        return PartialView("_MusicasList", musicas);
     }
 
     public IActionResult Perfil()
