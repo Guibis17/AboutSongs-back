@@ -32,7 +32,7 @@
 <section class="hidden musicas">
     <h1 class="title-s">Álbuns</h1>
     <div class="cards" id="albums-container">
-        @Html.Partial("_AlbunsList", Model)
+        @await Html.PartialAsync("_AlbunsList", Model)
     </div>
 </section>
 
