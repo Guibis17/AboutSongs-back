@@ -164,7 +164,7 @@ public class HomeController : Controller
         {
             return NotFound();
         }
-        return View();
+        return View(usuario);
     }
 
     [HttpPost]

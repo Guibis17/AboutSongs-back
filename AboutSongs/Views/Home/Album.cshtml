@@ -46,13 +46,6 @@
             <p class="s-musical">@string.Join(", ", Model.Generos.Select(a => a.Nome).ToList())</p>
         </div>
     </div>
-    <div class="s-content">
-        <ul>
-            <li><a href="#"><i class="icon-s fa-brands fa-spotify"></i></a></li>
-            <li><a href="#"><i class="icon-y fa-brands fa-youtube"></i></a></li>
-            <li><a href="#"><i class="icon-a fa-brands fa-apple"></i></a></li>
-        </ul>
-    </div>
 </section>
 
 <div class="hr-1">
@@ -107,11 +100,11 @@
                     <div class="comment-name">@comentario.Usuario.Nome</div>
                     <div class="comment-text" style="white-space: pre-line">@comentario.Comentario</div>
                     <div class="comment-actions">
-                        <span class="like"><i class="fas fa-thumbs-up me-2"></i> 0</span>
+                        @* <span class="like"><i class="fas fa-thumbs-up me-2"></i> 0</span>
                         <span class="dislike"><i class="fas fa-thumbs-down me-2"></i> 0</span>
                         <span><i class="fas fa-edit me-2"></i> Editar</span>
                         <span><i class="fas fa-trash-alt me-2"></i> Excluir</span>
-                        <span><i class="fas fa-reply me-2"></i> Responder</span>
+                        <span><i class="fas fa-reply me-2"></i> Responder</span> *@
                     </div>
                 </div>
             </div>
@@ -162,3 +155,9 @@
         }
     </script>
 }
+
+<style>
+    .classification {
+        margin-right: 150px;
+    }
+</style>
