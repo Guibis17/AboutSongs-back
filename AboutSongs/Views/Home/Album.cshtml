@@ -23,17 +23,12 @@
         <h1 class="n-album" id="name-album">@Model.Nome</h1>
         <h2 class="n-artist">@string.Join(", ", Model.Artistas.Select(a => a.Nome).ToList())</h2>
         <div class="options">
-            <button class="comentar" href="#comments-s"><i class="fa-regular fa-comment"></i></button>
-            <button class="curtida"><i class="fa-regular fa-heart"></i></button>
-            <p>1 mil curtidas</p>
+            <a class="comentar" href="#comments-s"><i class="fa-regular fa-comment"></i></a>
+            @* <button class="curtida"><i class="fa-regular fa-heart"></i></button>
+            <p>1 mil curtidas</p> *@
         </div>
     </div>
-
 </section>
-
-<div class="hr">
-    <hr class="line">
-</div>
 
 <section class="informations">
     <div class="hidden f-content">

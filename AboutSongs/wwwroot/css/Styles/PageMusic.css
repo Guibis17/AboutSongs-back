@@ -80,58 +80,37 @@
             width: 100%;
             height: auto;
             display: flex;
-            background-color: #252525;
-            padding: 10px;
-            border-radius: 10px;
             margin-top: 15px;
             gap: 15px;
             align-items: center;
 
             & .comentar {
-                width: auto;
-                height: 60px;
+                width: 85px;
+                height: 85px;
                 display: flex;
+                justify-content: center;
                 align-items: center;
+                border-radius: 50px;
+                background-color: #131313;
+                transition: all .35s ease-out;
 
                 & i {
-                    color: #dddddd;
+                    color: #ffffff;
                     font-size: 25pt;
+                    transition: all .35s ease-out;
                 }
-            }
 
-            & .curtida {
-                width: auto;
-                height: 60px;
-                cursor: pointer;
+                &:hover {
+                    background-color: #ffffff;
+                    transition: all .35s ease-in;
+                }
 
-                & i {
-                    color: #dddddd;
-                    font-size: 25pt;
+                &:hover i {
+                    color: #131313;
+                    transition: all .35s ease-in;
                 }
             }
         }
-
-        & p {
-            color: #dddddd;
-            padding-top: 3px;
-            font-weight: 500;
-            margin-bottom: 0 !important;
-        }
-    }
-}
-
-.hr {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    padding: 0 0 25px 0;
-
-    & .line {
-        width: 40%;
-        height: .25px;
-        background-color: #a0a0a059;
-        border-radius: 10px;
     }
 }
 
@@ -141,8 +120,7 @@
     width: 100%;
     max-width: 1000px;
     height: auto;
-    background-color: #161616;
-    border-radius: 5px;
+    background-color: #131313;
     padding: 30px 15px;
     display: flex;
     justify-content: space-evenly;
@@ -470,6 +448,7 @@ button:hover {
         width: 95%;
     }
 }
+
 /* --========================================================================================================-- */
 /* --=====================           Parece que chegou ao fim não esquece o ;           =====================-- */
 /* --========================================================================================================-- */

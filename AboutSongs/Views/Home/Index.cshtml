@@ -105,7 +105,7 @@
         <a class="all-a" asp-action="Albuns" asp-controller="Home">Ver tudo.</a>
     </div>
     <div class="cards">
-        @foreach (var album in Model.Albuns)
+        @foreach (var album in Model.Albuns.Take(6))
         {
             <a asp-action="Album" asp-controller="Home" asp-route-id="@album.Id">
                 <div class="c-card">
@@ -119,4 +119,13 @@
             </a>
         }
     </div>
+</section>
+
+<div class="hidden line-3">
+    <hr class="hr-3">
+</div>
+
+<section class="hidden frase">
+    <h1>"A música é a batida invisível que move o mundo, conectando almas, embalando memórias e transformando vidas em melodias únicas."</h1>
+    <p>Equipe AboutSongs</p>
 </section>

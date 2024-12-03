@@ -89,42 +89,36 @@
             width: 100%;
             height: auto;
             display: flex;
-            background-color: #252525;
-            padding: 10px;
-            border-radius: 10px;
             margin-top: 15px;
             gap: 15px;
             align-items: center;
 
             & .comentar {
-                width: auto;
-                height: 60px;
+                width: 85px;
+                height: 85px;
                 display: flex;
+                justify-content: center;
                 align-items: center;
+                border-radius: 50px;
+                background-color: #131313;
+                transition: all .35s ease-out;
 
                 & i {
-                    color: #dddddd;
+                    color: #ffffff;
                     font-size: 25pt;
+                    transition: all .35s ease-out;
+                }
+
+                &:hover {
+                    background-color: #ffffff;
+                    transition: all .35s ease-in;
+                }
+
+                &:hover i {
+                    color: #131313;
+                    transition: all .35s ease-in;
                 }
             }
-
-            & .curtida {
-                width: auto;
-                height: 60px;
-                cursor: pointer;
-
-                & i {
-                    color: #dddddd;
-                    font-size: 25pt;
-                }
-            }
-        }
-
-        & p {
-            color: #dddddd;
-            padding-top: 3px;
-            font-weight: 500;
-            margin-bottom: 0 !important;
         }
     }
 }
@@ -152,7 +146,7 @@
     width: 100%;
     max-width: 1000px;
     height: auto;
-    background-color: #161616;
+    background-color: #131313;
     border-radius: 5px;
     padding: 30px 15px;
     display: flex;
@@ -178,6 +172,7 @@
             justify-content: center;
             align-items: start;
             gap: 5px;
+            margin-right: 405px;
 
             & .title-c,
             .title-cl {
@@ -330,14 +325,13 @@
                 transition: all .35s ease-out;
 
                 &:hover {
-                    background-color: #3a3a3a8a;
+                    background-color: #72727246;
                     transition: all .25s ease-in;
                 }
 
                 & .icon {
                     width: 150px;
                     height: 65px;
-                    background-color: #53535349;
                     font-size: 26pt;
                     display: flex;
                     justify-content: center;
@@ -345,7 +339,7 @@
                     border-radius: 5px;
                     margin-right: 5px;
                     opacity: 1;
-                    color: #000000;
+                    color: #ffffff;
                     transition: all .35s ease-out;
                 }
 
